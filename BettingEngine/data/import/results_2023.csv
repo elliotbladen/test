@@ -1,0 +1,214 @@
+season,round,match_date,kickoff_time,home_team,away_team,venue,home_score,away_score,is_final,is_overtime
+2023,31,2023-10-01,19:30,Penrith Panthers,Brisbane Broncos,Accor Stadium,26,24,1,0
+2023,30,2023-09-23,19:50,Brisbane Broncos,New Zealand Warriors,Suncorp Stadium,42,12,1,0
+2023,30,2023-09-22,19:50,Penrith Panthers,Melbourne Storm,Accor Stadium,38,4,1,0
+2023,29,2023-09-16,18:05,New Zealand Warriors,Newcastle Knights,Go Media Stadium,40,10,1,0
+2023,29,2023-09-15,19:50,Melbourne Storm,Sydney Roosters,AAMI Park,18,13,1,0
+2023,28,2023-09-10,16:05,Newcastle Knights,Canberra Raiders,McDonald Jones Stadium,30,28,1,1
+2023,28,2023-09-09,19:50,Cronulla Sharks,Sydney Roosters,Sharks Stadium,12,13,1,0
+2023,28,2023-09-09,16:05,Penrith Panthers,New Zealand Warriors,BlueBet Stadium,32,6,1,0
+2023,28,2023-09-08,19:50,Brisbane Broncos,Melbourne Storm,Suncorp Stadium,26,0,1,0
+2023,27,2023-09-03,16:05,Cronulla Sharks,Canberra Raiders,Sharks Stadium,24,6,0,0
+2023,27,2023-09-03,14:00,Gold Coast Titans,Canterbury Bulldogs,Cbus Super Stadium,34,30,0,0
+2023,27,2023-09-02,19:35,St. George Illawarra Dragons,Newcastle Knights,Jubilee Stadium,12,32,0,0
+2023,27,2023-09-02,17:30,Penrith Panthers,North QLD Cowboys,BlueBet Stadium,44,12,0,0
+2023,27,2023-09-02,15:00,Dolphins,New Zealand Warriors,Suncorp Stadium,34,10,0,0
+2023,27,2023-09-01,20:00,South Sydney Rabbitohs,Sydney Roosters,Accor Stadium,12,26,0,0
+2023,27,2023-09-01,18:00,Manly Sea Eagles,Wests Tigers,4 Pines Park,54,12,0,0
+2023,27,2023-08-31,19:50,Brisbane Broncos,Melbourne Storm,Suncorp Stadium,22,32,0,0
+2023,26,2023-08-27,16:05,Newcastle Knights,Cronulla Sharks,McDonald Jones Stadium,32,6,0,0
+2023,26,2023-08-27,14:00,Canterbury Bulldogs,Manly Sea Eagles,Accor Stadium,24,42,0,0
+2023,26,2023-08-26,19:35,Canberra Raiders,Brisbane Broncos,GIO Stadium,18,29,0,0
+2023,26,2023-08-26,17:30,Sydney Roosters,Wests Tigers,Allianz Stadium,32,8,0,0
+2023,26,2023-08-26,15:00,Melbourne Storm,Gold Coast Titans,AAMI Park,37,16,0,0
+2023,26,2023-08-25,20:00,Dolphins,North QLD Cowboys,Suncorp Stadium,10,34,0,0
+2023,26,2023-08-25,18:00,New Zealand Warriors,St. George Illawarra Dragons,Go Media Stadium,18,6,0,0
+2023,26,2023-08-24,19:50,Penrith Panthers,Parramatta Eels,BlueBet Stadium,18,32,0,0
+2023,25,2023-08-20,16:05,Canberra Raiders,Canterbury Bulldogs,GIO Stadium,36,24,0,0
+2023,25,2023-08-20,14:00,Newcastle Knights,South Sydney Rabbitohs,McDonald Jones Stadium,29,10,0,0
+2023,25,2023-08-19,19:35,St. George Illawarra Dragons,Melbourne Storm,WIN Stadium,28,38,0,0
+2023,25,2023-08-19,17:30,Gold Coast Titans,Penrith Panthers,Cbus Super Stadium,14,40,0,0
+2023,25,2023-08-19,15:00,Wests Tigers,Dolphins,CommBank Stadium,24,23,0,0
+2023,25,2023-08-18,20:00,Parramatta Eels,Sydney Roosters,CommBank Stadium,12,34,0,0
+2023,25,2023-08-18,18:00,New Zealand Warriors,Manly Sea Eagles,Go Media Stadium,29,22,0,0
+2023,25,2023-08-17,19:50,North QLD Cowboys,Cronulla Sharks,QCB Stadium,12,32,0,0
+2023,24,2023-08-13,16:05,Newcastle Knights,Canterbury Bulldogs,McDonald Jones Stadium,42,6,0,0
+2023,24,2023-08-13,14:00,Melbourne Storm,Canberra Raiders,AAMI Park,48,2,0,0
+2023,24,2023-08-12,19:35,Sydney Roosters,Dolphins,Allianz Stadium,30,14,0,0
+2023,24,2023-08-12,17:30,Wests Tigers,New Zealand Warriors,FMG Stadium,22,30,0,0
+2023,24,2023-08-12,15:00,South Sydney Rabbitohs,St. George Illawarra Dragons,Barlow Park,26,14,0,0
+2023,24,2023-08-11,20:00,Brisbane Broncos,Parramatta Eels,The Gabba,54,10,0,0
+2023,24,2023-08-11,18:00,Cronulla Sharks,Gold Coast Titans,Sharks Stadium,36,6,0,0
+2023,24,2023-08-10,19:50,Manly Sea Eagles,Penrith Panthers,4 Pines Park,12,24,0,0
+2023,23,2023-08-06,16:05,Canberra Raiders,Wests Tigers,GIO Stadium,22,18,0,0
+2023,23,2023-08-06,14:00,Parramatta Eels,St. George Illawarra Dragons,CommBank Stadium,26,20,0,0
+2023,23,2023-08-05,17:35,South Sydney Rabbitohs,Cronulla Sharks,Optus Stadium,16,26,0,0
+2023,23,2023-08-05,15:30,Dolphins,Newcastle Knights,Optus Stadium,28,30,0,0
+2023,23,2023-08-05,15:00,North QLD Cowboys,Brisbane Broncos,QCB Stadium,14,30,0,0
+2023,23,2023-08-04,20:00,Penrith Panthers,Melbourne Storm,BlueBet Stadium,26,6,0,0
+2023,23,2023-08-04,18:00,Gold Coast Titans,New Zealand Warriors,Cbus Super Stadium,18,28,0,0
+2023,23,2023-08-03,19:50,Sydney Roosters,Manly Sea Eagles,SCG,26,16,0,0
+2023,22,2023-07-30,16:05,Gold Coast Titans,North QLD Cowboys,Cbus Super Stadium,22,13,0,0
+2023,22,2023-07-30,14:00,Canterbury Bulldogs,Dolphins,Salter Oval,23,22,0,0
+2023,22,2023-07-29,19:35,Penrith Panthers,Cronulla Sharks,BlueBet Stadium,28,0,0,0
+2023,22,2023-07-29,17:30,St. George Illawarra Dragons,Manly Sea Eagles,WIN Stadium,18,24,0,0
+2023,22,2023-07-29,15:00,Canberra Raiders,Newcastle Knights,GIO Stadium,6,28,0,0
+2023,22,2023-07-28,20:00,Melbourne Storm,Parramatta Eels,Marvel Stadium,46,16,0,0
+2023,22,2023-07-28,18:00,Wests Tigers,South Sydney Rabbitohs,Scully Park,18,32,0,0
+2023,22,2023-07-27,19:50,Brisbane Broncos,Sydney Roosters,The Gabba,32,10,0,0
+2023,21,2023-07-23,16:05,Cronulla Sharks,Manly Sea Eagles,Sharks Stadium,26,30,0,0
+2023,21,2023-07-23,14:00,Penrith Panthers,Canterbury Bulldogs,BlueBet Stadium,44,18,0,0
+2023,21,2023-07-22,19:35,North QLD Cowboys,Parramatta Eels,QCB Stadium,24,16,0,0
+2023,21,2023-07-22,17:30,Newcastle Knights,Melbourne Storm,McDonald Jones Stadium,26,18,0,0
+2023,21,2023-07-22,15:00,Gold Coast Titans,Sydney Roosters,Cbus Super Stadium,18,36,0,0
+2023,21,2023-07-21,20:00,South Sydney Rabbitohs,Brisbane Broncos,Sunshine Coast Stadium,20,36,0,0
+2023,21,2023-07-21,18:00,New Zealand Warriors,Canberra Raiders,Go Media Stadium,21,20,0,1
+2023,21,2023-07-20,19:50,St. George Illawarra Dragons,Wests Tigers,WIN Stadium,18,14,0,0
+2023,20,2023-07-16,18:15,Parramatta Eels,Gold Coast Titans,CommBank Stadium,25,24,0,0
+2023,20,2023-07-16,16:05,Dolphins,Penrith Panthers,Kayo Stadium,14,24,0,0
+2023,20,2023-07-16,16:00,New Zealand Warriors,Cronulla Sharks,Go Media Stadium,44,12,0,0
+2023,20,2023-07-15,19:35,Sydney Roosters,Melbourne Storm,SCG,16,30,0,0
+2023,20,2023-07-15,17:30,Manly Sea Eagles,North QLD Cowboys,4 Pines Park,8,19,0,0
+2023,20,2023-07-15,15:00,Canterbury Bulldogs,Brisbane Broncos,Belmore Sports Ground,24,44,0,0
+2023,20,2023-07-14,20:00,Newcastle Knights,Wests Tigers,McDonald Jones Stadium,34,18,0,0
+2023,19,2023-07-09,16:05,Gold Coast Titans,Dolphins,Cbus Super Stadium,21,23,0,1
+2023,19,2023-07-08,19:35,South Sydney Rabbitohs,Canterbury Bulldogs,Accor Stadium,32,36,0,0
+2023,19,2023-07-08,17:30,Parramatta Eels,New Zealand Warriors,CommBank Stadium,10,46,0,0
+2023,19,2023-07-07,20:00,St. George Illawarra Dragons,Canberra Raiders,WIN Stadium,26,36,0,0
+2023,19,2023-07-06,19:50,Wests Tigers,Cronulla Sharks,CommBank Stadium,12,36,0,0
+2023,18,2023-07-02,16:05,Manly Sea Eagles,Sydney Roosters,4 Pines Park,18,16,0,0
+2023,18,2023-07-02,14:00,Canterbury Bulldogs,Newcastle Knights,Accor Stadium,0,66,0,0
+2023,18,2023-07-01,19:35,Brisbane Broncos,Dolphins,The Gabba,24,16,0,0
+2023,18,2023-07-01,17:30,North QLD Cowboys,Wests Tigers,QCB Stadium,74,0,0,0
+2023,18,2023-07-01,15:00,Canberra Raiders,Gold Coast Titans,GIO Stadium,26,22,0,0
+2023,18,2023-06-30,20:00,Melbourne Storm,Penrith Panthers,Marvel Stadium,16,34,0,0
+2023,18,2023-06-30,20:00,New Zealand Warriors,South Sydney Rabbitohs,Go Media Stadium,6,28,0,0
+2023,18,2023-06-29,19:50,Cronulla Sharks,St. George Illawarra Dragons,Sharks Stadium,52,16,0,0
+2023,17,2023-06-25,18:15,Sydney Roosters,Canberra Raiders,Allianz Stadium,18,20,0,0
+2023,17,2023-06-25,16:05,South Sydney Rabbitohs,North QLD Cowboys,Accor Stadium,6,31,0,0
+2023,17,2023-06-25,14:00,Brisbane Broncos,Gold Coast Titans,Suncorp Stadium,12,18,0,0
+2023,17,2023-06-24,19:35,Melbourne Storm,Manly Sea Eagles,AAMI Park,24,6,0,0
+2023,17,2023-06-24,17:30,Penrith Panthers,Newcastle Knights,BlueBet Stadium,20,12,0,0
+2023,17,2023-06-24,15:00,Dolphins,Parramatta Eels,Sunshine Coast Stadium,20,48,0,0
+2023,17,2023-06-23,20:00,St. George Illawarra Dragons,New Zealand Warriors,WIN Stadium,18,48,0,0
+2023,16,2023-06-18,16:05,Cronulla Sharks,Canterbury Bulldogs,Sharks Stadium,48,10,0,0
+2023,16,2023-06-17,19:35,Wests Tigers,Melbourne Storm,Campbelltown Stadium,6,28,0,0
+2023,16,2023-06-17,17:30,Parramatta Eels,Manly Sea Eagles,CommBank Stadium,34,4,0,0
+2023,16,2023-06-17,15:00,Newcastle Knights,Sydney Roosters,McDonald Jones Stadium,16,18,0,0
+2023,16,2023-06-16,20:00,North QLD Cowboys,Penrith Panthers,QCB Stadium,27,23,0,1
+2023,16,2023-06-12,16:00,Canterbury Bulldogs,Parramatta Eels,Accor Stadium,12,34,0,0
+2023,15,2023-06-11,16:05,Melbourne Storm,Cronulla Sharks,AAMI Park,54,10,0,0
+2023,15,2023-06-10,19:35,Sydney Roosters,Penrith Panthers,Allianz Stadium,6,30,0,0
+2023,15,2023-06-10,17:30,Brisbane Broncos,Newcastle Knights,Suncorp Stadium,24,20,0,0
+2023,15,2023-06-10,15:00,St. George Illawarra Dragons,South Sydney Rabbitohs,Jubilee Stadium,36,30,0,0
+2023,15,2023-06-09,20:00,Manly Sea Eagles,Dolphins,4 Pines Park,58,18,0,0
+2023,15,2023-06-09,18:00,Canberra Raiders,New Zealand Warriors,GIO Stadium,14,36,0,0
+2023,15,2023-06-08,19:50,Gold Coast Titans,Wests Tigers,Cbus Super Stadium,28,12,0,0
+2023,14,2023-06-04,18:15,Penrith Panthers,St. George Illawarra Dragons,BlueBet Stadium,26,18,0,0
+2023,14,2023-06-04,16:05,North QLD Cowboys,Melbourne Storm,QCB Stadium,45,20,0,0
+2023,14,2023-06-04,14:00,Sydney Roosters,Canterbury Bulldogs,Polytec Stadium,25,24,0,0
+2023,14,2023-06-03,19:35,Cronulla Sharks,Brisbane Broncos,Sharks Stadium,12,20,0,0
+2023,14,2023-06-03,17:30,Gold Coast Titans,South Sydney Rabbitohs,Cbus Super Stadium,28,46,0,0
+2023,14,2023-06-03,17:00,New Zealand Warriors,Dolphins,Go Media Stadium,30,8,0,0
+2023,14,2023-06-02,20:00,Wests Tigers,Canberra Raiders,Campbelltown Stadium,19,20,0,0
+2023,13,2023-05-28,16:05,Newcastle Knights,Manly Sea Eagles,McDonald Jones Stadium,28,18,0,0
+2023,13,2023-05-27,19:35,South Sydney Rabbitohs,Canberra Raiders,Accor Stadium,26,33,0,0
+2023,13,2023-05-27,17:30,New Zealand Warriors,Brisbane Broncos,McLean Park,22,26,0,0
+2023,13,2023-05-26,20:00,Parramatta Eels,North QLD Cowboys,CommBank Stadium,24,16,0,0
+2023,13,2023-05-25,19:50,Dolphins,St. George Illawarra Dragons,Kayo Stadium,26,12,0,0
+2023,12,2023-05-21,16:05,Canberra Raiders,Manly Sea Eagles,GIO Stadium,14,42,0,0
+2023,12,2023-05-21,14:00,Canterbury Bulldogs,Gold Coast Titans,Accor Stadium,20,18,0,0
+2023,12,2023-05-20,19:35,Dolphins,Melbourne Storm,Suncorp Stadium,16,24,0,0
+2023,12,2023-05-20,17:30,Wests Tigers,North QLD Cowboys,Leichhardt Oval,66,18,0,0
+2023,12,2023-05-20,15:00,Cronulla Sharks,Newcastle Knights,C.ex Coffs International Stadium,26,6,0,0
+2023,12,2023-05-19,20:00,South Sydney Rabbitohs,Parramatta Eels,Allianz Stadium,16,36,0,0
+2023,12,2023-05-19,18:00,St. George Illawarra Dragons,Sydney Roosters,Jubilee Stadium,24,22,0,0
+2023,12,2023-05-18,19:50,Brisbane Broncos,Penrith Panthers,Suncorp Stadium,4,15,0,0
+2023,11,2023-05-14,16:05,Manly Sea Eagles,Cronulla Sharks,4 Pines Park,14,20,0,0
+2023,11,2023-05-14,14:00,Newcastle Knights,Gold Coast Titans,McDonald Jones Stadium,46,26,0,0
+2023,11,2023-05-13,19:35,Canberra Raiders,Parramatta Eels,GIO Stadium,26,18,0,0
+2023,11,2023-05-13,17:30,North QLD Cowboys,St. George Illawarra Dragons,QCB Stadium,42,22,0,0
+2023,11,2023-05-13,15:00,South Sydney Rabbitohs,Wests Tigers,Accor Stadium,20,0,0,0
+2023,11,2023-05-12,20:00,Penrith Panthers,Sydney Roosters,BlueBet Stadium,48,4,0,0
+2023,11,2023-05-12,18:00,Canterbury Bulldogs,New Zealand Warriors,Accor Stadium,12,24,0,0
+2023,11,2023-05-11,19:50,Melbourne Storm,Brisbane Broncos,AAMI Park,24,16,0,0
+2023,10,2023-05-07,18:25,Gold Coast Titans,Parramatta Eels,Suncorp Stadium,26,24,0,0
+2023,10,2023-05-07,16:00,Sydney Roosters,North QLD Cowboys,Suncorp Stadium,6,20,0,0
+2023,10,2023-05-07,13:50,Wests Tigers,St. George Illawarra Dragons,Suncorp Stadium,18,16,0,0
+2023,10,2023-05-06,19:45,Melbourne Storm,South Sydney Rabbitohs,Suncorp Stadium,12,28,0,0
+2023,10,2023-05-06,17:30,Cronulla Sharks,Dolphins,Suncorp Stadium,16,36,0,0
+2023,10,2023-05-06,15:00,New Zealand Warriors,Penrith Panthers,Suncorp Stadium,6,18,0,0
+2023,10,2023-05-05,20:05,Manly Sea Eagles,Brisbane Broncos,Suncorp Stadium,6,32,0,0
+2023,10,2023-05-05,18:00,Canterbury Bulldogs,Canberra Raiders,Suncorp Stadium,30,34,0,0
+2023,9,2023-04-30,16:05,St. George Illawarra Dragons,Canterbury Bulldogs,WIN Stadium,16,18,0,0
+2023,9,2023-04-30,16:00,New Zealand Warriors,Sydney Roosters,Go Media Stadium,0,14,0,0
+2023,9,2023-04-29,19:35,Penrith Panthers,Wests Tigers,Carrington Park,8,12,0,0
+2023,9,2023-04-29,17:30,Manly Sea Eagles,Gold Coast Titans,4 Pines Park,10,26,0,0
+2023,9,2023-04-29,15:00,Canberra Raiders,Dolphins,McDonalds Park,31,30,0,1
+2023,9,2023-04-28,20:00,Brisbane Broncos,South Sydney Rabbitohs,Suncorp Stadium,6,32,0,0
+2023,9,2023-04-28,18:00,Parramatta Eels,Newcastle Knights,CommBank Stadium,43,12,0,0
+2023,9,2023-04-27,19:50,Cronulla Sharks,North QLD Cowboys,Sharks Stadium,44,6,0,0
+2023,9,2023-04-25,19:00,Melbourne Storm,New Zealand Warriors,AAMI Park,30,22,0,0
+2023,9,2023-04-25,16:05,Sydney Roosters,St. George Illawarra Dragons,Allianz Stadium,27,26,0,0
+2023,8,2023-04-23,16:05,Wests Tigers,Manly Sea Eagles,Campbelltown Stadium,16,22,0,0
+2023,8,2023-04-23,14:00,Dolphins,Gold Coast Titans,Suncorp Stadium,28,26,0,0
+2023,8,2023-04-22,19:35,North QLD Cowboys,Newcastle Knights,QCB Stadium,18,16,0,0
+2023,8,2023-04-22,17:30,Canterbury Bulldogs,Cronulla Sharks,Accor Stadium,20,33,0,0
+2023,8,2023-04-21,19:30,Parramatta Eels,Brisbane Broncos,TIO Stadium,16,26,0,0
+2023,8,2023-04-20,19:50,South Sydney Rabbitohs,Penrith Panthers,Accor Stadium,20,18,0,0
+2023,7,2023-04-16,16:05,Parramatta Eels,Canterbury Bulldogs,CommBank Stadium,30,4,0,0
+2023,7,2023-04-16,14:00,Canberra Raiders,St. George Illawarra Dragons,GIO Stadium,20,14,0,0
+2023,7,2023-04-15,19:35,Gold Coast Titans,Brisbane Broncos,Cbus Super Stadium,26,43,0,0
+2023,7,2023-04-15,17:30,Newcastle Knights,Penrith Panthers,McDonald Jones Stadium,15,16,0,1
+2023,7,2023-04-15,17:00,New Zealand Warriors,North QLD Cowboys,Go Media Stadium,22,14,0,0
+2023,7,2023-04-14,20:00,Manly Sea Eagles,Melbourne Storm,4 Pines Park,18,8,0,0
+2023,7,2023-04-14,18:00,Cronulla Sharks,Sydney Roosters,Sharks Stadium,22,12,0,0
+2023,7,2023-04-13,19:50,Dolphins,South Sydney Rabbitohs,Suncorp Stadium,14,36,0,0
+2023,7,2023-04-10,16:00,Wests Tigers,Parramatta Eels,Accor Stadium,22,28,0,0
+2023,6,2023-04-09,18:15,Newcastle Knights,New Zealand Warriors,McDonald Jones Stadium,34,24,0,0
+2023,6,2023-04-09,16:05,Gold Coast Titans,St. George Illawarra Dragons,Cbus Super Stadium,20,18,0,0
+2023,6,2023-04-08,19:35,Brisbane Broncos,Canberra Raiders,Suncorp Stadium,14,20,0,0
+2023,6,2023-04-08,17:00,Penrith Panthers,Manly Sea Eagles,BlueBet Stadium,44,12,0,0
+2023,6,2023-04-07,20:00,North QLD Cowboys,Dolphins,QCB Stadium,22,32,0,0
+2023,6,2023-04-07,16:05,Canterbury Bulldogs,South Sydney Rabbitohs,Accor Stadium,16,50,0,0
+2023,6,2023-04-06,19:50,Melbourne Storm,Sydney Roosters,AAMI Park,28,8,0,0
+2023,5,2023-04-02,18:15,Canterbury Bulldogs,North QLD Cowboys,Accor Stadium,15,14,0,1
+2023,5,2023-04-02,16:05,Cronulla Sharks,New Zealand Warriors,Sharks Stadium,30,32,0,0
+2023,5,2023-04-01,18:35,Brisbane Broncos,Wests Tigers,Suncorp Stadium,46,12,0,0
+2023,5,2023-04-01,17:30,St. George Illawarra Dragons,Dolphins,WIN Stadium,38,12,0,0
+2023,5,2023-04-01,15:00,Manly Sea Eagles,Newcastle Knights,Glen Willow Regional Sports Stadium,32,32,0,1
+2023,5,2023-03-31,20:00,South Sydney Rabbitohs,Melbourne Storm,Accor Stadium,10,18,0,0
+2023,5,2023-03-31,18:00,Canberra Raiders,Penrith Panthers,GIO Stadium,12,53,0,0
+2023,5,2023-03-30,20:00,Sydney Roosters,Parramatta Eels,Allianz Stadium,28,20,0,0
+2023,4,2023-03-26,18:15,St. George Illawarra Dragons,Cronulla Sharks,Jubilee Stadium,8,40,0,0
+2023,4,2023-03-26,16:05,Newcastle Knights,Canberra Raiders,McDonald Jones Stadium,24,14,0,0
+2023,4,2023-03-26,16:00,New Zealand Warriors,Canterbury Bulldogs,Go Media Stadium,16,14,0,0
+2023,4,2023-03-25,19:35,South Sydney Rabbitohs,Manly Sea Eagles,Accor Stadium,13,12,0,1
+2023,4,2023-03-25,17:30,North QLD Cowboys,Gold Coast Titans,QCB Stadium,24,12,0,0
+2023,4,2023-03-24,19:00,Dolphins,Brisbane Broncos,Suncorp Stadium,12,18,0,0
+2023,4,2023-03-24,18:00,Melbourne Storm,Wests Tigers,AAMI Park,24,12,0,0
+2023,4,2023-03-23,20:00,Parramatta Eels,Penrith Panthers,CommBank Stadium,17,16,0,1
+2023,3,2023-03-19,18:15,Canberra Raiders,Cronulla Sharks,GIO Stadium,24,20,0,0
+2023,3,2023-03-19,16:05,Canterbury Bulldogs,Wests Tigers,Belmore Sports Ground,26,22,0,0
+2023,3,2023-03-18,18:35,Brisbane Broncos,St. George Illawarra Dragons,Suncorp Stadium,40,18,0,0
+2023,3,2023-03-18,16:30,North QLD Cowboys,New Zealand Warriors,QCB Stadium,12,26,0,0
+2023,3,2023-03-18,14:00,Gold Coast Titans,Melbourne Storm,Cbus Super Stadium,38,34,0,0
+2023,3,2023-03-17,20:00,Sydney Roosters,South Sydney Rabbitohs,Allianz Stadium,20,18,0,0
+2023,3,2023-03-17,18:00,Newcastle Knights,Dolphins,McDonald Jones Stadium,20,36,0,0
+2023,3,2023-03-16,20:00,Manly Sea Eagles,Parramatta Eels,4 Pines Park,34,30,0,0
+2023,2,2023-03-12,18:15,St. George Illawarra Dragons,Gold Coast Titans,Jubilee Stadium,32,18,0,0
+2023,2,2023-03-12,16:05,Wests Tigers,Newcastle Knights,Leichhardt Oval,12,14,0,0
+2023,2,2023-03-11,19:35,Melbourne Storm,Canterbury Bulldogs,AAMI Park,12,26,0,0
+2023,2,2023-03-11,16:30,Dolphins,Canberra Raiders,Kayo Stadium,20,14,0,0
+2023,2,2023-03-11,15:00,Sydney Roosters,New Zealand Warriors,Allianz Stadium,20,12,0,0
+2023,2,2023-03-10,19:00,Brisbane Broncos,North QLD Cowboys,Suncorp Stadium,28,16,0,0
+2023,2,2023-03-10,18:00,Parramatta Eels,Cronulla Sharks,CommBank Stadium,26,30,0,0
+2023,2,2023-03-09,20:00,Penrith Panthers,South Sydney Rabbitohs,BlueBet Stadium,16,10,0,0
+2023,1,2023-03-05,18:15,Wests Tigers,Gold Coast Titans,Leichhardt Oval,10,22,0,0
+2023,1,2023-03-05,15:05,Dolphins,Sydney Roosters,Suncorp Stadium,28,18,0,0
+2023,1,2023-03-04,19:35,Cronulla Sharks,South Sydney Rabbitohs,Sharks Stadium,18,27,0,0
+2023,1,2023-03-04,16:30,North QLD Cowboys,Canberra Raiders,QCB Stadium,19,18,0,0
+2023,1,2023-03-04,15:00,Manly Sea Eagles,Canterbury Bulldogs,4 Pines Park,31,6,0,0
+2023,1,2023-03-03,20:05,Penrith Panthers,Brisbane Broncos,BlueBet Stadium,12,13,0,0
+2023,1,2023-03-03,20:00,New Zealand Warriors,Newcastle Knights,Sky Stadium,20,12,0,0
+2023,1,2023-03-02,20:00,Parramatta Eels,Melbourne Storm,CommBank Stadium,12,16,0,1

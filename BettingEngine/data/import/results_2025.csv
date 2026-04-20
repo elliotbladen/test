@@ -1,0 +1,214 @@
+season,round,match_date,kickoff_time,home_team,away_team,venue,home_score,away_score,is_final,is_overtime
+2025,32,2025-10-05,19:30,Melbourne Storm,Brisbane Broncos,Accor Stadium,22,26,1,1
+2025,31,2025-09-28,16:05,Brisbane Broncos,Penrith Panthers,Suncorp Stadium,16,14,1,1
+2025,31,2025-09-26,19:50,Melbourne Storm,Cronulla-Sutherland Sharks,AAMI Park,22,14,1,1
+2025,30,2025-09-20,16:05,Canterbury-Bankstown Bulldogs,Penrith Panthers,Accor Stadium,26,46,1,1
+2025,30,2025-09-20,19:50,Canberra Raiders,Cronulla-Sutherland Sharks,GIO Stadium,12,32,1,1
+2025,29,2025-09-14,16:05,Canberra Raiders,Brisbane Broncos,GIO Stadium,28,29,1,1
+2025,29,2025-09-13,19:50,Cronulla-Sutherland Sharks,Sydney Roosters,Sharks Stadium,20,10,1,1
+2025,29,2025-09-13,18:05,New Zealand Warriors,Penrith Panthers,Go Media Stadium,8,24,1,1
+2025,29,2025-09-12,19:50,Melbourne Storm,Canterbury-Bankstown Bulldogs,AAMI Park,26,18,1,1
+2025,28,2025-09-07,16:05,Parramatta Eels,Newcastle Knights,CommBank Stadium,66,10,1,1
+2025,28,2025-09-07,14:00,Dolphins,Canberra Raiders,Kayo Stadium,62,24,1,1
+2025,28,2025-09-06,19:35,Canterbury-Bankstown Bulldogs,Cronulla-Sutherland Sharks,Accor Stadium,6,24,1,1
+2025,28,2025-09-06,17:30,Gold Coast Titans,Wests Tigers,Cbus Super Stadium,36,28,1,1
+2025,28,2025-09-06,15:00,St. George Illawarra Dragons,Penrith Panthers,WIN Stadium,20,40,1,1
+2025,28,2025-09-05,20:00,Sydney Roosters,South Sydney Rabbitohs,Allianz Stadium,36,6,1,1
+2025,28,2025-09-05,18:00,Manly-Warringah Sea Eagles,New Zealand Warriors,4 Pines Park,27,26,1,1
+2025,28,2025-09-04,19:50,Brisbane Broncos,Melbourne Storm,Suncorp Stadium,30,14,1,1
+2025,27,2025-08-31,16:05,Dolphins,Gold Coast Titans,Suncorp Stadium,36,30,1,1
+2025,27,2025-08-31,14:00,Cronulla-Sutherland Sharks,Newcastle Knights,Sharks Stadium,40,16,1,1
+2025,27,2025-08-30,19:35,North Queensland Cowboys,Brisbane Broncos,QCB Stadium,30,38,1,1
+2025,27,2025-08-30,17:30,St. George Illawarra Dragons,Manly-Warringah Sea Eagles,Jubilee Stadium,24,40,1,1
+2025,27,2025-08-30,15:00,Canberra Raiders,Wests Tigers,GIO Stadium,24,10,1,1
+2025,27,2025-08-29,20:00,Melbourne Storm,Sydney Roosters,AAMI Park,10,40,1,1
+2025,27,2025-08-29,18:00,New Zealand Warriors,Parramatta Eels,Go Media Stadium,22,26,1,1
+2025,27,2025-08-28,19:50,Canterbury-Bankstown Bulldogs,Penrith Panthers,Accor Stadium,28,4,1,1
+2025,26,2025-08-24,16:05,Wests Tigers,North Queensland Cowboys,Leichhardt Oval,28,34,1,1
+2025,26,2025-08-24,14:00,Newcastle Knights,Brisbane Broncos,McDonald Jones Stadium,12,46,1,1
+2025,26,2025-08-23,19:35,Parramatta Eels,Sydney Roosters,CommBank Stadium,30,10,1,1
+2025,26,2025-08-23,17:30,Gold Coast Titans,New Zealand Warriors,Cbus Super Stadium,18,32,1,1
+2025,26,2025-08-23,15:00,Manly-Warringah Sea Eagles,Dolphins,4 Pines Park,58,30,1,1
+2025,26,2025-08-22,20:00,Melbourne Storm,Canterbury-Bankstown Bulldogs,AAMI Park,20,14,1,1
+2025,26,2025-08-22,18:00,Penrith Panthers,Canberra Raiders,Glen Willow Regional Sports Stadium,16,20,1,1
+2025,26,2025-08-21,19:50,South Sydney Rabbitohs,St. George Illawarra Dragons,Accor Stadium,40,0,1,1
+2025,25,2025-08-17,16:05,North Queensland Cowboys,Newcastle Knights,QCB Stadium,38,4,1,1
+2025,25,2025-08-17,14:00,Wests Tigers,Manly-Warringah Sea Eagles,Allianz Stadium,26,12,1,1
+2025,25,2025-08-16,19:35,South Sydney Rabbitohs,Parramatta Eels,Allianz Stadium,20,16,1,1
+2025,25,2025-08-16,17:30,Brisbane Broncos,Dolphins,Suncorp Stadium,38,28,1,1
+2025,25,2025-08-16,15:00,Cronulla-Sutherland Sharks,Gold Coast Titans,Sharks Stadium,54,22,1,1
+2025,25,2025-08-15,20:00,Sydney Roosters,Canterbury-Bankstown Bulldogs,Allianz Stadium,32,12,1,1
+2025,25,2025-08-15,20:00,New Zealand Warriors,St. George Illawarra Dragons,Go Media Stadium,14,10,1,1
+2025,25,2025-08-14,19:50,Penrith Panthers,Melbourne Storm,CommBank Stadium,18,22,1,1
+2025,24,2025-08-10,16:05,Parramatta Eels,North Queensland Cowboys,CommBank Stadium,19,18,1,1
+2025,24,2025-08-10,14:00,Gold Coast Titans,South Sydney Rabbitohs,Cbus Super Stadium,18,20,1,1
+2025,24,2025-08-09,19:35,Canterbury-Bankstown Bulldogs,New Zealand Warriors,Accor Stadium,32,14,1,1
+2025,24,2025-08-09,17:30,Dolphins,Sydney Roosters,Suncorp Stadium,12,64,1,1
+2025,24,2025-08-09,15:00,St. George Illawarra Dragons,Cronulla-Sutherland Sharks,Jubilee Stadium,22,14,1,1
+2025,24,2025-08-08,20:00,Canberra Raiders,Manly-Warringah Sea Eagles,GIO Stadium,28,12,1,1
+2025,24,2025-08-08,18:00,Newcastle Knights,Penrith Panthers,McDonald Jones Stadium,12,48,1,1
+2025,24,2025-08-07,19:50,Melbourne Storm,Brisbane Broncos,AAMI Park,22,2,1,1
+2025,23,2025-08-03,16:05,Cronulla-Sutherland Sharks,North Queensland Cowboys,Sharks Stadium,32,12,1,1
+2025,23,2025-08-03,14:00,Wests Tigers,Canterbury-Bankstown Bulldogs,CommBank Stadium,28,14,1,1
+2025,23,2025-08-02,19:35,Manly-Warringah Sea Eagles,Sydney Roosters,4 Pines Park,4,20,1,1
+2025,23,2025-08-02,17:30,St. George Illawarra Dragons,Canberra Raiders,WIN Stadium,18,12,1,1
+2025,23,2025-08-02,15:00,Gold Coast Titans,Penrith Panthers,Cbus Super Stadium,26,30,1,1
+2025,23,2025-08-01,20:00,Brisbane Broncos,South Sydney Rabbitohs,Suncorp Stadium,60,14,1,1
+2025,23,2025-08-01,20:00,New Zealand Warriors,Dolphins,Go Media Stadium,18,20,1,1
+2025,23,2025-07-31,19:50,Parramatta Eels,Melbourne Storm,CommBank Stadium,10,16,1,1
+2025,22,2025-07-27,16:05,Canterbury-Bankstown Bulldogs,Manly-Warringah Sea Eagles,Allianz Stadium,42,4,1,1
+2025,22,2025-07-27,14:00,Canberra Raiders,Newcastle Knights,GIO Stadium,44,18,1,1
+2025,22,2025-07-26,19:35,South Sydney Rabbitohs,Cronulla-Sutherland Sharks,Polytec Stadium,12,14,1,1
+2025,22,2025-07-26,17:30,Penrith Panthers,Wests Tigers,CommBank Stadium,36,2,1,1
+2025,22,2025-07-26,17:00,New Zealand Warriors,Gold Coast Titans,Go Media Stadium,16,24,1,1
+2025,22,2025-07-25,20:00,Brisbane Broncos,Parramatta Eels,Suncorp Stadium,20,22,1,1
+2025,22,2025-07-25,18:00,North Queensland Cowboys,St. George Illawarra Dragons,QCB Stadium,38,32,1,1
+2025,22,2025-07-24,19:50,Sydney Roosters,Melbourne Storm,Allianz Stadium,30,34,1,1
+2025,21,2025-07-20,16:05,Newcastle Knights,New Zealand Warriors,McDonald Jones Stadium,15,20,1,1
+2025,21,2025-07-20,14:00,Wests Tigers,Gold Coast Titans,Leichhardt Oval,21,20,1,1
+2025,21,2025-07-19,19:35,Melbourne Storm,Manly-Warringah Sea Eagles,AAMI Park,16,18,1,1
+2025,21,2025-07-19,17:30,Canterbury-Bankstown Bulldogs,St. George Illawarra Dragons,Accor Stadium,20,18,1,1
+2025,21,2025-07-19,15:00,Canberra Raiders,Parramatta Eels,GIO Stadium,40,16,1,1
+2025,21,2025-07-18,20:00,Penrith Panthers,South Sydney Rabbitohs,CommBank Stadium,30,10,1,1
+2025,21,2025-07-18,18:00,Cronulla-Sutherland Sharks,Sydney Roosters,Sharks Stadium,31,18,1,1
+2025,21,2025-07-17,19:50,Dolphins,North Queensland Cowboys,Suncorp Stadium,43,24,1,1
+2025,20,2025-07-13,18:15,Gold Coast Titans,Brisbane Broncos,Cbus Super Stadium,14,26,1,1
+2025,20,2025-07-13,16:05,Parramatta Eels,Penrith Panthers,CommBank Stadium,10,32,1,1
+2025,20,2025-07-13,16:00,New Zealand Warriors,Wests Tigers,Go Media Stadium,34,14,1,1
+2025,20,2025-07-12,19:35,North Queensland Cowboys,Canterbury-Bankstown Bulldogs,QCB Stadium,8,12,1,1
+2025,20,2025-07-12,17:30,St. George Illawarra Dragons,Sydney Roosters,Jubilee Stadium,24,31,1,1
+2025,20,2025-07-12,15:00,Newcastle Knights,Melbourne Storm,McDonald Jones Stadium,14,32,1,1
+2025,20,2025-07-11,20:00,Cronulla-Sutherland Sharks,Dolphins,Sharks Stadium,24,12,1,1
+2025,19,2025-07-06,16:05,Manly-Warringah Sea Eagles,South Sydney Rabbitohs,4 Pines Park,30,12,1,1
+2025,19,2025-07-06,14:00,Sydney Roosters,Wests Tigers,Allianz Stadium,28,30,1,1
+2025,19,2025-07-05,19:35,North Queensland Cowboys,Melbourne Storm,QCB Stadium,20,26,1,1
+2025,19,2025-07-05,17:30,Canberra Raiders,St. George Illawarra Dragons,GIO Stadium,28,24,1,1
+2025,19,2025-07-04,20:00,Canterbury-Bankstown Bulldogs,Brisbane Broncos,Accor Stadium,18,22,1,1
+2025,18,2025-06-29,16:05,Gold Coast Titans,North Queensland Cowboys,Cbus Super Stadium,24,30,1,1
+2025,18,2025-06-29,14:00,Melbourne Storm,Cronulla-Sutherland Sharks,AAMI Park,30,6,1,1
+2025,18,2025-06-28,19:50,Dolphins,South Sydney Rabbitohs,Suncorp Stadium,50,28,1,1
+2025,18,2025-06-28,17:30,St. George Illawarra Dragons,Parramatta Eels,WIN Stadium,34,20,1,1
+2025,18,2025-06-28,15:00,Brisbane Broncos,New Zealand Warriors,Suncorp Stadium,26,12,1,1
+2025,18,2025-06-27,20:00,Newcastle Knights,Canberra Raiders,McDonald Jones Stadium,18,22,1,1
+2025,18,2025-06-27,18:00,Manly-Warringah Sea Eagles,Wests Tigers,4 Pines Park,28,10,1,1
+2025,18,2025-06-26,19:50,Penrith Panthers,Canterbury-Bankstown Bulldogs,CommBank Stadium,8,6,1,1
+2025,17,2025-06-22,18:15,Parramatta Eels,Gold Coast Titans,CommBank Stadium,36,20,1,1
+2025,17,2025-06-22,16:05,Sydney Roosters,North Queensland Cowboys,Allianz Stadium,42,8,1,1
+2025,17,2025-06-22,14:00,Brisbane Broncos,Cronulla-Sutherland Sharks,Suncorp Stadium,34,28,1,1
+2025,17,2025-06-21,19:35,South Sydney Rabbitohs,Melbourne Storm,Accor Stadium,24,25,1,1
+2025,17,2025-06-21,15:30,Dolphins,Newcastle Knights,HBF Park,20,26,1,1
+2025,17,2025-06-21,15:00,New Zealand Warriors,Penrith Panthers,Go Media Stadium,18,28,1,1
+2025,17,2025-06-20,20:00,Wests Tigers,Canberra Raiders,Campbelltown Stadium,12,16,1,1
+2025,16,2025-06-15,16:05,South Sydney Rabbitohs,Canterbury-Bankstown Bulldogs,Accor Stadium,18,24,1,1
+2025,16,2025-06-14,19:35,North Queensland Cowboys,Dolphins,QCB Stadium,4,58,1,1
+2025,16,2025-06-14,17:30,Newcastle Knights,Sydney Roosters,McDonald Jones Stadium,8,12,1,1
+2025,16,2025-06-13,20:00,Gold Coast Titans,Manly-Warringah Sea Eagles,Cbus Super Stadium,28,8,1,1
+2025,16,2025-06-12,19:50,Cronulla-Sutherland Sharks,St. George Illawarra Dragons,Sharks Stadium,30,18,1,1
+2025,16,2025-06-09,16:00,Canterbury-Bankstown Bulldogs,Parramatta Eels,Accor Stadium,30,12,1,1
+2025,15,2025-06-08,16:05,Wests Tigers,Penrith Panthers,CommBank Stadium,14,18,1,1
+2025,15,2025-06-08,14:00,Canberra Raiders,South Sydney Rabbitohs,GIO Stadium,36,12,1,1
+2025,15,2025-06-07,19:35,Brisbane Broncos,Gold Coast Titans,Suncorp Stadium,44,14,1,1
+2025,15,2025-06-07,17:30,Cronulla-Sutherland Sharks,New Zealand Warriors,Sharks Stadium,10,40,1,1
+2025,15,2025-06-06,20:00,Dolphins,St. George Illawarra Dragons,Suncorp Stadium,56,6,1,1
+2025,15,2025-06-06,18:00,Melbourne Storm,North Queensland Cowboys,AAMI Park,38,14,1,1
+2025,15,2025-06-05,19:50,Newcastle Knights,Manly-Warringah Sea Eagles,McDonald Jones Stadium,26,22,1,1
+2025,14,2025-06-01,18:15,Sydney Roosters,Canberra Raiders,Allianz Stadium,24,26,1,1
+2025,14,2025-06-01,16:05,Penrith Panthers,Parramatta Eels,CommBank Stadium,18,10,1,1
+2025,14,2025-06-01,14:00,South Sydney Rabbitohs,New Zealand Warriors,Accor Stadium,30,36,1,1
+2025,14,2025-05-31,19:35,Manly-Warringah Sea Eagles,Brisbane Broncos,4 Pines Park,34,6,1,1
+2025,14,2025-05-31,17:30,North Queensland Cowboys,Wests Tigers,QCB Stadium,32,28,1,1
+2025,14,2025-05-31,15:00,Gold Coast Titans,Melbourne Storm,Cbus Super Stadium,16,28,1,1
+2025,14,2025-05-30,20:00,St. George Illawarra Dragons,Newcastle Knights,Jubilee Stadium,20,6,1,1
+2025,13,2025-05-25,18:05,New Zealand Warriors,Canberra Raiders,Go Media Stadium,10,16,1,1
+2025,13,2025-05-24,19:35,Sydney Roosters,Cronulla-Sutherland Sharks,Polytec Stadium,42,16,1,1
+2025,13,2025-05-24,17:30,Penrith Panthers,Newcastle Knights,Carrington Park,6,25,1,1
+2025,13,2025-05-23,20:00,Parramatta Eels,Manly-Warringah Sea Eagles,CommBank Stadium,30,10,1,1
+2025,13,2025-05-22,19:50,Canterbury-Bankstown Bulldogs,Dolphins,Accor Stadium,8,44,1,1
+2025,12,2025-05-18,18:15,Wests Tigers,South Sydney Rabbitohs,Campbelltown Stadium,12,22,1,1
+2025,12,2025-05-18,16:05,Canberra Raiders,Gold Coast Titans,GIO Stadium,40,24,1,1
+2025,12,2025-05-18,14:00,Brisbane Broncos,St. George Illawarra Dragons,Suncorp Stadium,26,30,1,1
+2025,12,2025-05-17,19:35,Cronulla-Sutherland Sharks,Melbourne Storm,Sharks Stadium,31,26,1,1
+2025,12,2025-05-17,17:30,North Queensland Cowboys,Manly-Warringah Sea Eagles,QCB Stadium,6,24,1,1
+2025,12,2025-05-17,15:00,Dolphins,New Zealand Warriors,Suncorp Stadium,12,16,1,1
+2025,12,2025-05-16,20:00,Canterbury-Bankstown Bulldogs,Sydney Roosters,Accor Stadium,24,20,1,1
+2025,12,2025-05-16,18:00,Newcastle Knights,Parramatta Eels,McDonald Jones Stadium,6,28,1,1
+2025,11,2025-05-11,16:05,Manly-Warringah Sea Eagles,Cronulla-Sutherland Sharks,4 Pines Park,14,30,1,1
+2025,11,2025-05-11,14:00,Melbourne Storm,Wests Tigers,AAMI Park,64,0,1,1
+2025,11,2025-05-10,19:35,North Queensland Cowboys,Penrith Panthers,QCB Stadium,30,30,1,1
+2025,11,2025-05-10,17:30,St. George Illawarra Dragons,New Zealand Warriors,WIN Stadium,14,15,1,1
+2025,11,2025-05-10,15:00,Canberra Raiders,Canterbury-Bankstown Bulldogs,GIO Stadium,20,32,1,1
+2025,11,2025-05-09,20:00,South Sydney Rabbitohs,Brisbane Broncos,Accor Stadium,22,14,1,1
+2025,11,2025-05-09,18:00,Newcastle Knights,Gold Coast Titans,McDonald Jones Stadium,20,24,1,1
+2025,11,2025-05-08,19:50,Parramatta Eels,Dolphins,CommBank Stadium,16,20,1,1
+2025,10,2025-05-04,18:25,Melbourne Storm,Canberra Raiders,Suncorp Stadium,18,20,1,1
+2025,10,2025-05-04,16:05,Penrith Panthers,Brisbane Broncos,Suncorp Stadium,32,8,1,1
+2025,10,2025-05-04,13:50,Gold Coast Titans,Canterbury-Bankstown Bulldogs,Suncorp Stadium,18,38,1,1
+2025,10,2025-05-03,19:45,Wests Tigers,St. George Illawarra Dragons,Suncorp Stadium,34,28,1,1
+2025,10,2025-05-03,17:30,New Zealand Warriors,North Queensland Cowboys,Suncorp Stadium,30,26,1,1
+2025,10,2025-05-03,15:00,South Sydney Rabbitohs,Newcastle Knights,Suncorp Stadium,4,30,1,1
+2025,10,2025-05-02,20:05,Sydney Roosters,Dolphins,Suncorp Stadium,36,26,1,1
+2025,10,2025-05-02,18:00,Cronulla-Sutherland Sharks,Parramatta Eels,Suncorp Stadium,28,18,1,1
+2025,9,2025-04-27,16:05,Wests Tigers,Cronulla-Sutherland Sharks,Leichhardt Oval,20,18,1,1
+2025,9,2025-04-27,14:00,Canberra Raiders,Dolphins,GIO Stadium,40,28,1,1
+2025,9,2025-04-26,19:35,Penrith Panthers,Manly-Warringah Sea Eagles,CommBank Stadium,10,26,1,1
+2025,9,2025-04-26,17:30,North Queensland Cowboys,Gold Coast Titans,QCB Stadium,50,18,1,1
+2025,9,2025-04-25,20:00,Melbourne Storm,South Sydney Rabbitohs,AAMI Park,24,16,1,1
+2025,9,2025-04-25,20:00,New Zealand Warriors,Newcastle Knights,Apollo Projects Stadium,26,12,1,1
+2025,9,2025-04-25,16:00,Sydney Roosters,St. George Illawarra Dragons,Allianz Stadium,46,18,1,1
+2025,9,2025-04-24,19:50,Brisbane Broncos,Canterbury-Bankstown Bulldogs,Suncorp Stadium,42,18,1,1
+2025,9,2025-04-21,16:00,Wests Tigers,Parramatta Eels,CommBank Stadium,22,38,1,1
+2025,8,2025-04-20,16:05,Newcastle Knights,Cronulla-Sutherland Sharks,McDonald Jones Stadium,14,34,1,1
+2025,8,2025-04-20,14:00,Gold Coast Titans,Canberra Raiders,Cbus Super Stadium,20,30,1,1
+2025,8,2025-04-19,19:35,Sydney Roosters,Penrith Panthers,Allianz Stadium,12,40,1,1
+2025,8,2025-04-19,19:30,New Zealand Warriors,Brisbane Broncos,Go Media Stadium,20,18,1,1
+2025,8,2025-04-18,20:00,Dolphins,Melbourne Storm,Suncorp Stadium,42,22,1,1
+2025,8,2025-04-18,16:05,Canterbury-Bankstown Bulldogs,South Sydney Rabbitohs,Accor Stadium,32,0,1,1
+2025,8,2025-04-17,19:50,Manly-Warringah Sea Eagles,St. George Illawarra Dragons,4 Pines Park,18,20,1,1
+2025,7,2025-04-13,16:05,Newcastle Knights,Wests Tigers,McDonald Jones Stadium,4,20,1,1
+2025,7,2025-04-13,14:00,Melbourne Storm,New Zealand Warriors,AAMI Park,42,14,1,1
+2025,7,2025-04-12,19:05,Parramatta Eels,Canberra Raiders,TIO Stadium,12,50,1,1
+2025,7,2025-04-12,15:30,South Sydney Rabbitohs,North Queensland Cowboys,Optus Stadium,16,24,1,1
+2025,7,2025-04-12,13:00,Cronulla-Sutherland Sharks,Manly-Warringah Sea Eagles,Optus Stadium,24,18,1,1
+2025,7,2025-04-11,20:00,Brisbane Broncos,Sydney Roosters,Suncorp Stadium,16,26,1,1
+2025,7,2025-04-11,18:00,St. George Illawarra Dragons,Gold Coast Titans,WIN Stadium,38,16,1,1
+2025,7,2025-04-10,19:50,Dolphins,Penrith Panthers,Suncorp Stadium,30,12,1,1
+2025,6,2025-04-06,18:15,Canterbury-Bankstown Bulldogs,Newcastle Knights,Accor Stadium,20,0,1,1
+2025,6,2025-04-06,16:05,Manly-Warringah Sea Eagles,Melbourne Storm,4 Pines Park,24,48,1,1
+2025,6,2025-04-05,18:35,Brisbane Broncos,Wests Tigers,Suncorp Stadium,46,24,1,1
+2025,6,2025-04-05,16:30,Gold Coast Titans,Dolphins,Cbus Super Stadium,10,36,1,1
+2025,6,2025-04-05,15:00,Parramatta Eels,St. George Illawarra Dragons,CommBank Stadium,23,22,1,1
+2025,6,2025-04-04,20:00,South Sydney Rabbitohs,Sydney Roosters,Accor Stadium,20,14,1,1
+2025,6,2025-04-04,18:00,Penrith Panthers,North Queensland Cowboys,CommBank Stadium,18,22,1,1
+2025,6,2025-04-03,20:00,Canberra Raiders,Cronulla-Sutherland Sharks,GIO Stadium,24,20,1,1
+2025,5,2025-03-30,18:15,Wests Tigers,New Zealand Warriors,Campbelltown Stadium,24,26,1,1
+2025,5,2025-03-30,16:05,Manly-Warringah Sea Eagles,Parramatta Eels,4 Pines Park,26,12,1,1
+2025,5,2025-03-29,19:35,Cronulla-Sutherland Sharks,Canterbury-Bankstown Bulldogs,Sharks Stadium,6,20,1,1
+2025,5,2025-03-29,16:30,North Queensland Cowboys,Canberra Raiders,QCB Stadium,30,20,1,1
+2025,5,2025-03-29,15:00,St. George Illawarra Dragons,Melbourne Storm,Jubilee Stadium,14,8,1,1
+2025,5,2025-03-28,19:00,Dolphins,Brisbane Broncos,Suncorp Stadium,12,20,1,1
+2025,5,2025-03-28,18:00,Sydney Roosters,Gold Coast Titans,Allianz Stadium,12,30,1,1
+2025,5,2025-03-27,20:00,South Sydney Rabbitohs,Penrith Panthers,Accor Stadium,28,18,1,1
+2025,4,2025-03-23,18:15,Manly-Warringah Sea Eagles,Canberra Raiders,4 Pines Park,40,12,1,1
+2025,4,2025-03-23,16:05,Parramatta Eels,Canterbury-Bankstown Bulldogs,CommBank Stadium,8,16,1,1
+2025,4,2025-03-22,18:35,Gold Coast Titans,Newcastle Knights,Cbus Super Stadium,26,6,1,1
+2025,4,2025-03-22,16:30,Dolphins,Wests Tigers,Kayo Stadium,18,30,1,1
+2025,4,2025-03-22,15:00,Cronulla-Sutherland Sharks,South Sydney Rabbitohs,Sharks Stadium,27,12,1,1
+2025,4,2025-03-21,19:00,Brisbane Broncos,North Queensland Cowboys,Suncorp Stadium,26,16,1,1
+2025,4,2025-03-21,20:00,New Zealand Warriors,Sydney Roosters,Go Media Stadium,14,6,1,1
+2025,4,2025-03-20,20:00,Melbourne Storm,Penrith Panthers,AAMI Park,30,24,1,1
+2025,3,2025-03-16,18:15,Canterbury-Bankstown Bulldogs,Gold Coast Titans,Belmore Sports Ground,40,24,1,1
+2025,3,2025-03-16,16:05,Parramatta Eels,Wests Tigers,CommBank Stadium,6,32,1,1
+2025,3,2025-03-15,19:35,Canberra Raiders,Brisbane Broncos,GIO Stadium,32,22,1,1
+2025,3,2025-03-15,16:30,North Queensland Cowboys,Cronulla-Sutherland Sharks,QCB Stadium,12,36,1,1
+2025,3,2025-03-15,15:00,St. George Illawarra Dragons,South Sydney Rabbitohs,WIN Stadium,24,25,1,1
+2025,3,2025-03-14,20:00,Penrith Panthers,Sydney Roosters,CommBank Stadium,32,38,1,1
+2025,3,2025-03-14,20:00,New Zealand Warriors,Manly-Warringah Sea Eagles,Go Media Stadium,36,16,1,1
+2025,3,2025-03-13,20:00,Newcastle Knights,Dolphins,McDonald Jones Stadium,26,12,1,1
+2025,2,2025-03-09,16:05,Melbourne Storm,Parramatta Eels,AAMI Park,56,18,1,1
+2025,2,2025-03-08,19:35,Manly-Warringah Sea Eagles,North Queensland Cowboys,4 Pines Park,42,12,1,1
+2025,2,2025-03-08,17:30,St. George Illawarra Dragons,Canterbury-Bankstown Bulldogs,Jubilee Stadium,20,28,1,1
+2025,2,2025-03-07,20:05,South Sydney Rabbitohs,Dolphins,CommBank Stadium,16,14,1,1
+2025,2,2025-03-07,18:00,Wests Tigers,Newcastle Knights,Campbelltown Stadium,8,10,1,1
+2025,2,2025-03-06,20:00,Sydney Roosters,Brisbane Broncos,Allianz Stadium,14,50,1,1
+2025,1,2025-03-02,20:30,Penrith Panthers,Cronulla-Sutherland Sharks,Allegiant Stadium,28,22,1,1
+2025,1,2025-03-02,16:00,Canberra Raiders,New Zealand Warriors,Allegiant Stadium,30,8,1,1

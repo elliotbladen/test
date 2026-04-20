@@ -1,0 +1,9 @@
+season,model_round,wiki_round,date,home_team,away_team,actual_home_score,actual_away_score,actual_margin,actual_total,golden_point,model_margin,margin_error,margin_correct,model_total,total_error,total_ou,fair_home_odds,fair_away_odds,referee,notes
+2026,8,7,2026-04-16,North Queensland Cowboys,Manly-Warringah Sea Eagles,6,38,-32,44,0,+5.9,37.9,0,51.3,7.3,UNDER,1.452,3.211,Gerard Sutton,Model called Cowboys home win by 6 — Manly blew them out by 32. Biggest miss of round.
+2026,8,7,2026-04-17,Canberra Raiders,Melbourne Storm,26,22,+4,48,0,+2.0,2.0,1,54.0,6.0,UNDER,1.766,2.305,Peter Gough,Called Raiders upset correctly. Margin within 2 pts.
+2026,8,7,2026-04-17,Dolphins,Penrith Panthers,22,23,-1,45,1,-5.4,4.4,1,47.9,2.9,UNDER,3.036,1.491,Adam Gee,Panthers won golden point — model had Panthers but by 5. Direction correct.
+2026,8,7,2026-04-18,New Zealand Warriors,Gold Coast Titans,28,20,+8,48,0,+15.0,7.0,1,43.8,4.2,OVER,1.118,9.465,Wyatt Raymond,Warriors won as expected. Model overestimated margin by 7.
+2026,8,7,2026-04-18,South Sydney Rabbitohs,St. George Illawarra Dragons,30,12,+18,42,0,+7.5,10.5,1,41.0,1.0,OVER,1.357,3.799,Ziggy Przeklasa-Adamski,Direction correct. Rabbitohs won bigger than model expected. Total almost exact — 42 vs 41.
+2026,8,7,2026-04-18,Wests Tigers,Brisbane Broncos,20,21,-1,41,0,+1.4,2.4,0,44.7,3.7,UNDER,1.830,2.205,Todd Smith,Model had Tigers by 1.4 — Broncos won by 1. Coin flip went wrong way.
+2026,8,7,2026-04-19,Sydney Roosters,Newcastle Knights,38,24,+14,62,0,+13.1,0.9,1,48.7,13.3,OVER,1.159,7.273,Ashley Klein,Best call of round on margin. Roosters by 13.1 — actual 14. Total badly undercooked — 62 scored vs 48.7 model.
+2026,8,7,2026-04-19,Parramatta Eels,Canterbury-Bankstown Bulldogs,38,20,+18,58,0,-6.1,24.1,0,42.2,15.8,OVER,3.272,1.440,Liam Kennedy,Biggest model error on both margin and total. Had Bulldogs away win — Eels dominated. T2 style flag had fired as a warning.

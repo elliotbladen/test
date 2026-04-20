@@ -1,0 +1,13 @@
+# kelly.yaml
+# Kelly staking configuration for V1.
+
+kelly:
+  fraction: 0.25  # Quarter Kelly in Year 1
+
+stake_caps:
+  minimum_actionable_pct: 0.0025   # 0.25% of bankroll — below this, pass/watch
+  soft_review_threshold_pct: 0.015  # 1.50% of bankroll — flag for review
+  hard_cap_pct: 0.02                # 2.00% of bankroll — hard maximum
+
+bankroll:
+  starting_bankroll: 10000.0  # Starting bankroll amount in base currency

@@ -1,0 +1,660 @@
+# tiers.yaml
+# Tier adjustment configuration and toggles.
+# Each tier can be enabled or disabled independently.
+# Adjustment bounds prevent any single tier from dominating.
+
+tier1_baseline:
+  enabled: true
+
+  # --- Scoring environment ---
+  # Average total points per NRL game across the full season.
+  # league_avg_per_team = league_avg_total / 2 (each team's starting baseline).
+  # Recalibrate each season; recent NRL seasons have averaged around 44-50.
+  league_avg_total: 47.0
+
+  # --- Home advantage ---
+  # Baseline structural home ground advantage, expressed in expected points.
+  # Applied to the home team's expected score only (not subtracted from away).
+  # Separate from venue-specific fortress effects (handled in Tier 4).
+  # Calibrate from historical results; typical range 2.5–5.0 for NRL.
+  home_advantage_points: 3.5
+
+  # --- Recent form ---
+  # Number of recent games used when computing form from actual results.
+  # If last_n_results are not passed to compute_baseline(), the stored
+  # recent_form_rating field is used as a fallback instead.
+  recent_form_games: 5
+
+  # If true, the most recent game is weighted highest (linear decay).
+  # If false (default), all N games are equally weighted.
+  # V1 default: false — simpler, easier to inspect and explain.
+  form_recency_weighted: false
+
+  # Maximum expected-points delta from the form factor, in points.
+  # form_delta = clamp(form_score, -1.0, 1.0) * form_weight_points
+  # With form_weight_points = 2.5:
+  #   perfect recent form (+1.0) → +2.5 expected points
+  #   neutral form (0.0)         →  0.0
+  #   poor recent form (-1.0)    → -2.5 expected points
+  # Keep this conservative in V1. Situational adjustments are in Tier 3.
+  form_weight_points: 2.5
+
+  # --- Win probability model ---
+  # Standard deviation of the NRL margin distribution, used to convert
+  # expected margin to a home win probability via a normal distribution:
+  #   P(home wins) = Φ(expected_margin / margin_std_dev)
+  # A higher value = more uncertainty = odds closer to evens.
+  # Calibrate from std_dev of (actual_margin - predicted_margin) historically.
+  # Reasonable starting range for NRL: 10.0–14.0.
+  margin_std_dev: 12.0
+
+  # --- ELO blending ---
+  # ELO provides an independent strength signal, especially useful when
+  # attack/defence stats are thin (early season, new teams).
+  #
+  # elo_weight: blend weight for ELO-derived margin vs ratings-derived margin.
+  #   0.0 = pure attack/defence ratings
+  #   1.0 = pure ELO
+  #   0.3 = 30% ELO, 70% ratings (V1 default — conservative ELO influence)
+  elo_weight: 0.3
+
+  # points_per_elo_point: how many expected margin points per 1-point ELO gap.
+  # Example: 100-point ELO gap → 8.0 points expected margin (before home advantage).
+  # Calibrate from historical data.
+  # CALIBRATION NOTE (2026-04-05): raised 0.07 → 0.08 to widen T1 board toward market.
+  # 100-pt gap → 8.0 pts (excl HA); 86-pt gap → 6.9 pts; 143-pt gap → 11.4 pts.
+  points_per_elo_point: 0.08
+
+  # --- ELO gap dampening (high-end) ---
+  # Very large ELO gaps (>150 pts) can produce unrealistic spreads.
+  # The excess portion above the threshold is scaled down by dampener_factor.
+  #
+  # effective_diff = threshold + (diff - threshold) × dampener_factor
+  #
+  # Example with threshold=150, factor=0.75:
+  #   diff=200 → effective = 150 + 50×0.75 = 187.5 pts → 15.0 pts margin (vs raw 16.0)
+  #   diff=270 → effective = 150 + 120×0.75 = 240 pts  → 19.2 pts margin (vs raw 21.6)
+  #
+  # Set dampener_factor=1.0 to disable.
+  elo_gap_dampener_threshold: 150
+  elo_gap_dampener_factor: 0.75
+
+  # default_elo: ELO rating assigned to teams with no rating on record.
+  # All teams start at this value; it drifts based on results over time.
+  default_elo: 1500.0
+
+  # --- Team-specific home advantage ---
+  # Minimum games played before the team-specific home advantage is fully trusted.
+  # Below this, the result is blended toward the league average home advantage.
+  # Using total games_played as a proxy for home game count (approximately half).
+  #
+  # CALIBRATION NOTE (2026-04-05):
+  # Increased from 4 → 14 after audit showed 3-game samples producing HA of +6.5 pts.
+  # At 3gp: data_weight = 3/14 = 0.21  (was 3/4 = 0.75)
+  # At 7gp: data_weight = 7/14 = 0.50
+  # At 14gp (full season half): data_weight = 1.00
+  # This keeps the model anchored near league HA for the first ~7 rounds.
+  min_games_for_home_advantage: 14
+
+  # Hard cap on how far a team's home advantage can deviate from the league average.
+  # Prevents outlier data from producing extreme values.
+  # A team's home advantage is bounded within:
+  #   [home_advantage_points - team_ha_max_delta, home_advantage_points + team_ha_max_delta]
+  #
+  # CALIBRATION NOTE (2026-04-05):
+  # Reduced from 4.0 → 2.0 after audit. With league HA = 3.5:
+  #   Old range: [-0.5, +7.5]  — allowed near-zero or extreme fortress effects
+  #   New range: [+1.5, +5.5]  — all teams retain meaningful home advantage
+  # Even a genuine fortress should not exceed +5.5 on early-season data.
+  team_ha_max_delta: 2.0
+
+  # --- Prior-season attack/defence priors ---
+  # When current-season games are limited, regress toward last season's
+  # PF/PA.  Elite teams (Penrith, Storm) carry their strength forward;
+  # weak teams carry their weakness.
+  #
+  # prior_season_weight: regression factor applied to prior PF/PA.
+  #   1.0 = use prior at full face value (too strong)
+  #   0.0 = no prior (equivalent to old shrink-toward-zero)
+  #   0.70 = 70% of prior signal
+  #
+  # The prior is blended with current-season ratings using the same
+  # pfpa_shrink factor:
+  #   blended = current * shrink + (prior * prior_season_weight) * (1 - shrink)
+  #
+  # CALIBRATION NOTE (2026-04-05): raised 0.60 → 0.70.
+  # Better early-season carry-over; elite teams (Penrith, Storm) earn more
+  # PF/PA credit from their 2025 season before R8 shrink reaches 1.0.
+  prior_season_weight: 0.70
+
+  # --- Dynamic ELO weight ---
+  # ELO anchors heavily early season; PF/PA earns influence as games
+  # accumulate.
+  #
+  # pfpa_max_weight: maximum PF/PA blend share at full games played.
+  #   dynamic_elo_weight = 1.0 - pfpa_max_weight * avg_match_shrink
+  #   At 0 gp:             elo_weight = 1.00  (pure ELO)
+  #   At pfpa_shrink_full_games gp: elo_weight = 1.0 - pfpa_max_weight
+  #
+  # Set pfpa_max_weight = 0.70 so long-run elo_weight = 0.30,
+  # matching the original static elo_weight: 0.3 config value.
+  pfpa_max_weight: 0.70
+
+  # --- PF/PA early-season shrinkage ---
+  # Attack and defence ratings from 2–3 games are highly volatile.
+  # This shrink factor scales each team's PF/PA contribution toward zero
+  # when sample size is small, so ELO anchors the model early season.
+  #
+  # shrink(team) = min(1.0, games_played / pfpa_shrink_full_games)
+  # Each team's shrink is applied independently using their own games_played.
+  #
+  # At pfpa_shrink_full_games games: full PF/PA weight restored.
+  # At 0 games: PF/PA contribution = 0 (pure ELO + home edge).
+  #
+  # CALIBRATION NOTE (2026-04-05): originally set to 8.
+  # CALIBRATION NOTE (2026-04-09): raised 8 → 10.
+  # At 4 games: current-season weight was 50% (too aggressive).
+  # At 4 games with 10: current-season weight = 40%, giving prior more influence.
+  # Full trust not reached until ~rounds 10–11 of play.
+  pfpa_shrink_full_games: 10
+
+  # --- Pythagorean floor / ceiling guard ---
+  # Prevents a small sample of early-season results from producing a blended
+  # Pythagorean rating that is wildly inconsistent with 2025 prior quality.
+  #
+  # Both floor and ceiling are anchored to the team's raw 2025 prior
+  # Pythagorean win percentage (not regressed by prior_season_weight).
+  #
+  # While a team has fewer than pyth_floor_ceiling_gp_threshold games played:
+  #   blended_pyth_win_pct >= prior_2025_pyth_win_pct - pyth_floor_ceiling_max_deviation
+  #   blended_pyth_win_pct <= prior_2025_pyth_win_pct + pyth_floor_ceiling_max_deviation
+  #
+  # After pyth_floor_ceiling_gp_threshold games, guard is removed entirely.
+  # Teams with no 2025 prior are anchored to 0.500 (league average).
+  pyth_floor_ceiling_max_deviation: 0.25
+  pyth_floor_ceiling_gp_threshold: 8
+
+  # --- Season-long quality ---
+  # When wins/losses/win_pct are available, season quality is driven primarily
+  # by win record with scoring differential as a secondary corrective signal.
+  #
+  # season_quality_scale: (win_pct - 0.5) * scale → quality in expected-points units.
+  #   Example: win_pct=1.00 → +12.0 pts quality; win_pct=0.00 → -12.0 pts quality.
+  #   Calibrate so the full range is comparable to typical scoring differentials.
+  season_quality_scale: 24.0
+
+  # season_quality_correction_weight: how much scoring differential nudges
+  # the win-based quality signal. 0.0 = pure wins, 1.0 = pure scoring diff.
+  # Keep low — wins are the primary signal; scoring corrects misleading records.
+  season_quality_correction_weight: 0.2
+
+  # Within the primary signal, split between win record and ladder position.
+  # Both must be available for ladder to influence quality; if ladder_position
+  # is NULL, the full primary weight falls on win record alone.
+  # season_quality_win_weight + season_quality_ladder_weight should sum to 1.0.
+  season_quality_win_weight: 0.6
+  season_quality_ladder_weight: 0.4
+
+  # Number of teams in the competition. Used to normalise ladder_position to [-1, +1].
+  # Position 1 (top) → +1.0; position num_teams (bottom) → -1.0.
+  season_quality_num_teams: 16
+
+  # --- Attack / defence recency blend ---
+  # attack_season_weight: share of the season-long scoring average in attack_rating.
+  # The remaining share comes from the recent-games average (same window as form).
+  # 0.7 = 70% season, 30% recent (season dominates but recent scoring matters).
+  # Falls back to season-only if no recent results are passed.
+  attack_season_weight: 0.7
+
+  # defence_season_weight: same pattern for points conceded.
+  defence_season_weight: 0.7
+
+  # --- Defence-over-attack lean ---
+  # When both attack and defence signals are active, defence is trusted slightly
+  # more than attack. Applied as a multiplier on the effective defence rating:
+  #   effective_defence = defence_rating * (1 + defence_attack_bias)
+  # 0.05 = 5% extra weight on defence. Set to 0.0 to disable.
+  defence_attack_bias: 0.05
+
+  # --- Pythagorean Expectation ---
+  # Replaces raw PF/PA attack/defence ratings as the team quality signal.
+  # Formula: pf^exp / (pf^exp + pa^exp), then scaled to margin-point units.
+  #
+  # pythagorean_exponent: NRL-calibrated exponent (research consensus = 1.9)
+  # pythagorean_scale: converts (pyth_win_pct - 0.5) to expected margin pts.
+  #   At scale=50: a team at 0.600 pyth → +5.0 pts quality contribution.
+  #   At scale=50: a team at 0.400 pyth → -5.0 pts quality contribution.
+  #   Calibrated so Pythagorean contribution is comparable to prior PF/PA.
+  pythagorean_exponent: 1.9
+  pythagorean_scale: 50.0
+
+  # --- Totals conservative bias ---
+  # Under uncertainty, Tier 1 leans toward lower scoring rather than higher.
+  # This number is deducted from the total (split evenly: half per team).
+  # The margin is unchanged; only the total and individual expected scores shift.
+  # 0.5 = half a point off the total. Set to 0.0 to disable.
+  totals_conservative_bias: 0.5
+
+  # --- Close-call class lean ---
+  # When the game is close, lean slightly toward the better class team.
+  # Applies only when |blended_margin| < threshold; tapers linearly to zero
+  # at the threshold. Full strength only at margin = 0.
+  #
+  # close_call_class_lean_threshold: |margin| at or above this = no lean applied.
+  # close_call_class_lean_pts: max points nudge when margin is exactly 0.
+  close_call_class_lean_threshold: 6.0
+  close_call_class_lean_pts: 0.5
+
+  # --- Recent form component weights ---
+  # Form is a blend of four per-game components. These weights must sum to 1.0.
+  # V1 defaults: outcome-dominant (0.4), other components secondary (0.2 each).
+  form_outcome_weight: 0.4      # win/loss outcome: primary signal
+  form_margin_weight: 0.2       # margin of victory/defeat
+  form_scoring_weight: 0.2      # points scored vs league average
+  form_conceding_weight: 0.2    # points conceded vs league average
+
+  # Normalisation denominators for margin/scoring/conceding components.
+  # A game result at or beyond the denominator saturates at ±1.0.
+  form_margin_norm: 20.0        # ±20 pt margin → saturated signal
+  form_scoring_norm: 12.0       # ±12 pts above/below league avg → saturated
+  form_conceding_norm: 12.0     # ±12 pts above/below league avg → saturated
+
+  # --- Class vs form balance ---
+  # season_quality_weight: scales the attack/defence (class) delta contribution.
+  #   1.0 = unchanged (default); < 1.0 reduces class pull on the final number.
+  # form_balance_weight: scales the form delta contribution.
+  #   1.0 = unchanged (default); > 1.0 increases form's influence on the number.
+  # V1 defaults are 1.0 / 1.0 — same behaviour as before, but now auditable.
+  # To reflect the spec's "roughly balanced" intent, tune toward equal weighting.
+  season_quality_weight: 0.75
+  form_balance_weight: 1.0
+
+  # --- Form behavior rules (A-D: per-game interpretation) ---
+  # blowout_threshold: |margin| at or above this = blowout result.
+  blowout_threshold: 20.0
+  # narrow_threshold: |margin| below this = narrow result (rules B, C, D).
+  narrow_threshold: 8.0
+  # Opponent strength proxies (relative to league_avg_per_team).
+  #   pts_against > avg * strong_opp_factor → strong opponent (rule B)
+  #   pts_against < avg * weak_opp_factor   → weak opponent   (rule D)
+  strong_opp_factor: 1.2
+  weak_opp_factor: 0.8
+  # broader_form_threshold: raw form score must clear this to be "broadly positive"
+  # or fall below its negative to be "broadly negative" (rules B, C).
+  broader_form_threshold: 0.1
+  # Effect sizes (in form-score units, before form_weight_points scaling).
+  blowout_win_dampener: 0.10          # per-game reduction for blowout wins
+  blowout_loss_amplifier: 0.15        # per-game extra reduction for blowout losses
+  narrow_loss_vs_strong_bonus: 0.10   # per-game bonus for qualifying narrow losses
+  ugly_win_positive_bonus: 0.05       # per-game bonus for ugly wins while broadly winning
+  ugly_win_negative_penalty: 0.05     # per-game penalty for ugly wins while broadly struggling
+  form_behavior_max_adj: 0.25         # cap on total A-D adjustment (form-score units)
+
+  # --- Form quality signals (E-F: season-level) ---
+  # E. Low-scoring winning: warning if winning but weak attack and no elite defence.
+  low_score_winning_threshold: 0.5    # win_pct must exceed this = "winning"
+  low_score_attack_threshold: -1.5    # attack_rating below this = weak attack
+  low_score_defence_threshold: 2.0    # defence_rating above this = elite defence (no warning)
+  low_score_warning_adj: -0.10        # form score penalty when E-warning applies
+  # F. High-scoring but leaky: warning if scoring well but conceding a lot.
+  leaky_defence_threshold: -2.0       # defence_rating below this = leaking
+  leaky_attack_threshold: 2.0         # attack_rating above this = scoring well
+  leaky_warning_adj: -0.08            # form score penalty when F-warning applies
+  form_quality_max_adj: 0.15          # cap on total E-F adjustment (form-score units)
+
+tier2_matchup:
+  enabled: true
+
+  # Combined Tier 2 outer cap.
+  # Maximum expected-points shift per team from the SUM of all active Tier 2
+  # families.  Each family has its own inner/outer cap that bounds its individual
+  # contribution.  This cap is enforced AFTER all families have run via a
+  # proportional scaling pass in compute_matchup_adjustments().
+  # When multiple families fire in the same game and the sum exceeds this cap,
+  # all family deltas are scaled down by the same factor to land exactly on the cap.
+  max_home_points_delta: 4.0
+  max_away_points_delta: 4.0
+
+  # -----------------------------------------------------------------------
+  # Bucket 1: Yardage / territory / ruck-momentum
+  # -----------------------------------------------------------------------
+  # Adjusts both expected scores based on which team is more likely to win
+  # the field-position and momentum battle in this specific matchup.
+  #
+  # Positive bucket_score → home team has the yardage/territory edge.
+  # Negative bucket_score → away team has the edge.
+  #
+  # Adjustment is symmetric:
+  #   home_delta =  bucket_score * max_points_swing
+  #   away_delta = -bucket_score * max_points_swing
+  #
+  # This means the bucket primarily affects margin/H2H/handicap.
+  # Net total effect is approximately zero.
+  yardage:
+    enabled: true
+
+    # Maximum expected-points shift per team from this bucket alone.
+    # bucket_score (±1.0) × max_points_swing = inner cap before outer cap.
+    # Keep conservative in V1: a full ±1.0 score rarely occurs in practice.
+    # Calibrate upward if backtesting shows the yardage edge is systematically
+    # larger than this allows.
+    max_points_swing: 2.5
+
+    # --- Signal weights ---
+    # Must conceptually reflect the priority order in the spec:
+    #   1. run metres (biggest)  2. completion  3. kicking  4. ruck (smallest)
+    # Weights are re-normalised automatically so they do not need to sum to 1.0,
+    # but keeping them summing to 1.0 makes the bucket score easier to interpret.
+    run_metres_weight: 0.40
+    completion_weight: 0.30
+    kick_weight:       0.20
+    ruck_weight:       0.10
+
+    # --- Normalisation denominators ---
+    # The differential at which each sub-signal saturates at ±1.0.
+    # All values are PLACEHOLDERS — recalibrate from NRL historical distributions
+    # once a full season of team-level per-game stats is available.
+
+    # Signal 1 sub-signal norms (run metres / post-contact metres)
+    run_metres_norm:          100.0   # ±100 run metres/game differential → ±1.0
+    post_contact_metres_norm:  40.0   # ±40 post-contact metres/game → ±1.0
+
+    # Signal 2 sub-signal norms (completion / errors / discipline)
+    completion_rate_norm:  0.08   # ±8 percentage-point completion differential → ±1.0
+    errors_pg_norm:        3.0    # ±3 errors/game differential → ±1.0
+    penalties_pg_norm:     3.0    # ±3 penalties/game differential → ±1.0
+
+    # Signal 3 norm (kick metres)
+    kick_metres_norm: 150.0   # ±150 kick metres/game differential → ±1.0
+
+    # Signal 4 norm (ruck speed — placeholder; data not yet standardised)
+    ruck_speed_norm: 1.0   # placeholder — recalibrate when PTB data is sourced
+
+    # --- Sub-signal blend weights within Signal 1 ---
+    # run_metres and post_contact_metres are blended into Signal 1.
+    # If post_contact_metres_pg is unavailable, falls back to run_metres only.
+    run_metres_only_weight:    0.60
+    post_contact_metres_weight: 0.40
+
+    # --- Sub-signal blend weights within Signal 2 ---
+    # completion_rate, errors_pg, and penalties_pg are blended into Signal 2.
+    # Any missing sub-signal is excluded and remaining weights are re-normalised.
+    completion_rate_weight: 0.50   # completion rate dominates (most direct)
+    errors_weight:          0.30
+    penalties_weight:       0.20
+
+    # --- Sample size gate ---
+    # Minimum games played by BOTH teams before any yardage signal is trusted.
+    # Below this threshold all signals return 0.0 (neutral) to suppress
+    # early-season small-sample noise.
+    min_sample_games: 3
+
+  # -----------------------------------------------------------------------
+  # Family A: Territory & Control
+  # completion/kick style vs errors/penalties vulnerability
+  # -----------------------------------------------------------------------
+  family_a:
+    enabled: true
+
+    # --- Style weights (auto-normalised by sum) ---
+    # Higher completion + higher kick metres + fewer errors + fewer penalties
+    # = stronger territorial control style.
+    # Approved weights: cr=0.35, km=0.25, err(inv)=0.20, pen(inv)=0.15 → sum=0.95
+    completion_rate_weight:  0.35
+    kick_metres_weight:      0.25
+    errors_style_weight:     0.20
+    penalties_style_weight:  0.15
+
+    # --- Vulnerability weights (auto-normalised by sum) ---
+    # Higher errors + higher penalties = more vulnerable to territory loss.
+    errors_vuln_weight:      0.60
+    penalties_vuln_weight:   0.40
+
+    # --- Gate threshold ---
+    # Both style > gate AND vuln > gate must pass for a direction to fire.
+    gate_threshold: 0.25
+
+    # --- Point ladder ---
+    strong_pts:  3.0   # matchup_score >= 0.40
+    average_pts: 2.0   # matchup_score >= 0.20
+    weak_pts:    1.0   # matchup_score >= 0.0625
+
+    # --- Caps ---
+    inner_cap: 3.0   # max raw delta before outer cap
+    outer_cap: 4.0   # absolute ceiling on home/away delta
+
+  # -----------------------------------------------------------------------
+  # Family C: Physical Carry & Forward Dominance
+  # run_metres_pg + errors_pg(inv) style  vs  mt_pg vulnerability
+  # -----------------------------------------------------------------------
+  family_c:
+    enabled: true
+
+    # --- Style weights (auto-normalised by sum; sum = 1.00) ---
+    # High run metres = physical carry volume.
+    # Low errors (inverted) = sustained pressure without self-interruption.
+    # The errors component prevents high-volume but sloppy teams from
+    # appearing dominant.
+    run_metres_weight:    0.70
+    errors_style_weight:  0.30
+
+    # --- Vulnerability weight ---
+    # Missed tackles = physically beaten in the contact zone.
+    mt_vuln_weight:  1.00
+
+    # --- Gate threshold ---
+    gate_threshold: 0.25
+
+    # --- Point ladder ---
+    strong_pts:  3.0   # matchup_score >= 0.40
+    average_pts: 2.0   # matchup_score >= 0.20
+    weak_pts:    1.0   # matchup_score >= 0.0625
+
+    # --- Caps ---
+    inner_cap: 3.0
+    outer_cap: 4.0
+
+  # -----------------------------------------------------------------------
+  # Family D: Kicking Pressure & Exit Stress  [SOFT LAUNCH — controlled trial]
+  # FDO (forced dropouts) style  vs  KRM (kick return metres) vulnerability
+  # -----------------------------------------------------------------------
+  #
+  # STATUS: experimental — do not treat as equivalent to frozen families.
+  #
+  # Style:       normalized FDO (forced dropouts per game)
+  #              High FDO = team pins opponents with targeted kicks.
+  # Vulnerability: INVERTED normalized KRM (kick return metres per game)
+  #              Low KRM = poor exit quality = vulnerable to kicking pressure.
+  #              The inversion is applied inside compute_family_d() — config
+  #              values remain positive and human-readable.
+  #
+  # Guardrail: inner_cap and outer_cap are deliberately smaller than mature
+  # families (2.0 / 2.5 vs 3.0 / 4.0).  2D can matter but cannot dominate.
+  # The combined Tier 2 outer cap (±4.0) applies on top of these.
+  #
+  # Exclusions (must never appear in 2D): KM, K, KR, errors, penalties,
+  # missed tackles, completion rate.  Any of these would duplicate 2A/2B/2C.
+  #
+  # Overlap monitoring: games where 2A and 2D both fire are tracked in logs.
+  # After one full season, evaluate whether 2D adds signal beyond 2A + 2C.
+  family_d:
+    enabled: true
+
+    # --- Style weight (single stat — no blending in V1) ---
+    fdo_weight:  1.00   # forced dropouts pg; weight 1.0 = FDO alone drives style
+
+    # --- Vulnerability weight ---
+    # KRM is inverted in code: low KRM = high vulnerability.
+    # This weight is for documentation/future multi-stat extension only in V1.
+    krm_weight:  1.00
+
+    # --- Gate threshold ---
+    gate_threshold: 0.25
+
+    # --- Point ladder (same thresholds as mature families) ---
+    strong_pts:  3.0   # matchup_score >= 0.40
+    average_pts: 2.0   # matchup_score >= 0.20
+    weak_pts:    1.0   # matchup_score >= 0.0625
+
+    # --- Caps (CONSERVATIVE — smaller than mature families) ---
+    # inner_cap: max delta before outer cap is applied
+    # outer_cap: absolute ceiling per direction
+    # Mature families use 3.0 / 4.0.  2D uses 2.0 / 2.5 during trial period.
+    inner_cap: 2.0
+    outer_cap: 2.5
+
+  # -----------------------------------------------------------------------
+  # Bucket 2: Defensive system / discipline
+  # NOT YET IMPLEMENTED
+  # -----------------------------------------------------------------------
+  # defensive_system:
+  #   enabled: false
+
+  # -----------------------------------------------------------------------
+  # Bucket 3: Attacking shape / scoring-actions
+  # NOT YET IMPLEMENTED
+  # -----------------------------------------------------------------------
+  # attacking_shape:
+  #   enabled: false
+
+  # -----------------------------------------------------------------------
+  # Overlay: Coach H2H
+  # NOT YET IMPLEMENTED
+  # -----------------------------------------------------------------------
+  # coach_h2h:
+  #   enabled: false
+
+  # -----------------------------------------------------------------------
+  # Overlay: Team-vs-team history
+  # NOT YET IMPLEMENTED
+  # -----------------------------------------------------------------------
+  # team_vs_team_history:
+  #   enabled: false
+
+tier3_situational:
+  enabled: true
+
+  # Combined Tier 3 outer cap.
+  # Maximum expected-points shift per team from the SUM of 3A + 3B + 3C.
+  # Proportional scaling applied if either home or away exceeds this.
+  max_home_points_delta: 3.0
+  max_away_points_delta: 3.0
+
+  # -----------------------------------------------------------------------
+  # 3A: Rest / Turnaround
+  # -----------------------------------------------------------------------
+  # Rest is classified from days since each team's last game in the season.
+  # A team's first game (no prior game found) is treated as 'normal'.
+  #
+  # Classification thresholds:
+  #   short:  ≤ short_max_days                (e.g. 1–6 days — midweek/short week)
+  #   normal: short_max_days+1 .. normal_max_days  (e.g. 7–9 days — standard week)
+  #   long:   normal_max_days+1 .. long_max_days   (e.g. 10–13 days — extra rest)
+  #   bye:    > long_max_days                  (e.g. ≥14 days — full bye week+)
+  #
+  # Margin matrix [home_class][away_class] = margin delta in expected points.
+  # Positive = home advantage.  Antisymmetric (diagonal = 0).
+  #
+  # Anchor values (approved):
+  #   short→normal = -1.0  (home on short rest vs away on normal = home disadvantaged)
+  #   short→long   = -1.5
+  #   long→short   = +1.5  (antisymmetric of short→long)
+  #   bye→short    = +2.0  (antisymmetric of short→bye = -2.0)
+  rest:
+    enabled: true
+    short_max_days:  6    # 1–6 days  = short turnaround
+    normal_max_days: 9    # 7–9 days  = normal
+    long_max_days:  13    # 10–13 days = long rest; ≥14 = bye
+    cap: 2.0              # max |rest delta| before outer cap
+
+    # Margin matrix — 16 entries, must cover all short/normal/long/bye pairs.
+    # Convention: {home_class}_vs_{away_class}
+    matrix:
+      short_vs_short:   0.0
+      short_vs_normal: -1.0
+      short_vs_long:   -1.5
+      short_vs_bye:    -2.0
+      normal_vs_short:  1.0
+      normal_vs_normal: 0.0
+      normal_vs_long:  -1.0
+      normal_vs_bye:   -1.5
+      long_vs_short:    1.5
+      long_vs_normal:   1.0
+      long_vs_long:     0.0
+      long_vs_bye:     -1.0
+      bye_vs_short:     2.0
+      bye_vs_normal:    1.5
+      bye_vs_long:      1.0
+      bye_vs_bye:       0.0
+
+  # -----------------------------------------------------------------------
+  # 3B: Travel / Fatigue
+  # -----------------------------------------------------------------------
+  # delta = (away_travel_km - home_travel_km) / 1000 * scale
+  # Positive delta = home advantage (away team travelled further).
+  # Travel is computed via haversine(team_home_base, venue).
+  # If geo data is missing for either team or venue, delta = 0 (no adjustment).
+  travel:
+    enabled: true
+    scale: 1.1        # calibrated: 1000 km net travel gap → 1.1 pts swing
+    cap: 2.0          # max |travel delta| in points
+
+  # -----------------------------------------------------------------------
+  # 3C: Compound rule (short rest + heavy travel)
+  # -----------------------------------------------------------------------
+  # Applied in addition to 3A and 3B if BOTH conditions are true:
+  #   1. Team is classified as 'short' rest
+  #   2. That team's travel to venue > threshold_km
+  # Effect: -0.5 pts to the affected team (separately per team).
+  # Cap prevents 3C from exceeding ±0.5 in total (home + away combined).
+  compound:
+    enabled: true
+    threshold_km: 500     # travel must exceed this for rule to fire
+    delta: -0.5           # points penalty per team that meets both conditions
+    cap: 0.5              # max |compound delta| per team
+
+tier4_venue:
+  enabled: true
+  max_home_points_delta: 3.0
+  max_away_points_delta: 3.0
+  # Max handicap adjustment from team venue edge differential
+  handicap_clamp: 1.5
+  # Max totals adjustment from venue scoring profile
+  totals_clamp: 2.0
+
+tier5_injury:
+  enabled: true
+  handicap_clamp: 3.0        # max ± shift to handicap from injury differential
+  totals_threshold: 4.0      # combined pts above this trigger totals suppression
+  totals_rate: -0.3          # pts suppression per combined injury pt above threshold
+  totals_cap: -3.0           # max totals suppression from injuries
+
+tier6_referee:
+  enabled: true
+  # Shrink factor for bucket_edge differential (fixed at 1.0 in V1)
+  shrink: 1.0
+  # Max handicap delta from referee bucket edge differential
+  handicap_clamp: 1.5
+  # Totals deltas by bucket type
+  totals_whistle_heavy: -2.0
+  totals_flow_heavy: 2.0
+  totals_neutral: 0.0
+  # Max totals delta
+  totals_clamp: 2.0
+
+tier7_environment:
+  weather:
+    enabled: true
+    max_total_delta: 3.0
+
+  lunar:
+    enabled: false  # Experimental — off by default in V1
+    max_home_points_delta: 1.0
+    max_away_points_delta: 1.0
+    max_total_delta: 1.5
+    # full moon: slight home boost + slight total increase
+    full_moon_home_delta: 0.5
+    full_moon_total_delta: 0.5
+    # new moon: slight away boost + slight total decrease
+    new_moon_away_delta: 0.5
+    new_moon_total_delta: -0.5

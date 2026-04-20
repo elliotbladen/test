@@ -1,0 +1,19 @@
+# bookmakers.yaml
+# Bookmaker configuration.
+# priority_rank: lower number = higher priority (1 = most trusted as benchmark)
+
+bookmakers:
+  - name: "Pinnacle"
+    code: "pinnacle"
+    priority_rank: 1
+    is_sharp_benchmark: true
+
+  - name: "Bet365"
+    code: "bet365"
+    priority_rank: 2
+    is_sharp_benchmark: false
+
+# Odds freshness rules
+freshness:
+  max_snapshot_age_hours: 24  # Signal should not use a snapshot older than this
+  warn_if_older_than_hours: 6

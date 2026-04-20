@@ -1,0 +1,24 @@
+# requirements.txt
+# Python dependencies for the NRL Pricing Engine V1.
+# Pin versions once the stack is stable.
+
+# Database
+# sqlite3 is part of the Python standard library — no package needed for SQLite
+
+# Data handling
+pandas
+openpyxl       # Excel read/write for spreadsheet importer and exporter
+
+# Config
+pyyaml         # Parse YAML config files
+
+# Testing
+pytest
+
+# Utilities
+python-dateutil  # Flexible date parsing for normalization
+
+# Optional / future
+# psycopg2-binary  # PostgreSQL driver (when scaling beyond SQLite)
+# requests         # For scraping market data
+# ephem            # Lunar phase calculations (Tier 7B)

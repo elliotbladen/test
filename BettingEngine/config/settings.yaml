@@ -1,0 +1,24 @@
+# settings.yaml
+# General application settings for the NRL pricing engine.
+
+app:
+  name: "NRL Pricing Engine"
+  version: "1.0.0"
+  sport: "NRL"
+  competition: "NRL"
+  season: 2025
+
+database:
+  engine: "sqlite"  # sqlite | postgresql
+  path: "data/model.db"  # used for sqlite only
+  # host, port, name, user, password used for postgresql
+
+logging:
+  level: "INFO"  # DEBUG | INFO | WARNING | ERROR
+  log_to_file: true
+  log_dir: "logs/"
+
+data:
+  snapshots_dir: "data/snapshots/"
+  exports_dir: "data/exports/"
+  imports_dir: "data/imports/"

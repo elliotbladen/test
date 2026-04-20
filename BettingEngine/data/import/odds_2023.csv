@@ -1,0 +1,1279 @@
+season,round,match_date,home_team,away_team,bookmaker,is_closing,is_opening,market_type,selection,odds,line
+2023,31,2023-10-01,Penrith Panthers,Brisbane Broncos,bet365,1,0,h2h,home,1.6,
+2023,31,2023-10-01,Penrith Panthers,Brisbane Broncos,bet365,1,0,h2h,away,2.4,
+2023,31,2023-10-01,Penrith Panthers,Brisbane Broncos,bet365,1,0,handicap,home,1.82,-3.5
+2023,31,2023-10-01,Penrith Panthers,Brisbane Broncos,bet365,1,0,handicap,away,2.0,3.5
+2023,31,2023-10-01,Penrith Panthers,Brisbane Broncos,bet365,1,0,total,over,1.952,38.5
+2023,31,2023-10-01,Penrith Panthers,Brisbane Broncos,bet365,1,0,total,under,1.87,38.5
+2023,30,2023-09-23,Brisbane Broncos,New Zealand Warriors,bet365,1,0,h2h,home,1.25,
+2023,30,2023-09-23,Brisbane Broncos,New Zealand Warriors,bet365,1,0,h2h,away,4.0,
+2023,30,2023-09-23,Brisbane Broncos,New Zealand Warriors,bet365,1,0,handicap,home,1.91,-10.5
+2023,30,2023-09-23,Brisbane Broncos,New Zealand Warriors,bet365,1,0,handicap,away,1.91,10.5
+2023,30,2023-09-23,Brisbane Broncos,New Zealand Warriors,bet365,1,0,total,over,1.91,42.5
+2023,30,2023-09-23,Brisbane Broncos,New Zealand Warriors,bet365,1,0,total,under,1.91,42.5
+2023,30,2023-09-22,Penrith Panthers,Melbourne Storm,bet365,1,0,h2h,home,1.19,
+2023,30,2023-09-22,Penrith Panthers,Melbourne Storm,bet365,1,0,h2h,away,5.0,
+2023,30,2023-09-22,Penrith Panthers,Melbourne Storm,bet365,1,0,handicap,home,1.91,-13.5
+2023,30,2023-09-22,Penrith Panthers,Melbourne Storm,bet365,1,0,handicap,away,1.91,13.5
+2023,30,2023-09-22,Penrith Panthers,Melbourne Storm,bet365,1,0,total,over,1.97,38.5
+2023,30,2023-09-22,Penrith Panthers,Melbourne Storm,bet365,1,0,total,under,1.85,38.5
+2023,29,2023-09-16,New Zealand Warriors,Newcastle Knights,bet365,1,0,h2h,home,1.52,
+2023,29,2023-09-16,New Zealand Warriors,Newcastle Knights,bet365,1,0,h2h,away,2.62,
+2023,29,2023-09-16,New Zealand Warriors,Newcastle Knights,bet365,1,0,handicap,home,1.87,-5.5
+2023,29,2023-09-16,New Zealand Warriors,Newcastle Knights,bet365,1,0,handicap,away,1.952,5.5
+2023,29,2023-09-16,New Zealand Warriors,Newcastle Knights,bet365,1,0,total,over,1.91,41.5
+2023,29,2023-09-16,New Zealand Warriors,Newcastle Knights,bet365,1,0,total,under,1.91,41.5
+2023,29,2023-09-15,Melbourne Storm,Sydney Roosters,bet365,1,0,h2h,home,1.38,
+2023,29,2023-09-15,Melbourne Storm,Sydney Roosters,bet365,1,0,h2h,away,3.2,
+2023,29,2023-09-15,Melbourne Storm,Sydney Roosters,bet365,1,0,handicap,home,1.87,-7.5
+2023,29,2023-09-15,Melbourne Storm,Sydney Roosters,bet365,1,0,handicap,away,1.952,7.5
+2023,29,2023-09-15,Melbourne Storm,Sydney Roosters,bet365,1,0,total,over,1.91,39.5
+2023,29,2023-09-15,Melbourne Storm,Sydney Roosters,bet365,1,0,total,under,1.91,39.5
+2023,28,2023-09-10,Newcastle Knights,Canberra Raiders,bet365,1,0,h2h,home,1.17,
+2023,28,2023-09-10,Newcastle Knights,Canberra Raiders,bet365,1,0,h2h,away,5.4,
+2023,28,2023-09-10,Newcastle Knights,Canberra Raiders,bet365,1,0,handicap,home,1.87,-14.5
+2023,28,2023-09-10,Newcastle Knights,Canberra Raiders,bet365,1,0,handicap,away,1.952,14.5
+2023,28,2023-09-10,Newcastle Knights,Canberra Raiders,bet365,1,0,total,over,1.82,43.5
+2023,28,2023-09-10,Newcastle Knights,Canberra Raiders,bet365,1,0,total,under,2.0,43.5
+2023,28,2023-09-09,Cronulla Sharks,Sydney Roosters,bet365,1,0,h2h,home,2.02,
+2023,28,2023-09-09,Cronulla Sharks,Sydney Roosters,bet365,1,0,h2h,away,1.833,
+2023,28,2023-09-09,Cronulla Sharks,Sydney Roosters,bet365,1,0,handicap,home,1.91,1.5
+2023,28,2023-09-09,Cronulla Sharks,Sydney Roosters,bet365,1,0,handicap,away,1.91,-1.5
+2023,28,2023-09-09,Cronulla Sharks,Sydney Roosters,bet365,1,0,total,over,1.87,40.5
+2023,28,2023-09-09,Cronulla Sharks,Sydney Roosters,bet365,1,0,total,under,1.952,40.5
+2023,28,2023-09-09,Penrith Panthers,New Zealand Warriors,bet365,1,0,h2h,home,1.12,
+2023,28,2023-09-09,Penrith Panthers,New Zealand Warriors,bet365,1,0,h2h,away,6.75,
+2023,28,2023-09-09,Penrith Panthers,New Zealand Warriors,bet365,1,0,handicap,home,2.0,-18.5
+2023,28,2023-09-09,Penrith Panthers,New Zealand Warriors,bet365,1,0,handicap,away,1.82,18.5
+2023,28,2023-09-09,Penrith Panthers,New Zealand Warriors,bet365,1,0,total,over,1.87,41.5
+2023,28,2023-09-09,Penrith Panthers,New Zealand Warriors,bet365,1,0,total,under,1.952,41.5
+2023,28,2023-09-08,Brisbane Broncos,Melbourne Storm,bet365,1,0,h2h,home,1.63,
+2023,28,2023-09-08,Brisbane Broncos,Melbourne Storm,bet365,1,0,h2h,away,2.35,
+2023,28,2023-09-08,Brisbane Broncos,Melbourne Storm,bet365,1,0,handicap,home,2.0,-4.5
+2023,28,2023-09-08,Brisbane Broncos,Melbourne Storm,bet365,1,0,handicap,away,1.82,4.5
+2023,28,2023-09-08,Brisbane Broncos,Melbourne Storm,bet365,1,0,total,over,2.05,42.5
+2023,28,2023-09-08,Brisbane Broncos,Melbourne Storm,bet365,1,0,total,under,1.78,42.5
+2023,27,2023-09-03,Cronulla Sharks,Canberra Raiders,bet365,1,0,h2h,home,1.28,
+2023,27,2023-09-03,Cronulla Sharks,Canberra Raiders,bet365,1,0,h2h,away,3.7,
+2023,27,2023-09-03,Cronulla Sharks,Canberra Raiders,bet365,1,0,handicap,home,1.82,-11.5
+2023,27,2023-09-03,Cronulla Sharks,Canberra Raiders,bet365,1,0,handicap,away,2.0,11.5
+2023,27,2023-09-03,Cronulla Sharks,Canberra Raiders,bet365,1,0,total,over,1.8,45.5
+2023,27,2023-09-03,Cronulla Sharks,Canberra Raiders,bet365,1,0,total,under,2.02,45.5
+2023,27,2023-09-03,Gold Coast Titans,Canterbury Bulldogs,bet365,1,0,h2h,home,1.24,
+2023,27,2023-09-03,Gold Coast Titans,Canterbury Bulldogs,bet365,1,0,h2h,away,4.25,
+2023,27,2023-09-03,Gold Coast Titans,Canterbury Bulldogs,bet365,1,0,handicap,home,1.91,-13.5
+2023,27,2023-09-03,Gold Coast Titans,Canterbury Bulldogs,bet365,1,0,handicap,away,1.91,13.5
+2023,27,2023-09-03,Gold Coast Titans,Canterbury Bulldogs,bet365,1,0,total,over,1.91,56.5
+2023,27,2023-09-03,Gold Coast Titans,Canterbury Bulldogs,bet365,1,0,total,under,1.91,56.5
+2023,27,2023-09-02,St. George Illawarra Dragons,Newcastle Knights,bet365,1,0,h2h,home,1.91,
+2023,27,2023-09-02,St. George Illawarra Dragons,Newcastle Knights,bet365,1,0,h2h,away,1.9,
+2023,27,2023-09-02,St. George Illawarra Dragons,Newcastle Knights,bet365,1,0,handicap,home,1.97,-1.5
+2023,27,2023-09-02,St. George Illawarra Dragons,Newcastle Knights,bet365,1,0,handicap,away,1.833,1.5
+2023,27,2023-09-02,St. George Illawarra Dragons,Newcastle Knights,bet365,1,0,total,over,1.87,47.5
+2023,27,2023-09-02,St. George Illawarra Dragons,Newcastle Knights,bet365,1,0,total,under,1.952,47.5
+2023,27,2023-09-02,Penrith Panthers,North QLD Cowboys,bet365,1,0,h2h,home,1.22,
+2023,27,2023-09-02,Penrith Panthers,North QLD Cowboys,bet365,1,0,h2h,away,4.5,
+2023,27,2023-09-02,Penrith Panthers,North QLD Cowboys,bet365,1,0,handicap,home,2.0,-12.5
+2023,27,2023-09-02,Penrith Panthers,North QLD Cowboys,bet365,1,0,handicap,away,1.82,12.5
+2023,27,2023-09-02,Penrith Panthers,North QLD Cowboys,bet365,1,0,total,over,1.91,42.5
+2023,27,2023-09-02,Penrith Panthers,North QLD Cowboys,bet365,1,0,total,under,1.91,42.5
+2023,27,2023-09-02,Dolphins,New Zealand Warriors,bet365,1,0,h2h,home,1.5,
+2023,27,2023-09-02,Dolphins,New Zealand Warriors,bet365,1,0,h2h,away,2.68,
+2023,27,2023-09-02,Dolphins,New Zealand Warriors,bet365,1,0,handicap,home,1.952,-6.5
+2023,27,2023-09-02,Dolphins,New Zealand Warriors,bet365,1,0,handicap,away,1.87,6.5
+2023,27,2023-09-02,Dolphins,New Zealand Warriors,bet365,1,0,total,over,1.97,52.5
+2023,27,2023-09-02,Dolphins,New Zealand Warriors,bet365,1,0,total,under,1.85,52.5
+2023,27,2023-09-01,South Sydney Rabbitohs,Sydney Roosters,bet365,1,0,h2h,home,1.7,
+2023,27,2023-09-01,South Sydney Rabbitohs,Sydney Roosters,bet365,1,0,h2h,away,2.18,
+2023,27,2023-09-01,South Sydney Rabbitohs,Sydney Roosters,bet365,1,0,handicap,home,1.91,-3.5
+2023,27,2023-09-01,South Sydney Rabbitohs,Sydney Roosters,bet365,1,0,handicap,away,1.91,3.5
+2023,27,2023-09-01,South Sydney Rabbitohs,Sydney Roosters,bet365,1,0,total,over,1.91,43.5
+2023,27,2023-09-01,South Sydney Rabbitohs,Sydney Roosters,bet365,1,0,total,under,1.91,43.5
+2023,27,2023-09-01,Manly Sea Eagles,Wests Tigers,bet365,1,0,h2h,home,1.2,
+2023,27,2023-09-01,Manly Sea Eagles,Wests Tigers,bet365,1,0,h2h,away,4.5,
+2023,27,2023-09-01,Manly Sea Eagles,Wests Tigers,bet365,1,0,handicap,home,2.0,-14.5
+2023,27,2023-09-01,Manly Sea Eagles,Wests Tigers,bet365,1,0,handicap,away,1.82,14.5
+2023,27,2023-09-01,Manly Sea Eagles,Wests Tigers,bet365,1,0,total,over,1.85,48.5
+2023,27,2023-09-01,Manly Sea Eagles,Wests Tigers,bet365,1,0,total,under,1.97,48.5
+2023,27,2023-08-31,Brisbane Broncos,Melbourne Storm,bet365,1,0,h2h,home,1.56,
+2023,27,2023-08-31,Brisbane Broncos,Melbourne Storm,bet365,1,0,h2h,away,2.5,
+2023,27,2023-08-31,Brisbane Broncos,Melbourne Storm,bet365,1,0,handicap,home,1.91,-4.5
+2023,27,2023-08-31,Brisbane Broncos,Melbourne Storm,bet365,1,0,handicap,away,1.91,4.5
+2023,27,2023-08-31,Brisbane Broncos,Melbourne Storm,bet365,1,0,total,over,1.952,43.5
+2023,27,2023-08-31,Brisbane Broncos,Melbourne Storm,bet365,1,0,total,under,1.87,43.5
+2023,26,2023-08-27,Newcastle Knights,Cronulla Sharks,bet365,1,0,h2h,home,1.42,
+2023,26,2023-08-27,Newcastle Knights,Cronulla Sharks,bet365,1,0,h2h,away,3.0,
+2023,26,2023-08-27,Newcastle Knights,Cronulla Sharks,bet365,1,0,handicap,home,1.87,-7.5
+2023,26,2023-08-27,Newcastle Knights,Cronulla Sharks,bet365,1,0,handicap,away,1.952,7.5
+2023,26,2023-08-27,Newcastle Knights,Cronulla Sharks,bet365,1,0,total,over,1.91,45.5
+2023,26,2023-08-27,Newcastle Knights,Cronulla Sharks,bet365,1,0,total,under,1.91,45.5
+2023,26,2023-08-27,Canterbury Bulldogs,Manly Sea Eagles,bet365,1,0,h2h,home,2.5,
+2023,26,2023-08-27,Canterbury Bulldogs,Manly Sea Eagles,bet365,1,0,h2h,away,1.56,
+2023,26,2023-08-27,Canterbury Bulldogs,Manly Sea Eagles,bet365,1,0,handicap,home,1.91,5.5
+2023,26,2023-08-27,Canterbury Bulldogs,Manly Sea Eagles,bet365,1,0,handicap,away,1.91,-5.5
+2023,26,2023-08-27,Canterbury Bulldogs,Manly Sea Eagles,bet365,1,0,total,over,1.85,47.5
+2023,26,2023-08-27,Canterbury Bulldogs,Manly Sea Eagles,bet365,1,0,total,under,1.97,47.5
+2023,26,2023-08-26,Canberra Raiders,Brisbane Broncos,bet365,1,0,h2h,home,3.3,
+2023,26,2023-08-26,Canberra Raiders,Brisbane Broncos,bet365,1,0,h2h,away,1.35,
+2023,26,2023-08-26,Canberra Raiders,Brisbane Broncos,bet365,1,0,handicap,home,1.91,8.5
+2023,26,2023-08-26,Canberra Raiders,Brisbane Broncos,bet365,1,0,handicap,away,1.91,-8.5
+2023,26,2023-08-26,Canberra Raiders,Brisbane Broncos,bet365,1,0,total,over,1.91,44.5
+2023,26,2023-08-26,Canberra Raiders,Brisbane Broncos,bet365,1,0,total,under,1.91,44.5
+2023,26,2023-08-26,Sydney Roosters,Wests Tigers,bet365,1,0,h2h,home,1.17,
+2023,26,2023-08-26,Sydney Roosters,Wests Tigers,bet365,1,0,h2h,away,5.4,
+2023,26,2023-08-26,Sydney Roosters,Wests Tigers,bet365,1,0,handicap,home,1.82,-15.5
+2023,26,2023-08-26,Sydney Roosters,Wests Tigers,bet365,1,0,handicap,away,2.0,15.5
+2023,26,2023-08-26,Sydney Roosters,Wests Tigers,bet365,1,0,total,over,1.97,46.5
+2023,26,2023-08-26,Sydney Roosters,Wests Tigers,bet365,1,0,total,under,1.85,46.5
+2023,26,2023-08-26,Melbourne Storm,Gold Coast Titans,bet365,1,0,h2h,home,1.09,
+2023,26,2023-08-26,Melbourne Storm,Gold Coast Titans,bet365,1,0,h2h,away,8.0,
+2023,26,2023-08-26,Melbourne Storm,Gold Coast Titans,bet365,1,0,handicap,home,1.87,-21.5
+2023,26,2023-08-26,Melbourne Storm,Gold Coast Titans,bet365,1,0,handicap,away,1.952,21.5
+2023,26,2023-08-26,Melbourne Storm,Gold Coast Titans,bet365,1,0,total,over,1.91,49.5
+2023,26,2023-08-26,Melbourne Storm,Gold Coast Titans,bet365,1,0,total,under,1.91,49.5
+2023,26,2023-08-25,Dolphins,North QLD Cowboys,bet365,1,0,h2h,home,3.2,
+2023,26,2023-08-25,Dolphins,North QLD Cowboys,bet365,1,0,h2h,away,1.37,
+2023,26,2023-08-25,Dolphins,North QLD Cowboys,bet365,1,0,handicap,home,1.91,8.5
+2023,26,2023-08-25,Dolphins,North QLD Cowboys,bet365,1,0,handicap,away,1.91,-8.5
+2023,26,2023-08-25,Dolphins,North QLD Cowboys,bet365,1,0,total,over,1.87,48.5
+2023,26,2023-08-25,Dolphins,North QLD Cowboys,bet365,1,0,total,under,1.952,48.5
+2023,26,2023-08-25,New Zealand Warriors,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.13,
+2023,26,2023-08-25,New Zealand Warriors,St. George Illawarra Dragons,bet365,1,0,h2h,away,6.5,
+2023,26,2023-08-25,New Zealand Warriors,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.91,-16.5
+2023,26,2023-08-25,New Zealand Warriors,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.91,16.5
+2023,26,2023-08-25,New Zealand Warriors,St. George Illawarra Dragons,bet365,1,0,total,over,1.91,49.5
+2023,26,2023-08-25,New Zealand Warriors,St. George Illawarra Dragons,bet365,1,0,total,under,1.91,49.5
+2023,26,2023-08-24,Penrith Panthers,Parramatta Eels,bet365,1,0,h2h,home,1.1,
+2023,26,2023-08-24,Penrith Panthers,Parramatta Eels,bet365,1,0,h2h,away,8.0,
+2023,26,2023-08-24,Penrith Panthers,Parramatta Eels,bet365,1,0,handicap,home,2.0,-18.5
+2023,26,2023-08-24,Penrith Panthers,Parramatta Eels,bet365,1,0,handicap,away,1.82,18.5
+2023,26,2023-08-24,Penrith Panthers,Parramatta Eels,bet365,1,0,total,over,1.87,43.5
+2023,26,2023-08-24,Penrith Panthers,Parramatta Eels,bet365,1,0,total,under,1.952,43.5
+2023,25,2023-08-20,Canberra Raiders,Canterbury Bulldogs,bet365,1,0,h2h,home,1.38,
+2023,25,2023-08-20,Canberra Raiders,Canterbury Bulldogs,bet365,1,0,h2h,away,3.2,
+2023,25,2023-08-20,Canberra Raiders,Canterbury Bulldogs,bet365,1,0,handicap,home,1.87,-7.5
+2023,25,2023-08-20,Canberra Raiders,Canterbury Bulldogs,bet365,1,0,handicap,away,1.952,7.5
+2023,25,2023-08-20,Canberra Raiders,Canterbury Bulldogs,bet365,1,0,total,over,1.85,45.5
+2023,25,2023-08-20,Canberra Raiders,Canterbury Bulldogs,bet365,1,0,total,under,1.97,45.5
+2023,25,2023-08-20,Newcastle Knights,South Sydney Rabbitohs,bet365,1,0,h2h,home,2.35,
+2023,25,2023-08-20,Newcastle Knights,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.62,
+2023,25,2023-08-20,Newcastle Knights,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.82,4.5
+2023,25,2023-08-20,Newcastle Knights,South Sydney Rabbitohs,bet365,1,0,handicap,away,2.0,-4.5
+2023,25,2023-08-20,Newcastle Knights,South Sydney Rabbitohs,bet365,1,0,total,over,1.97,48.5
+2023,25,2023-08-20,Newcastle Knights,South Sydney Rabbitohs,bet365,1,0,total,under,1.85,48.5
+2023,25,2023-08-19,St. George Illawarra Dragons,Melbourne Storm,bet365,1,0,h2h,home,5.5,
+2023,25,2023-08-19,St. George Illawarra Dragons,Melbourne Storm,bet365,1,0,h2h,away,1.15,
+2023,25,2023-08-19,St. George Illawarra Dragons,Melbourne Storm,bet365,1,0,handicap,home,1.87,16.5
+2023,25,2023-08-19,St. George Illawarra Dragons,Melbourne Storm,bet365,1,0,handicap,away,1.952,-16.5
+2023,25,2023-08-19,St. George Illawarra Dragons,Melbourne Storm,bet365,1,0,total,over,1.82,44.5
+2023,25,2023-08-19,St. George Illawarra Dragons,Melbourne Storm,bet365,1,0,total,under,2.0,44.5
+2023,25,2023-08-19,Gold Coast Titans,Penrith Panthers,bet365,1,0,h2h,home,9.0,
+2023,25,2023-08-19,Gold Coast Titans,Penrith Panthers,bet365,1,0,h2h,away,1.07,
+2023,25,2023-08-19,Gold Coast Titans,Penrith Panthers,bet365,1,0,handicap,home,1.87,20.5
+2023,25,2023-08-19,Gold Coast Titans,Penrith Panthers,bet365,1,0,handicap,away,1.952,-20.5
+2023,25,2023-08-19,Gold Coast Titans,Penrith Panthers,bet365,1,0,total,over,1.82,43.5
+2023,25,2023-08-19,Gold Coast Titans,Penrith Panthers,bet365,1,0,total,under,2.0,43.5
+2023,25,2023-08-19,Wests Tigers,Dolphins,bet365,1,0,h2h,home,1.5,
+2023,25,2023-08-19,Wests Tigers,Dolphins,bet365,1,0,h2h,away,2.68,
+2023,25,2023-08-19,Wests Tigers,Dolphins,bet365,1,0,handicap,home,1.952,-6.5
+2023,25,2023-08-19,Wests Tigers,Dolphins,bet365,1,0,handicap,away,1.87,6.5
+2023,25,2023-08-19,Wests Tigers,Dolphins,bet365,1,0,total,over,1.91,47.5
+2023,25,2023-08-19,Wests Tigers,Dolphins,bet365,1,0,total,under,1.91,47.5
+2023,25,2023-08-18,Parramatta Eels,Sydney Roosters,bet365,1,0,h2h,home,2.35,
+2023,25,2023-08-18,Parramatta Eels,Sydney Roosters,bet365,1,0,h2h,away,1.63,
+2023,25,2023-08-18,Parramatta Eels,Sydney Roosters,bet365,1,0,handicap,home,1.952,3.5
+2023,25,2023-08-18,Parramatta Eels,Sydney Roosters,bet365,1,0,handicap,away,1.87,-3.5
+2023,25,2023-08-18,Parramatta Eels,Sydney Roosters,bet365,1,0,total,over,1.952,44.5
+2023,25,2023-08-18,Parramatta Eels,Sydney Roosters,bet365,1,0,total,under,1.87,44.5
+2023,25,2023-08-18,New Zealand Warriors,Manly Sea Eagles,bet365,1,0,h2h,home,1.19,
+2023,25,2023-08-18,New Zealand Warriors,Manly Sea Eagles,bet365,1,0,h2h,away,5.0,
+2023,25,2023-08-18,New Zealand Warriors,Manly Sea Eagles,bet365,1,0,handicap,home,2.0,-14.5
+2023,25,2023-08-18,New Zealand Warriors,Manly Sea Eagles,bet365,1,0,handicap,away,1.82,14.5
+2023,25,2023-08-18,New Zealand Warriors,Manly Sea Eagles,bet365,1,0,total,over,1.97,46.5
+2023,25,2023-08-18,New Zealand Warriors,Manly Sea Eagles,bet365,1,0,total,under,1.85,46.5
+2023,25,2023-08-17,North QLD Cowboys,Cronulla Sharks,bet365,1,0,h2h,home,1.58,
+2023,25,2023-08-17,North QLD Cowboys,Cronulla Sharks,bet365,1,0,h2h,away,2.45,
+2023,25,2023-08-17,North QLD Cowboys,Cronulla Sharks,bet365,1,0,handicap,home,1.952,-5.5
+2023,25,2023-08-17,North QLD Cowboys,Cronulla Sharks,bet365,1,0,handicap,away,1.87,5.5
+2023,25,2023-08-17,North QLD Cowboys,Cronulla Sharks,bet365,1,0,total,over,1.952,47.5
+2023,25,2023-08-17,North QLD Cowboys,Cronulla Sharks,bet365,1,0,total,under,1.87,47.5
+2023,24,2023-08-13,Newcastle Knights,Canterbury Bulldogs,bet365,1,0,h2h,home,1.28,
+2023,24,2023-08-13,Newcastle Knights,Canterbury Bulldogs,bet365,1,0,h2h,away,3.85,
+2023,24,2023-08-13,Newcastle Knights,Canterbury Bulldogs,bet365,1,0,handicap,home,1.91,-10.5
+2023,24,2023-08-13,Newcastle Knights,Canterbury Bulldogs,bet365,1,0,handicap,away,1.91,10.5
+2023,24,2023-08-13,Newcastle Knights,Canterbury Bulldogs,bet365,1,0,total,over,1.97,48.5
+2023,24,2023-08-13,Newcastle Knights,Canterbury Bulldogs,bet365,1,0,total,under,1.85,48.5
+2023,24,2023-08-13,Melbourne Storm,Canberra Raiders,bet365,1,0,h2h,home,1.24,
+2023,24,2023-08-13,Melbourne Storm,Canberra Raiders,bet365,1,0,h2h,away,4.25,
+2023,24,2023-08-13,Melbourne Storm,Canberra Raiders,bet365,1,0,handicap,home,2.0,-12.5
+2023,24,2023-08-13,Melbourne Storm,Canberra Raiders,bet365,1,0,handicap,away,1.82,12.5
+2023,24,2023-08-13,Melbourne Storm,Canberra Raiders,bet365,1,0,total,over,1.82,43.5
+2023,24,2023-08-13,Melbourne Storm,Canberra Raiders,bet365,1,0,total,under,2.0,43.5
+2023,24,2023-08-12,Sydney Roosters,Dolphins,bet365,1,0,h2h,home,1.28,
+2023,24,2023-08-12,Sydney Roosters,Dolphins,bet365,1,0,h2h,away,3.85,
+2023,24,2023-08-12,Sydney Roosters,Dolphins,bet365,1,0,handicap,home,1.833,-10.5
+2023,24,2023-08-12,Sydney Roosters,Dolphins,bet365,1,0,handicap,away,1.97,10.5
+2023,24,2023-08-12,Sydney Roosters,Dolphins,bet365,1,0,total,over,1.87,46.5
+2023,24,2023-08-12,Sydney Roosters,Dolphins,bet365,1,0,total,under,1.952,46.5
+2023,24,2023-08-12,Wests Tigers,New Zealand Warriors,bet365,1,0,h2h,home,5.0,
+2023,24,2023-08-12,Wests Tigers,New Zealand Warriors,bet365,1,0,h2h,away,1.18,
+2023,24,2023-08-12,Wests Tigers,New Zealand Warriors,bet365,1,0,handicap,home,1.91,14.5
+2023,24,2023-08-12,Wests Tigers,New Zealand Warriors,bet365,1,0,handicap,away,1.91,-14.5
+2023,24,2023-08-12,Wests Tigers,New Zealand Warriors,bet365,1,0,total,over,1.952,46.5
+2023,24,2023-08-12,Wests Tigers,New Zealand Warriors,bet365,1,0,total,under,1.87,46.5
+2023,24,2023-08-12,South Sydney Rabbitohs,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.11,
+2023,24,2023-08-12,South Sydney Rabbitohs,St. George Illawarra Dragons,bet365,1,0,h2h,away,7.25,
+2023,24,2023-08-12,South Sydney Rabbitohs,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.91,-18.5
+2023,24,2023-08-12,South Sydney Rabbitohs,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.91,18.5
+2023,24,2023-08-12,South Sydney Rabbitohs,St. George Illawarra Dragons,bet365,1,0,total,over,1.952,50.5
+2023,24,2023-08-12,South Sydney Rabbitohs,St. George Illawarra Dragons,bet365,1,0,total,under,1.87,50.5
+2023,24,2023-08-11,Brisbane Broncos,Parramatta Eels,bet365,1,0,h2h,home,1.25,
+2023,24,2023-08-11,Brisbane Broncos,Parramatta Eels,bet365,1,0,h2h,away,4.0,
+2023,24,2023-08-11,Brisbane Broncos,Parramatta Eels,bet365,1,0,handicap,home,2.0,-12.5
+2023,24,2023-08-11,Brisbane Broncos,Parramatta Eels,bet365,1,0,handicap,away,1.82,12.5
+2023,24,2023-08-11,Brisbane Broncos,Parramatta Eels,bet365,1,0,total,over,1.91,47.5
+2023,24,2023-08-11,Brisbane Broncos,Parramatta Eels,bet365,1,0,total,under,1.91,47.5
+2023,24,2023-08-11,Cronulla Sharks,Gold Coast Titans,bet365,1,0,h2h,home,1.28,
+2023,24,2023-08-11,Cronulla Sharks,Gold Coast Titans,bet365,1,0,h2h,away,3.85,
+2023,24,2023-08-11,Cronulla Sharks,Gold Coast Titans,bet365,1,0,handicap,home,1.87,-10.5
+2023,24,2023-08-11,Cronulla Sharks,Gold Coast Titans,bet365,1,0,handicap,away,1.952,10.5
+2023,24,2023-08-11,Cronulla Sharks,Gold Coast Titans,bet365,1,0,total,over,1.91,48.5
+2023,24,2023-08-11,Cronulla Sharks,Gold Coast Titans,bet365,1,0,total,under,1.91,48.5
+2023,24,2023-08-10,Manly Sea Eagles,Penrith Panthers,bet365,1,0,h2h,home,6.5,
+2023,24,2023-08-10,Manly Sea Eagles,Penrith Panthers,bet365,1,0,h2h,away,1.13,
+2023,24,2023-08-10,Manly Sea Eagles,Penrith Panthers,bet365,1,0,handicap,home,1.87,16.5
+2023,24,2023-08-10,Manly Sea Eagles,Penrith Panthers,bet365,1,0,handicap,away,1.952,-16.5
+2023,24,2023-08-10,Manly Sea Eagles,Penrith Panthers,bet365,1,0,total,over,1.91,42.5
+2023,24,2023-08-10,Manly Sea Eagles,Penrith Panthers,bet365,1,0,total,under,1.91,42.5
+2023,23,2023-08-06,Canberra Raiders,Wests Tigers,bet365,1,0,h2h,home,1.28,
+2023,23,2023-08-06,Canberra Raiders,Wests Tigers,bet365,1,0,h2h,away,3.7,
+2023,23,2023-08-06,Canberra Raiders,Wests Tigers,bet365,1,0,handicap,home,2.0,-12.5
+2023,23,2023-08-06,Canberra Raiders,Wests Tigers,bet365,1,0,handicap,away,1.82,12.5
+2023,23,2023-08-06,Canberra Raiders,Wests Tigers,bet365,1,0,total,over,1.91,46.5
+2023,23,2023-08-06,Canberra Raiders,Wests Tigers,bet365,1,0,total,under,1.91,46.5
+2023,23,2023-08-06,Parramatta Eels,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.14,
+2023,23,2023-08-06,Parramatta Eels,St. George Illawarra Dragons,bet365,1,0,h2h,away,6.0,
+2023,23,2023-08-06,Parramatta Eels,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.87,-17.5
+2023,23,2023-08-06,Parramatta Eels,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.952,17.5
+2023,23,2023-08-06,Parramatta Eels,St. George Illawarra Dragons,bet365,1,0,total,over,1.91,47.5
+2023,23,2023-08-06,Parramatta Eels,St. George Illawarra Dragons,bet365,1,0,total,under,1.91,47.5
+2023,23,2023-08-05,South Sydney Rabbitohs,Cronulla Sharks,bet365,1,0,h2h,home,1.24,
+2023,23,2023-08-05,South Sydney Rabbitohs,Cronulla Sharks,bet365,1,0,h2h,away,4.25,
+2023,23,2023-08-05,South Sydney Rabbitohs,Cronulla Sharks,bet365,1,0,handicap,home,1.952,-12.5
+2023,23,2023-08-05,South Sydney Rabbitohs,Cronulla Sharks,bet365,1,0,handicap,away,1.87,12.5
+2023,23,2023-08-05,South Sydney Rabbitohs,Cronulla Sharks,bet365,1,0,total,over,1.91,48.5
+2023,23,2023-08-05,South Sydney Rabbitohs,Cronulla Sharks,bet365,1,0,total,under,1.91,48.5
+2023,23,2023-08-05,Dolphins,Newcastle Knights,bet365,1,0,h2h,home,3.7,
+2023,23,2023-08-05,Dolphins,Newcastle Knights,bet365,1,0,h2h,away,1.3,
+2023,23,2023-08-05,Dolphins,Newcastle Knights,bet365,1,0,handicap,home,1.91,10.5
+2023,23,2023-08-05,Dolphins,Newcastle Knights,bet365,1,0,handicap,away,1.91,-10.5
+2023,23,2023-08-05,Dolphins,Newcastle Knights,bet365,1,0,total,over,1.91,48.5
+2023,23,2023-08-05,Dolphins,Newcastle Knights,bet365,1,0,total,under,1.91,48.5
+2023,23,2023-08-05,North QLD Cowboys,Brisbane Broncos,bet365,1,0,h2h,home,1.93,
+2023,23,2023-08-05,North QLD Cowboys,Brisbane Broncos,bet365,1,0,h2h,away,1.93,
+2023,23,2023-08-05,North QLD Cowboys,Brisbane Broncos,bet365,1,0,handicap,home,1.8,1.5
+2023,23,2023-08-05,North QLD Cowboys,Brisbane Broncos,bet365,1,0,handicap,away,2.02,-1.5
+2023,23,2023-08-05,North QLD Cowboys,Brisbane Broncos,bet365,1,0,total,over,1.952,42.5
+2023,23,2023-08-05,North QLD Cowboys,Brisbane Broncos,bet365,1,0,total,under,1.87,42.5
+2023,23,2023-08-04,Penrith Panthers,Melbourne Storm,bet365,1,0,h2h,home,1.19,
+2023,23,2023-08-04,Penrith Panthers,Melbourne Storm,bet365,1,0,h2h,away,5.0,
+2023,23,2023-08-04,Penrith Panthers,Melbourne Storm,bet365,1,0,handicap,home,1.87,-13.5
+2023,23,2023-08-04,Penrith Panthers,Melbourne Storm,bet365,1,0,handicap,away,1.952,13.5
+2023,23,2023-08-04,Penrith Panthers,Melbourne Storm,bet365,1,0,total,over,1.82,39.5
+2023,23,2023-08-04,Penrith Panthers,Melbourne Storm,bet365,1,0,total,under,2.0,39.5
+2023,23,2023-08-04,Gold Coast Titans,New Zealand Warriors,bet365,1,0,h2h,home,3.2,
+2023,23,2023-08-04,Gold Coast Titans,New Zealand Warriors,bet365,1,0,h2h,away,1.38,
+2023,23,2023-08-04,Gold Coast Titans,New Zealand Warriors,bet365,1,0,handicap,home,1.952,9.5
+2023,23,2023-08-04,Gold Coast Titans,New Zealand Warriors,bet365,1,0,handicap,away,1.87,-9.5
+2023,23,2023-08-04,Gold Coast Titans,New Zealand Warriors,bet365,1,0,total,over,1.82,47.5
+2023,23,2023-08-04,Gold Coast Titans,New Zealand Warriors,bet365,1,0,total,under,2.0,47.5
+2023,23,2023-08-03,Sydney Roosters,Manly Sea Eagles,bet365,1,0,h2h,home,1.58,
+2023,23,2023-08-03,Sydney Roosters,Manly Sea Eagles,bet365,1,0,h2h,away,2.45,
+2023,23,2023-08-03,Sydney Roosters,Manly Sea Eagles,bet365,1,0,handicap,home,1.87,-4.5
+2023,23,2023-08-03,Sydney Roosters,Manly Sea Eagles,bet365,1,0,handicap,away,1.952,4.5
+2023,23,2023-08-03,Sydney Roosters,Manly Sea Eagles,bet365,1,0,total,over,1.91,41.5
+2023,23,2023-08-03,Sydney Roosters,Manly Sea Eagles,bet365,1,0,total,under,1.91,41.5
+2023,22,2023-07-30,Gold Coast Titans,North QLD Cowboys,bet365,1,0,h2h,home,3.3,
+2023,22,2023-07-30,Gold Coast Titans,North QLD Cowboys,bet365,1,0,h2h,away,1.36,
+2023,22,2023-07-30,Gold Coast Titans,North QLD Cowboys,bet365,1,0,handicap,home,1.952,9.5
+2023,22,2023-07-30,Gold Coast Titans,North QLD Cowboys,bet365,1,0,handicap,away,1.87,-9.5
+2023,22,2023-07-30,Gold Coast Titans,North QLD Cowboys,bet365,1,0,total,over,1.91,48.5
+2023,22,2023-07-30,Gold Coast Titans,North QLD Cowboys,bet365,1,0,total,under,1.91,48.5
+2023,22,2023-07-30,Canterbury Bulldogs,Dolphins,bet365,1,0,h2h,home,2.3,
+2023,22,2023-07-30,Canterbury Bulldogs,Dolphins,bet365,1,0,h2h,away,1.65,
+2023,22,2023-07-30,Canterbury Bulldogs,Dolphins,bet365,1,0,handicap,home,2.0,3.5
+2023,22,2023-07-30,Canterbury Bulldogs,Dolphins,bet365,1,0,handicap,away,1.82,-3.5
+2023,22,2023-07-30,Canterbury Bulldogs,Dolphins,bet365,1,0,total,over,1.91,49.5
+2023,22,2023-07-30,Canterbury Bulldogs,Dolphins,bet365,1,0,total,under,1.91,49.5
+2023,22,2023-07-29,Penrith Panthers,Cronulla Sharks,bet365,1,0,h2h,home,1.12,
+2023,22,2023-07-29,Penrith Panthers,Cronulla Sharks,bet365,1,0,h2h,away,6.5,
+2023,22,2023-07-29,Penrith Panthers,Cronulla Sharks,bet365,1,0,handicap,home,1.87,-16.5
+2023,22,2023-07-29,Penrith Panthers,Cronulla Sharks,bet365,1,0,handicap,away,1.952,16.5
+2023,22,2023-07-29,Penrith Panthers,Cronulla Sharks,bet365,1,0,total,over,1.91,44.5
+2023,22,2023-07-29,Penrith Panthers,Cronulla Sharks,bet365,1,0,total,under,1.91,44.5
+2023,22,2023-07-29,St. George Illawarra Dragons,Manly Sea Eagles,bet365,1,0,h2h,home,2.85,
+2023,22,2023-07-29,St. George Illawarra Dragons,Manly Sea Eagles,bet365,1,0,h2h,away,1.45,
+2023,22,2023-07-29,St. George Illawarra Dragons,Manly Sea Eagles,bet365,1,0,handicap,home,1.91,7.5
+2023,22,2023-07-29,St. George Illawarra Dragons,Manly Sea Eagles,bet365,1,0,handicap,away,1.91,-7.5
+2023,22,2023-07-29,St. George Illawarra Dragons,Manly Sea Eagles,bet365,1,0,total,over,1.87,45.5
+2023,22,2023-07-29,St. George Illawarra Dragons,Manly Sea Eagles,bet365,1,0,total,under,1.952,45.5
+2023,22,2023-07-29,Canberra Raiders,Newcastle Knights,bet365,1,0,h2h,home,1.65,
+2023,22,2023-07-29,Canberra Raiders,Newcastle Knights,bet365,1,0,h2h,away,2.3,
+2023,22,2023-07-29,Canberra Raiders,Newcastle Knights,bet365,1,0,handicap,home,2.1,-4.5
+2023,22,2023-07-29,Canberra Raiders,Newcastle Knights,bet365,1,0,handicap,away,1.75,4.5
+2023,22,2023-07-29,Canberra Raiders,Newcastle Knights,bet365,1,0,total,over,1.91,46.5
+2023,22,2023-07-29,Canberra Raiders,Newcastle Knights,bet365,1,0,total,under,1.91,46.5
+2023,22,2023-07-28,Melbourne Storm,Parramatta Eels,bet365,1,0,h2h,home,1.44,
+2023,22,2023-07-28,Melbourne Storm,Parramatta Eels,bet365,1,0,h2h,away,2.85,
+2023,22,2023-07-28,Melbourne Storm,Parramatta Eels,bet365,1,0,handicap,home,1.952,-7.5
+2023,22,2023-07-28,Melbourne Storm,Parramatta Eels,bet365,1,0,handicap,away,1.87,7.5
+2023,22,2023-07-28,Melbourne Storm,Parramatta Eels,bet365,1,0,total,over,1.91,43.5
+2023,22,2023-07-28,Melbourne Storm,Parramatta Eels,bet365,1,0,total,under,1.91,43.5
+2023,22,2023-07-28,Wests Tigers,South Sydney Rabbitohs,bet365,1,0,h2h,home,10.0,
+2023,22,2023-07-28,Wests Tigers,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.06,
+2023,22,2023-07-28,Wests Tigers,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.87,22.5
+2023,22,2023-07-28,Wests Tigers,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.952,-22.5
+2023,22,2023-07-28,Wests Tigers,South Sydney Rabbitohs,bet365,1,0,total,over,1.91,51.5
+2023,22,2023-07-28,Wests Tigers,South Sydney Rabbitohs,bet365,1,0,total,under,1.91,51.5
+2023,22,2023-07-27,Brisbane Broncos,Sydney Roosters,bet365,1,0,h2h,home,1.38,
+2023,22,2023-07-27,Brisbane Broncos,Sydney Roosters,bet365,1,0,h2h,away,3.2,
+2023,22,2023-07-27,Brisbane Broncos,Sydney Roosters,bet365,1,0,handicap,home,1.952,-8.5
+2023,22,2023-07-27,Brisbane Broncos,Sydney Roosters,bet365,1,0,handicap,away,1.87,8.5
+2023,22,2023-07-27,Brisbane Broncos,Sydney Roosters,bet365,1,0,total,over,1.91,44.5
+2023,22,2023-07-27,Brisbane Broncos,Sydney Roosters,bet365,1,0,total,under,1.91,44.5
+2023,21,2023-07-23,Cronulla Sharks,Manly Sea Eagles,bet365,1,0,h2h,home,1.35,
+2023,21,2023-07-23,Cronulla Sharks,Manly Sea Eagles,bet365,1,0,h2h,away,3.3,
+2023,21,2023-07-23,Cronulla Sharks,Manly Sea Eagles,bet365,1,0,handicap,home,1.87,-8.5
+2023,21,2023-07-23,Cronulla Sharks,Manly Sea Eagles,bet365,1,0,handicap,away,1.952,8.5
+2023,21,2023-07-23,Cronulla Sharks,Manly Sea Eagles,bet365,1,0,total,over,1.91,46.5
+2023,21,2023-07-23,Cronulla Sharks,Manly Sea Eagles,bet365,1,0,total,under,1.91,46.5
+2023,21,2023-07-23,Penrith Panthers,Canterbury Bulldogs,bet365,1,0,h2h,home,1.025,
+2023,21,2023-07-23,Penrith Panthers,Canterbury Bulldogs,bet365,1,0,h2h,away,15.0,
+2023,21,2023-07-23,Penrith Panthers,Canterbury Bulldogs,bet365,1,0,handicap,home,1.91,-30.5
+2023,21,2023-07-23,Penrith Panthers,Canterbury Bulldogs,bet365,1,0,handicap,away,1.91,30.5
+2023,21,2023-07-23,Penrith Panthers,Canterbury Bulldogs,bet365,1,0,total,over,1.91,47.5
+2023,21,2023-07-23,Penrith Panthers,Canterbury Bulldogs,bet365,1,0,total,under,1.91,47.5
+2023,21,2023-07-22,North QLD Cowboys,Parramatta Eels,bet365,1,0,h2h,home,1.38,
+2023,21,2023-07-22,North QLD Cowboys,Parramatta Eels,bet365,1,0,h2h,away,3.1,
+2023,21,2023-07-22,North QLD Cowboys,Parramatta Eels,bet365,1,0,handicap,home,1.952,-8.5
+2023,21,2023-07-22,North QLD Cowboys,Parramatta Eels,bet365,1,0,handicap,away,1.87,8.5
+2023,21,2023-07-22,North QLD Cowboys,Parramatta Eels,bet365,1,0,total,over,1.87,46.5
+2023,21,2023-07-22,North QLD Cowboys,Parramatta Eels,bet365,1,0,total,under,1.952,46.5
+2023,21,2023-07-22,Newcastle Knights,Melbourne Storm,bet365,1,0,h2h,home,3.2,
+2023,21,2023-07-22,Newcastle Knights,Melbourne Storm,bet365,1,0,h2h,away,1.36,
+2023,21,2023-07-22,Newcastle Knights,Melbourne Storm,bet365,1,0,handicap,home,1.87,8.5
+2023,21,2023-07-22,Newcastle Knights,Melbourne Storm,bet365,1,0,handicap,away,1.952,-8.5
+2023,21,2023-07-22,Newcastle Knights,Melbourne Storm,bet365,1,0,total,over,1.91,45.5
+2023,21,2023-07-22,Newcastle Knights,Melbourne Storm,bet365,1,0,total,under,1.91,45.5
+2023,21,2023-07-22,Gold Coast Titans,Sydney Roosters,bet365,1,0,h2h,home,2.22,
+2023,21,2023-07-22,Gold Coast Titans,Sydney Roosters,bet365,1,0,h2h,away,1.7,
+2023,21,2023-07-22,Gold Coast Titans,Sydney Roosters,bet365,1,0,handicap,home,1.87,3.5
+2023,21,2023-07-22,Gold Coast Titans,Sydney Roosters,bet365,1,0,handicap,away,1.952,-3.5
+2023,21,2023-07-22,Gold Coast Titans,Sydney Roosters,bet365,1,0,total,over,1.85,47.5
+2023,21,2023-07-22,Gold Coast Titans,Sydney Roosters,bet365,1,0,total,under,1.97,47.5
+2023,21,2023-07-21,South Sydney Rabbitohs,Brisbane Broncos,bet365,1,0,h2h,home,1.93,
+2023,21,2023-07-21,South Sydney Rabbitohs,Brisbane Broncos,bet365,1,0,h2h,away,1.93,
+2023,21,2023-07-21,South Sydney Rabbitohs,Brisbane Broncos,bet365,1,0,handicap,home,1.8,1.5
+2023,21,2023-07-21,South Sydney Rabbitohs,Brisbane Broncos,bet365,1,0,handicap,away,2.02,-1.5
+2023,21,2023-07-21,South Sydney Rabbitohs,Brisbane Broncos,bet365,1,0,total,over,1.952,44.5
+2023,21,2023-07-21,South Sydney Rabbitohs,Brisbane Broncos,bet365,1,0,total,under,1.87,44.5
+2023,21,2023-07-21,New Zealand Warriors,Canberra Raiders,bet365,1,0,h2h,home,1.42,
+2023,21,2023-07-21,New Zealand Warriors,Canberra Raiders,bet365,1,0,h2h,away,3.0,
+2023,21,2023-07-21,New Zealand Warriors,Canberra Raiders,bet365,1,0,handicap,home,1.91,-6.5
+2023,21,2023-07-21,New Zealand Warriors,Canberra Raiders,bet365,1,0,handicap,away,1.91,6.5
+2023,21,2023-07-21,New Zealand Warriors,Canberra Raiders,bet365,1,0,total,over,1.85,39.5
+2023,21,2023-07-21,New Zealand Warriors,Canberra Raiders,bet365,1,0,total,under,1.97,39.5
+2023,21,2023-07-20,St. George Illawarra Dragons,Wests Tigers,bet365,1,0,h2h,home,1.54,
+2023,21,2023-07-20,St. George Illawarra Dragons,Wests Tigers,bet365,1,0,h2h,away,2.55,
+2023,21,2023-07-20,St. George Illawarra Dragons,Wests Tigers,bet365,1,0,handicap,home,1.87,-5.5
+2023,21,2023-07-20,St. George Illawarra Dragons,Wests Tigers,bet365,1,0,handicap,away,1.952,5.5
+2023,21,2023-07-20,St. George Illawarra Dragons,Wests Tigers,bet365,1,0,total,over,1.91,45.5
+2023,21,2023-07-20,St. George Illawarra Dragons,Wests Tigers,bet365,1,0,total,under,1.91,45.5
+2023,20,2023-07-16,Parramatta Eels,Gold Coast Titans,bet365,1,0,h2h,home,1.25,
+2023,20,2023-07-16,Parramatta Eels,Gold Coast Titans,bet365,1,0,h2h,away,4.0,
+2023,20,2023-07-16,Parramatta Eels,Gold Coast Titans,bet365,1,0,handicap,home,1.87,-11.5
+2023,20,2023-07-16,Parramatta Eels,Gold Coast Titans,bet365,1,0,handicap,away,1.952,11.5
+2023,20,2023-07-16,Parramatta Eels,Gold Coast Titans,bet365,1,0,total,over,1.91,50.5
+2023,20,2023-07-16,Parramatta Eels,Gold Coast Titans,bet365,1,0,total,under,1.91,50.5
+2023,20,2023-07-16,Dolphins,Penrith Panthers,bet365,1,0,h2h,home,3.7,
+2023,20,2023-07-16,Dolphins,Penrith Panthers,bet365,1,0,h2h,away,1.3,
+2023,20,2023-07-16,Dolphins,Penrith Panthers,bet365,1,0,handicap,home,1.952,10.5
+2023,20,2023-07-16,Dolphins,Penrith Panthers,bet365,1,0,handicap,away,1.87,-10.5
+2023,20,2023-07-16,Dolphins,Penrith Panthers,bet365,1,0,total,over,1.91,44.5
+2023,20,2023-07-16,Dolphins,Penrith Panthers,bet365,1,0,total,under,1.91,44.5
+2023,20,2023-07-16,New Zealand Warriors,Cronulla Sharks,bet365,1,0,h2h,home,1.85,
+2023,20,2023-07-16,New Zealand Warriors,Cronulla Sharks,bet365,1,0,h2h,away,2.0,
+2023,20,2023-07-16,New Zealand Warriors,Cronulla Sharks,bet365,1,0,handicap,home,1.952,-1.5
+2023,20,2023-07-16,New Zealand Warriors,Cronulla Sharks,bet365,1,0,handicap,away,1.87,1.5
+2023,20,2023-07-16,New Zealand Warriors,Cronulla Sharks,bet365,1,0,total,over,1.952,44.5
+2023,20,2023-07-16,New Zealand Warriors,Cronulla Sharks,bet365,1,0,total,under,1.87,44.5
+2023,20,2023-07-15,Sydney Roosters,Melbourne Storm,bet365,1,0,h2h,home,2.75,
+2023,20,2023-07-15,Sydney Roosters,Melbourne Storm,bet365,1,0,h2h,away,1.48,
+2023,20,2023-07-15,Sydney Roosters,Melbourne Storm,bet365,1,0,handicap,home,1.87,6.5
+2023,20,2023-07-15,Sydney Roosters,Melbourne Storm,bet365,1,0,handicap,away,1.952,-6.5
+2023,20,2023-07-15,Sydney Roosters,Melbourne Storm,bet365,1,0,total,over,1.91,41.5
+2023,20,2023-07-15,Sydney Roosters,Melbourne Storm,bet365,1,0,total,under,1.91,41.5
+2023,20,2023-07-15,Manly Sea Eagles,North QLD Cowboys,bet365,1,0,h2h,home,2.45,
+2023,20,2023-07-15,Manly Sea Eagles,North QLD Cowboys,bet365,1,0,h2h,away,1.58,
+2023,20,2023-07-15,Manly Sea Eagles,North QLD Cowboys,bet365,1,0,handicap,home,1.91,4.5
+2023,20,2023-07-15,Manly Sea Eagles,North QLD Cowboys,bet365,1,0,handicap,away,1.91,-4.5
+2023,20,2023-07-15,Manly Sea Eagles,North QLD Cowboys,bet365,1,0,total,over,1.87,44.5
+2023,20,2023-07-15,Manly Sea Eagles,North QLD Cowboys,bet365,1,0,total,under,1.952,44.5
+2023,20,2023-07-15,Canterbury Bulldogs,Brisbane Broncos,bet365,1,0,h2h,home,2.9,
+2023,20,2023-07-15,Canterbury Bulldogs,Brisbane Broncos,bet365,1,0,h2h,away,1.44,
+2023,20,2023-07-15,Canterbury Bulldogs,Brisbane Broncos,bet365,1,0,handicap,home,1.91,6.5
+2023,20,2023-07-15,Canterbury Bulldogs,Brisbane Broncos,bet365,1,0,handicap,away,1.91,-6.5
+2023,20,2023-07-15,Canterbury Bulldogs,Brisbane Broncos,bet365,1,0,total,over,1.91,45.5
+2023,20,2023-07-15,Canterbury Bulldogs,Brisbane Broncos,bet365,1,0,total,under,1.91,45.5
+2023,20,2023-07-14,Newcastle Knights,Wests Tigers,bet365,1,0,h2h,home,1.22,
+2023,20,2023-07-14,Newcastle Knights,Wests Tigers,bet365,1,0,h2h,away,4.5,
+2023,20,2023-07-14,Newcastle Knights,Wests Tigers,bet365,1,0,handicap,home,1.91,-13.5
+2023,20,2023-07-14,Newcastle Knights,Wests Tigers,bet365,1,0,handicap,away,1.91,13.5
+2023,20,2023-07-14,Newcastle Knights,Wests Tigers,bet365,1,0,total,over,1.91,45.5
+2023,20,2023-07-14,Newcastle Knights,Wests Tigers,bet365,1,0,total,under,1.91,45.5
+2023,19,2023-07-09,Gold Coast Titans,Dolphins,bet365,1,0,h2h,home,1.68,
+2023,19,2023-07-09,Gold Coast Titans,Dolphins,bet365,1,0,h2h,away,2.25,
+2023,19,2023-07-09,Gold Coast Titans,Dolphins,bet365,1,0,handicap,home,1.91,-3.5
+2023,19,2023-07-09,Gold Coast Titans,Dolphins,bet365,1,0,handicap,away,1.91,3.5
+2023,19,2023-07-09,Gold Coast Titans,Dolphins,bet365,1,0,total,over,1.91,51.5
+2023,19,2023-07-09,Gold Coast Titans,Dolphins,bet365,1,0,total,under,1.91,51.5
+2023,19,2023-07-08,South Sydney Rabbitohs,Canterbury Bulldogs,bet365,1,0,h2h,home,1.6,
+2023,19,2023-07-08,South Sydney Rabbitohs,Canterbury Bulldogs,bet365,1,0,h2h,away,2.4,
+2023,19,2023-07-08,South Sydney Rabbitohs,Canterbury Bulldogs,bet365,1,0,handicap,home,2.0,-4.5
+2023,19,2023-07-08,South Sydney Rabbitohs,Canterbury Bulldogs,bet365,1,0,handicap,away,1.82,4.5
+2023,19,2023-07-08,South Sydney Rabbitohs,Canterbury Bulldogs,bet365,1,0,total,over,1.91,42.5
+2023,19,2023-07-08,South Sydney Rabbitohs,Canterbury Bulldogs,bet365,1,0,total,under,1.91,42.5
+2023,19,2023-07-08,Parramatta Eels,New Zealand Warriors,bet365,1,0,h2h,home,2.55,
+2023,19,2023-07-08,Parramatta Eels,New Zealand Warriors,bet365,1,0,h2h,away,1.53,
+2023,19,2023-07-08,Parramatta Eels,New Zealand Warriors,bet365,1,0,handicap,home,1.97,4.5
+2023,19,2023-07-08,Parramatta Eels,New Zealand Warriors,bet365,1,0,handicap,away,1.833,-4.5
+2023,19,2023-07-08,Parramatta Eels,New Zealand Warriors,bet365,1,0,total,over,1.91,43.5
+2023,19,2023-07-08,Parramatta Eels,New Zealand Warriors,bet365,1,0,total,under,1.91,43.5
+2023,19,2023-07-07,St. George Illawarra Dragons,Canberra Raiders,bet365,1,0,h2h,home,4.25,
+2023,19,2023-07-07,St. George Illawarra Dragons,Canberra Raiders,bet365,1,0,h2h,away,1.24,
+2023,19,2023-07-07,St. George Illawarra Dragons,Canberra Raiders,bet365,1,0,handicap,home,1.952,11.5
+2023,19,2023-07-07,St. George Illawarra Dragons,Canberra Raiders,bet365,1,0,handicap,away,1.87,-11.5
+2023,19,2023-07-07,St. George Illawarra Dragons,Canberra Raiders,bet365,1,0,total,over,1.82,45.5
+2023,19,2023-07-07,St. George Illawarra Dragons,Canberra Raiders,bet365,1,0,total,under,2.0,45.5
+2023,19,2023-07-06,Wests Tigers,Cronulla Sharks,bet365,1,0,h2h,home,11.0,
+2023,19,2023-07-06,Wests Tigers,Cronulla Sharks,bet365,1,0,h2h,away,1.05,
+2023,19,2023-07-06,Wests Tigers,Cronulla Sharks,bet365,1,0,handicap,home,1.952,23.5
+2023,19,2023-07-06,Wests Tigers,Cronulla Sharks,bet365,1,0,handicap,away,1.87,-23.5
+2023,19,2023-07-06,Wests Tigers,Cronulla Sharks,bet365,1,0,total,over,1.85,49.5
+2023,19,2023-07-06,Wests Tigers,Cronulla Sharks,bet365,1,0,total,under,1.97,49.5
+2023,18,2023-07-02,Manly Sea Eagles,Sydney Roosters,bet365,1,0,h2h,home,1.57,
+2023,18,2023-07-02,Manly Sea Eagles,Sydney Roosters,bet365,1,0,h2h,away,2.45,
+2023,18,2023-07-02,Manly Sea Eagles,Sydney Roosters,bet365,1,0,handicap,home,1.91,-4.5
+2023,18,2023-07-02,Manly Sea Eagles,Sydney Roosters,bet365,1,0,handicap,away,1.91,4.5
+2023,18,2023-07-02,Manly Sea Eagles,Sydney Roosters,bet365,1,0,total,over,1.87,43.5
+2023,18,2023-07-02,Manly Sea Eagles,Sydney Roosters,bet365,1,0,total,under,1.952,43.5
+2023,18,2023-07-02,Canterbury Bulldogs,Newcastle Knights,bet365,1,0,h2h,home,2.18,
+2023,18,2023-07-02,Canterbury Bulldogs,Newcastle Knights,bet365,1,0,h2h,away,1.7,
+2023,18,2023-07-02,Canterbury Bulldogs,Newcastle Knights,bet365,1,0,handicap,home,1.87,2.5
+2023,18,2023-07-02,Canterbury Bulldogs,Newcastle Knights,bet365,1,0,handicap,away,1.952,-2.5
+2023,18,2023-07-02,Canterbury Bulldogs,Newcastle Knights,bet365,1,0,total,over,1.85,43.5
+2023,18,2023-07-02,Canterbury Bulldogs,Newcastle Knights,bet365,1,0,total,under,1.97,43.5
+2023,18,2023-07-01,Brisbane Broncos,Dolphins,bet365,1,0,h2h,home,1.35,
+2023,18,2023-07-01,Brisbane Broncos,Dolphins,bet365,1,0,h2h,away,3.25,
+2023,18,2023-07-01,Brisbane Broncos,Dolphins,bet365,1,0,handicap,home,1.91,-8.5
+2023,18,2023-07-01,Brisbane Broncos,Dolphins,bet365,1,0,handicap,away,1.91,8.5
+2023,18,2023-07-01,Brisbane Broncos,Dolphins,bet365,1,0,total,over,1.91,47.5
+2023,18,2023-07-01,Brisbane Broncos,Dolphins,bet365,1,0,total,under,1.91,47.5
+2023,18,2023-07-01,North QLD Cowboys,Wests Tigers,bet365,1,0,h2h,home,1.13,
+2023,18,2023-07-01,North QLD Cowboys,Wests Tigers,bet365,1,0,h2h,away,6.5,
+2023,18,2023-07-01,North QLD Cowboys,Wests Tigers,bet365,1,0,handicap,home,1.91,-16.5
+2023,18,2023-07-01,North QLD Cowboys,Wests Tigers,bet365,1,0,handicap,away,1.91,16.5
+2023,18,2023-07-01,North QLD Cowboys,Wests Tigers,bet365,1,0,total,over,1.91,45.5
+2023,18,2023-07-01,North QLD Cowboys,Wests Tigers,bet365,1,0,total,under,1.91,45.5
+2023,18,2023-07-01,Canberra Raiders,Gold Coast Titans,bet365,1,0,h2h,home,1.65,
+2023,18,2023-07-01,Canberra Raiders,Gold Coast Titans,bet365,1,0,h2h,away,2.3,
+2023,18,2023-07-01,Canberra Raiders,Gold Coast Titans,bet365,1,0,handicap,home,1.87,-3.5
+2023,18,2023-07-01,Canberra Raiders,Gold Coast Titans,bet365,1,0,handicap,away,1.952,3.5
+2023,18,2023-07-01,Canberra Raiders,Gold Coast Titans,bet365,1,0,total,over,1.91,45.5
+2023,18,2023-07-01,Canberra Raiders,Gold Coast Titans,bet365,1,0,total,under,1.91,45.5
+2023,18,2023-06-30,Melbourne Storm,Penrith Panthers,bet365,1,0,h2h,home,1.72,
+2023,18,2023-06-30,Melbourne Storm,Penrith Panthers,bet365,1,0,h2h,away,2.18,
+2023,18,2023-06-30,Melbourne Storm,Penrith Panthers,bet365,1,0,handicap,home,1.82,-1.5
+2023,18,2023-06-30,Melbourne Storm,Penrith Panthers,bet365,1,0,handicap,away,2.0,1.5
+2023,18,2023-06-30,Melbourne Storm,Penrith Panthers,bet365,1,0,total,over,2.02,38.5
+2023,18,2023-06-30,Melbourne Storm,Penrith Panthers,bet365,1,0,total,under,1.8,38.5
+2023,18,2023-06-30,New Zealand Warriors,South Sydney Rabbitohs,bet365,1,0,h2h,home,1.5,
+2023,18,2023-06-30,New Zealand Warriors,South Sydney Rabbitohs,bet365,1,0,h2h,away,2.62,
+2023,18,2023-06-30,New Zealand Warriors,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.87,-4.5
+2023,18,2023-06-30,New Zealand Warriors,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.952,4.5
+2023,18,2023-06-30,New Zealand Warriors,South Sydney Rabbitohs,bet365,1,0,total,over,1.952,37.5
+2023,18,2023-06-30,New Zealand Warriors,South Sydney Rabbitohs,bet365,1,0,total,under,1.87,37.5
+2023,18,2023-06-29,Cronulla Sharks,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.11,
+2023,18,2023-06-29,Cronulla Sharks,St. George Illawarra Dragons,bet365,1,0,h2h,away,6.75,
+2023,18,2023-06-29,Cronulla Sharks,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.91,-18.5
+2023,18,2023-06-29,Cronulla Sharks,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.91,18.5
+2023,18,2023-06-29,Cronulla Sharks,St. George Illawarra Dragons,bet365,1,0,total,over,1.85,45.5
+2023,18,2023-06-29,Cronulla Sharks,St. George Illawarra Dragons,bet365,1,0,total,under,1.97,45.5
+2023,17,2023-06-25,Sydney Roosters,Canberra Raiders,bet365,1,0,h2h,home,1.65,
+2023,17,2023-06-25,Sydney Roosters,Canberra Raiders,bet365,1,0,h2h,away,2.3,
+2023,17,2023-06-25,Sydney Roosters,Canberra Raiders,bet365,1,0,handicap,home,1.82,-3.5
+2023,17,2023-06-25,Sydney Roosters,Canberra Raiders,bet365,1,0,handicap,away,2.0,3.5
+2023,17,2023-06-25,Sydney Roosters,Canberra Raiders,bet365,1,0,total,over,1.91,43.5
+2023,17,2023-06-25,Sydney Roosters,Canberra Raiders,bet365,1,0,total,under,1.91,43.5
+2023,17,2023-06-25,South Sydney Rabbitohs,North QLD Cowboys,bet365,1,0,h2h,home,1.48,
+2023,17,2023-06-25,South Sydney Rabbitohs,North QLD Cowboys,bet365,1,0,h2h,away,2.75,
+2023,17,2023-06-25,South Sydney Rabbitohs,North QLD Cowboys,bet365,1,0,handicap,home,1.91,-6.5
+2023,17,2023-06-25,South Sydney Rabbitohs,North QLD Cowboys,bet365,1,0,handicap,away,1.91,6.5
+2023,17,2023-06-25,South Sydney Rabbitohs,North QLD Cowboys,bet365,1,0,total,over,1.82,45.5
+2023,17,2023-06-25,South Sydney Rabbitohs,North QLD Cowboys,bet365,1,0,total,under,2.0,45.5
+2023,17,2023-06-25,Brisbane Broncos,Gold Coast Titans,bet365,1,0,h2h,home,1.25,
+2023,17,2023-06-25,Brisbane Broncos,Gold Coast Titans,bet365,1,0,h2h,away,4.15,
+2023,17,2023-06-25,Brisbane Broncos,Gold Coast Titans,bet365,1,0,handicap,home,1.91,-12.5
+2023,17,2023-06-25,Brisbane Broncos,Gold Coast Titans,bet365,1,0,handicap,away,1.91,12.5
+2023,17,2023-06-25,Brisbane Broncos,Gold Coast Titans,bet365,1,0,total,over,1.91,51.5
+2023,17,2023-06-25,Brisbane Broncos,Gold Coast Titans,bet365,1,0,total,under,1.91,51.5
+2023,17,2023-06-24,Melbourne Storm,Manly Sea Eagles,bet365,1,0,h2h,home,1.25,
+2023,17,2023-06-24,Melbourne Storm,Manly Sea Eagles,bet365,1,0,h2h,away,4.0,
+2023,17,2023-06-24,Melbourne Storm,Manly Sea Eagles,bet365,1,0,handicap,home,1.87,-11.5
+2023,17,2023-06-24,Melbourne Storm,Manly Sea Eagles,bet365,1,0,handicap,away,1.952,11.5
+2023,17,2023-06-24,Melbourne Storm,Manly Sea Eagles,bet365,1,0,total,over,1.91,43.5
+2023,17,2023-06-24,Melbourne Storm,Manly Sea Eagles,bet365,1,0,total,under,1.91,43.5
+2023,17,2023-06-24,Penrith Panthers,Newcastle Knights,bet365,1,0,h2h,home,1.6,
+2023,17,2023-06-24,Penrith Panthers,Newcastle Knights,bet365,1,0,h2h,away,2.4,
+2023,17,2023-06-24,Penrith Panthers,Newcastle Knights,bet365,1,0,handicap,home,1.952,-4.5
+2023,17,2023-06-24,Penrith Panthers,Newcastle Knights,bet365,1,0,handicap,away,1.87,4.5
+2023,17,2023-06-24,Penrith Panthers,Newcastle Knights,bet365,1,0,total,over,1.82,40.5
+2023,17,2023-06-24,Penrith Panthers,Newcastle Knights,bet365,1,0,total,under,2.0,40.5
+2023,17,2023-06-24,Dolphins,Parramatta Eels,bet365,1,0,h2h,home,2.8,
+2023,17,2023-06-24,Dolphins,Parramatta Eels,bet365,1,0,h2h,away,1.45,
+2023,17,2023-06-24,Dolphins,Parramatta Eels,bet365,1,0,handicap,home,1.91,6.5
+2023,17,2023-06-24,Dolphins,Parramatta Eels,bet365,1,0,handicap,away,1.91,-6.5
+2023,17,2023-06-24,Dolphins,Parramatta Eels,bet365,1,0,total,over,1.91,46.5
+2023,17,2023-06-24,Dolphins,Parramatta Eels,bet365,1,0,total,under,1.91,46.5
+2023,17,2023-06-23,St. George Illawarra Dragons,New Zealand Warriors,bet365,1,0,h2h,home,2.62,
+2023,17,2023-06-23,St. George Illawarra Dragons,New Zealand Warriors,bet365,1,0,h2h,away,1.5,
+2023,17,2023-06-23,St. George Illawarra Dragons,New Zealand Warriors,bet365,1,0,handicap,home,1.91,6.5
+2023,17,2023-06-23,St. George Illawarra Dragons,New Zealand Warriors,bet365,1,0,handicap,away,1.91,-6.5
+2023,17,2023-06-23,St. George Illawarra Dragons,New Zealand Warriors,bet365,1,0,total,over,1.91,43.5
+2023,17,2023-06-23,St. George Illawarra Dragons,New Zealand Warriors,bet365,1,0,total,under,1.91,43.5
+2023,16,2023-06-18,Cronulla Sharks,Canterbury Bulldogs,bet365,1,0,h2h,home,1.12,
+2023,16,2023-06-18,Cronulla Sharks,Canterbury Bulldogs,bet365,1,0,h2h,away,6.75,
+2023,16,2023-06-18,Cronulla Sharks,Canterbury Bulldogs,bet365,1,0,handicap,home,1.82,-17.5
+2023,16,2023-06-18,Cronulla Sharks,Canterbury Bulldogs,bet365,1,0,handicap,away,2.0,17.5
+2023,16,2023-06-18,Cronulla Sharks,Canterbury Bulldogs,bet365,1,0,total,over,1.82,45.5
+2023,16,2023-06-18,Cronulla Sharks,Canterbury Bulldogs,bet365,1,0,total,under,2.0,45.5
+2023,16,2023-06-17,Wests Tigers,Melbourne Storm,bet365,1,0,h2h,home,2.75,
+2023,16,2023-06-17,Wests Tigers,Melbourne Storm,bet365,1,0,h2h,away,1.47,
+2023,16,2023-06-17,Wests Tigers,Melbourne Storm,bet365,1,0,handicap,home,1.87,6.5
+2023,16,2023-06-17,Wests Tigers,Melbourne Storm,bet365,1,0,handicap,away,1.952,-6.5
+2023,16,2023-06-17,Wests Tigers,Melbourne Storm,bet365,1,0,total,over,1.91,41.5
+2023,16,2023-06-17,Wests Tigers,Melbourne Storm,bet365,1,0,total,under,1.91,41.5
+2023,16,2023-06-17,Parramatta Eels,Manly Sea Eagles,bet365,1,0,h2h,home,1.56,
+2023,16,2023-06-17,Parramatta Eels,Manly Sea Eagles,bet365,1,0,h2h,away,2.5,
+2023,16,2023-06-17,Parramatta Eels,Manly Sea Eagles,bet365,1,0,handicap,home,1.91,-4.5
+2023,16,2023-06-17,Parramatta Eels,Manly Sea Eagles,bet365,1,0,handicap,away,1.91,4.5
+2023,16,2023-06-17,Parramatta Eels,Manly Sea Eagles,bet365,1,0,total,over,1.952,42.5
+2023,16,2023-06-17,Parramatta Eels,Manly Sea Eagles,bet365,1,0,total,under,1.87,42.5
+2023,16,2023-06-17,Newcastle Knights,Sydney Roosters,bet365,1,0,h2h,home,1.53,
+2023,16,2023-06-17,Newcastle Knights,Sydney Roosters,bet365,1,0,h2h,away,2.55,
+2023,16,2023-06-17,Newcastle Knights,Sydney Roosters,bet365,1,0,handicap,home,2.0,-6.5
+2023,16,2023-06-17,Newcastle Knights,Sydney Roosters,bet365,1,0,handicap,away,1.82,6.5
+2023,16,2023-06-17,Newcastle Knights,Sydney Roosters,bet365,1,0,total,over,1.87,45.5
+2023,16,2023-06-17,Newcastle Knights,Sydney Roosters,bet365,1,0,total,under,1.952,45.5
+2023,16,2023-06-16,North QLD Cowboys,Penrith Panthers,bet365,1,0,h2h,home,1.8,
+2023,16,2023-06-16,North QLD Cowboys,Penrith Panthers,bet365,1,0,h2h,away,2.05,
+2023,16,2023-06-16,North QLD Cowboys,Penrith Panthers,bet365,1,0,handicap,home,1.952,-1.5
+2023,16,2023-06-16,North QLD Cowboys,Penrith Panthers,bet365,1,0,handicap,away,1.87,1.5
+2023,16,2023-06-16,North QLD Cowboys,Penrith Panthers,bet365,1,0,total,over,1.91,40.5
+2023,16,2023-06-16,North QLD Cowboys,Penrith Panthers,bet365,1,0,total,under,1.91,40.5
+2023,16,2023-06-12,Canterbury Bulldogs,Parramatta Eels,bet365,1,0,h2h,home,2.75,
+2023,16,2023-06-12,Canterbury Bulldogs,Parramatta Eels,bet365,1,0,h2h,away,1.48,
+2023,16,2023-06-12,Canterbury Bulldogs,Parramatta Eels,bet365,1,0,handicap,home,1.91,6.5
+2023,16,2023-06-12,Canterbury Bulldogs,Parramatta Eels,bet365,1,0,handicap,away,1.91,-6.5
+2023,16,2023-06-12,Canterbury Bulldogs,Parramatta Eels,bet365,1,0,total,over,1.87,43.5
+2023,16,2023-06-12,Canterbury Bulldogs,Parramatta Eels,bet365,1,0,total,under,1.952,43.5
+2023,15,2023-06-11,Melbourne Storm,Cronulla Sharks,bet365,1,0,h2h,home,1.63,
+2023,15,2023-06-11,Melbourne Storm,Cronulla Sharks,bet365,1,0,h2h,away,2.35,
+2023,15,2023-06-11,Melbourne Storm,Cronulla Sharks,bet365,1,0,handicap,home,1.85,-3.5
+2023,15,2023-06-11,Melbourne Storm,Cronulla Sharks,bet365,1,0,handicap,away,1.97,3.5
+2023,15,2023-06-11,Melbourne Storm,Cronulla Sharks,bet365,1,0,total,over,1.91,43.5
+2023,15,2023-06-11,Melbourne Storm,Cronulla Sharks,bet365,1,0,total,under,1.91,43.5
+2023,15,2023-06-10,Sydney Roosters,Penrith Panthers,bet365,1,0,h2h,home,2.5,
+2023,15,2023-06-10,Sydney Roosters,Penrith Panthers,bet365,1,0,h2h,away,1.56,
+2023,15,2023-06-10,Sydney Roosters,Penrith Panthers,bet365,1,0,handicap,home,1.91,4.5
+2023,15,2023-06-10,Sydney Roosters,Penrith Panthers,bet365,1,0,handicap,away,1.91,-4.5
+2023,15,2023-06-10,Sydney Roosters,Penrith Panthers,bet365,1,0,total,over,1.952,38.5
+2023,15,2023-06-10,Sydney Roosters,Penrith Panthers,bet365,1,0,total,under,1.87,38.5
+2023,15,2023-06-10,Brisbane Broncos,Newcastle Knights,bet365,1,0,h2h,home,1.19,
+2023,15,2023-06-10,Brisbane Broncos,Newcastle Knights,bet365,1,0,h2h,away,5.0,
+2023,15,2023-06-10,Brisbane Broncos,Newcastle Knights,bet365,1,0,handicap,home,1.87,-13.5
+2023,15,2023-06-10,Brisbane Broncos,Newcastle Knights,bet365,1,0,handicap,away,1.952,13.5
+2023,15,2023-06-10,Brisbane Broncos,Newcastle Knights,bet365,1,0,total,over,1.85,43.5
+2023,15,2023-06-10,Brisbane Broncos,Newcastle Knights,bet365,1,0,total,under,1.97,43.5
+2023,15,2023-06-10,St. George Illawarra Dragons,South Sydney Rabbitohs,bet365,1,0,h2h,home,2.25,
+2023,15,2023-06-10,St. George Illawarra Dragons,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.68,
+2023,15,2023-06-10,St. George Illawarra Dragons,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.91,3.5
+2023,15,2023-06-10,St. George Illawarra Dragons,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.91,-3.5
+2023,15,2023-06-10,St. George Illawarra Dragons,South Sydney Rabbitohs,bet365,1,0,total,over,1.82,43.5
+2023,15,2023-06-10,St. George Illawarra Dragons,South Sydney Rabbitohs,bet365,1,0,total,under,2.0,43.5
+2023,15,2023-06-09,Manly Sea Eagles,Dolphins,bet365,1,0,h2h,home,1.4,
+2023,15,2023-06-09,Manly Sea Eagles,Dolphins,bet365,1,0,h2h,away,3.1,
+2023,15,2023-06-09,Manly Sea Eagles,Dolphins,bet365,1,0,handicap,home,1.91,-9.5
+2023,15,2023-06-09,Manly Sea Eagles,Dolphins,bet365,1,0,handicap,away,1.91,9.5
+2023,15,2023-06-09,Manly Sea Eagles,Dolphins,bet365,1,0,total,over,1.87,45.5
+2023,15,2023-06-09,Manly Sea Eagles,Dolphins,bet365,1,0,total,under,1.952,45.5
+2023,15,2023-06-09,Canberra Raiders,New Zealand Warriors,bet365,1,0,h2h,home,1.5,
+2023,15,2023-06-09,Canberra Raiders,New Zealand Warriors,bet365,1,0,h2h,away,2.68,
+2023,15,2023-06-09,Canberra Raiders,New Zealand Warriors,bet365,1,0,handicap,home,1.91,-5.5
+2023,15,2023-06-09,Canberra Raiders,New Zealand Warriors,bet365,1,0,handicap,away,1.91,5.5
+2023,15,2023-06-09,Canberra Raiders,New Zealand Warriors,bet365,1,0,total,over,1.85,43.5
+2023,15,2023-06-09,Canberra Raiders,New Zealand Warriors,bet365,1,0,total,under,1.97,43.5
+2023,15,2023-06-08,Gold Coast Titans,Wests Tigers,bet365,1,0,h2h,home,1.85,
+2023,15,2023-06-08,Gold Coast Titans,Wests Tigers,bet365,1,0,h2h,away,2.0,
+2023,15,2023-06-08,Gold Coast Titans,Wests Tigers,bet365,1,0,handicap,home,1.91,-1.5
+2023,15,2023-06-08,Gold Coast Titans,Wests Tigers,bet365,1,0,handicap,away,1.91,1.5
+2023,15,2023-06-08,Gold Coast Titans,Wests Tigers,bet365,1,0,total,over,1.93,45.5
+2023,15,2023-06-08,Gold Coast Titans,Wests Tigers,bet365,1,0,total,under,1.89,45.5
+2023,14,2023-06-04,Penrith Panthers,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.11,
+2023,14,2023-06-04,Penrith Panthers,St. George Illawarra Dragons,bet365,1,0,h2h,away,6.75,
+2023,14,2023-06-04,Penrith Panthers,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.82,-18.5
+2023,14,2023-06-04,Penrith Panthers,St. George Illawarra Dragons,bet365,1,0,handicap,away,2.0,18.5
+2023,14,2023-06-04,Penrith Panthers,St. George Illawarra Dragons,bet365,1,0,total,over,1.82,42.5
+2023,14,2023-06-04,Penrith Panthers,St. George Illawarra Dragons,bet365,1,0,total,under,2.0,42.5
+2023,14,2023-06-04,North QLD Cowboys,Melbourne Storm,bet365,1,0,h2h,home,3.0,
+2023,14,2023-06-04,North QLD Cowboys,Melbourne Storm,bet365,1,0,h2h,away,1.42,
+2023,14,2023-06-04,North QLD Cowboys,Melbourne Storm,bet365,1,0,handicap,home,1.952,7.5
+2023,14,2023-06-04,North QLD Cowboys,Melbourne Storm,bet365,1,0,handicap,away,1.87,-7.5
+2023,14,2023-06-04,North QLD Cowboys,Melbourne Storm,bet365,1,0,total,over,1.91,43.5
+2023,14,2023-06-04,North QLD Cowboys,Melbourne Storm,bet365,1,0,total,under,1.91,43.5
+2023,14,2023-06-04,Sydney Roosters,Canterbury Bulldogs,bet365,1,0,h2h,home,1.3,
+2023,14,2023-06-04,Sydney Roosters,Canterbury Bulldogs,bet365,1,0,h2h,away,3.7,
+2023,14,2023-06-04,Sydney Roosters,Canterbury Bulldogs,bet365,1,0,handicap,home,1.952,-10.5
+2023,14,2023-06-04,Sydney Roosters,Canterbury Bulldogs,bet365,1,0,handicap,away,1.87,10.5
+2023,14,2023-06-04,Sydney Roosters,Canterbury Bulldogs,bet365,1,0,total,over,1.91,42.5
+2023,14,2023-06-04,Sydney Roosters,Canterbury Bulldogs,bet365,1,0,total,under,1.91,42.5
+2023,14,2023-06-03,Cronulla Sharks,Brisbane Broncos,bet365,1,0,h2h,home,1.58,
+2023,14,2023-06-03,Cronulla Sharks,Brisbane Broncos,bet365,1,0,h2h,away,2.45,
+2023,14,2023-06-03,Cronulla Sharks,Brisbane Broncos,bet365,1,0,handicap,home,1.91,-4.5
+2023,14,2023-06-03,Cronulla Sharks,Brisbane Broncos,bet365,1,0,handicap,away,1.91,4.5
+2023,14,2023-06-03,Cronulla Sharks,Brisbane Broncos,bet365,1,0,total,over,1.91,42.5
+2023,14,2023-06-03,Cronulla Sharks,Brisbane Broncos,bet365,1,0,total,under,1.91,42.5
+2023,14,2023-06-03,Gold Coast Titans,South Sydney Rabbitohs,bet365,1,0,h2h,home,3.4,
+2023,14,2023-06-03,Gold Coast Titans,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.333,
+2023,14,2023-06-03,Gold Coast Titans,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.952,9.5
+2023,14,2023-06-03,Gold Coast Titans,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.87,-9.5
+2023,14,2023-06-03,Gold Coast Titans,South Sydney Rabbitohs,bet365,1,0,total,over,1.91,48.5
+2023,14,2023-06-03,Gold Coast Titans,South Sydney Rabbitohs,bet365,1,0,total,under,1.91,48.5
+2023,14,2023-06-03,New Zealand Warriors,Dolphins,bet365,1,0,h2h,home,1.42,
+2023,14,2023-06-03,New Zealand Warriors,Dolphins,bet365,1,0,h2h,away,3.0,
+2023,14,2023-06-03,New Zealand Warriors,Dolphins,bet365,1,0,handicap,home,1.952,-8.5
+2023,14,2023-06-03,New Zealand Warriors,Dolphins,bet365,1,0,handicap,away,1.87,8.5
+2023,14,2023-06-03,New Zealand Warriors,Dolphins,bet365,1,0,total,over,1.91,44.5
+2023,14,2023-06-03,New Zealand Warriors,Dolphins,bet365,1,0,total,under,1.91,44.5
+2023,14,2023-06-02,Wests Tigers,Canberra Raiders,bet365,1,0,h2h,home,2.05,
+2023,14,2023-06-02,Wests Tigers,Canberra Raiders,bet365,1,0,h2h,away,1.8,
+2023,14,2023-06-02,Wests Tigers,Canberra Raiders,bet365,1,0,handicap,home,1.91,1.5
+2023,14,2023-06-02,Wests Tigers,Canberra Raiders,bet365,1,0,handicap,away,1.91,-1.5
+2023,14,2023-06-02,Wests Tigers,Canberra Raiders,bet365,1,0,total,over,1.91,42.5
+2023,14,2023-06-02,Wests Tigers,Canberra Raiders,bet365,1,0,total,under,1.91,42.5
+2023,13,2023-05-28,Newcastle Knights,Manly Sea Eagles,bet365,1,0,h2h,home,1.32,
+2023,13,2023-05-28,Newcastle Knights,Manly Sea Eagles,bet365,1,0,h2h,away,3.5,
+2023,13,2023-05-28,Newcastle Knights,Manly Sea Eagles,bet365,1,0,handicap,home,1.91,-10.5
+2023,13,2023-05-28,Newcastle Knights,Manly Sea Eagles,bet365,1,0,handicap,away,1.91,10.5
+2023,13,2023-05-28,Newcastle Knights,Manly Sea Eagles,bet365,1,0,total,over,1.85,45.5
+2023,13,2023-05-28,Newcastle Knights,Manly Sea Eagles,bet365,1,0,total,under,1.97,45.5
+2023,13,2023-05-27,South Sydney Rabbitohs,Canberra Raiders,bet365,1,0,h2h,home,1.65,
+2023,13,2023-05-27,South Sydney Rabbitohs,Canberra Raiders,bet365,1,0,h2h,away,2.3,
+2023,13,2023-05-27,South Sydney Rabbitohs,Canberra Raiders,bet365,1,0,handicap,home,1.87,-2.5
+2023,13,2023-05-27,South Sydney Rabbitohs,Canberra Raiders,bet365,1,0,handicap,away,1.952,2.5
+2023,13,2023-05-27,South Sydney Rabbitohs,Canberra Raiders,bet365,1,0,total,over,1.952,42.5
+2023,13,2023-05-27,South Sydney Rabbitohs,Canberra Raiders,bet365,1,0,total,under,1.87,42.5
+2023,13,2023-05-27,New Zealand Warriors,Brisbane Broncos,bet365,1,0,h2h,home,1.42,
+2023,13,2023-05-27,New Zealand Warriors,Brisbane Broncos,bet365,1,0,h2h,away,3.0,
+2023,13,2023-05-27,New Zealand Warriors,Brisbane Broncos,bet365,1,0,handicap,home,1.91,-7.5
+2023,13,2023-05-27,New Zealand Warriors,Brisbane Broncos,bet365,1,0,handicap,away,1.91,7.5
+2023,13,2023-05-27,New Zealand Warriors,Brisbane Broncos,bet365,1,0,total,over,1.91,43.5
+2023,13,2023-05-27,New Zealand Warriors,Brisbane Broncos,bet365,1,0,total,under,1.91,43.5
+2023,13,2023-05-26,Parramatta Eels,North QLD Cowboys,bet365,1,0,h2h,home,1.18,
+2023,13,2023-05-26,Parramatta Eels,North QLD Cowboys,bet365,1,0,h2h,away,5.0,
+2023,13,2023-05-26,Parramatta Eels,North QLD Cowboys,bet365,1,0,handicap,home,1.87,-14.5
+2023,13,2023-05-26,Parramatta Eels,North QLD Cowboys,bet365,1,0,handicap,away,1.952,14.5
+2023,13,2023-05-26,Parramatta Eels,North QLD Cowboys,bet365,1,0,total,over,1.85,45.5
+2023,13,2023-05-26,Parramatta Eels,North QLD Cowboys,bet365,1,0,total,under,1.97,45.5
+2023,13,2023-05-25,Dolphins,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.47,
+2023,13,2023-05-25,Dolphins,St. George Illawarra Dragons,bet365,1,0,h2h,away,2.75,
+2023,13,2023-05-25,Dolphins,St. George Illawarra Dragons,bet365,1,0,handicap,home,2.0,-6.5
+2023,13,2023-05-25,Dolphins,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.82,6.5
+2023,13,2023-05-25,Dolphins,St. George Illawarra Dragons,bet365,1,0,total,over,1.85,44.5
+2023,13,2023-05-25,Dolphins,St. George Illawarra Dragons,bet365,1,0,total,under,1.97,44.5
+2023,12,2023-05-21,Canberra Raiders,Manly Sea Eagles,bet365,1,0,h2h,home,1.58,
+2023,12,2023-05-21,Canberra Raiders,Manly Sea Eagles,bet365,1,0,h2h,away,2.45,
+2023,12,2023-05-21,Canberra Raiders,Manly Sea Eagles,bet365,1,0,handicap,home,1.952,-4.5
+2023,12,2023-05-21,Canberra Raiders,Manly Sea Eagles,bet365,1,0,handicap,away,1.87,4.5
+2023,12,2023-05-21,Canberra Raiders,Manly Sea Eagles,bet365,1,0,total,over,1.91,44.5
+2023,12,2023-05-21,Canberra Raiders,Manly Sea Eagles,bet365,1,0,total,under,1.91,44.5
+2023,12,2023-05-21,Canterbury Bulldogs,Gold Coast Titans,bet365,1,0,h2h,home,2.0,
+2023,12,2023-05-21,Canterbury Bulldogs,Gold Coast Titans,bet365,1,0,h2h,away,1.85,
+2023,12,2023-05-21,Canterbury Bulldogs,Gold Coast Titans,bet365,1,0,handicap,home,1.87,1.5
+2023,12,2023-05-21,Canterbury Bulldogs,Gold Coast Titans,bet365,1,0,handicap,away,1.952,-1.5
+2023,12,2023-05-21,Canterbury Bulldogs,Gold Coast Titans,bet365,1,0,total,over,1.85,47.5
+2023,12,2023-05-21,Canterbury Bulldogs,Gold Coast Titans,bet365,1,0,total,under,1.97,47.5
+2023,12,2023-05-20,Dolphins,Melbourne Storm,bet365,1,0,h2h,home,2.8,
+2023,12,2023-05-20,Dolphins,Melbourne Storm,bet365,1,0,h2h,away,1.47,
+2023,12,2023-05-20,Dolphins,Melbourne Storm,bet365,1,0,handicap,home,1.91,6.5
+2023,12,2023-05-20,Dolphins,Melbourne Storm,bet365,1,0,handicap,away,1.91,-6.5
+2023,12,2023-05-20,Dolphins,Melbourne Storm,bet365,1,0,total,over,1.91,42.5
+2023,12,2023-05-20,Dolphins,Melbourne Storm,bet365,1,0,total,under,1.91,42.5
+2023,12,2023-05-20,Wests Tigers,North QLD Cowboys,bet365,1,0,h2h,home,2.18,
+2023,12,2023-05-20,Wests Tigers,North QLD Cowboys,bet365,1,0,h2h,away,1.72,
+2023,12,2023-05-20,Wests Tigers,North QLD Cowboys,bet365,1,0,handicap,home,1.87,2.5
+2023,12,2023-05-20,Wests Tigers,North QLD Cowboys,bet365,1,0,handicap,away,1.952,-2.5
+2023,12,2023-05-20,Wests Tigers,North QLD Cowboys,bet365,1,0,total,over,1.952,42.5
+2023,12,2023-05-20,Wests Tigers,North QLD Cowboys,bet365,1,0,total,under,1.87,42.5
+2023,12,2023-05-20,Cronulla Sharks,Newcastle Knights,bet365,1,0,h2h,home,1.36,
+2023,12,2023-05-20,Cronulla Sharks,Newcastle Knights,bet365,1,0,h2h,away,3.25,
+2023,12,2023-05-20,Cronulla Sharks,Newcastle Knights,bet365,1,0,handicap,home,1.952,-8.5
+2023,12,2023-05-20,Cronulla Sharks,Newcastle Knights,bet365,1,0,handicap,away,1.87,8.5
+2023,12,2023-05-20,Cronulla Sharks,Newcastle Knights,bet365,1,0,total,over,1.91,48.5
+2023,12,2023-05-20,Cronulla Sharks,Newcastle Knights,bet365,1,0,total,under,1.91,48.5
+2023,12,2023-05-19,South Sydney Rabbitohs,Parramatta Eels,bet365,1,0,h2h,home,1.333,
+2023,12,2023-05-19,South Sydney Rabbitohs,Parramatta Eels,bet365,1,0,h2h,away,3.5,
+2023,12,2023-05-19,South Sydney Rabbitohs,Parramatta Eels,bet365,1,0,handicap,home,1.87,-9.5
+2023,12,2023-05-19,South Sydney Rabbitohs,Parramatta Eels,bet365,1,0,handicap,away,1.952,9.5
+2023,12,2023-05-19,South Sydney Rabbitohs,Parramatta Eels,bet365,1,0,total,over,1.91,43.5
+2023,12,2023-05-19,South Sydney Rabbitohs,Parramatta Eels,bet365,1,0,total,under,1.91,43.5
+2023,12,2023-05-19,St. George Illawarra Dragons,Sydney Roosters,bet365,1,0,h2h,home,2.75,
+2023,12,2023-05-19,St. George Illawarra Dragons,Sydney Roosters,bet365,1,0,h2h,away,1.47,
+2023,12,2023-05-19,St. George Illawarra Dragons,Sydney Roosters,bet365,1,0,handicap,home,1.952,6.5
+2023,12,2023-05-19,St. George Illawarra Dragons,Sydney Roosters,bet365,1,0,handicap,away,1.87,-6.5
+2023,12,2023-05-19,St. George Illawarra Dragons,Sydney Roosters,bet365,1,0,total,over,1.85,41.5
+2023,12,2023-05-19,St. George Illawarra Dragons,Sydney Roosters,bet365,1,0,total,under,1.97,41.5
+2023,12,2023-05-18,Brisbane Broncos,Penrith Panthers,bet365,1,0,h2h,home,3.35,
+2023,12,2023-05-18,Brisbane Broncos,Penrith Panthers,bet365,1,0,h2h,away,1.35,
+2023,12,2023-05-18,Brisbane Broncos,Penrith Panthers,bet365,1,0,handicap,home,2.0,7.5
+2023,12,2023-05-18,Brisbane Broncos,Penrith Panthers,bet365,1,0,handicap,away,1.82,-7.5
+2023,12,2023-05-18,Brisbane Broncos,Penrith Panthers,bet365,1,0,total,over,1.85,39.5
+2023,12,2023-05-18,Brisbane Broncos,Penrith Panthers,bet365,1,0,total,under,1.97,39.5
+2023,11,2023-05-14,Manly Sea Eagles,Cronulla Sharks,bet365,1,0,h2h,home,2.6,
+2023,11,2023-05-14,Manly Sea Eagles,Cronulla Sharks,bet365,1,0,h2h,away,1.52,
+2023,11,2023-05-14,Manly Sea Eagles,Cronulla Sharks,bet365,1,0,handicap,home,1.91,4.5
+2023,11,2023-05-14,Manly Sea Eagles,Cronulla Sharks,bet365,1,0,handicap,away,1.91,-4.5
+2023,11,2023-05-14,Manly Sea Eagles,Cronulla Sharks,bet365,1,0,total,over,1.91,45.5
+2023,11,2023-05-14,Manly Sea Eagles,Cronulla Sharks,bet365,1,0,total,under,1.91,45.5
+2023,11,2023-05-14,Newcastle Knights,Gold Coast Titans,bet365,1,0,h2h,home,1.77,
+2023,11,2023-05-14,Newcastle Knights,Gold Coast Titans,bet365,1,0,h2h,away,2.1,
+2023,11,2023-05-14,Newcastle Knights,Gold Coast Titans,bet365,1,0,handicap,home,1.87,-1.5
+2023,11,2023-05-14,Newcastle Knights,Gold Coast Titans,bet365,1,0,handicap,away,1.952,1.5
+2023,11,2023-05-14,Newcastle Knights,Gold Coast Titans,bet365,1,0,total,over,1.91,47.5
+2023,11,2023-05-14,Newcastle Knights,Gold Coast Titans,bet365,1,0,total,under,1.91,47.5
+2023,11,2023-05-13,Canberra Raiders,Parramatta Eels,bet365,1,0,h2h,home,1.68,
+2023,11,2023-05-13,Canberra Raiders,Parramatta Eels,bet365,1,0,h2h,away,2.25,
+2023,11,2023-05-13,Canberra Raiders,Parramatta Eels,bet365,1,0,handicap,home,1.91,-2.5
+2023,11,2023-05-13,Canberra Raiders,Parramatta Eels,bet365,1,0,handicap,away,1.91,2.5
+2023,11,2023-05-13,Canberra Raiders,Parramatta Eels,bet365,1,0,total,over,1.91,44.5
+2023,11,2023-05-13,Canberra Raiders,Parramatta Eels,bet365,1,0,total,under,1.91,44.5
+2023,11,2023-05-13,North QLD Cowboys,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.44,
+2023,11,2023-05-13,North QLD Cowboys,St. George Illawarra Dragons,bet365,1,0,h2h,away,2.9,
+2023,11,2023-05-13,North QLD Cowboys,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.91,-6.5
+2023,11,2023-05-13,North QLD Cowboys,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.91,6.5
+2023,11,2023-05-13,North QLD Cowboys,St. George Illawarra Dragons,bet365,1,0,total,over,1.82,41.5
+2023,11,2023-05-13,North QLD Cowboys,St. George Illawarra Dragons,bet365,1,0,total,under,2.0,41.5
+2023,11,2023-05-13,South Sydney Rabbitohs,Wests Tigers,bet365,1,0,h2h,home,1.14,
+2023,11,2023-05-13,South Sydney Rabbitohs,Wests Tigers,bet365,1,0,h2h,away,6.25,
+2023,11,2023-05-13,South Sydney Rabbitohs,Wests Tigers,bet365,1,0,handicap,home,1.91,-16.5
+2023,11,2023-05-13,South Sydney Rabbitohs,Wests Tigers,bet365,1,0,handicap,away,1.91,16.5
+2023,11,2023-05-13,South Sydney Rabbitohs,Wests Tigers,bet365,1,0,total,over,1.82,45.5
+2023,11,2023-05-13,South Sydney Rabbitohs,Wests Tigers,bet365,1,0,total,under,2.0,45.5
+2023,11,2023-05-12,Penrith Panthers,Sydney Roosters,bet365,1,0,h2h,home,1.47,
+2023,11,2023-05-12,Penrith Panthers,Sydney Roosters,bet365,1,0,h2h,away,2.75,
+2023,11,2023-05-12,Penrith Panthers,Sydney Roosters,bet365,1,0,handicap,home,2.0,-6.5
+2023,11,2023-05-12,Penrith Panthers,Sydney Roosters,bet365,1,0,handicap,away,1.82,6.5
+2023,11,2023-05-12,Penrith Panthers,Sydney Roosters,bet365,1,0,total,over,1.91,37.5
+2023,11,2023-05-12,Penrith Panthers,Sydney Roosters,bet365,1,0,total,under,1.91,37.5
+2023,11,2023-05-12,Canterbury Bulldogs,New Zealand Warriors,bet365,1,0,h2h,home,2.18,
+2023,11,2023-05-12,Canterbury Bulldogs,New Zealand Warriors,bet365,1,0,h2h,away,1.72,
+2023,11,2023-05-12,Canterbury Bulldogs,New Zealand Warriors,bet365,1,0,handicap,home,1.82,2.5
+2023,11,2023-05-12,Canterbury Bulldogs,New Zealand Warriors,bet365,1,0,handicap,away,2.0,-2.5
+2023,11,2023-05-12,Canterbury Bulldogs,New Zealand Warriors,bet365,1,0,total,over,1.87,41.5
+2023,11,2023-05-12,Canterbury Bulldogs,New Zealand Warriors,bet365,1,0,total,under,1.952,41.5
+2023,11,2023-05-11,Melbourne Storm,Brisbane Broncos,bet365,1,0,h2h,home,1.68,
+2023,11,2023-05-11,Melbourne Storm,Brisbane Broncos,bet365,1,0,h2h,away,2.25,
+2023,11,2023-05-11,Melbourne Storm,Brisbane Broncos,bet365,1,0,handicap,home,1.87,-2.5
+2023,11,2023-05-11,Melbourne Storm,Brisbane Broncos,bet365,1,0,handicap,away,1.952,2.5
+2023,11,2023-05-11,Melbourne Storm,Brisbane Broncos,bet365,1,0,total,over,1.87,40.5
+2023,11,2023-05-11,Melbourne Storm,Brisbane Broncos,bet365,1,0,total,under,1.952,40.5
+2023,10,2023-05-07,Gold Coast Titans,Parramatta Eels,bet365,1,0,h2h,home,2.9,
+2023,10,2023-05-07,Gold Coast Titans,Parramatta Eels,bet365,1,0,h2h,away,1.44,
+2023,10,2023-05-07,Gold Coast Titans,Parramatta Eels,bet365,1,0,handicap,home,1.91,7.5
+2023,10,2023-05-07,Gold Coast Titans,Parramatta Eels,bet365,1,0,handicap,away,1.91,-7.5
+2023,10,2023-05-07,Gold Coast Titans,Parramatta Eels,bet365,1,0,total,over,1.91,42.5
+2023,10,2023-05-07,Gold Coast Titans,Parramatta Eels,bet365,1,0,total,under,1.91,42.5
+2023,10,2023-05-07,Sydney Roosters,North QLD Cowboys,bet365,1,0,h2h,home,1.24,
+2023,10,2023-05-07,Sydney Roosters,North QLD Cowboys,bet365,1,0,h2h,away,4.25,
+2023,10,2023-05-07,Sydney Roosters,North QLD Cowboys,bet365,1,0,handicap,home,1.91,-13.5
+2023,10,2023-05-07,Sydney Roosters,North QLD Cowboys,bet365,1,0,handicap,away,1.91,13.5
+2023,10,2023-05-07,Sydney Roosters,North QLD Cowboys,bet365,1,0,total,over,1.85,43.5
+2023,10,2023-05-07,Sydney Roosters,North QLD Cowboys,bet365,1,0,total,under,1.97,43.5
+2023,10,2023-05-07,Wests Tigers,St. George Illawarra Dragons,bet365,1,0,h2h,home,2.1,
+2023,10,2023-05-07,Wests Tigers,St. George Illawarra Dragons,bet365,1,0,h2h,away,1.77,
+2023,10,2023-05-07,Wests Tigers,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.952,1.5
+2023,10,2023-05-07,Wests Tigers,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.87,-1.5
+2023,10,2023-05-07,Wests Tigers,St. George Illawarra Dragons,bet365,1,0,total,over,1.87,45.5
+2023,10,2023-05-07,Wests Tigers,St. George Illawarra Dragons,bet365,1,0,total,under,1.952,45.5
+2023,10,2023-05-06,Melbourne Storm,South Sydney Rabbitohs,bet365,1,0,h2h,home,2.0,
+2023,10,2023-05-06,Melbourne Storm,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.85,
+2023,10,2023-05-06,Melbourne Storm,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.91,1.5
+2023,10,2023-05-06,Melbourne Storm,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.91,-1.5
+2023,10,2023-05-06,Melbourne Storm,South Sydney Rabbitohs,bet365,1,0,total,over,1.91,41.5
+2023,10,2023-05-06,Melbourne Storm,South Sydney Rabbitohs,bet365,1,0,total,under,1.91,41.5
+2023,10,2023-05-06,Cronulla Sharks,Dolphins,bet365,1,0,h2h,home,1.27,
+2023,10,2023-05-06,Cronulla Sharks,Dolphins,bet365,1,0,h2h,away,4.0,
+2023,10,2023-05-06,Cronulla Sharks,Dolphins,bet365,1,0,handicap,home,1.82,-11.5
+2023,10,2023-05-06,Cronulla Sharks,Dolphins,bet365,1,0,handicap,away,2.0,11.5
+2023,10,2023-05-06,Cronulla Sharks,Dolphins,bet365,1,0,total,over,1.82,47.5
+2023,10,2023-05-06,Cronulla Sharks,Dolphins,bet365,1,0,total,under,2.0,47.5
+2023,10,2023-05-06,New Zealand Warriors,Penrith Panthers,bet365,1,0,h2h,home,4.25,
+2023,10,2023-05-06,New Zealand Warriors,Penrith Panthers,bet365,1,0,h2h,away,1.24,
+2023,10,2023-05-06,New Zealand Warriors,Penrith Panthers,bet365,1,0,handicap,home,1.87,12.5
+2023,10,2023-05-06,New Zealand Warriors,Penrith Panthers,bet365,1,0,handicap,away,1.952,-12.5
+2023,10,2023-05-06,New Zealand Warriors,Penrith Panthers,bet365,1,0,total,over,1.87,42.5
+2023,10,2023-05-06,New Zealand Warriors,Penrith Panthers,bet365,1,0,total,under,1.952,42.5
+2023,10,2023-05-05,Manly Sea Eagles,Brisbane Broncos,bet365,1,0,h2h,home,3.7,
+2023,10,2023-05-05,Manly Sea Eagles,Brisbane Broncos,bet365,1,0,h2h,away,1.28,
+2023,10,2023-05-05,Manly Sea Eagles,Brisbane Broncos,bet365,1,0,handicap,home,1.91,10.5
+2023,10,2023-05-05,Manly Sea Eagles,Brisbane Broncos,bet365,1,0,handicap,away,1.91,-10.5
+2023,10,2023-05-05,Manly Sea Eagles,Brisbane Broncos,bet365,1,0,total,over,1.87,46.5
+2023,10,2023-05-05,Manly Sea Eagles,Brisbane Broncos,bet365,1,0,total,under,1.952,46.5
+2023,10,2023-05-05,Canterbury Bulldogs,Canberra Raiders,bet365,1,0,h2h,home,2.8,
+2023,10,2023-05-05,Canterbury Bulldogs,Canberra Raiders,bet365,1,0,h2h,away,1.47,
+2023,10,2023-05-05,Canterbury Bulldogs,Canberra Raiders,bet365,1,0,handicap,home,2.0,5.5
+2023,10,2023-05-05,Canterbury Bulldogs,Canberra Raiders,bet365,1,0,handicap,away,1.82,-5.5
+2023,10,2023-05-05,Canterbury Bulldogs,Canberra Raiders,bet365,1,0,total,over,1.91,41.5
+2023,10,2023-05-05,Canterbury Bulldogs,Canberra Raiders,bet365,1,0,total,under,1.91,41.5
+2023,9,2023-04-30,St. George Illawarra Dragons,Canterbury Bulldogs,bet365,1,0,h2h,home,1.47,
+2023,9,2023-04-30,St. George Illawarra Dragons,Canterbury Bulldogs,bet365,1,0,h2h,away,2.8,
+2023,9,2023-04-30,St. George Illawarra Dragons,Canterbury Bulldogs,bet365,1,0,handicap,home,2.0,-6.5
+2023,9,2023-04-30,St. George Illawarra Dragons,Canterbury Bulldogs,bet365,1,0,handicap,away,1.82,6.5
+2023,9,2023-04-30,St. George Illawarra Dragons,Canterbury Bulldogs,bet365,1,0,total,over,1.82,41.5
+2023,9,2023-04-30,St. George Illawarra Dragons,Canterbury Bulldogs,bet365,1,0,total,under,2.0,41.5
+2023,9,2023-04-30,New Zealand Warriors,Sydney Roosters,bet365,1,0,h2h,home,2.85,
+2023,9,2023-04-30,New Zealand Warriors,Sydney Roosters,bet365,1,0,h2h,away,1.45,
+2023,9,2023-04-30,New Zealand Warriors,Sydney Roosters,bet365,1,0,handicap,home,1.87,6.5
+2023,9,2023-04-30,New Zealand Warriors,Sydney Roosters,bet365,1,0,handicap,away,1.952,-6.5
+2023,9,2023-04-30,New Zealand Warriors,Sydney Roosters,bet365,1,0,total,over,1.91,40.5
+2023,9,2023-04-30,New Zealand Warriors,Sydney Roosters,bet365,1,0,total,under,1.91,40.5
+2023,9,2023-04-29,Penrith Panthers,Wests Tigers,bet365,1,0,h2h,home,1.09,
+2023,9,2023-04-29,Penrith Panthers,Wests Tigers,bet365,1,0,h2h,away,8.0,
+2023,9,2023-04-29,Penrith Panthers,Wests Tigers,bet365,1,0,handicap,home,1.75,-17.5
+2023,9,2023-04-29,Penrith Panthers,Wests Tigers,bet365,1,0,handicap,away,2.1,17.5
+2023,9,2023-04-29,Penrith Panthers,Wests Tigers,bet365,1,0,total,over,1.91,39.5
+2023,9,2023-04-29,Penrith Panthers,Wests Tigers,bet365,1,0,total,under,1.91,39.5
+2023,9,2023-04-29,Manly Sea Eagles,Gold Coast Titans,bet365,1,0,h2h,home,1.56,
+2023,9,2023-04-29,Manly Sea Eagles,Gold Coast Titans,bet365,1,0,h2h,away,2.5,
+2023,9,2023-04-29,Manly Sea Eagles,Gold Coast Titans,bet365,1,0,handicap,home,1.91,-4.5
+2023,9,2023-04-29,Manly Sea Eagles,Gold Coast Titans,bet365,1,0,handicap,away,1.91,4.5
+2023,9,2023-04-29,Manly Sea Eagles,Gold Coast Titans,bet365,1,0,total,over,1.952,42.5
+2023,9,2023-04-29,Manly Sea Eagles,Gold Coast Titans,bet365,1,0,total,under,1.87,42.5
+2023,9,2023-04-29,Canberra Raiders,Dolphins,bet365,1,0,h2h,home,1.6,
+2023,9,2023-04-29,Canberra Raiders,Dolphins,bet365,1,0,h2h,away,2.4,
+2023,9,2023-04-29,Canberra Raiders,Dolphins,bet365,1,0,handicap,home,2.0,-4.5
+2023,9,2023-04-29,Canberra Raiders,Dolphins,bet365,1,0,handicap,away,1.82,4.5
+2023,9,2023-04-29,Canberra Raiders,Dolphins,bet365,1,0,total,over,1.93,43.5
+2023,9,2023-04-29,Canberra Raiders,Dolphins,bet365,1,0,total,under,1.89,43.5
+2023,9,2023-04-28,Brisbane Broncos,South Sydney Rabbitohs,bet365,1,0,h2h,home,2.45,
+2023,9,2023-04-28,Brisbane Broncos,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.58,
+2023,9,2023-04-28,Brisbane Broncos,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.82,4.5
+2023,9,2023-04-28,Brisbane Broncos,South Sydney Rabbitohs,bet365,1,0,handicap,away,2.0,-4.5
+2023,9,2023-04-28,Brisbane Broncos,South Sydney Rabbitohs,bet365,1,0,total,over,1.91,42.5
+2023,9,2023-04-28,Brisbane Broncos,South Sydney Rabbitohs,bet365,1,0,total,under,1.91,42.5
+2023,9,2023-04-28,Parramatta Eels,Newcastle Knights,bet365,1,0,h2h,home,1.5,
+2023,9,2023-04-28,Parramatta Eels,Newcastle Knights,bet365,1,0,h2h,away,2.68,
+2023,9,2023-04-28,Parramatta Eels,Newcastle Knights,bet365,1,0,handicap,home,2.0,-6.5
+2023,9,2023-04-28,Parramatta Eels,Newcastle Knights,bet365,1,0,handicap,away,1.82,6.5
+2023,9,2023-04-28,Parramatta Eels,Newcastle Knights,bet365,1,0,total,over,1.91,42.5
+2023,9,2023-04-28,Parramatta Eels,Newcastle Knights,bet365,1,0,total,under,1.91,42.5
+2023,9,2023-04-27,Cronulla Sharks,North QLD Cowboys,bet365,1,0,h2h,home,1.27,
+2023,9,2023-04-27,Cronulla Sharks,North QLD Cowboys,bet365,1,0,h2h,away,4.0,
+2023,9,2023-04-27,Cronulla Sharks,North QLD Cowboys,bet365,1,0,handicap,home,1.91,-10.5
+2023,9,2023-04-27,Cronulla Sharks,North QLD Cowboys,bet365,1,0,handicap,away,1.91,10.5
+2023,9,2023-04-27,Cronulla Sharks,North QLD Cowboys,bet365,1,0,total,over,1.91,42.5
+2023,9,2023-04-27,Cronulla Sharks,North QLD Cowboys,bet365,1,0,total,under,1.91,42.5
+2023,9,2023-04-25,Melbourne Storm,New Zealand Warriors,bet365,1,0,h2h,home,1.27,
+2023,9,2023-04-25,Melbourne Storm,New Zealand Warriors,bet365,1,0,h2h,away,4.0,
+2023,9,2023-04-25,Melbourne Storm,New Zealand Warriors,bet365,1,0,handicap,home,1.91,-11.5
+2023,9,2023-04-25,Melbourne Storm,New Zealand Warriors,bet365,1,0,handicap,away,1.91,11.5
+2023,9,2023-04-25,Melbourne Storm,New Zealand Warriors,bet365,1,0,total,over,2.0,42.5
+2023,9,2023-04-25,Melbourne Storm,New Zealand Warriors,bet365,1,0,total,under,1.82,42.5
+2023,9,2023-04-25,Sydney Roosters,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.18,
+2023,9,2023-04-25,Sydney Roosters,St. George Illawarra Dragons,bet365,1,0,h2h,away,5.2,
+2023,9,2023-04-25,Sydney Roosters,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.87,-12.5
+2023,9,2023-04-25,Sydney Roosters,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.952,12.5
+2023,9,2023-04-25,Sydney Roosters,St. George Illawarra Dragons,bet365,1,0,total,over,1.952,42.5
+2023,9,2023-04-25,Sydney Roosters,St. George Illawarra Dragons,bet365,1,0,total,under,1.87,42.5
+2023,8,2023-04-23,Wests Tigers,Manly Sea Eagles,bet365,1,0,h2h,home,4.0,
+2023,8,2023-04-23,Wests Tigers,Manly Sea Eagles,bet365,1,0,h2h,away,1.27,
+2023,8,2023-04-23,Wests Tigers,Manly Sea Eagles,bet365,1,0,handicap,home,1.91,11.5
+2023,8,2023-04-23,Wests Tigers,Manly Sea Eagles,bet365,1,0,handicap,away,1.91,-11.5
+2023,8,2023-04-23,Wests Tigers,Manly Sea Eagles,bet365,1,0,total,over,1.87,44.5
+2023,8,2023-04-23,Wests Tigers,Manly Sea Eagles,bet365,1,0,total,under,1.952,44.5
+2023,8,2023-04-23,Dolphins,Gold Coast Titans,bet365,1,0,h2h,home,1.8,
+2023,8,2023-04-23,Dolphins,Gold Coast Titans,bet365,1,0,h2h,away,2.05,
+2023,8,2023-04-23,Dolphins,Gold Coast Titans,bet365,1,0,handicap,home,2.05,-2.5
+2023,8,2023-04-23,Dolphins,Gold Coast Titans,bet365,1,0,handicap,away,1.78,2.5
+2023,8,2023-04-23,Dolphins,Gold Coast Titans,bet365,1,0,total,over,1.87,47.5
+2023,8,2023-04-23,Dolphins,Gold Coast Titans,bet365,1,0,total,under,1.952,47.5
+2023,8,2023-04-22,North QLD Cowboys,Newcastle Knights,bet365,1,0,h2h,home,1.65,
+2023,8,2023-04-22,North QLD Cowboys,Newcastle Knights,bet365,1,0,h2h,away,2.3,
+2023,8,2023-04-22,North QLD Cowboys,Newcastle Knights,bet365,1,0,handicap,home,1.87,-3.5
+2023,8,2023-04-22,North QLD Cowboys,Newcastle Knights,bet365,1,0,handicap,away,1.952,3.5
+2023,8,2023-04-22,North QLD Cowboys,Newcastle Knights,bet365,1,0,total,over,1.87,41.5
+2023,8,2023-04-22,North QLD Cowboys,Newcastle Knights,bet365,1,0,total,under,1.952,41.5
+2023,8,2023-04-22,Canterbury Bulldogs,Cronulla Sharks,bet365,1,0,h2h,home,5.6,
+2023,8,2023-04-22,Canterbury Bulldogs,Cronulla Sharks,bet365,1,0,h2h,away,1.16,
+2023,8,2023-04-22,Canterbury Bulldogs,Cronulla Sharks,bet365,1,0,handicap,home,1.91,14.5
+2023,8,2023-04-22,Canterbury Bulldogs,Cronulla Sharks,bet365,1,0,handicap,away,1.91,-14.5
+2023,8,2023-04-22,Canterbury Bulldogs,Cronulla Sharks,bet365,1,0,total,over,1.91,42.5
+2023,8,2023-04-22,Canterbury Bulldogs,Cronulla Sharks,bet365,1,0,total,under,1.91,42.5
+2023,8,2023-04-21,Parramatta Eels,Brisbane Broncos,bet365,1,0,h2h,home,2.3,
+2023,8,2023-04-21,Parramatta Eels,Brisbane Broncos,bet365,1,0,h2h,away,1.65,
+2023,8,2023-04-21,Parramatta Eels,Brisbane Broncos,bet365,1,0,handicap,home,1.91,2.5
+2023,8,2023-04-21,Parramatta Eels,Brisbane Broncos,bet365,1,0,handicap,away,1.91,-2.5
+2023,8,2023-04-21,Parramatta Eels,Brisbane Broncos,bet365,1,0,total,over,1.82,43.5
+2023,8,2023-04-21,Parramatta Eels,Brisbane Broncos,bet365,1,0,total,under,2.0,43.5
+2023,8,2023-04-20,South Sydney Rabbitohs,Penrith Panthers,bet365,1,0,h2h,home,2.55,
+2023,8,2023-04-20,South Sydney Rabbitohs,Penrith Panthers,bet365,1,0,h2h,away,1.54,
+2023,8,2023-04-20,South Sydney Rabbitohs,Penrith Panthers,bet365,1,0,handicap,home,1.91,4.5
+2023,8,2023-04-20,South Sydney Rabbitohs,Penrith Panthers,bet365,1,0,handicap,away,1.91,-4.5
+2023,8,2023-04-20,South Sydney Rabbitohs,Penrith Panthers,bet365,1,0,total,over,1.93,37.5
+2023,8,2023-04-20,South Sydney Rabbitohs,Penrith Panthers,bet365,1,0,total,under,1.89,37.5
+2023,7,2023-04-16,Parramatta Eels,Canterbury Bulldogs,bet365,1,0,h2h,home,1.3,
+2023,7,2023-04-16,Parramatta Eels,Canterbury Bulldogs,bet365,1,0,h2h,away,3.7,
+2023,7,2023-04-16,Parramatta Eels,Canterbury Bulldogs,bet365,1,0,handicap,home,2.0,-10.5
+2023,7,2023-04-16,Parramatta Eels,Canterbury Bulldogs,bet365,1,0,handicap,away,1.82,10.5
+2023,7,2023-04-16,Parramatta Eels,Canterbury Bulldogs,bet365,1,0,total,over,1.91,44.5
+2023,7,2023-04-16,Parramatta Eels,Canterbury Bulldogs,bet365,1,0,total,under,1.91,44.5
+2023,7,2023-04-16,Canberra Raiders,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.44,
+2023,7,2023-04-16,Canberra Raiders,St. George Illawarra Dragons,bet365,1,0,h2h,away,2.9,
+2023,7,2023-04-16,Canberra Raiders,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.91,-6.5
+2023,7,2023-04-16,Canberra Raiders,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.91,6.5
+2023,7,2023-04-16,Canberra Raiders,St. George Illawarra Dragons,bet365,1,0,total,over,1.91,42.5
+2023,7,2023-04-16,Canberra Raiders,St. George Illawarra Dragons,bet365,1,0,total,under,1.91,42.5
+2023,7,2023-04-15,Gold Coast Titans,Brisbane Broncos,bet365,1,0,h2h,home,3.5,
+2023,7,2023-04-15,Gold Coast Titans,Brisbane Broncos,bet365,1,0,h2h,away,1.333,
+2023,7,2023-04-15,Gold Coast Titans,Brisbane Broncos,bet365,1,0,handicap,home,1.952,8.5
+2023,7,2023-04-15,Gold Coast Titans,Brisbane Broncos,bet365,1,0,handicap,away,1.87,-8.5
+2023,7,2023-04-15,Gold Coast Titans,Brisbane Broncos,bet365,1,0,total,over,1.87,46.5
+2023,7,2023-04-15,Gold Coast Titans,Brisbane Broncos,bet365,1,0,total,under,1.952,46.5
+2023,7,2023-04-15,Newcastle Knights,Penrith Panthers,bet365,1,0,h2h,home,6.0,
+2023,7,2023-04-15,Newcastle Knights,Penrith Panthers,bet365,1,0,h2h,away,1.14,
+2023,7,2023-04-15,Newcastle Knights,Penrith Panthers,bet365,1,0,handicap,home,1.91,16.5
+2023,7,2023-04-15,Newcastle Knights,Penrith Panthers,bet365,1,0,handicap,away,1.91,-16.5
+2023,7,2023-04-15,Newcastle Knights,Penrith Panthers,bet365,1,0,total,over,1.91,44.5
+2023,7,2023-04-15,Newcastle Knights,Penrith Panthers,bet365,1,0,total,under,1.91,44.5
+2023,7,2023-04-15,New Zealand Warriors,North QLD Cowboys,bet365,1,0,h2h,home,1.93,
+2023,7,2023-04-15,New Zealand Warriors,North QLD Cowboys,bet365,1,0,h2h,away,1.93,
+2023,7,2023-04-15,New Zealand Warriors,North QLD Cowboys,bet365,1,0,handicap,home,1.97,-1.5
+2023,7,2023-04-15,New Zealand Warriors,North QLD Cowboys,bet365,1,0,handicap,away,1.833,1.5
+2023,7,2023-04-15,New Zealand Warriors,North QLD Cowboys,bet365,1,0,total,over,1.91,42.5
+2023,7,2023-04-15,New Zealand Warriors,North QLD Cowboys,bet365,1,0,total,under,1.91,42.5
+2023,7,2023-04-14,Manly Sea Eagles,Melbourne Storm,bet365,1,0,h2h,home,2.62,
+2023,7,2023-04-14,Manly Sea Eagles,Melbourne Storm,bet365,1,0,h2h,away,1.52,
+2023,7,2023-04-14,Manly Sea Eagles,Melbourne Storm,bet365,1,0,handicap,home,2.0,5.5
+2023,7,2023-04-14,Manly Sea Eagles,Melbourne Storm,bet365,1,0,handicap,away,1.82,-5.5
+2023,7,2023-04-14,Manly Sea Eagles,Melbourne Storm,bet365,1,0,total,over,1.82,44.5
+2023,7,2023-04-14,Manly Sea Eagles,Melbourne Storm,bet365,1,0,total,under,2.0,44.5
+2023,7,2023-04-14,Cronulla Sharks,Sydney Roosters,bet365,1,0,h2h,home,2.25,
+2023,7,2023-04-14,Cronulla Sharks,Sydney Roosters,bet365,1,0,h2h,away,1.68,
+2023,7,2023-04-14,Cronulla Sharks,Sydney Roosters,bet365,1,0,handicap,home,1.952,3.5
+2023,7,2023-04-14,Cronulla Sharks,Sydney Roosters,bet365,1,0,handicap,away,1.87,-3.5
+2023,7,2023-04-14,Cronulla Sharks,Sydney Roosters,bet365,1,0,total,over,1.952,43.5
+2023,7,2023-04-14,Cronulla Sharks,Sydney Roosters,bet365,1,0,total,under,1.87,43.5
+2023,7,2023-04-13,Dolphins,South Sydney Rabbitohs,bet365,1,0,h2h,home,3.7,
+2023,7,2023-04-13,Dolphins,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.3,
+2023,7,2023-04-13,Dolphins,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.91,11.5
+2023,7,2023-04-13,Dolphins,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.91,-11.5
+2023,7,2023-04-13,Dolphins,South Sydney Rabbitohs,bet365,1,0,total,over,1.91,46.5
+2023,7,2023-04-13,Dolphins,South Sydney Rabbitohs,bet365,1,0,total,under,1.91,46.5
+2023,7,2023-04-10,Wests Tigers,Parramatta Eels,bet365,1,0,h2h,home,4.25,
+2023,7,2023-04-10,Wests Tigers,Parramatta Eels,bet365,1,0,h2h,away,1.22,
+2023,7,2023-04-10,Wests Tigers,Parramatta Eels,bet365,1,0,handicap,home,1.952,12.5
+2023,7,2023-04-10,Wests Tigers,Parramatta Eels,bet365,1,0,handicap,away,1.87,-12.5
+2023,7,2023-04-10,Wests Tigers,Parramatta Eels,bet365,1,0,total,over,1.91,46.5
+2023,7,2023-04-10,Wests Tigers,Parramatta Eels,bet365,1,0,total,under,1.91,46.5
+2023,6,2023-04-09,Newcastle Knights,New Zealand Warriors,bet365,1,0,h2h,home,1.952,
+2023,6,2023-04-09,Newcastle Knights,New Zealand Warriors,bet365,1,0,h2h,away,1.9,
+2023,6,2023-04-09,Newcastle Knights,New Zealand Warriors,bet365,1,0,handicap,home,1.833,1.5
+2023,6,2023-04-09,Newcastle Knights,New Zealand Warriors,bet365,1,0,handicap,away,1.97,-1.5
+2023,6,2023-04-09,Newcastle Knights,New Zealand Warriors,bet365,1,0,total,over,1.91,44.5
+2023,6,2023-04-09,Newcastle Knights,New Zealand Warriors,bet365,1,0,total,under,1.91,44.5
+2023,6,2023-04-09,Gold Coast Titans,St. George Illawarra Dragons,bet365,1,0,h2h,home,2.0,
+2023,6,2023-04-09,Gold Coast Titans,St. George Illawarra Dragons,bet365,1,0,h2h,away,1.85,
+2023,6,2023-04-09,Gold Coast Titans,St. George Illawarra Dragons,bet365,1,0,handicap,home,1.87,1.5
+2023,6,2023-04-09,Gold Coast Titans,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.952,-1.5
+2023,6,2023-04-09,Gold Coast Titans,St. George Illawarra Dragons,bet365,1,0,total,over,1.85,47.5
+2023,6,2023-04-09,Gold Coast Titans,St. George Illawarra Dragons,bet365,1,0,total,under,1.97,47.5
+2023,6,2023-04-08,Brisbane Broncos,Canberra Raiders,bet365,1,0,h2h,home,1.14,
+2023,6,2023-04-08,Brisbane Broncos,Canberra Raiders,bet365,1,0,h2h,away,6.0,
+2023,6,2023-04-08,Brisbane Broncos,Canberra Raiders,bet365,1,0,handicap,home,1.91,-17.5
+2023,6,2023-04-08,Brisbane Broncos,Canberra Raiders,bet365,1,0,handicap,away,1.91,17.5
+2023,6,2023-04-08,Brisbane Broncos,Canberra Raiders,bet365,1,0,total,over,1.87,45.5
+2023,6,2023-04-08,Brisbane Broncos,Canberra Raiders,bet365,1,0,total,under,1.952,45.5
+2023,6,2023-04-08,Penrith Panthers,Manly Sea Eagles,bet365,1,0,h2h,home,1.3,
+2023,6,2023-04-08,Penrith Panthers,Manly Sea Eagles,bet365,1,0,h2h,away,3.7,
+2023,6,2023-04-08,Penrith Panthers,Manly Sea Eagles,bet365,1,0,handicap,home,1.91,-10.5
+2023,6,2023-04-08,Penrith Panthers,Manly Sea Eagles,bet365,1,0,handicap,away,1.91,10.5
+2023,6,2023-04-08,Penrith Panthers,Manly Sea Eagles,bet365,1,0,total,over,1.87,43.5
+2023,6,2023-04-08,Penrith Panthers,Manly Sea Eagles,bet365,1,0,total,under,1.952,43.5
+2023,6,2023-04-07,North QLD Cowboys,Dolphins,bet365,1,0,h2h,home,1.22,
+2023,6,2023-04-07,North QLD Cowboys,Dolphins,bet365,1,0,h2h,away,4.5,
+2023,6,2023-04-07,North QLD Cowboys,Dolphins,bet365,1,0,handicap,home,1.82,-11.5
+2023,6,2023-04-07,North QLD Cowboys,Dolphins,bet365,1,0,handicap,away,2.0,11.5
+2023,6,2023-04-07,North QLD Cowboys,Dolphins,bet365,1,0,total,over,1.82,42.5
+2023,6,2023-04-07,North QLD Cowboys,Dolphins,bet365,1,0,total,under,2.0,42.5
+2023,6,2023-04-07,Canterbury Bulldogs,South Sydney Rabbitohs,bet365,1,0,h2h,home,4.5,
+2023,6,2023-04-07,Canterbury Bulldogs,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.22,
+2023,6,2023-04-07,Canterbury Bulldogs,South Sydney Rabbitohs,bet365,1,0,handicap,home,2.0,11.5
+2023,6,2023-04-07,Canterbury Bulldogs,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.82,-11.5
+2023,6,2023-04-07,Canterbury Bulldogs,South Sydney Rabbitohs,bet365,1,0,total,over,1.87,40.5
+2023,6,2023-04-07,Canterbury Bulldogs,South Sydney Rabbitohs,bet365,1,0,total,under,1.952,40.5
+2023,6,2023-04-06,Melbourne Storm,Sydney Roosters,bet365,1,0,h2h,home,1.7,
+2023,6,2023-04-06,Melbourne Storm,Sydney Roosters,bet365,1,0,h2h,away,2.18,
+2023,6,2023-04-06,Melbourne Storm,Sydney Roosters,bet365,1,0,handicap,home,2.0,-2.5
+2023,6,2023-04-06,Melbourne Storm,Sydney Roosters,bet365,1,0,handicap,away,1.82,2.5
+2023,6,2023-04-06,Melbourne Storm,Sydney Roosters,bet365,1,0,total,over,1.91,38.5
+2023,6,2023-04-06,Melbourne Storm,Sydney Roosters,bet365,1,0,total,under,1.91,38.5
+2023,5,2023-04-02,Canterbury Bulldogs,North QLD Cowboys,bet365,1,0,h2h,home,1.91,
+2023,5,2023-04-02,Canterbury Bulldogs,North QLD Cowboys,bet365,1,0,h2h,away,1.9,
+2023,5,2023-04-02,Canterbury Bulldogs,North QLD Cowboys,bet365,1,0,handicap,home,2.1,-2.5
+2023,5,2023-04-02,Canterbury Bulldogs,North QLD Cowboys,bet365,1,0,handicap,away,1.75,2.5
+2023,5,2023-04-02,Canterbury Bulldogs,North QLD Cowboys,bet365,1,0,total,over,1.91,39.5
+2023,5,2023-04-02,Canterbury Bulldogs,North QLD Cowboys,bet365,1,0,total,under,1.91,39.5
+2023,5,2023-04-02,Cronulla Sharks,New Zealand Warriors,bet365,1,0,h2h,home,1.22,
+2023,5,2023-04-02,Cronulla Sharks,New Zealand Warriors,bet365,1,0,h2h,away,4.5,
+2023,5,2023-04-02,Cronulla Sharks,New Zealand Warriors,bet365,1,0,handicap,home,1.91,-13.5
+2023,5,2023-04-02,Cronulla Sharks,New Zealand Warriors,bet365,1,0,handicap,away,1.91,13.5
+2023,5,2023-04-02,Cronulla Sharks,New Zealand Warriors,bet365,1,0,total,over,1.91,42.5
+2023,5,2023-04-02,Cronulla Sharks,New Zealand Warriors,bet365,1,0,total,under,1.91,42.5
+2023,5,2023-04-01,Brisbane Broncos,Wests Tigers,bet365,1,0,h2h,home,1.15,
+2023,5,2023-04-01,Brisbane Broncos,Wests Tigers,bet365,1,0,h2h,away,6.0,
+2023,5,2023-04-01,Brisbane Broncos,Wests Tigers,bet365,1,0,handicap,home,1.952,-16.5
+2023,5,2023-04-01,Brisbane Broncos,Wests Tigers,bet365,1,0,handicap,away,1.87,16.5
+2023,5,2023-04-01,Brisbane Broncos,Wests Tigers,bet365,1,0,total,over,1.91,43.5
+2023,5,2023-04-01,Brisbane Broncos,Wests Tigers,bet365,1,0,total,under,1.91,43.5
+2023,5,2023-04-01,St. George Illawarra Dragons,Dolphins,bet365,1,0,h2h,home,1.72,
+2023,5,2023-04-01,St. George Illawarra Dragons,Dolphins,bet365,1,0,h2h,away,2.18,
+2023,5,2023-04-01,St. George Illawarra Dragons,Dolphins,bet365,1,0,handicap,home,1.91,-2.5
+2023,5,2023-04-01,St. George Illawarra Dragons,Dolphins,bet365,1,0,handicap,away,1.91,2.5
+2023,5,2023-04-01,St. George Illawarra Dragons,Dolphins,bet365,1,0,total,over,1.97,42.5
+2023,5,2023-04-01,St. George Illawarra Dragons,Dolphins,bet365,1,0,total,under,1.85,42.5
+2023,5,2023-04-01,Manly Sea Eagles,Newcastle Knights,bet365,1,0,h2h,home,1.19,
+2023,5,2023-04-01,Manly Sea Eagles,Newcastle Knights,bet365,1,0,h2h,away,5.0,
+2023,5,2023-04-01,Manly Sea Eagles,Newcastle Knights,bet365,1,0,handicap,home,1.91,-13.5
+2023,5,2023-04-01,Manly Sea Eagles,Newcastle Knights,bet365,1,0,handicap,away,1.91,13.5
+2023,5,2023-04-01,Manly Sea Eagles,Newcastle Knights,bet365,1,0,total,over,1.87,45.5
+2023,5,2023-04-01,Manly Sea Eagles,Newcastle Knights,bet365,1,0,total,under,1.952,45.5
+2023,5,2023-03-31,South Sydney Rabbitohs,Melbourne Storm,bet365,1,0,h2h,home,1.53,
+2023,5,2023-03-31,South Sydney Rabbitohs,Melbourne Storm,bet365,1,0,h2h,away,2.55,
+2023,5,2023-03-31,South Sydney Rabbitohs,Melbourne Storm,bet365,1,0,handicap,home,1.87,-4.5
+2023,5,2023-03-31,South Sydney Rabbitohs,Melbourne Storm,bet365,1,0,handicap,away,1.952,4.5
+2023,5,2023-03-31,South Sydney Rabbitohs,Melbourne Storm,bet365,1,0,total,over,1.91,40.5
+2023,5,2023-03-31,South Sydney Rabbitohs,Melbourne Storm,bet365,1,0,total,under,1.91,40.5
+2023,5,2023-03-31,Canberra Raiders,Penrith Panthers,bet365,1,0,h2h,home,4.25,
+2023,5,2023-03-31,Canberra Raiders,Penrith Panthers,bet365,1,0,h2h,away,1.24,
+2023,5,2023-03-31,Canberra Raiders,Penrith Panthers,bet365,1,0,handicap,home,1.952,11.5
+2023,5,2023-03-31,Canberra Raiders,Penrith Panthers,bet365,1,0,handicap,away,1.87,-11.5
+2023,5,2023-03-31,Canberra Raiders,Penrith Panthers,bet365,1,0,total,over,1.91,39.5
+2023,5,2023-03-31,Canberra Raiders,Penrith Panthers,bet365,1,0,total,under,1.91,39.5
+2023,5,2023-03-30,Sydney Roosters,Parramatta Eels,bet365,1,0,h2h,home,1.54,
+2023,5,2023-03-30,Sydney Roosters,Parramatta Eels,bet365,1,0,h2h,away,2.55,
+2023,5,2023-03-30,Sydney Roosters,Parramatta Eels,bet365,1,0,handicap,home,1.87,-4.5
+2023,5,2023-03-30,Sydney Roosters,Parramatta Eels,bet365,1,0,handicap,away,1.952,4.5
+2023,5,2023-03-30,Sydney Roosters,Parramatta Eels,bet365,1,0,total,over,1.91,41.5
+2023,5,2023-03-30,Sydney Roosters,Parramatta Eels,bet365,1,0,total,under,1.91,41.5
+2023,4,2023-03-26,St. George Illawarra Dragons,Cronulla Sharks,bet365,1,0,h2h,home,2.85,
+2023,4,2023-03-26,St. George Illawarra Dragons,Cronulla Sharks,bet365,1,0,h2h,away,1.45,
+2023,4,2023-03-26,St. George Illawarra Dragons,Cronulla Sharks,bet365,1,0,handicap,home,1.952,6.5
+2023,4,2023-03-26,St. George Illawarra Dragons,Cronulla Sharks,bet365,1,0,handicap,away,1.87,-6.5
+2023,4,2023-03-26,St. George Illawarra Dragons,Cronulla Sharks,bet365,1,0,total,over,1.85,43.5
+2023,4,2023-03-26,St. George Illawarra Dragons,Cronulla Sharks,bet365,1,0,total,under,1.97,43.5
+2023,4,2023-03-26,Newcastle Knights,Canberra Raiders,bet365,1,0,h2h,home,2.55,
+2023,4,2023-03-26,Newcastle Knights,Canberra Raiders,bet365,1,0,h2h,away,1.54,
+2023,4,2023-03-26,Newcastle Knights,Canberra Raiders,bet365,1,0,handicap,home,1.91,5.5
+2023,4,2023-03-26,Newcastle Knights,Canberra Raiders,bet365,1,0,handicap,away,1.91,-5.5
+2023,4,2023-03-26,Newcastle Knights,Canberra Raiders,bet365,1,0,total,over,1.97,42.5
+2023,4,2023-03-26,Newcastle Knights,Canberra Raiders,bet365,1,0,total,under,1.85,42.5
+2023,4,2023-03-26,New Zealand Warriors,Canterbury Bulldogs,bet365,1,0,h2h,home,1.77,
+2023,4,2023-03-26,New Zealand Warriors,Canterbury Bulldogs,bet365,1,0,h2h,away,2.1,
+2023,4,2023-03-26,New Zealand Warriors,Canterbury Bulldogs,bet365,1,0,handicap,home,1.87,-1.5
+2023,4,2023-03-26,New Zealand Warriors,Canterbury Bulldogs,bet365,1,0,handicap,away,1.952,1.5
+2023,4,2023-03-26,New Zealand Warriors,Canterbury Bulldogs,bet365,1,0,total,over,1.91,43.5
+2023,4,2023-03-26,New Zealand Warriors,Canterbury Bulldogs,bet365,1,0,total,under,1.91,43.5
+2023,4,2023-03-25,South Sydney Rabbitohs,Manly Sea Eagles,bet365,1,0,h2h,home,1.63,
+2023,4,2023-03-25,South Sydney Rabbitohs,Manly Sea Eagles,bet365,1,0,h2h,away,2.35,
+2023,4,2023-03-25,South Sydney Rabbitohs,Manly Sea Eagles,bet365,1,0,handicap,home,2.0,-4.5
+2023,4,2023-03-25,South Sydney Rabbitohs,Manly Sea Eagles,bet365,1,0,handicap,away,1.82,4.5
+2023,4,2023-03-25,South Sydney Rabbitohs,Manly Sea Eagles,bet365,1,0,total,over,1.87,43.5
+2023,4,2023-03-25,South Sydney Rabbitohs,Manly Sea Eagles,bet365,1,0,total,under,1.952,43.5
+2023,4,2023-03-25,North QLD Cowboys,Gold Coast Titans,bet365,1,0,h2h,home,1.5,
+2023,4,2023-03-25,North QLD Cowboys,Gold Coast Titans,bet365,1,0,h2h,away,2.62,
+2023,4,2023-03-25,North QLD Cowboys,Gold Coast Titans,bet365,1,0,handicap,home,1.82,-7.5
+2023,4,2023-03-25,North QLD Cowboys,Gold Coast Titans,bet365,1,0,handicap,away,2.0,7.5
+2023,4,2023-03-25,North QLD Cowboys,Gold Coast Titans,bet365,1,0,total,over,1.952,44.5
+2023,4,2023-03-25,North QLD Cowboys,Gold Coast Titans,bet365,1,0,total,under,1.87,44.5
+2023,4,2023-03-24,Dolphins,Brisbane Broncos,bet365,1,0,h2h,home,3.85,
+2023,4,2023-03-24,Dolphins,Brisbane Broncos,bet365,1,0,h2h,away,1.27,
+2023,4,2023-03-24,Dolphins,Brisbane Broncos,bet365,1,0,handicap,home,1.87,12.5
+2023,4,2023-03-24,Dolphins,Brisbane Broncos,bet365,1,0,handicap,away,1.952,-12.5
+2023,4,2023-03-24,Dolphins,Brisbane Broncos,bet365,1,0,total,over,1.82,44.5
+2023,4,2023-03-24,Dolphins,Brisbane Broncos,bet365,1,0,total,under,2.0,44.5
+2023,4,2023-03-24,Melbourne Storm,Wests Tigers,bet365,1,0,h2h,home,1.28,
+2023,4,2023-03-24,Melbourne Storm,Wests Tigers,bet365,1,0,h2h,away,3.85,
+2023,4,2023-03-24,Melbourne Storm,Wests Tigers,bet365,1,0,handicap,home,2.0,-10.5
+2023,4,2023-03-24,Melbourne Storm,Wests Tigers,bet365,1,0,handicap,away,1.82,10.5
+2023,4,2023-03-24,Melbourne Storm,Wests Tigers,bet365,1,0,total,over,1.91,43.5
+2023,4,2023-03-24,Melbourne Storm,Wests Tigers,bet365,1,0,total,under,1.91,43.5
+2023,4,2023-03-23,Parramatta Eels,Penrith Panthers,bet365,1,0,h2h,home,3.0,
+2023,4,2023-03-23,Parramatta Eels,Penrith Panthers,bet365,1,0,h2h,away,1.42,
+2023,4,2023-03-23,Parramatta Eels,Penrith Panthers,bet365,1,0,handicap,home,1.91,6.5
+2023,4,2023-03-23,Parramatta Eels,Penrith Panthers,bet365,1,0,handicap,away,1.91,-6.5
+2023,4,2023-03-23,Parramatta Eels,Penrith Panthers,bet365,1,0,total,over,1.91,39.5
+2023,4,2023-03-23,Parramatta Eels,Penrith Panthers,bet365,1,0,total,under,1.91,39.5
+2023,3,2023-03-19,Canberra Raiders,Cronulla Sharks,bet365,1,0,h2h,home,2.18,
+2023,3,2023-03-19,Canberra Raiders,Cronulla Sharks,bet365,1,0,h2h,away,1.72,
+2023,3,2023-03-19,Canberra Raiders,Cronulla Sharks,bet365,1,0,handicap,home,1.91,2.5
+2023,3,2023-03-19,Canberra Raiders,Cronulla Sharks,bet365,1,0,handicap,away,1.91,-2.5
+2023,3,2023-03-19,Canberra Raiders,Cronulla Sharks,bet365,1,0,total,over,1.85,43.5
+2023,3,2023-03-19,Canberra Raiders,Cronulla Sharks,bet365,1,0,total,under,1.97,43.5
+2023,3,2023-03-19,Canterbury Bulldogs,Wests Tigers,bet365,1,0,h2h,home,1.35,
+2023,3,2023-03-19,Canterbury Bulldogs,Wests Tigers,bet365,1,0,h2h,away,3.35,
+2023,3,2023-03-19,Canterbury Bulldogs,Wests Tigers,bet365,1,0,handicap,home,2.0,-10.5
+2023,3,2023-03-19,Canterbury Bulldogs,Wests Tigers,bet365,1,0,handicap,away,1.82,10.5
+2023,3,2023-03-19,Canterbury Bulldogs,Wests Tigers,bet365,1,0,total,over,1.85,42.5
+2023,3,2023-03-19,Canterbury Bulldogs,Wests Tigers,bet365,1,0,total,under,1.97,42.5
+2023,3,2023-03-18,Brisbane Broncos,St. George Illawarra Dragons,bet365,1,0,h2h,home,1.27,
+2023,3,2023-03-18,Brisbane Broncos,St. George Illawarra Dragons,bet365,1,0,h2h,away,4.0,
+2023,3,2023-03-18,Brisbane Broncos,St. George Illawarra Dragons,bet365,1,0,handicap,home,2.0,-12.5
+2023,3,2023-03-18,Brisbane Broncos,St. George Illawarra Dragons,bet365,1,0,handicap,away,1.82,12.5
+2023,3,2023-03-18,Brisbane Broncos,St. George Illawarra Dragons,bet365,1,0,total,over,1.91,43.5
+2023,3,2023-03-18,Brisbane Broncos,St. George Illawarra Dragons,bet365,1,0,total,under,1.91,43.5
+2023,3,2023-03-18,North QLD Cowboys,New Zealand Warriors,bet365,1,0,h2h,home,1.3,
+2023,3,2023-03-18,North QLD Cowboys,New Zealand Warriors,bet365,1,0,h2h,away,3.7,
+2023,3,2023-03-18,North QLD Cowboys,New Zealand Warriors,bet365,1,0,handicap,home,1.91,-11.5
+2023,3,2023-03-18,North QLD Cowboys,New Zealand Warriors,bet365,1,0,handicap,away,1.91,11.5
+2023,3,2023-03-18,North QLD Cowboys,New Zealand Warriors,bet365,1,0,total,over,1.91,43.5
+2023,3,2023-03-18,North QLD Cowboys,New Zealand Warriors,bet365,1,0,total,under,1.91,43.5
+2023,3,2023-03-18,Gold Coast Titans,Melbourne Storm,bet365,1,0,h2h,home,2.8,
+2023,3,2023-03-18,Gold Coast Titans,Melbourne Storm,bet365,1,0,h2h,away,1.47,
+2023,3,2023-03-18,Gold Coast Titans,Melbourne Storm,bet365,1,0,handicap,home,1.91,6.5
+2023,3,2023-03-18,Gold Coast Titans,Melbourne Storm,bet365,1,0,handicap,away,1.91,-6.5
+2023,3,2023-03-18,Gold Coast Titans,Melbourne Storm,bet365,1,0,total,over,1.91,42.5
+2023,3,2023-03-18,Gold Coast Titans,Melbourne Storm,bet365,1,0,total,under,1.91,42.5
+2023,3,2023-03-17,Sydney Roosters,South Sydney Rabbitohs,bet365,1,0,h2h,home,2.18,
+2023,3,2023-03-17,Sydney Roosters,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.7,
+2023,3,2023-03-17,Sydney Roosters,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.91,2.5
+2023,3,2023-03-17,Sydney Roosters,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.91,-2.5
+2023,3,2023-03-17,Sydney Roosters,South Sydney Rabbitohs,bet365,1,0,total,over,1.87,41.5
+2023,3,2023-03-17,Sydney Roosters,South Sydney Rabbitohs,bet365,1,0,total,under,1.952,41.5
+2023,3,2023-03-17,Newcastle Knights,Dolphins,bet365,1,0,h2h,home,2.55,
+2023,3,2023-03-17,Newcastle Knights,Dolphins,bet365,1,0,h2h,away,1.53,
+2023,3,2023-03-17,Newcastle Knights,Dolphins,bet365,1,0,handicap,home,1.91,4.5
+2023,3,2023-03-17,Newcastle Knights,Dolphins,bet365,1,0,handicap,away,1.91,-4.5
+2023,3,2023-03-17,Newcastle Knights,Dolphins,bet365,1,0,total,over,1.85,40.5
+2023,3,2023-03-17,Newcastle Knights,Dolphins,bet365,1,0,total,under,1.97,40.5
+2023,3,2023-03-16,Manly Sea Eagles,Parramatta Eels,bet365,1,0,h2h,home,1.65,
+2023,3,2023-03-16,Manly Sea Eagles,Parramatta Eels,bet365,1,0,h2h,away,2.3,
+2023,3,2023-03-16,Manly Sea Eagles,Parramatta Eels,bet365,1,0,handicap,home,1.91,-3.5
+2023,3,2023-03-16,Manly Sea Eagles,Parramatta Eels,bet365,1,0,handicap,away,1.91,3.5
+2023,3,2023-03-16,Manly Sea Eagles,Parramatta Eels,bet365,1,0,total,over,1.93,43.5
+2023,3,2023-03-16,Manly Sea Eagles,Parramatta Eels,bet365,1,0,total,under,1.89,43.5
+2023,2,2023-03-12,St. George Illawarra Dragons,Gold Coast Titans,bet365,1,0,h2h,home,2.1,
+2023,2,2023-03-12,St. George Illawarra Dragons,Gold Coast Titans,bet365,1,0,h2h,away,1.77,
+2023,2,2023-03-12,St. George Illawarra Dragons,Gold Coast Titans,bet365,1,0,handicap,home,2.0,1.5
+2023,2,2023-03-12,St. George Illawarra Dragons,Gold Coast Titans,bet365,1,0,handicap,away,1.82,-1.5
+2023,2,2023-03-12,St. George Illawarra Dragons,Gold Coast Titans,bet365,1,0,total,over,1.87,39.5
+2023,2,2023-03-12,St. George Illawarra Dragons,Gold Coast Titans,bet365,1,0,total,under,1.952,39.5
+2023,2,2023-03-12,Wests Tigers,Newcastle Knights,bet365,1,0,h2h,home,1.58,
+2023,2,2023-03-12,Wests Tigers,Newcastle Knights,bet365,1,0,h2h,away,2.45,
+2023,2,2023-03-12,Wests Tigers,Newcastle Knights,bet365,1,0,handicap,home,1.91,-4.5
+2023,2,2023-03-12,Wests Tigers,Newcastle Knights,bet365,1,0,handicap,away,1.91,4.5
+2023,2,2023-03-12,Wests Tigers,Newcastle Knights,bet365,1,0,total,over,1.91,42.5
+2023,2,2023-03-12,Wests Tigers,Newcastle Knights,bet365,1,0,total,under,1.91,42.5
+2023,2,2023-03-11,Melbourne Storm,Canterbury Bulldogs,bet365,1,0,h2h,home,1.38,
+2023,2,2023-03-11,Melbourne Storm,Canterbury Bulldogs,bet365,1,0,h2h,away,3.2,
+2023,2,2023-03-11,Melbourne Storm,Canterbury Bulldogs,bet365,1,0,handicap,home,1.87,-7.5
+2023,2,2023-03-11,Melbourne Storm,Canterbury Bulldogs,bet365,1,0,handicap,away,1.952,7.5
+2023,2,2023-03-11,Melbourne Storm,Canterbury Bulldogs,bet365,1,0,total,over,1.91,39.5
+2023,2,2023-03-11,Melbourne Storm,Canterbury Bulldogs,bet365,1,0,total,under,1.91,39.5
+2023,2,2023-03-11,Dolphins,Canberra Raiders,bet365,1,0,h2h,home,2.3,
+2023,2,2023-03-11,Dolphins,Canberra Raiders,bet365,1,0,h2h,away,1.65,
+2023,2,2023-03-11,Dolphins,Canberra Raiders,bet365,1,0,handicap,home,1.91,3.5
+2023,2,2023-03-11,Dolphins,Canberra Raiders,bet365,1,0,handicap,away,1.91,-3.5
+2023,2,2023-03-11,Dolphins,Canberra Raiders,bet365,1,0,total,over,1.87,39.5
+2023,2,2023-03-11,Dolphins,Canberra Raiders,bet365,1,0,total,under,1.952,39.5
+2023,2,2023-03-11,Sydney Roosters,New Zealand Warriors,bet365,1,0,h2h,home,1.24,
+2023,2,2023-03-11,Sydney Roosters,New Zealand Warriors,bet365,1,0,h2h,away,4.25,
+2023,2,2023-03-11,Sydney Roosters,New Zealand Warriors,bet365,1,0,handicap,home,1.91,-12.5
+2023,2,2023-03-11,Sydney Roosters,New Zealand Warriors,bet365,1,0,handicap,away,1.91,12.5
+2023,2,2023-03-11,Sydney Roosters,New Zealand Warriors,bet365,1,0,total,over,1.91,45.5
+2023,2,2023-03-11,Sydney Roosters,New Zealand Warriors,bet365,1,0,total,under,1.91,45.5
+2023,2,2023-03-10,Brisbane Broncos,North QLD Cowboys,bet365,1,0,h2h,home,1.77,
+2023,2,2023-03-10,Brisbane Broncos,North QLD Cowboys,bet365,1,0,h2h,away,2.1,
+2023,2,2023-03-10,Brisbane Broncos,North QLD Cowboys,bet365,1,0,handicap,home,1.87,-1.5
+2023,2,2023-03-10,Brisbane Broncos,North QLD Cowboys,bet365,1,0,handicap,away,1.952,1.5
+2023,2,2023-03-10,Brisbane Broncos,North QLD Cowboys,bet365,1,0,total,over,1.93,40.5
+2023,2,2023-03-10,Brisbane Broncos,North QLD Cowboys,bet365,1,0,total,under,1.89,40.5
+2023,2,2023-03-10,Parramatta Eels,Cronulla Sharks,bet365,1,0,h2h,home,1.47,
+2023,2,2023-03-10,Parramatta Eels,Cronulla Sharks,bet365,1,0,h2h,away,2.8,
+2023,2,2023-03-10,Parramatta Eels,Cronulla Sharks,bet365,1,0,handicap,home,1.87,-5.5
+2023,2,2023-03-10,Parramatta Eels,Cronulla Sharks,bet365,1,0,handicap,away,1.952,5.5
+2023,2,2023-03-10,Parramatta Eels,Cronulla Sharks,bet365,1,0,total,over,1.952,40.5
+2023,2,2023-03-10,Parramatta Eels,Cronulla Sharks,bet365,1,0,total,under,1.87,40.5
+2023,2,2023-03-09,Penrith Panthers,South Sydney Rabbitohs,bet365,1,0,h2h,home,1.52,
+2023,2,2023-03-09,Penrith Panthers,South Sydney Rabbitohs,bet365,1,0,h2h,away,2.62,
+2023,2,2023-03-09,Penrith Panthers,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.87,-4.5
+2023,2,2023-03-09,Penrith Panthers,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.952,4.5
+2023,2,2023-03-09,Penrith Panthers,South Sydney Rabbitohs,bet365,1,0,total,over,1.91,38.5
+2023,2,2023-03-09,Penrith Panthers,South Sydney Rabbitohs,bet365,1,0,total,under,1.91,38.5
+2023,1,2023-03-05,Wests Tigers,Gold Coast Titans,bet365,1,0,h2h,home,1.54,
+2023,1,2023-03-05,Wests Tigers,Gold Coast Titans,bet365,1,0,h2h,away,2.55,
+2023,1,2023-03-05,Wests Tigers,Gold Coast Titans,bet365,1,0,handicap,home,1.91,-4.5
+2023,1,2023-03-05,Wests Tigers,Gold Coast Titans,bet365,1,0,handicap,away,1.91,4.5
+2023,1,2023-03-05,Wests Tigers,Gold Coast Titans,bet365,1,0,total,over,1.85,46.5
+2023,1,2023-03-05,Wests Tigers,Gold Coast Titans,bet365,1,0,total,under,1.97,46.5
+2023,1,2023-03-05,Dolphins,Sydney Roosters,bet365,1,0,h2h,home,7.5,
+2023,1,2023-03-05,Dolphins,Sydney Roosters,bet365,1,0,h2h,away,1.1,
+2023,1,2023-03-05,Dolphins,Sydney Roosters,bet365,1,0,handicap,home,1.82,18.5
+2023,1,2023-03-05,Dolphins,Sydney Roosters,bet365,1,0,handicap,away,2.0,-18.5
+2023,1,2023-03-05,Dolphins,Sydney Roosters,bet365,1,0,total,over,1.82,45.5
+2023,1,2023-03-05,Dolphins,Sydney Roosters,bet365,1,0,total,under,2.0,45.5
+2023,1,2023-03-04,Cronulla Sharks,South Sydney Rabbitohs,bet365,1,0,h2h,home,2.75,
+2023,1,2023-03-04,Cronulla Sharks,South Sydney Rabbitohs,bet365,1,0,h2h,away,1.48,
+2023,1,2023-03-04,Cronulla Sharks,South Sydney Rabbitohs,bet365,1,0,handicap,home,1.952,5.5
+2023,1,2023-03-04,Cronulla Sharks,South Sydney Rabbitohs,bet365,1,0,handicap,away,1.87,-5.5
+2023,1,2023-03-04,Cronulla Sharks,South Sydney Rabbitohs,bet365,1,0,total,over,1.91,40.5
+2023,1,2023-03-04,Cronulla Sharks,South Sydney Rabbitohs,bet365,1,0,total,under,1.91,40.5
+2023,1,2023-03-04,North QLD Cowboys,Canberra Raiders,bet365,1,0,h2h,home,1.28,
+2023,1,2023-03-04,North QLD Cowboys,Canberra Raiders,bet365,1,0,h2h,away,3.85,
+2023,1,2023-03-04,North QLD Cowboys,Canberra Raiders,bet365,1,0,handicap,home,1.87,-10.5
+2023,1,2023-03-04,North QLD Cowboys,Canberra Raiders,bet365,1,0,handicap,away,1.952,10.5
+2023,1,2023-03-04,North QLD Cowboys,Canberra Raiders,bet365,1,0,total,over,1.93,42.5
+2023,1,2023-03-04,North QLD Cowboys,Canberra Raiders,bet365,1,0,total,under,1.89,42.5
+2023,1,2023-03-04,Manly Sea Eagles,Canterbury Bulldogs,bet365,1,0,h2h,home,1.47,
+2023,1,2023-03-04,Manly Sea Eagles,Canterbury Bulldogs,bet365,1,0,h2h,away,2.75,
+2023,1,2023-03-04,Manly Sea Eagles,Canterbury Bulldogs,bet365,1,0,handicap,home,1.91,-6.5
+2023,1,2023-03-04,Manly Sea Eagles,Canterbury Bulldogs,bet365,1,0,handicap,away,1.91,6.5
+2023,1,2023-03-04,Manly Sea Eagles,Canterbury Bulldogs,bet365,1,0,total,over,1.85,43.5
+2023,1,2023-03-04,Manly Sea Eagles,Canterbury Bulldogs,bet365,1,0,total,under,1.97,43.5
+2023,1,2023-03-03,Penrith Panthers,Brisbane Broncos,bet365,1,0,h2h,home,1.22,
+2023,1,2023-03-03,Penrith Panthers,Brisbane Broncos,bet365,1,0,h2h,away,4.5,
+2023,1,2023-03-03,Penrith Panthers,Brisbane Broncos,bet365,1,0,handicap,home,1.952,-12.5
+2023,1,2023-03-03,Penrith Panthers,Brisbane Broncos,bet365,1,0,handicap,away,1.87,12.5
+2023,1,2023-03-03,Penrith Panthers,Brisbane Broncos,bet365,1,0,total,over,1.91,40.5
+2023,1,2023-03-03,Penrith Panthers,Brisbane Broncos,bet365,1,0,total,under,1.91,40.5
+2023,1,2023-03-03,New Zealand Warriors,Newcastle Knights,bet365,1,0,h2h,home,1.75,
+2023,1,2023-03-03,New Zealand Warriors,Newcastle Knights,bet365,1,0,h2h,away,2.15,
+2023,1,2023-03-03,New Zealand Warriors,Newcastle Knights,bet365,1,0,handicap,home,2.0,-2.5
+2023,1,2023-03-03,New Zealand Warriors,Newcastle Knights,bet365,1,0,handicap,away,1.82,2.5
+2023,1,2023-03-03,New Zealand Warriors,Newcastle Knights,bet365,1,0,total,over,1.952,42.5
+2023,1,2023-03-03,New Zealand Warriors,Newcastle Knights,bet365,1,0,total,under,1.87,42.5
+2023,1,2023-03-02,Parramatta Eels,Melbourne Storm,bet365,1,0,h2h,home,2.1,
+2023,1,2023-03-02,Parramatta Eels,Melbourne Storm,bet365,1,0,h2h,away,1.77,
+2023,1,2023-03-02,Parramatta Eels,Melbourne Storm,bet365,1,0,handicap,home,1.91,1.5
+2023,1,2023-03-02,Parramatta Eels,Melbourne Storm,bet365,1,0,handicap,away,1.91,-1.5
+2023,1,2023-03-02,Parramatta Eels,Melbourne Storm,bet365,1,0,total,over,1.87,40.5
+2023,1,2023-03-02,Parramatta Eels,Melbourne Storm,bet365,1,0,total,under,1.952,40.5

@@ -1,0 +1,28 @@
+-- =============================================================================
+-- Migration 003: Add Family C (Physical Carry & Forward Dominance) column
+--                to team_style_stats
+-- =============================================================================
+--
+-- PURPOSE
+-- -------
+-- Adds the 1 nullable REAL column needed by Tier 2 Family C to team_style_stats.
+-- This column is already present in the canonical schema.sql definition.
+-- This migration brings existing databases up to date.
+--
+-- BEHAVIOUR ON RE-RUN
+-- -------------------
+-- The migration runner executes each statement independently and ignores
+-- "duplicate column name" errors. Safe to re-run.
+--
+-- FIELDS ADDED
+-- ------------
+-- Family C: Physical Carry & Forward Dominance
+--   run_metres_pg  REAL   average run metres per game  [style]
+--
+-- NOTE: errors_pg (style inverted) and mt_pg (vulnerability) are already
+--       present from Family A and Family B respectively. No additional
+--       columns are required for those signals.
+--
+-- =============================================================================
+
+ALTER TABLE team_style_stats ADD COLUMN run_metres_pg  REAL;

@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Databases (local SQLite files)
+*.db
+*.sqlite
+*.sqlite3
+
+# ML model binaries
+*.joblib
+*.pkl
+*.pickle
+
+# Logs
+logs/*.log
+logs/*.json
+
+# Outputs (generated files)
+outputs/*.csv
+outputs/*.xlsx
+
+# ML result CSVs and caches
+ml/results/*.csv
+ml/results/*.json
+
+# Environment variables
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

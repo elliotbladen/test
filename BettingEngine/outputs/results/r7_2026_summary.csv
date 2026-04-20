@@ -1,0 +1,15 @@
+metric,value,notes
+games,8,Round 7 (internal model round 8)
+h2h_correct,5,Cowboys/Manly + Tigers/Broncos + Eels/Bulldogs wrong
+h2h_accuracy_pct,62.5,
+margin_mae,11.15,Mean absolute error across all 8 games
+margin_mae_ex_cowboys,7.33,Excluding the 37.9pt Cowboys/Manly outlier
+margin_best_call,0.9,Roosters vs Knights (called +13.1 actual was +14)
+margin_worst_call,37.9,Cowboys vs Manly
+total_mae,6.78,Mean absolute error on totals
+total_best_call,1.0,Rabbitohs vs Dragons (model 41.0 actual 42)
+total_worst_call,15.8,Eels vs Bulldogs (model 42.2 actual 58)
+total_over_count,4,Warriors/Titans + Rabbitohs/Dragons + Roosters/Knights + Eels/Bulldogs (actual exceeded model total)
+total_under_count,4,Cowboys/Manly + Raiders/Storm + Dolphins/Panthers + Tigers/Broncos (actual came in under model total)
+total_split_note,4 over / 4 under,Perfectly split — no directional bias on totals this round
+round_note,Round numbering offset,Wikipedia calls this Round 7 — our internal count includes Las Vegas opener as Round 1

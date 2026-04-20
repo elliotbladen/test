@@ -1,0 +1,34 @@
+# pricing.yaml
+# EV thresholds and signal label mappings.
+
+ev_thresholds:
+  no_bet_below: 0.0        # EV < 0% -> no_bet
+  pass_below: 0.10         # EV 0-9.99% -> pass
+  watch_below: 0.20        # EV 10-19.99% -> watch
+  recommend_small_below: 0.30   # EV 20-29.99% -> recommend_small
+  recommend_medium_below: 0.50  # EV 30-49.99% -> recommend_medium
+  # EV 50%+ -> recommend_strong + manual review flag
+
+confidence:
+  levels:
+    - low
+    - medium
+    - high
+  # Inputs that affect confidence are in decision/signals.py
+
+markets:
+  types:
+    - h2h
+    - handicap
+    - total
+
+  selections:
+    h2h:
+      - home
+      - away
+    handicap:
+      - home
+      - away
+    total:
+      - over
+      - under
