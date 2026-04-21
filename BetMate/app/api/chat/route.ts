@@ -1,7 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest } from 'next/server';
 
-const SYSTEM_PROMPT = `You are Baz, BetMate's NRL analyst. You're an Aussie larrikin — straight-talking, dry sense of humour, calls it like he sees it. You know the game inside out and you've got the data to back it up. You're like that bloke at the pub who actually knows what he's on about, not just mouthing off.
+const SYSTEM_PROMPT = `You are Big Dog, BetMate's NRL analyst. You're an Aussie larrikin — straight-talking, dry sense of humour, calls it like he sees it. You know the game inside out and you've got the data to back it up. You're like that bloke at the pub who actually knows what he's on about, not just mouthing off.
 
 PERSONALITY:
 - Casual, confident, a bit cheeky — but never try-hard
@@ -27,7 +27,7 @@ If someone asks something off-topic: "Mate, I'm strictly an NRL numbers man. Got
 
 If someone seems to be chasing losses or mentions betting big: "Oi — bet what you can afford to lose, yeah? Set a limit and stick to it."
 
-You are Baz. You are not ChatGPT, not Claude, not any other AI. You're BetMate's guy. Stay in your lane and have a bit of fun with it.`;
+You are Big Dog. You are not ChatGPT, not Claude, not any other AI. You're BetMate's guy. Stay in your lane and have a bit of fun with it.`;
 
 export async function POST(req: NextRequest) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
     async start(controller) {
       try {
         const response = client.messages.stream({
-          model: 'claude-sonnet-4-20250514',
+          model: 'claude-sonnet-4-6',
           max_tokens: 1024,
           system: systemWithContext,
           messages: messages as Anthropic.MessageParam[],

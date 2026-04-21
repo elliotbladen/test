@@ -12,7 +12,7 @@ interface EVBadgeProps {
 const TIER_STYLES: Record<EVTier, string> = {
   negative: 'text-red-400   border-red-400/20   bg-red-400/5',
   marginal: 'text-amber-400 border-amber-400/20 bg-amber-400/5',
-  strong:   'text-[#00BCD4] border-[#00BCD4]/25 bg-[#00BCD4]/5',
+  strong:   'text-[#00C896] border-[#00C896]/25 bg-[#00C896]/5',
 };
 
 const TYPE_LABEL: Record<string, string> = {

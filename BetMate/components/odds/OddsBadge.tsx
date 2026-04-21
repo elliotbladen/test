@@ -44,13 +44,13 @@ export default function OddsBadge({
         'transition-all duration-150 cursor-pointer group',
         'touch-target',
         isBest
-          ? 'border-[#00BCD4] bg-[#00BCD4]/10 hover:bg-[#00BCD4]/18'
+          ? 'border-[#00C896] bg-[#00C896]/10 hover:bg-[#00C896]/18'
           : 'border-[#1C1C1C] bg-[#111111] hover:border-[#2E2E2E]',
       ].join(' ')}
     >
       {/* BEST badge — positioned above the button */}
       {isBest && (
-        <span className="absolute -top-[9px] left-1/2 -translate-x-1/2 bg-[#00BCD4] text-black text-[8px] font-black font-mono px-1.5 py-[2px] rounded uppercase tracking-widest whitespace-nowrap leading-none">
+        <span className="absolute -top-[9px] left-1/2 -translate-x-1/2 bg-[#00C896] text-black text-[8px] font-black font-mono px-1.5 py-[2px] rounded uppercase tracking-widest whitespace-nowrap leading-none">
           BEST
         </span>
       )}
@@ -58,7 +58,7 @@ export default function OddsBadge({
       {/* Bookmaker name */}
       <span className={[
         'text-[9px] font-mono uppercase tracking-[0.1em] mb-1 leading-none',
-        isBest ? 'text-[#00BCD4]/70' : 'text-[#888888]',
+        isBest ? 'text-[#00C896]/70' : 'text-[#888888]',
       ].join(' ')}>
         {BM_LABEL[bookmaker] ?? bookmaker.toUpperCase()}
       </span>
@@ -68,8 +68,8 @@ export default function OddsBadge({
         className={[
           'text-[15px] font-bold font-tabular leading-none',
           isBest
-            ? 'text-[#00BCD4]'
-            : 'text-white group-hover:text-[#00BCD4] transition-colors',
+            ? 'text-[#00C896]'
+            : 'text-white group-hover:text-[#00C896] transition-colors',
         ].join(' ')}
       >
         {odds.toFixed(2)}

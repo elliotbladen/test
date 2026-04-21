@@ -51,8 +51,8 @@ export default function RegisterPage() {
     return (
       <div className="min-h-[calc(100vh-120px)] flex items-center justify-center px-4">
         <div className="w-full max-w-sm text-center">
-          <div className="w-12 h-12 rounded-full border-2 border-[#00BCD4] flex items-center justify-center mx-auto mb-4">
-            <span className="text-[#00BCD4] text-xl">✓</span>
+          <div className="w-12 h-12 rounded-full border-2 border-[#00C896] flex items-center justify-center mx-auto mb-4">
+            <span className="text-[#00C896] text-xl">✓</span>
           </div>
           <h2 className="text-lg font-semibold mb-2">Check your email</h2>
           <p className="text-[#6B7280] text-sm">
@@ -68,7 +68,7 @@ export default function RegisterPage() {
     <div className="min-h-[calc(100vh-120px)] flex items-center justify-center px-4">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <span className="text-[#00BCD4] font-mono font-bold text-2xl tracking-tight">BetMate</span>
+          <span className="text-[#00C896] font-mono font-bold text-2xl tracking-tight">BetMate</span>
           <p className="text-[#6B7280] text-sm mt-2">Create your free account</p>
         </div>
 
@@ -76,7 +76,7 @@ export default function RegisterPage() {
           {/* Google OAuth */}
           <button
             onClick={handleGoogleSignup}
-            className="w-full flex items-center justify-center gap-3 border border-[#1E1E1E] hover:border-[#00BCD4]/50 bg-[#111111] text-white font-medium py-2.5 rounded transition-colors duration-150 mb-6"
+            className="w-full flex items-center justify-center gap-3 border border-[#1E1E1E] hover:border-[#00C896]/50 bg-[#111111] text-white font-medium py-2.5 rounded transition-colors duration-150 mb-6"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/>
@@ -103,7 +103,7 @@ export default function RegisterPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00BCD4] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
+                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00C896] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
                 placeholder="you@example.com"
               />
             </div>
@@ -117,7 +117,7 @@ export default function RegisterPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 minLength={8}
-                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00BCD4] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
+                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00C896] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
                 placeholder="Min. 8 characters"
               />
             </div>
@@ -130,7 +130,7 @@ export default function RegisterPage() {
                 value={confirm}
                 onChange={(e) => setConfirm(e.target.value)}
                 required
-                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00BCD4] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
+                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00C896] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
                 placeholder="••••••••"
               />
             </div>
@@ -142,7 +142,7 @@ export default function RegisterPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#00BCD4] hover:bg-[#00ACC1] disabled:opacity-50 text-black font-semibold py-2.5 rounded transition-colors duration-150"
+              className="w-full bg-[#00C896] hover:bg-[#00B386] disabled:opacity-50 text-black font-semibold py-2.5 rounded transition-colors duration-150"
             >
               {loading ? 'Creating account…' : 'Create free account'}
             </button>
@@ -156,7 +156,7 @@ export default function RegisterPage() {
 
         <p className="text-center text-[#6B7280] text-sm mt-6">
           Already have an account?{' '}
-          <Link href="/auth/login" className="text-[#00BCD4] hover:underline">
+          <Link href="/auth/login" className="text-[#00C896] hover:underline">
             Sign in
           </Link>
         </p>

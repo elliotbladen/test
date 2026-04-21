@@ -49,23 +49,22 @@ function bumpCount(): number {
 function buildOddsContext(games: Game[]): string {
   if (games.length === 0) return 'No games loaded this week.';
   return games.map((g) => {
-    const bestHome = Math.max(
-      g.odds.sportsbet.home, g.odds.tab.home, g.odds.neds.home, g.odds.betfair.home,
-    );
-    const bestAway = Math.max(
-      g.odds.sportsbet.away, g.odds.tab.away, g.odds.neds.away, g.odds.betfair.away,
-    );
+    const oddsEntries = Object.entries(g.odds);
+    const bestHome = oddsEntries.length ? Math.max(...oddsEntries.map(([, o]) => o.home)) : 0;
+    const bestAway = oddsEntries.length ? Math.max(...oddsEntries.map(([, o]) => o.away)) : 0;
+    const oddsHomeStr = oddsEntries.map(([k, o]) => `${k.toUpperCase()} ${o.home}`).join(' | ');
+    const oddsAwayStr = oddsEntries.map(([k, o]) => `${k.toUpperCase()} ${o.away}`).join(' | ');
     return `
 GAME: ${g.homeTeam} vs ${g.awayTeam}
-Round: ${g.round} | Kickoff: ${g.kickoffTime} | Venue: ${g.venue}
-Referee: ${g.referee} (${g.refereeBucket})
+Round: ${g.round} | Kickoff: ${g.kickoffTime}${g.venue ? ` | Venue: ${g.venue}` : ''}
+${g.referee ? `Referee: ${g.referee}${g.refereeBucket ? ` (${g.refereeBucket})` : ''}` : ''}
 H2H Odds:
-  ${g.homeTeam}: SB ${g.odds.sportsbet.home} | TAB ${g.odds.tab.home} | NEDS ${g.odds.neds.home} | BF ${g.odds.betfair.home} | BEST ${bestHome.toFixed(2)}
-  ${g.awayTeam}: SB ${g.odds.sportsbet.away} | TAB ${g.odds.tab.away} | NEDS ${g.odds.neds.away} | BF ${g.odds.betfair.away} | BEST ${bestAway.toFixed(2)}
-EV: Line ${g.evLine.label} (${g.evLine.tier}) | Total ${g.evTotal.label} (${g.evTotal.tier})
-Model: Line ${g.modelLine} | Total ${g.totalPts} | Market ${g.marketLine}
-Public: ${g.publicPct}% ${g.publicTeam} | Line move: ${g.lineMoveSummary}
-Tier: ${g.tier}`.trim();
+  ${g.homeTeam}: ${oddsHomeStr} | BEST ${bestHome.toFixed(2)}
+  ${g.awayTeam}: ${oddsAwayStr} | BEST ${bestAway.toFixed(2)}
+${g.evLine ? `EV: Line ${g.evLine.label} (${g.evLine.tier})${g.evTotal ? ` | Total ${g.evTotal.label} (${g.evTotal.tier})` : ''}` : ''}
+${g.modelLine ? `Model: Line ${g.modelLine}${g.totalPts ? ` | Total ${g.totalPts}` : ''}${g.marketLine ? ` | Market ${g.marketLine}` : ''}` : ''}
+${g.publicPct ? `Public: ${g.publicPct}% ${g.publicTeam}${g.lineMoveSummary ? ` | Line move: ${g.lineMoveSummary}` : ''}` : ''}
+${g.tier ? `Tier: ${g.tier}` : ''}`.trim();
   }).join('\n\n');
 }
 
@@ -77,7 +76,7 @@ interface Message {
 
 const WELCOME: Message = {
   role: 'assistant',
-  content: "G'day. I'm Baz — ask me anything about this round. Odds, value, referee matchups, why the model's on or off a certain team. If the data says something's cooked, I'll tell ya.",
+  content: "G'day. I'm Big Dog — ask me anything about this round. Odds, value, referee matchups, why the model's on or off a certain team. If the data says something's cooked, I'll tell ya.",
 };
 
 const SUGGESTED = [
@@ -151,8 +150,6 @@ export default function ChatPanel({
 
     if (textareaRef.current) textareaRef.current.style.height = 'auto';
 
-    const newCount = bumpCount();
-    setMsgCount(newCount);
     setMessages((prev) => [...prev, { role: 'assistant', content: '' }]);
 
     try {
@@ -181,6 +178,10 @@ export default function ChatPanel({
           return updated;
         });
       }
+
+      // Count the message only after full response received
+      const newCount = bumpCount();
+      setMsgCount(newCount);
     } catch {
       setMessages((prev) => {
         const updated = [...prev];
@@ -203,7 +204,7 @@ export default function ChatPanel({
       <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#1C1C1C] shrink-0">
         <div className="flex items-center gap-3">
           <span className="font-bold text-white text-[15px] tracking-tight uppercase">
-            Baz
+            Big Dog
           </span>
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot" />
@@ -220,20 +221,20 @@ export default function ChatPanel({
       {/* ── Login wall ────────────────────────────────────────────────────── */}
       {!isLoggedIn && (
         <div className="flex-1 flex flex-col items-center justify-center px-6 text-center gap-4">
-          <div className="w-12 h-12 rounded-full border border-[#00BCD4]/40 flex items-center justify-center mb-1">
-            <span className="text-[#00BCD4] text-xl">🔒</span>
+          <div className="w-12 h-12 rounded-full border border-[#00C896]/40 flex items-center justify-center mb-1">
+            <span className="text-[#00C896] text-xl">🔒</span>
           </div>
-          <p className="text-white font-semibold text-sm">Sign up to chat with Baz</p>
+          <p className="text-white font-semibold text-sm">Sign up to chat with Big Dog</p>
           <p className="text-[#555] text-xs leading-relaxed">
             Free account gets you 3 messages a day.<br />No credit card needed.
           </p>
           <Link
             href="/auth/register"
-            className="inline-flex items-center justify-center bg-[#00BCD4] hover:bg-[#00ACC1] text-black text-xs font-bold px-6 py-2.5 rounded-lg transition-colors"
+            className="inline-flex items-center justify-center bg-[#00C896] hover:bg-[#00B386] text-black text-xs font-bold px-6 py-2.5 rounded-lg transition-colors"
           >
             Create free account
           </Link>
-          <Link href="/auth/login" className="text-[#555] hover:text-[#00BCD4] text-xs transition-colors">
+          <Link href="/auth/login" className="text-[#555] hover:text-[#00C896] text-xs transition-colors">
             Already have an account? Sign in
           </Link>
         </div>
@@ -251,7 +252,7 @@ export default function ChatPanel({
                 className={[
                   'max-w-[88%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed',
                   msg.role === 'user'
-                    ? 'bg-[#00BCD4] text-black font-medium rounded-br-sm'
+                    ? 'bg-[#00C896] text-black font-medium rounded-br-sm'
                     : 'bg-[#161616] text-[#ccc] border border-[#1C1C1C] rounded-bl-sm',
                 ].join(' ')}
               >
@@ -288,7 +289,7 @@ export default function ChatPanel({
             <button
               key={q}
               onClick={() => send(q)}
-              className="w-full text-left px-3.5 py-2.5 rounded-lg border border-[#1C1C1C] bg-[#111] text-[#888] text-[12px] font-mono hover:border-[#00BCD4]/40 hover:text-[#00BCD4] transition-colors"
+              className="w-full text-left px-3.5 py-2.5 rounded-lg border border-[#1C1C1C] bg-[#111] text-[#888] text-[12px] font-mono hover:border-[#00C896]/40 hover:text-[#00C896] transition-colors"
             >
               {q}
             </button>
@@ -307,14 +308,14 @@ export default function ChatPanel({
             placeholder={isBlocked ? 'Upgrade to PRO to continue…' : 'Ask about any game…'}
             disabled={isBlocked || loading}
             rows={1}
-            className="flex-1 bg-[#111] border border-[#1C1C1C] focus:border-[#00BCD4]/50 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-[#444] outline-none resize-none disabled:opacity-40 transition-colors leading-snug"
+            className="flex-1 bg-[#111] border border-[#1C1C1C] focus:border-[#00C896]/50 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-[#444] outline-none resize-none disabled:opacity-40 transition-colors leading-snug"
             style={{ minHeight: '40px', maxHeight: '96px' }}
           />
           <button
             onClick={() => send()}
             disabled={!input.trim() || loading || isBlocked}
             aria-label="Send"
-            className="shrink-0 px-4 h-10 flex items-center justify-center bg-transparent border border-[#333] hover:border-[#00BCD4]/50 disabled:opacity-30 disabled:cursor-not-allowed rounded-xl transition-colors"
+            className="shrink-0 px-4 h-10 flex items-center justify-center bg-transparent border border-[#333] hover:border-[#00C896]/50 disabled:opacity-30 disabled:cursor-not-allowed rounded-xl transition-colors"
           >
             {loading
               ? <Loader2 className="w-4 h-4 text-[#888] animate-spin" />
@@ -326,7 +327,7 @@ export default function ChatPanel({
         {/* Footer */}
         <p className="text-[#333] text-[10px] font-mono mt-2 text-center uppercase tracking-widest">
           {userPlan === 'free' && !isBlocked
-            ? <>{remaining} free message{remaining !== 1 ? 's' : ''} remaining today · <Link href="/auth/register" className="text-[#555] hover:text-[#00BCD4] transition-colors">Upgrade</Link></>
+            ? <>{remaining} free message{remaining !== 1 ? 's' : ''} remaining today · <Link href="/auth/register" className="text-[#555] hover:text-[#00C896] transition-colors">Upgrade</Link></>
             : userPlan === 'free' && isBlocked
             ? <>Limit reached · <Link href="/auth/register" className="text-[#7C3AED]">Upgrade</Link></>
             : 'PRO — unlimited messages'

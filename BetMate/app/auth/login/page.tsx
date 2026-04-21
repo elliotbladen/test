@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { createClient } from '@/lib/supabase';
 
 export default function LoginPage() {
@@ -10,6 +11,7 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  const router = useRouter();
   const supabase = createClient();
 
   const handleGoogleLogin = async () => {
@@ -27,8 +29,8 @@ export default function LoginPage() {
     setLoading(true);
     setError(null);
     const { error } = await supabase.auth.signInWithPassword({ email, password });
-    if (error) setError(error.message);
-    setLoading(false);
+    if (error) { setError(error.message); setLoading(false); return; }
+    router.push('/odds');
   };
 
   return (
@@ -36,7 +38,7 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="mb-8 text-center">
-          <span className="text-[#00BCD4] font-mono font-bold text-2xl tracking-tight">BetMate</span>
+          <span className="text-[#00C896] font-mono font-bold text-2xl tracking-tight">BetMate</span>
           <p className="text-[#6B7280] text-sm mt-2">Sign in to your account</p>
         </div>
 
@@ -44,7 +46,7 @@ export default function LoginPage() {
           {/* Google OAuth */}
           <button
             onClick={handleGoogleLogin}
-            className="w-full flex items-center justify-center gap-3 border border-[#1E1E1E] hover:border-[#00BCD4]/50 bg-[#111111] hover:bg-[#111111] text-white font-medium py-2.5 rounded transition-colors duration-150 mb-6"
+            className="w-full flex items-center justify-center gap-3 border border-[#1E1E1E] hover:border-[#00C896]/50 bg-[#111111] hover:bg-[#111111] text-white font-medium py-2.5 rounded transition-colors duration-150 mb-6"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/>
@@ -73,7 +75,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00BCD4] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
+                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00C896] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
                 placeholder="you@example.com"
               />
             </div>
@@ -86,7 +88,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00BCD4] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
+                className="w-full bg-[#111111] border border-[#1E1E1E] focus:border-[#00C896] rounded px-3 py-2.5 text-sm text-white outline-none transition-colors duration-150 placeholder:text-[#3a3a3a]"
                 placeholder="••••••••"
               />
             </div>
@@ -98,7 +100,7 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#00BCD4] hover:bg-[#00ACC1] disabled:opacity-50 text-black font-semibold py-2.5 rounded transition-colors duration-150"
+              className="w-full bg-[#00C896] hover:bg-[#00B386] disabled:opacity-50 text-black font-semibold py-2.5 rounded transition-colors duration-150"
             >
               {loading ? 'Signing in…' : 'Sign in'}
             </button>
@@ -112,7 +114,7 @@ export default function LoginPage() {
 
         <p className="text-center text-[#6B7280] text-sm mt-6">
           No account?{' '}
-          <Link href="/auth/register" className="text-[#00BCD4] hover:underline">
+          <Link href="/auth/register" className="text-[#00C896] hover:underline">
             Sign up free
           </Link>
         </p>

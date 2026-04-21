@@ -33,7 +33,7 @@ export default function Home() {
           className="pointer-events-none absolute inset-0"
           style={{
             backgroundImage:
-              'linear-gradient(#00BCD4 1px, transparent 1px), linear-gradient(90deg, #00BCD4 1px, transparent 1px)',
+              'linear-gradient(#00C896 1px, transparent 1px), linear-gradient(90deg, #00C896 1px, transparent 1px)',
             backgroundSize: '56px 56px',
             opacity: 0.025,
           }}
@@ -45,17 +45,17 @@ export default function Home() {
         <div className="relative z-10 max-w-2xl mx-auto w-full">
           {/* Live badge */}
           <div className="inline-flex items-center gap-2 border border-[#1C1C1C] rounded px-3 py-1.5 mb-8 text-[10px] font-mono text-[#888888] uppercase tracking-[0.15em]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00BCD4] pulse-dot" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00C896] pulse-dot" />
             Updated every Thursday &amp; Saturday
           </div>
 
           {/* Headline */}
           <h1 className="text-[2.6rem] sm:text-6xl font-bold leading-[1.08] tracking-tight mb-5">
             Find the{' '}
-            <span className="text-[#00BCD4]">best odds.</span>
+            <span className="text-[#00C896]">best odds.</span>
             <br />
             Powered by a<br className="sm:hidden" />{' '}
-            <span className="text-[#00BCD4]">quant model.</span>
+            <span className="text-[#00C896]">quant model.</span>
           </h1>
 
           {/* Subheading */}
@@ -68,13 +68,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/auth/register"
-              className="inline-flex items-center justify-center bg-[#00BCD4] hover:bg-[#00ACC1] text-black font-bold px-8 py-3.5 rounded transition-colors duration-150 text-sm tracking-wide"
+              className="inline-flex items-center justify-center bg-[#00C896] hover:bg-[#00B386] text-black font-bold px-8 py-3.5 rounded transition-colors duration-150 text-sm tracking-wide"
             >
               Sign up free with Google
             </Link>
             <Link
               href="/odds"
-              className="inline-flex items-center justify-center border border-[#1C1C1C] hover:border-[#00BCD4]/50 hover:text-[#00BCD4] text-white font-semibold px-8 py-3.5 rounded transition-colors duration-150 text-sm"
+              className="inline-flex items-center justify-center border border-[#1C1C1C] hover:border-[#00C896]/50 hover:text-[#00C896] text-white font-semibold px-8 py-3.5 rounded transition-colors duration-150 text-sm"
             >
               View this week&apos;s odds
             </Link>
@@ -92,9 +92,9 @@ export default function Home() {
             {features.map((f) => (
               <div
                 key={f.title}
-                className="border border-[#1C1C1C] rounded-lg p-5 bg-[#080808] hover:border-[#00BCD4]/25 transition-colors duration-200"
+                className="border border-[#1C1C1C] rounded-lg p-5 bg-[#080808] hover:border-[#00C896]/25 transition-colors duration-200"
               >
-                <f.icon className="w-5 h-5 text-[#00BCD4] mb-4" strokeWidth={1.5} />
+                <f.icon className="w-5 h-5 text-[#00C896] mb-4" strokeWidth={1.5} />
                 <h3 className="text-white font-semibold text-sm mb-2">{f.title}</h3>
                 <p className="text-[#888888] text-[13px] leading-relaxed">{f.description}</p>
               </div>

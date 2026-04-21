@@ -9,9 +9,9 @@ module.exports = {
     extend: {
       colors: {
         cyan: {
-          DEFAULT: '#00BCD4',
-          400: '#00BCD4',
-          500: '#00ACC1',
+          DEFAULT: '#00C896',
+          400: '#00C896',
+          500: '#00B386',
           600: '#0097A7',
         },
         pro: '#7C3AED',
