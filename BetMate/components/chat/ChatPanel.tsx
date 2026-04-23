@@ -15,7 +15,8 @@ interface StoredChat {
 }
 
 function todayStr(): string {
-  return new Date().toISOString().split('T')[0];
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 }
 
 function readCount(): number {
@@ -76,7 +77,7 @@ interface Message {
 
 const WELCOME: Message = {
   role: 'assistant',
-  content: "G'day. I'm Big Dog — ask me anything about this round. Odds, value, referee matchups, why the model's on or off a certain team. If the data says something's cooked, I'll tell ya.",
+  content: "G'day. I'm Baz — ask me anything about this round. Odds, value, referee matchups, why the model's on or off a certain team. If the data says something's cooked, I'll tell ya.",
 };
 
 const SUGGESTED = [
@@ -204,7 +205,7 @@ export default function ChatPanel({
       <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#1C1C1C] shrink-0">
         <div className="flex items-center gap-3">
           <span className="font-bold text-white text-[15px] tracking-tight uppercase">
-            Big Dog
+            Baz
           </span>
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot" />
@@ -224,7 +225,7 @@ export default function ChatPanel({
           <div className="w-12 h-12 rounded-full border border-[#00C896]/40 flex items-center justify-center mb-1">
             <span className="text-[#00C896] text-xl">🔒</span>
           </div>
-          <p className="text-white font-semibold text-sm">Sign up to chat with Big Dog</p>
+          <p className="text-white font-semibold text-sm">Sign up to chat with Baz</p>
           <p className="text-[#555] text-xs leading-relaxed">
             Free account gets you 3 messages a day.<br />No credit card needed.
           </p>

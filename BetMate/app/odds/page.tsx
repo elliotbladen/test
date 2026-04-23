@@ -8,8 +8,9 @@ import ChatPanel from '@/components/chat/ChatPanel';
 import type { Game } from '@/components/odds/GameCard';
 import type { OddsApiEvent } from '@/lib/oddsApi';
 import { extractH2HOdds, extractSpreadsOdds, extractTotalsOdds } from '@/lib/oddsApi';
-import { computeMovements } from '@/lib/oddsMovement';
+import { computeMovements, mergeMovements } from '@/lib/oddsMovement';
 import type { MovementMap } from '@/lib/oddsMovement';
+import { getRefForGame } from '@/lib/referees';
 
 function transformEvents(events: OddsApiEvent[]): Game[] {
   return events.map((event) => {
@@ -43,6 +44,8 @@ function transformEvents(events: OddsApiEvent[]): Game[] {
       odds,
       spreadsOdds,
       totalsOdds,
+      referee: getRefForGame(event.home_team)?.name,
+      refereeBucket: getRefForGame(event.home_team)?.bucket,
       lastUpdated: new Date().toISOString(),
     };
   });
@@ -113,7 +116,8 @@ export default function OddsPage() {
   const [refreshCount, setRefreshCount] = useState(0);
   const [loading, setLoading]         = useState(false);
   const [error, setError]             = useState<string | null>(null);
-  const prevGamesRef = useRef<Game[]>([]);
+  const prevGamesRef  = useRef<Game[]>([]);
+  const movementsRef  = useRef<MovementMap>({});
 
   useEffect(() => {
     const supabase = createClient();
@@ -128,22 +132,39 @@ export default function OddsPage() {
 
   useEffect(() => {
     if (activeSport !== 'NRL') return;
-    setLoading(true);
-    setError(null);
-    fetch('/api/odds/nrl')
-      .then((r) => {
-        if (!r.ok) throw new Error(`Failed to load odds (${r.status})`);
-        return r.json();
-      })
-      .then((events: OddsApiEvent[]) => {
-        const newGames = transformEvents(events);
-        setMovements(computeMovements(prevGamesRef.current, newGames));
-        setRefreshCount((c) => c + 1);
-        prevGamesRef.current = newGames;
-        setNrlGames(newGames);
-      })
-      .catch((e) => setError(e.message))
-      .finally(() => setLoading(false));
+
+    // Seed prevGamesRef from localStorage so movements survive page refreshes
+    try {
+      const stored = localStorage.getItem('betmate_nrl_odds');
+      if (stored) prevGamesRef.current = JSON.parse(stored);
+    } catch { /* ignore */ }
+
+    function fetchOdds(isInitial = false) {
+      if (isInitial) setLoading(true);
+      setError(null);
+      fetch('/api/odds/nrl')
+        .then((r) => {
+          if (!r.ok) throw new Error(`Failed to load odds (${r.status})`);
+          return r.json();
+        })
+        .then((events: OddsApiEvent[]) => {
+          const newGames = transformEvents(events);
+          const incoming = computeMovements(prevGamesRef.current, newGames);
+          const merged = mergeMovements(movementsRef.current, incoming);
+          movementsRef.current = merged;
+          setMovements(merged);
+          setRefreshCount((c) => c + 1);
+          prevGamesRef.current = newGames;
+          try { localStorage.setItem('betmate_nrl_odds', JSON.stringify(newGames)); } catch { /* ignore */ }
+          setNrlGames(newGames);
+        })
+        .catch((e) => setError(e.message))
+        .finally(() => { if (isInitial) setLoading(false); });
+    }
+
+    fetchOdds(true);
+    const interval = setInterval(() => fetchOdds(false), 60_000);
+    return () => clearInterval(interval);
   }, [activeSport]);
 
   const games = activeSport === 'NRL' ? nrlGames : [];

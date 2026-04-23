@@ -26,12 +26,9 @@ export default function Header() {
       <div className="px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-1 shrink-0">
+        <Link href="/odds" className="flex items-center gap-1 shrink-0">
           <span className="text-[#00C896] font-mono font-bold text-[17px] tracking-tight leading-none uppercase">
             BetMate
-          </span>
-          <span className="text-[#888888] font-mono font-normal text-[17px] tracking-tight leading-none">
-            .AI
           </span>
         </Link>
 
@@ -47,8 +44,24 @@ export default function Header() {
           </div>
         )}
 
+        {/* Nav links */}
+        <nav className="hidden sm:flex items-center gap-4 ml-auto">
+          <Link
+            href="/odds"
+            className={`text-[13px] font-mono uppercase tracking-widest transition-colors ${pathname === '/odds' || pathname.startsWith('/odds/') ? 'text-white' : 'text-[#888888] hover:text-white'}`}
+          >
+            Odds
+          </Link>
+          <Link
+            href="/tools"
+            className={`text-[13px] font-mono uppercase tracking-widest transition-colors ${pathname === '/tools' ? 'text-white' : 'text-[#888888] hover:text-white'}`}
+          >
+            Tools
+          </Link>
+        </nav>
+
         {/* Right side */}
-        <div className="flex items-center gap-3 ml-auto">
+        <div className="flex items-center gap-3 sm:ml-4">
           {email ? (
             <div className="relative group">
               <span className="text-[#00C896] text-[13px] font-mono uppercase tracking-widest truncate max-w-[200px] cursor-default">

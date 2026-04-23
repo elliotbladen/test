@@ -91,6 +91,31 @@ body {
   transition: border-color 0.15s ease;
 }
 
+/* EV snake border — rotating green comet around bookmaker button */
+@property --ev-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes ev-snake {
+  to { --ev-angle: 360deg; }
+}
+.ev-snake-border {
+  animation: ev-snake 1.8s linear infinite;
+  border: 2px solid transparent !important;
+  background:
+    linear-gradient(#0d1f1a, #0d1f1a) padding-box,
+    conic-gradient(
+      from var(--ev-angle),
+      transparent 0%,
+      transparent 60%,
+      #00C896 75%,
+      #00ff99 85%,
+      #00C896 90%,
+      transparent 95%
+    ) border-box !important;
+}
+
 /* Odds movement arrows */
 @keyframes flash-up {
   0%   { opacity: 0; transform: translateY(3px) scale(0.7); }

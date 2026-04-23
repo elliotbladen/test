@@ -27,7 +27,7 @@ export default function OddsBadge({
   isBest,
   side,
 }: OddsBadgeProps) {
-  const url = getAffiliateUrl(bookmaker, sport, matchId);
+  const url = getAffiliateUrl(bookmaker, sport);
 
   const handleClick = () => {
     if (url) window.open(url, '_blank', 'noopener,noreferrer');

@@ -3,6 +3,15 @@ import type { Game } from '@/components/odds/GameCard';
 export type Movement = 'up' | 'down';
 export type MovementMap = Record<string, Movement>;
 
+// Merge new movements into existing map.
+// Arrows stay until a new price change overwrites them.
+export function mergeMovements(
+  existing: MovementMap,
+  incoming: MovementMap,
+): MovementMap {
+  return { ...existing, ...incoming };
+}
+
 export function computeMovements(prev: Game[], next: Game[]): MovementMap {
   const map: MovementMap = {};
 
