@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-[#1C1C1C] py-8 px-5">
+    <footer className="hidden lg:block border-t border-[#1C1C1C] py-8 px-5">
       <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <span className="text-[#00C896] font-mono font-bold text-sm tracking-tight">
           BetMate

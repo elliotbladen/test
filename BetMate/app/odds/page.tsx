@@ -170,7 +170,7 @@ export default function OddsPage() {
   const games = activeSport === 'NRL' ? nrlGames : [];
 
   return (
-    <div className="flex flex-col" style={{ height: 'calc(100vh - 56px)' }}>
+    <div className="flex flex-col" style={{ height: 'calc(100dvh - 56px)' }}>
 
       {/* ── Sport tabs bar ───────────────────────────────────────────────── */}
       <div className="border-b border-[#1C1C1C] px-4 sm:px-6 flex items-center gap-1 h-10 shrink-0">

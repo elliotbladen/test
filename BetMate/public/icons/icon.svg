@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#000000"/>
+  <rect x="48" y="48" width="416" height="416" rx="72" fill="#0A0A0A"/>
+  <text x="256" y="306" font-family="monospace" font-weight="900" font-size="196" text-anchor="middle" fill="#00C896">BM</text>
+  <rect x="96" y="360" width="320" height="4" rx="2" fill="#00C896" opacity="0.4"/>
+</svg>
