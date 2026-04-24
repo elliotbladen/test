@@ -24,13 +24,15 @@ Array of objects:
         "role":           "halfback",
         "importance_tier":"elite",
         "status":         "out",
+        "absence_type":   "injury",
         "notes":          "hamstring"
       }
     ]
 
-Valid roles:        fullback, halfback, five_eighth, hooker, pack, other
-Valid tiers:        elite, key, rotation
-Valid statuses:     out, doubtful, managed, available
+Valid roles:         fullback, halfback, five_eighth, hooker, pack, other
+Valid tiers:         elite, key, rotation
+Valid statuses:      out, doubtful, managed, available
+Valid absence types: injury, suspension  (default: injury)
 
 Notes and source_url are optional.
 """
@@ -73,9 +75,10 @@ NAME_MAP = {
     'Wests Tigers':             'Wests Tigers',
 }
 
-VALID_ROLES    = {'fullback', 'halfback', 'five_eighth', 'hooker', 'pack', 'other'}
-VALID_TIERS    = {'elite', 'key', 'rotation'}
-VALID_STATUSES = {'out', 'doubtful', 'managed', 'available'}
+VALID_ROLES         = {'fullback', 'halfback', 'five_eighth', 'hooker', 'pack', 'other'}
+VALID_TIERS         = {'elite', 'key', 'rotation'}
+VALID_STATUSES      = {'out', 'doubtful', 'managed', 'available'}
+VALID_ABSENCE_TYPES = {'injury', 'suspension'}
 
 
 def canonical(name: str) -> str:
@@ -105,9 +108,9 @@ def resolve_match(conn: sqlite3.Connection, season: int, round_number: int, team
 def process_injuries(conn: sqlite3.Connection, items: list, dry_run: bool) -> None:
     now = datetime.utcnow().isoformat()
 
-    print(f"\n{'─'*110}")
-    print(f"  {'Round':>5}  {'Team':<32}  {'Player':<22}  {'Role':<14}  {'Tier':<10}  {'Status':<10}  Result")
-    print(f"{'─'*110}")
+    print(f"\n{'─'*125}")
+    print(f"  {'Round':>5}  {'Team':<32}  {'Player':<22}  {'Role':<14}  {'Tier':<10}  {'Status':<10}  {'Type':<12}  Result")
+    print(f"{'─'*125}")
 
     ok = 0
     errors = 0
@@ -120,13 +123,17 @@ def process_injuries(conn: sqlite3.Connection, items: list, dry_run: bool) -> No
         role       = str(item.get('role', 'other')).strip().lower()
         tier       = str(item.get('importance_tier', 'rotation')).strip().lower()
         status     = str(item.get('status', 'out')).strip().lower()
-        notes      = item.get('notes')
-        source_url = item.get('source_url')
+        absence_type = str(item.get('absence_type', 'injury')).strip().lower()
+        notes        = item.get('notes')
+        source_url   = item.get('source_url')
+
+        if absence_type not in VALID_ABSENCE_TYPES:
+            absence_type = 'injury'
 
         display = f"{canonical(team_name):<32}"
 
         if not round_num or not team_name or not player:
-            print(f"  {'?':>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  SKIP (missing fields)")
+            print(f"  {'?':>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  {absence_type:<12}  SKIP (missing fields)")
             errors += 1
             continue
 
@@ -135,19 +142,19 @@ def process_injuries(conn: sqlite3.Connection, items: list, dry_run: bool) -> No
         if tier not in VALID_TIERS:
             tier = 'rotation'
         if status not in VALID_STATUSES:
-            print(f"  {round_num:>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  ERROR (invalid status)")
+            print(f"  {round_num:>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  {absence_type:<12}  ERROR (invalid status)")
             errors += 1
             continue
 
         team_id = resolve_team(conn, team_name)
         if team_id is None:
-            print(f"  {round_num:>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  ERROR (team not found)")
+            print(f"  {round_num:>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  {absence_type:<12}  ERROR (team not found)")
             errors += 1
             continue
 
         match_id = resolve_match(conn, season, round_num, team_id)
         if match_id is None:
-            print(f"  {round_num:>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  ERROR (match not found)")
+            print(f"  {round_num:>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  {absence_type:<12}  ERROR (match not found)")
             errors += 1
             continue
 
@@ -156,29 +163,30 @@ def process_injuries(conn: sqlite3.Connection, items: list, dry_run: bool) -> No
                 """
                 INSERT INTO injury_reports
                     (match_id, team_id, player_name, player_role, importance_tier,
-                     status, notes, source_url, captured_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                     status, absence_type, notes, source_url, captured_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(match_id, team_id, player_name) DO UPDATE SET
                     player_role      = excluded.player_role,
                     importance_tier  = excluded.importance_tier,
                     status           = excluded.status,
+                    absence_type     = excluded.absence_type,
                     notes            = excluded.notes,
                     source_url       = excluded.source_url,
                     captured_at      = excluded.captured_at
                 """,
-                (match_id, team_id, player, role, tier, status, notes, source_url, now),
+                (match_id, team_id, player, role, tier, status, absence_type, notes, source_url, now),
             )
             result_str = 'WRITTEN'
         else:
             result_str = 'DRY-RUN'
 
-        print(f"  {round_num:>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  {result_str}")
+        print(f"  {round_num:>5}  {display}  {player:<22}  {role:<14}  {tier:<10}  {status:<10}  {absence_type:<12}  {result_str}")
         ok += 1
 
     if not dry_run:
         conn.commit()
 
-    print(f"{'─'*110}")
+    print(f"{'─'*125}")
     print(f"  {ok} players loaded, {errors} errors.")
 
 

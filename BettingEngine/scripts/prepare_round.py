@@ -69,7 +69,8 @@ from pricing.tier3_situational import compute_situational_adjustments
 from pricing.tier4_venue import compute_venue_adjustments
 from pricing.tier5_injury import compute_injury_adjustments
 from pricing.tier6_referee import get_ref_context, compute_referee_adjustments
-from pricing.tier7_environment import compute_weather_adjustments
+from pricing.tier7_emotional import compute_emotional_adjustments
+from pricing.tier8_weather import compute_weather_adjustments
 from pricing.engine import derive_final_prices
 from db.queries import (
     get_team_stats, get_prior_season_stats,
@@ -77,6 +78,7 @@ from db.queries import (
     get_situational_context,
     get_team_venue_edge, get_venue_total_edge, get_venue_name,
     get_team_injury_pts,
+    get_emotional_flags,
     get_weather_conditions,
     get_or_create_referee,
     insert_tier2_performance, update_tier2_results,
@@ -831,21 +833,30 @@ def price_match(conn, match_row, tier2_cfg, tiers_cfg) -> dict:
         t6_handicap_delta = totals_T6 = 0.0
         t6_bucket = t6_referee_name = None
 
-    # --- Tier 7 weather ---
-    t7_cfg      = tiers_cfg.get('tier7_environment', {})
+    # --- Tier 7 emotional ---
+    t7_cfg         = tiers_cfg.get('tier7_emotional', {})
+    home_e_flags   = get_emotional_flags(conn, match_id, home_tid)
+    away_e_flags   = get_emotional_flags(conn, match_id, away_tid)
+    t7 = compute_emotional_adjustments(home_e_flags, away_e_flags, t7_cfg)
+    t7_handicap_delta = t7['handicap_delta']
+    totals_T7         = t7['totals_delta']
+
+    # --- Tier 8 weather (game-day pricing — 0.0 if not yet fetched) ---
+    t8_cfg      = tiers_cfg.get('tier8_weather', {})
     kickoff_dt  = match_row['kickoff_datetime'] or ''
     weather_row = get_weather_conditions(conn, match_id)
-    t7 = compute_weather_adjustments(weather_row, kickoff_dt, t7_cfg)
-    totals_T7          = t7['totals_delta']
-    t7_condition_type  = t7['condition_type']
-    t7_dew_risk        = int(t7['dew_risk'])
+    t8 = compute_weather_adjustments(weather_row, kickoff_dt, t8_cfg)
+    totals_T8          = t8['totals_delta']
+    t8_condition_type  = t8['condition_type']
+    t8_dew_risk        = int(t8['dew_risk'])
 
     final_home = round(t1_home + t2_capped_home + t3_home, 3)
     final_away = round(t1_away + t2_capped_away + t3_away, 3)
     final_mrg  = round(final_home - final_away
-                       + t4_handicap_delta + t5_handicap_delta + t6_handicap_delta, 3)
+                       + t4_handicap_delta + t5_handicap_delta
+                       + t6_handicap_delta + t7_handicap_delta, 3)
 
-    raw_final_total = totals_T1 + totals_T2 + totals_T3 + totals_T4 + totals_T5 + totals_T6 + totals_T7
+    raw_final_total = totals_T1 + totals_T2 + totals_T3 + totals_T4 + totals_T5 + totals_T6 + totals_T7 + totals_T8
     final_total     = round(max(TOTALS_FLOOR, min(TOTALS_CEILING, raw_final_total)), 2)
     pred_home_score = round((final_total + final_mrg) / 2.0, 1)
     pred_away_score = round((final_total - final_mrg) / 2.0, 1)
@@ -867,6 +878,7 @@ def price_match(conn, match_row, tier2_cfg, tiers_cfg) -> dict:
         't4_handicap_delta': t4_handicap_delta,
         't5_handicap_delta': t5_handicap_delta,
         't6_handicap_delta': t6_handicap_delta,
+        't7_handicap_delta': t7_handicap_delta,
         'final_margin': final_mrg,
 
         'totals_T1': round(totals_T1, 2),
@@ -876,6 +888,7 @@ def price_match(conn, match_row, tier2_cfg, tiers_cfg) -> dict:
         'totals_T5': totals_T5,
         'totals_T6': totals_T6,
         'totals_T7': totals_T7,
+        'totals_T8': totals_T8,
         'final_total': final_total,
         'pred_home_score': pred_home_score,
         'pred_away_score': pred_away_score,
@@ -915,17 +928,18 @@ def price_match(conn, match_row, tier2_cfg, tiers_cfg) -> dict:
         '_t2d_home_delta': t2d_h, '_t2d_away_delta': fd['away_delta'],
         '_t2d_label_h': _get_family_label(fd, 'h'), '_t2d_label_a': _get_family_label(fd, 'a'),
         '_t2d_2a_agree': fd['debug'].get('_2a_same_direction'),
-        'totals_T6': totals_T6,
-        'totals_T7': totals_T7,
-        't7_condition_type': t7_condition_type,
-        't7_dew_risk': t7_dew_risk,
+        '_t7_home_flags': len(home_e_flags),
+        '_t7_away_flags': len(away_e_flags),
+        '_t7_debug': t7['_debug'],
+        't8_condition_type': t8_condition_type,
+        't8_dew_risk': t8_dew_risk,
     }
 
 
 def step6a_fetch_weather(conn, season: int, round_number: int,
                          dry_run: bool, skip: bool):
     """
-    Step 6a — Fetch T7 weather conditions for every match in the round.
+    Step 6a — Fetch T8 weather conditions for every match in the round.
 
     Uses Open-Meteo for Australian venues and MetService for Auckland.
     Falls back to clear (0.0) on any API failure so pricing always completes.

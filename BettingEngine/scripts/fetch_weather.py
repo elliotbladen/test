@@ -30,7 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DB_PATH = ROOT / 'data' / 'model.db'
 
 sys.path.insert(0, str(ROOT))
-from pricing.tier7_environment import classify_condition, compute_dew_risk
+from pricing.tier8_weather import classify_condition, compute_dew_risk
 
 # Auckland venue IDs — use MetService instead of Open-Meteo
 AUCKLAND_VENUE_IDS = {3}   # Go Media Stadium

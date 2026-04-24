@@ -28,9 +28,8 @@ env/
 logs/*.log
 logs/*.json
 
-# Outputs (generated files)
-outputs/*.csv
-outputs/*.xlsx
+# Outputs — exclude ephemeral generated files but keep matrices and results
+outputs/model_prices_*.csv
 
 # ML result CSVs and caches
 ml/results/*.csv

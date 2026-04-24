@@ -1493,7 +1493,29 @@ def get_team_injury_pts(conn: sqlite3.Connection, match_id: int, team_id: int) -
 
 
 # =============================================================================
-# Tier 7 — Weather
+# Tier 7 — Emotional flags
+# =============================================================================
+
+def get_emotional_flags(conn: sqlite3.Connection, match_id: int, team_id: int) -> list:
+    """
+    Return all emotional_flags rows for a team in a given match.
+    Each row is returned as a dict with at least: flag_type, flag_strength,
+    player_name, notes.
+    Returns [] if no flags are loaded for this team/match.
+    """
+    rows = conn.execute(
+        """
+        SELECT flag_type, flag_strength, player_name, notes
+        FROM   emotional_flags
+        WHERE  match_id = ? AND team_id = ?
+        """,
+        (match_id, team_id),
+    ).fetchall()
+    return [dict(r) for r in rows]
+
+
+# =============================================================================
+# Tier 8 — Weather
 # =============================================================================
 
 def get_weather_conditions(conn: sqlite3.Connection, match_id: int) -> Optional[dict]:

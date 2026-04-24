@@ -1,0 +1,9 @@
+date,home_team,away_team,actual_home,actual_away,actual_margin,actual_total,model_fair_home,model_fair_away,bookie_home_odds,bookie_away_odds,ev_home,ev_away,h2h_signal,h2h_signal_ev,h2h_signal_odds,h2h_win,model_total,bookie_total,model_vs_line,total_signal,total_signal_odds,total_result,total_win,model_margin,bookie_hcap_home,spread_to_cover,hcap_signal,hcap_result,hcap_win
+2026-04-16,North Queensland Cowboys,Manly-Warringah Sea Eagles,6,38,-32,44,1.452,3.211,1.6,2.35,0.1019,-0.2681,HOME,0.1019,1.6,0,51.3,54.5,-3.2,UNDER,1.85,UNDER,1,5.9,-4.5,4.5,HOME,AWAY_CVR,0
+2026-04-17,Canberra Raiders,Melbourne Storm,26,22,4,48,1.766,2.305,2.1,1.74,0.1891,-0.2451,HOME,0.1891,2.1,1,54.0,48.5,5.5,OVER,1.95,UNDER,0,2.0,1.5,-1.5,HOME,HOME_CVR,1
+2026-04-17,Dolphins,Penrith Panthers,22,23,-1,45,3.036,1.491,3.45,1.31,0.1364,-0.1214,HOME,0.1364,3.45,0,47.9,52.5,-4.6,UNDER,1.85,UNDER,1,-5.4,11.5,-11.5,HOME,HOME_CVR,1
+2026-04-18,New Zealand Warriors,Gold Coast Titans,28,20,8,48,1.118,9.465,1.29,3.6,0.1538,-0.6197,HOME,0.1538,1.29,1,43.8,48.5,-4.7,UNDER,1.85,UNDER,1,15.0,-11.5,11.5,HOME,AWAY_CVR,0
+2026-04-18,South Sydney Rabbitohs,St. George Illawarra Dragons,30,12,18,42,1.357,3.799,1.28,3.7,-0.0567,-0.0261,AWAY,-0.0261,3.7,0,41.0,51.5,-10.5,UNDER,1.95,UNDER,1,7.5,-11.5,11.5,AWAY,HOME_CVR,0
+2026-04-18,Wests Tigers,Brisbane Broncos,20,21,-1,41,1.83,2.205,1.55,2.45,-0.153,0.1111,AWAY,0.1111,2.45,1,44.7,50.5,-5.8,UNDER,1.9,UNDER,1,1.4,-6.5,6.5,AWAY,AWAY_CVR,1
+2026-04-19,Sydney Roosters,Newcastle Knights,38,24,14,62,1.159,7.273,1.2,4.6,0.0354,-0.3675,HOME,0.0354,1.2,1,48.7,53.5,-4.8,UNDER,1.8,OVER,0,13.1,-13.5,13.5,AWAY,HOME_CVR,0
+2026-04-19,Parramatta Eels,Canterbury-Bankstown Bulldogs,38,20,18,58,3.272,1.44,4.2,1.23,0.2836,-0.1458,HOME,0.2836,4.2,1,42.2,49.5,-7.3,UNDER,1.95,OVER,0,-6.1,12.5,-12.5,HOME,HOME_CVR,1

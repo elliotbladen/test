@@ -1,22 +1,27 @@
 # pricing/tier5_injury.py
 # =============================================================================
-# Tier 5 — Injury layer
+# Tier 5 — Injury & Suspension layer
 # =============================================================================
 #
-# Converts team-level injury burden into two adjustments:
+# Converts team-level absence burden (injuries AND suspensions) into two
+# adjustments. Both absence types are treated identically in the pricing
+# math — a suspended halfback suppresses the model the same way an injured
+# one does.  The absence_type field in injury_reports distinguishes them for
+# reporting and filtering, but does not change the point weights below.
 #
 #   handicap_delta
 #       Captures the relative strength shift between the two teams.
-#       Formula: clamp(away_injury_pts - home_injury_pts, -3.0, +3.0)
-#       Positive = home favoured (away has more key players out).
-#       Negative = away favoured (home has more key players out).
+#       Formula: clamp(away_absence_pts - home_absence_pts, -3.0, +3.0)
+#       Positive = home favoured (away has more key players absent).
+#       Negative = away favoured (home has more key players absent).
 #
 #   totals_delta
 #       Captures the aggregate scoring suppression from absences on both sides.
-#       Formula: -0.3 per combined injury point above threshold (default 4.0).
+#       Formula: -0.3 per combined absence point above threshold (default 4.0).
 #       Capped at -3.0. Both teams losing key players reduces expected scoring.
 #
-# V1 injury points are supplied per-team from an external source (xlsx or DB).
+# V1 absence points are supplied per-team from the injury_reports table
+# (loaded via scripts/load_injury_round.py).
 # Role-based scale (illustrative):
 #   Elite spine (halfback, hooker, fullback): 3.0 pts
 #   Key playmaker / five-eighth:              2.0 pts
@@ -35,11 +40,15 @@ def compute_injury_adjustments(
     config: dict,
 ) -> dict:
     """
-    Compute Tier 5 injury adjustments.
+    Compute Tier 5 absence adjustments (injuries and suspensions combined).
+
+    Both absence types contribute identically to the pricing math.
+    Callers should sum all absence points regardless of absence_type before
+    passing them in.
 
     Args:
-        home_injury_pts: total injury burden for home team (sum of role-based pts)
-        away_injury_pts: total injury burden for away team
+        home_injury_pts: total absence burden for home team (sum of role-based pts)
+        away_injury_pts: total absence burden for away team
         config: tier5_injury section of tiers.yaml
 
     Returns dict with:

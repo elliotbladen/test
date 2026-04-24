@@ -1,0 +1,72 @@
+section,label,value,explanation
+
+HOW EV WORKS,,,"EV (Expected Value) tells you whether a bet is mathematically profitable in the long run. It compares what YOU think the true probability is (model) against what the BOOKMAKER is paying you."
+HOW EV WORKS,Formula,EV = (model_probability x bookie_odds) - 1,"If EV is positive you are being overpaid relative to the true probability. If negative you are being underpaid."
+HOW EV WORKS,Example — coin flip,,"Imagine a fair coin. True probability of heads = 50% (1/2). If bookie pays 2.20 for heads: EV = (0.50 x 2.20) - 1 = +10%. You'd bet this every time."
+HOW EV WORKS,Where model_probability comes from,1 / model_fair_odds,"The model prices each team as a fair decimal odd (no margin). We invert that to get a probability. e.g. fair odds 2.00 = 50% probability."
+HOW EV WORKS,Why 20% threshold?,,"In Year 1 we use a conservative 20% EV minimum before flagging a signal. This filters out noise and marginal edges. It means the model must think the bookie is mispricing by at least 20 cents in the dollar before we act."
+HOW EV WORKS,Quarter Kelly on top,,"Even when EV clears 20% we size at quarter Kelly with a hard stake cap. High EV does not mean bet big — it means bet smart."
+
+,,,"--- ROUND 7 RESULTS: ALL 8 GAMES RANKED BY EV ---"
+
+GAME ANALYSIS,Game 1 — STRONGEST SIGNAL,Parramatta Eels vs Canterbury Bulldogs,"THE MODEL DISAGREED WITH THE MARKET ON WHO WOULD WIN."
+GAME ANALYSIS,Model fair odds — Eels,3.272 (30.6% probability),"Model thought Eels had a 30.6% chance of winning at home. This is low — model actually expected Bulldogs to win."
+GAME ANALYSIS,Model fair odds — Bulldogs,1.440 (69.4% probability),"Model had Bulldogs as favourites. But not as strong a favourite as the market."
+GAME ANALYSIS,Bookie closing odds — Eels,4.20,"Bookie priced Eels at 4.20 implying only 23.8% probability. Much lower than model's 30.6%."
+GAME ANALYSIS,Bookie closing odds — Bulldogs,1.23,"Bookie had Bulldogs at 1.23 implying 81.3% probability. Model only gave them 69.4%."
+GAME ANALYSIS,EV on Eels (HOME),(0.306 x 4.20) - 1 = +28.4%,"The bookie was paying 4.20 for something the model thought was worth 3.27. That gap is the edge."
+GAME ANALYSIS,EV on Bulldogs (AWAY),(0.694 x 1.23) - 1 = -14.6%,"Bulldogs were overpriced by the market relative to model. No edge backing them."
+GAME ANALYSIS,Signal fired?,YES — Eels HOME at +28.4% EV,"Only signal of the round that cleared the 20% threshold."
+GAME ANALYSIS,Result,Eels won 38-20,"Signal correct. Even though the MODEL expected Bulldogs to win outright — the EV logic correctly identified Eels as the value bet."
+GAME ANALYSIS,Key lesson,,"EV betting is not about picking winners. It is about finding where the market has mispriced probability. The model said Bulldogs would probably win but the market was overconfident — so the value was on Eels."
+
+GAME ANALYSIS,Game 2 — NEAR THRESHOLD,Canberra Raiders vs Melbourne Storm,
+GAME ANALYSIS,Model fair odds — Raiders,1.766 (56.6% probability),"Model gave Raiders a slight home edge."
+GAME ANALYSIS,Bookie closing odds — Raiders,2.10,"Market priced Raiders at 2.10 — much longer than model. Market thought Storm were more likely to win."
+GAME ANALYSIS,EV on Raiders,(0.566 x 2.10) - 1 = +18.9%,"Just under 20% threshold. In strict rules this would not fire. But it is close — a borderline signal."
+GAME ANALYSIS,Result,Raiders won 26-22,"Would have been a winner. Illustrates the cost of the 20% filter — you miss some edges. But over the long run the filter prevents acting on noise."
+
+GAME ANALYSIS,Game 3,New Zealand Warriors vs Gold Coast Titans,
+GAME ANALYSIS,EV on Warriors,(0.894 x 1.29) - 1 = +15.4%,"Model had Warriors as massive favourites (89.4%). Bookie had them at 1.29 — still shorter than model implied."
+GAME ANALYSIS,Result,Warriors won 28-20,Correct direction. Below 20% threshold so no signal fires.
+
+GAME ANALYSIS,Game 4,Dolphins vs Penrith Panthers,
+GAME ANALYSIS,Model fair odds — Dolphins,3.036 (32.9% probability),"Model had Panthers winning. But not by as much as the market."
+GAME ANALYSIS,Bookie closing odds — Dolphins,3.45,"Bookie priced Dolphins longer than model — market more confident in Panthers."
+GAME ANALYSIS,EV on Dolphins (HOME),(0.329 x 3.45) - 1 = +13.6%,"Edge on Dolphins despite model expecting Panthers to win. Same logic as Eels — value can sit on the underdog side."
+GAME ANALYSIS,Result,Panthers won 23-22 golden point,"Wrong by one golden point kick. Close. Below 20% threshold so no signal."
+
+GAME ANALYSIS,Game 5,North Queensland Cowboys vs Manly Sea Eagles,
+GAME ANALYSIS,EV on Cowboys (HOME),(0.689 x 1.60) - 1 = +10.2%,"Positive but below threshold."
+GAME ANALYSIS,Result,Manly won 38-6,"Biggest miss of round. Cowboys blown out. Correct that this did not pass the 20% filter — the model was not confident enough to generate a signal and the result validated that caution."
+
+GAME ANALYSIS,Game 6,Wests Tigers vs Brisbane Broncos,
+GAME ANALYSIS,EV on Broncos (AWAY),(0.454 x 2.45) - 1 = +11.1%,"Model had Tigers as slight home favourites but bookie had Tigers shorter. Value on Broncos."
+GAME ANALYSIS,Result,Broncos won 21-20,Correct. Below threshold — no signal fired but would have been a winner.
+
+GAME ANALYSIS,Game 7,Sydney Roosters vs Newcastle Knights,
+GAME ANALYSIS,EV on Roosters (HOME),(0.863 x 1.20) - 1 = +3.5%,"Very slim edge. Model and market close on this one."
+GAME ANALYSIS,Result,Roosters won 38-24,Correct direction. Effectively no edge — 3.5% EV is noise.
+
+GAME ANALYSIS,Game 8 — NO EDGE,South Sydney Rabbitohs vs St George Dragons,
+GAME ANALYSIS,EV on Rabbitohs (HOME),(0.737 x 1.28) - 1 = -5.7%,"Negative EV. Market had Rabbitohs shorter than model."
+GAME ANALYSIS,EV on Dragons (AWAY),(0.263 x 3.70) - 1 = -2.6%,"Also negative. No edge on either side."
+GAME ANALYSIS,Signal fired?,NO — both sides negative EV,"This game is excluded from positive EV count. The market was efficient here."
+GAME ANALYSIS,Result,Rabbitohs won 30-12,"Irrelevant — there was no signal to evaluate."
+
+,,,"--- SCORECARD ---"
+
+SCORECARD,Total games,8,
+SCORECARD,Games with positive EV (either side),7,"Rabbitohs/Dragons excluded — both sides negative"
+SCORECARD,Games clearing 20% threshold,1,Eels only
+SCORECARD,Result on 20%+ signals,1/1 — 100%,
+SCORECARD,Result on all positive EV signals (7 games),5/7 — 71%,
+SCORECARD,Result on all 8 games,5/8 — 62%,
+
+,,,"--- WHAT THIS TELLS US ---"
+
+INSIGHT,Insight 1,The filter works as designed,"The one game that cleared 20% EV won. The two biggest losses (Cowboys blowout) did not clear the threshold — the model was uncertain enough that the filter correctly kept them out."
+INSIGHT,Insight 2,EV and picking winners are different things,"The Eels signal is the clearest example. Model expected Bulldogs to win. EV logic said bet Eels. Eels won. The edge came from reading the market's overconfidence — not from predicting the outright winner."
+INSIGHT,Insight 3,71% on positive EV is a strong sample result,"One round is not statistically meaningful. But 71% on the right side of positive EV games is the pattern we want to see persist. Track this across every round."
+INSIGHT,Insight 4,Totals model showing consistent UNDER bias vs market,"Model priced 7 of 8 games below the bookmaker total line and won 5 of those UNDER signals. This needs more rounds to confirm but it is the most interesting structural finding so far."
+INSIGHT,Insight 5,Handicap is the hardest market to beat,"4/8 on handicap cover. The closing line is the most efficient price in the market. Do not prioritise handicap signals over H2H or totals at this stage."

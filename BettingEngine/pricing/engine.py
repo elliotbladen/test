@@ -21,7 +21,8 @@
 #   Tier 4 — Venue            (stub — not yet implemented)
 #   Tier 5 — Injury           (stub — not yet implemented)
 #   Tier 6 — Referee          (stub — not yet implemented)
-#   Tier 7 — Environment      (stub — not yet implemented)
+#   Tier 7 — Emotional        (stub — loaded via price_round.py)
+#   Tier 8 — Weather          (game-day only — stub in engine, applied by price_round.py)
 #
 # PRICE DERIVATION
 # ----------------
@@ -47,7 +48,8 @@ from pricing.tier3_situational import compute_situational_adjustments
 from pricing.tier4_venue import compute_venue_adjustments
 from pricing.tier5_injury import compute_injury_adjustments
 from pricing.tier6_referee import compute_referee_adjustments
-from pricing.tier7_environment import compute_environment_adjustments
+from pricing.tier7_emotional import compute_emotional_adjustments_stub
+from pricing.tier8_weather import compute_weather_stub
 
 from db.queries import (
     get_match_by_id,
@@ -212,7 +214,7 @@ def run_pricing(
     match_date: Optional[str] = None,
 ) -> dict:
     """
-    Execute the 7-tier pricing sequence for a single match.
+    Execute the 8-tier pricing sequence for a single match.
 
     Thin orchestration only: loads data, calls each tier in sequence,
     accumulates point adjustments, derives final prices, generates signals.
@@ -438,7 +440,10 @@ def run_pricing(
     _try_tier(6, 'referee',      compute_referee_adjustments,
               match_with_stats, {}, config)   # referee stats dict not yet loaded
 
-    _try_tier(7, 'environment',  compute_environment_adjustments,
+    _try_tier(7, 'emotional',    compute_emotional_adjustments_stub,
+              match_with_stats, match_context or {}, config)
+
+    _try_tier(8, 'weather',      compute_weather_stub,
               match_with_stats, match_context or {}, config)
 
     # -------------------------------------------------------------------------

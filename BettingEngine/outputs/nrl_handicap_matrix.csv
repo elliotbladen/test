@@ -1,0 +1,1137 @@
+team,section,category,cover_rate_pct,market_implied_pct,diff_pp,edge_pct,direction,n,flag
+Brisbane Broncos,OVERALL,Cover Rate — All Games,54.9,50.0,4.9,9.8,covers,102,False
+Brisbane Broncos,OVERALL,Cover Rate — Home,52.9,50.0,2.9,5.8,covers,51,False
+Brisbane Broncos,OVERALL,Cover Rate — Away,56.9,50.0,6.9,13.8,covers,51,False
+Brisbane Broncos,FAVOURITE vs UNDERDOG,As Favourite (line < 0),52.2,50.0,2.2,4.4,covers,69,False
+Brisbane Broncos,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),60.6,50.0,10.6,21.2,covers,33,True
+Brisbane Broncos,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),40.7,50.0,-9.3,18.6,fades,27,True
+Brisbane Broncos,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),59.5,50.0,9.5,19.0,covers,42,True
+Brisbane Broncos,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),58.3,50.0,8.3,16.6,covers,24,True
+Brisbane Broncos,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),66.7,50.0,16.7,33.4,covers,9,True
+Brisbane Broncos,TIME OF DAY,Night Games (kick-off ≥ 18:00),56.6,50.0,6.6,13.2,covers,76,False
+Brisbane Broncos,TIME OF DAY,Day Games (kick-off < 18:00),50.0,50.0,0.0,0.0,fades,26,False
+Brisbane Broncos,DAY OF WEEK,Thursday / Friday Games,56.0,50.0,6.0,12.0,covers,50,False
+Brisbane Broncos,DAY OF WEEK,Saturday Games,51.4,50.0,1.4,2.8,covers,37,False
+Brisbane Broncos,DAY OF WEEK,Sunday Games,60.0,50.0,10.0,20.0,covers,15,True
+Brisbane Broncos,FORM,After a Win,60.0,50.0,10.0,20.0,covers,60,True
+Brisbane Broncos,FORM,After a Loss,46.3,50.0,-3.7,7.4,fades,41,False
+Brisbane Broncos,REST,Short Rest (≤ 6 days),46.9,50.0,-3.1,6.2,fades,32,False
+Brisbane Broncos,REST,Normal Rest (7-9 days),60.0,50.0,10.0,20.0,covers,50,True
+Brisbane Broncos,REST,Long Rest (≥ 10 days),52.6,50.0,2.6,5.2,covers,19,False
+Brisbane Broncos,MOON PHASE,New Moon (±1 day),25.0,50.0,-25.0,50.0,fades,8,True
+Brisbane Broncos,MOON PHASE,Full Moon (±1 day),42.9,50.0,-7.1,14.2,fades,7,False
+Brisbane Broncos,BY MONTH,March,53.3,50.0,3.3,6.6,covers,15,False
+Brisbane Broncos,BY MONTH,April,66.7,50.0,16.7,33.4,covers,18,True
+Brisbane Broncos,BY MONTH,May,43.8,50.0,-6.2,12.4,fades,16,False
+Brisbane Broncos,BY MONTH,June,54.5,50.0,4.5,9.0,covers,11,False
+Brisbane Broncos,BY MONTH,July,50.0,50.0,0.0,0.0,fades,16,False
+Brisbane Broncos,BY MONTH,August,47.1,50.0,-2.9,5.8,fades,17,False
+Brisbane Broncos,BY MONTH,September,71.4,50.0,21.4,42.8,covers,7,True
+Brisbane Broncos,BY MONTH,October,,50.0,,,,,
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,66.7,50.0,16.7,33.4,covers,6,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,83.3,50.0,33.3,66.6,covers,6,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,75.0,50.0,25.0,50.0,covers,4,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Dolphins,33.3,50.0,-16.7,33.4,fades,6,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,50.0,50.0,0.0,0.0,fades,8,False
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,50.0,50.0,0.0,0.0,fades,4,False
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,50.0,50.0,0.0,0.0,fades,10,False
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,50.0,50.0,0.0,0.0,fades,6,False
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,60.0,50.0,10.0,20.0,covers,5,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,62.5,50.0,12.5,25.0,covers,8,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,57.1,50.0,7.1,14.2,covers,7,False
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,37.5,50.0,-12.5,25.0,fades,8,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,62.5,50.0,12.5,25.0,covers,8,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs St George Dragons,40.0,50.0,-10.0,20.0,fades,5,True
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,42.9,50.0,-7.1,14.2,fades,7,False
+Brisbane Broncos,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,75.0,50.0,25.0,50.0,covers,4,True
+Brisbane Broncos,BY VENUE,4 Pines Park (Brookvale Oval),,50.0,,,,,
+Brisbane Broncos,BY VENUE,AAMI Park,50.0,50.0,0.0,0.0,fades,4,False
+Brisbane Broncos,BY VENUE,Accor Stadium,71.4,50.0,21.4,42.8,covers,7,True
+Brisbane Broncos,BY VENUE,Allegiant Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,Allianz Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,Belmore Sports Ground,,50.0,,,,,
+Brisbane Broncos,BY VENUE,BlueBet Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Brisbane Broncos,BY VENUE,Campbelltown Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,Cbus Super Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Brisbane Broncos,BY VENUE,CommBank Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,GIO Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Brisbane Broncos,BY VENUE,Go Media Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,McDonald Jones Stadium,100.0,50.0,50.0,100.0,covers,3,True
+Brisbane Broncos,BY VENUE,McLean Park,,50.0,,,,,
+Brisbane Broncos,BY VENUE,Moreton Daily Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,QCB Stadium,75.0,50.0,25.0,50.0,covers,4,True
+Brisbane Broncos,BY VENUE,SCG,,50.0,,,,,
+Brisbane Broncos,BY VENUE,Suncorp Stadium,49.1,50.0,-0.9,1.8,fades,55,False
+Brisbane Broncos,BY VENUE,Sunshine Coast Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,TIO Stadium,,50.0,,,,,
+Brisbane Broncos,BY VENUE,The Gabba,66.7,50.0,16.7,33.4,covers,3,True
+Canberra Raiders,OVERALL,Cover Rate — All Games,51.5,50.0,1.5,3.0,covers,101,False
+Canberra Raiders,OVERALL,Cover Rate — Home,52.0,50.0,2.0,4.0,covers,50,False
+Canberra Raiders,OVERALL,Cover Rate — Away,51.0,50.0,1.0,2.0,covers,51,False
+Canberra Raiders,FAVOURITE vs UNDERDOG,As Favourite (line < 0),42.9,50.0,-7.1,14.2,fades,49,False
+Canberra Raiders,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),59.6,50.0,9.6,19.2,covers,52,True
+Canberra Raiders,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),45.5,50.0,-4.5,9.0,fades,11,False
+Canberra Raiders,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),42.1,50.0,-7.9,15.8,fades,38,True
+Canberra Raiders,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),58.3,50.0,8.3,16.6,covers,36,True
+Canberra Raiders,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),62.5,50.0,12.5,25.0,covers,16,True
+Canberra Raiders,TIME OF DAY,Night Games (kick-off ≥ 18:00),59.1,50.0,9.1,18.2,covers,44,True
+Canberra Raiders,TIME OF DAY,Day Games (kick-off < 18:00),45.6,50.0,-4.4,8.8,fades,57,False
+Canberra Raiders,DAY OF WEEK,Thursday / Friday Games,52.4,50.0,2.4,4.8,covers,21,False
+Canberra Raiders,DAY OF WEEK,Saturday Games,50.0,50.0,0.0,0.0,fades,38,False
+Canberra Raiders,DAY OF WEEK,Sunday Games,52.4,50.0,2.4,4.8,covers,42,False
+Canberra Raiders,FORM,After a Win,49.2,50.0,-0.8,1.6,fades,59,False
+Canberra Raiders,FORM,After a Loss,53.7,50.0,3.7,7.4,covers,41,False
+Canberra Raiders,REST,Short Rest (≤ 6 days),40.7,50.0,-9.3,18.6,fades,27,True
+Canberra Raiders,REST,Normal Rest (7-9 days),50.9,50.0,0.9,1.8,covers,57,False
+Canberra Raiders,REST,Long Rest (≥ 10 days),68.8,50.0,18.8,37.6,covers,16,True
+Canberra Raiders,MOON PHASE,New Moon (±1 day),50.0,50.0,0.0,0.0,fades,10,False
+Canberra Raiders,MOON PHASE,Full Moon (±1 day),55.6,50.0,5.6,11.2,covers,9,False
+Canberra Raiders,BY MONTH,March,56.2,50.0,6.2,12.4,covers,16,False
+Canberra Raiders,BY MONTH,April,43.8,50.0,-6.2,12.4,fades,16,False
+Canberra Raiders,BY MONTH,May,66.7,50.0,16.7,33.4,covers,15,True
+Canberra Raiders,BY MONTH,June,42.9,50.0,-7.1,14.2,fades,14,False
+Canberra Raiders,BY MONTH,July,57.1,50.0,7.1,14.2,covers,14,False
+Canberra Raiders,BY MONTH,August,43.8,50.0,-6.2,12.4,fades,16,False
+Canberra Raiders,BY MONTH,September,50.0,50.0,0.0,0.0,fades,10,False
+Canberra Raiders,BY MONTH,October,,50.0,,,,,
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,33.3,50.0,-16.7,33.4,fades,6,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,66.7,50.0,16.7,33.4,covers,6,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,50.0,50.0,0.0,0.0,fades,8,False
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Dolphins,40.0,50.0,-10.0,20.0,fades,5,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,83.3,50.0,33.3,66.6,covers,6,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,42.9,50.0,-7.1,14.2,fades,7,False
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,83.3,50.0,33.3,66.6,covers,6,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,62.5,50.0,12.5,25.0,covers,8,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,33.3,50.0,-16.7,33.4,fades,9,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,16.7,50.0,-33.3,66.6,fades,6,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,66.7,50.0,16.7,33.4,covers,6,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,40.0,50.0,-10.0,20.0,fades,5,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,100.0,50.0,50.0,100.0,covers,4,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs St George Dragons,14.3,50.0,-35.7,71.4,fades,7,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,80.0,50.0,30.0,60.0,covers,5,True
+Canberra Raiders,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,42.9,50.0,-7.1,14.2,fades,7,False
+Canberra Raiders,BY VENUE,4 Pines Park (Brookvale Oval),,50.0,,,,,
+Canberra Raiders,BY VENUE,AAMI Park,75.0,50.0,25.0,50.0,covers,4,True
+Canberra Raiders,BY VENUE,Accor Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,Allegiant Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,Allianz Stadium,100.0,50.0,50.0,100.0,covers,3,True
+Canberra Raiders,BY VENUE,Apex Oval,,50.0,,,,,
+Canberra Raiders,BY VENUE,Apollo Projects Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,Belmore Sports Ground,,50.0,,,,,
+Canberra Raiders,BY VENUE,BlueBet Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,Campbelltown Stadium,0.0,50.0,-50.0,100.0,fades,3,True
+Canberra Raiders,BY VENUE,Cbus Super Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,CommBank Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,GIO Stadium,50.0,50.0,0.0,0.0,fades,46,False
+Canberra Raiders,BY VENUE,Glen Willow Regional Sports Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,Go Media Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,Kayo Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Canberra Raiders,BY VENUE,Leichhardt Oval,,50.0,,,,,
+Canberra Raiders,BY VENUE,McDonald Jones Stadium,40.0,50.0,-10.0,20.0,fades,5,True
+Canberra Raiders,BY VENUE,McDonalds Park,,50.0,,,,,
+Canberra Raiders,BY VENUE,Moreton Daily Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,QCB Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Canberra Raiders,BY VENUE,Suncorp Stadium,57.1,50.0,7.1,14.2,covers,7,False
+Canberra Raiders,BY VENUE,TIO Stadium,,50.0,,,,,
+Canberra Raiders,BY VENUE,WIN Stadium,0.0,50.0,-50.0,100.0,fades,3,True
+Canterbury Bulldogs,OVERALL,Cover Rate — All Games,45.5,50.0,-4.5,9.0,fades,99,False
+Canterbury Bulldogs,OVERALL,Cover Rate — Home,46.0,50.0,-4.0,8.0,fades,50,False
+Canterbury Bulldogs,OVERALL,Cover Rate — Away,44.9,50.0,-5.1,10.2,fades,49,False
+Canterbury Bulldogs,FAVOURITE vs UNDERDOG,As Favourite (line < 0),43.9,50.0,-6.1,12.2,fades,41,False
+Canterbury Bulldogs,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),46.6,50.0,-3.4,6.8,fades,58,False
+Canterbury Bulldogs,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),40.0,50.0,-10.0,20.0,fades,5,True
+Canterbury Bulldogs,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),44.4,50.0,-5.6,11.2,fades,36,False
+Canterbury Bulldogs,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),45.5,50.0,-4.5,9.0,fades,33,False
+Canterbury Bulldogs,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),48.0,50.0,-2.0,4.0,fades,25,False
+Canterbury Bulldogs,TIME OF DAY,Night Games (kick-off ≥ 18:00),41.9,50.0,-8.1,16.2,fades,43,True
+Canterbury Bulldogs,TIME OF DAY,Day Games (kick-off < 18:00),48.2,50.0,-1.8,3.6,fades,56,False
+Canterbury Bulldogs,DAY OF WEEK,Thursday / Friday Games,37.5,50.0,-12.5,25.0,fades,32,True
+Canterbury Bulldogs,DAY OF WEEK,Saturday Games,50.0,50.0,0.0,0.0,fades,26,False
+Canterbury Bulldogs,DAY OF WEEK,Sunday Games,45.9,50.0,-4.1,8.2,fades,37,False
+Canterbury Bulldogs,FORM,After a Win,45.5,50.0,-4.5,9.0,fades,44,False
+Canterbury Bulldogs,FORM,After a Loss,44.4,50.0,-5.6,11.2,fades,54,False
+Canterbury Bulldogs,REST,Short Rest (≤ 6 days),51.7,50.0,1.7,3.4,covers,29,False
+Canterbury Bulldogs,REST,Normal Rest (7-9 days),42.3,50.0,-7.7,15.4,fades,52,True
+Canterbury Bulldogs,REST,Long Rest (≥ 10 days),41.2,50.0,-8.8,17.6,fades,17,True
+Canterbury Bulldogs,MOON PHASE,New Moon (±1 day),36.4,50.0,-13.6,27.2,fades,11,True
+Canterbury Bulldogs,MOON PHASE,Full Moon (±1 day),41.7,50.0,-8.3,16.6,fades,12,True
+Canterbury Bulldogs,BY MONTH,March,53.3,50.0,3.3,6.6,covers,15,False
+Canterbury Bulldogs,BY MONTH,April,50.0,50.0,0.0,0.0,fades,16,False
+Canterbury Bulldogs,BY MONTH,May,50.0,50.0,0.0,0.0,fades,16,False
+Canterbury Bulldogs,BY MONTH,June,50.0,50.0,0.0,0.0,fades,12,False
+Canterbury Bulldogs,BY MONTH,July,43.8,50.0,-6.2,12.4,fades,16,False
+Canterbury Bulldogs,BY MONTH,August,41.2,50.0,-8.8,17.6,fades,17,True
+Canterbury Bulldogs,BY MONTH,September,14.3,50.0,-35.7,71.4,fades,7,True
+Canterbury Bulldogs,BY MONTH,October,,50.0,,,,,
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,16.7,50.0,-33.3,66.6,fades,6,True
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,33.3,50.0,-16.7,33.4,fades,6,True
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,50.0,50.0,0.0,0.0,fades,8,False
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Dolphins,66.7,50.0,16.7,33.4,covers,3,True
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,100.0,50.0,50.0,100.0,covers,6,True
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,28.6,50.0,-21.4,42.8,fades,7,True
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,60.0,50.0,10.0,20.0,covers,5,True
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,33.3,50.0,-16.7,33.4,fades,6,True
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,57.1,50.0,7.1,14.2,covers,7,False
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,16.7,50.0,-33.3,66.6,fades,6,True
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,50.0,50.0,0.0,0.0,fades,8,False
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,42.9,50.0,-7.1,14.2,fades,7,False
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,42.9,50.0,-7.1,14.2,fades,7,False
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs St George Dragons,50.0,50.0,0.0,0.0,fades,6,False
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,50.0,50.0,0.0,0.0,fades,6,False
+Canterbury Bulldogs,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,40.0,50.0,-10.0,20.0,fades,5,True
+Canterbury Bulldogs,BY VENUE,4 Pines Park (Brookvale Oval),,50.0,,,,,
+Canterbury Bulldogs,BY VENUE,AAMI Park,60.0,50.0,10.0,20.0,covers,5,True
+Canterbury Bulldogs,BY VENUE,Accor Stadium,44.7,50.0,-5.3,10.6,fades,38,False
+Canterbury Bulldogs,BY VENUE,Allianz Stadium,,50.0,,,,,
+Canterbury Bulldogs,BY VENUE,Belmore Sports Ground,33.3,50.0,-16.7,33.4,fades,6,True
+Canterbury Bulldogs,BY VENUE,BlueBet Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Canterbury Bulldogs,BY VENUE,Cbus Super Stadium,,50.0,,,,,
+Canterbury Bulldogs,BY VENUE,CommBank Stadium,30.0,50.0,-20.0,40.0,fades,10,True
+Canterbury Bulldogs,BY VENUE,GIO Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Canterbury Bulldogs,BY VENUE,Go Media Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Canterbury Bulldogs,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Canterbury Bulldogs,BY VENUE,Leichhardt Oval,,50.0,,,,,
+Canterbury Bulldogs,BY VENUE,McDonald Jones Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Canterbury Bulldogs,BY VENUE,Ocean Protect Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Canterbury Bulldogs,BY VENUE,Polytec Stadium,,50.0,,,,,
+Canterbury Bulldogs,BY VENUE,QCB Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Canterbury Bulldogs,BY VENUE,Salter Oval,66.7,50.0,16.7,33.4,covers,3,True
+Canterbury Bulldogs,BY VENUE,Suncorp Stadium,42.9,50.0,-7.1,14.2,fades,7,False
+Canterbury Bulldogs,BY VENUE,WIN Stadium,,50.0,,,,,
+Cronulla Sharks,OVERALL,Cover Rate — All Games,57.1,50.0,7.1,14.2,covers,105,False
+Cronulla Sharks,OVERALL,Cover Rate — Home,60.4,50.0,10.4,20.8,covers,53,True
+Cronulla Sharks,OVERALL,Cover Rate — Away,53.8,50.0,3.8,7.6,covers,52,False
+Cronulla Sharks,FAVOURITE vs UNDERDOG,As Favourite (line < 0),56.9,50.0,6.9,13.8,covers,72,False
+Cronulla Sharks,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),57.6,50.0,7.6,15.2,covers,33,True
+Cronulla Sharks,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),61.8,50.0,11.8,23.6,covers,34,True
+Cronulla Sharks,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),52.6,50.0,2.6,5.2,covers,38,False
+Cronulla Sharks,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),63.0,50.0,13.0,26.0,covers,27,True
+Cronulla Sharks,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),33.3,50.0,-16.7,33.4,fades,6,True
+Cronulla Sharks,TIME OF DAY,Night Games (kick-off ≥ 18:00),57.9,50.0,7.9,15.8,covers,57,True
+Cronulla Sharks,TIME OF DAY,Day Games (kick-off < 18:00),56.2,50.0,6.2,12.4,covers,48,False
+Cronulla Sharks,DAY OF WEEK,Thursday / Friday Games,72.4,50.0,22.4,44.8,covers,29,True
+Cronulla Sharks,DAY OF WEEK,Saturday Games,46.7,50.0,-3.3,6.6,fades,45,False
+Cronulla Sharks,DAY OF WEEK,Sunday Games,58.1,50.0,8.1,16.2,covers,31,True
+Cronulla Sharks,FORM,After a Win,53.0,50.0,3.0,6.0,covers,66,False
+Cronulla Sharks,FORM,After a Loss,65.8,50.0,15.8,31.6,covers,38,True
+Cronulla Sharks,REST,Short Rest (≤ 6 days),57.1,50.0,7.1,14.2,covers,28,False
+Cronulla Sharks,REST,Normal Rest (7-9 days),59.6,50.0,9.6,19.2,covers,57,True
+Cronulla Sharks,REST,Long Rest (≥ 10 days),52.6,50.0,2.6,5.2,covers,19,False
+Cronulla Sharks,MOON PHASE,New Moon (±1 day),54.5,50.0,4.5,9.0,covers,11,False
+Cronulla Sharks,MOON PHASE,Full Moon (±1 day),53.3,50.0,3.3,6.6,covers,15,False
+Cronulla Sharks,BY MONTH,March,60.0,50.0,10.0,20.0,covers,15,True
+Cronulla Sharks,BY MONTH,April,62.5,50.0,12.5,25.0,covers,16,True
+Cronulla Sharks,BY MONTH,May,56.2,50.0,6.2,12.4,covers,16,False
+Cronulla Sharks,BY MONTH,June,38.5,50.0,-11.5,23.0,fades,13,True
+Cronulla Sharks,BY MONTH,July,53.3,50.0,3.3,6.6,covers,15,False
+Cronulla Sharks,BY MONTH,August,64.7,50.0,14.7,29.4,covers,17,True
+Cronulla Sharks,BY MONTH,September,61.5,50.0,11.5,23.0,covers,13,True
+Cronulla Sharks,BY MONTH,October,,50.0,,,,,
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,25.0,50.0,-25.0,50.0,fades,4,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,50.0,50.0,0.0,0.0,fades,8,False
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,50.0,50.0,0.0,0.0,fades,8,False
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Dolphins,33.3,50.0,-16.7,33.4,fades,3,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,66.7,50.0,16.7,33.4,covers,6,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,85.7,50.0,35.7,71.4,covers,7,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,37.5,50.0,-12.5,25.0,fades,8,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,42.9,50.0,-7.1,14.2,fades,7,False
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,71.4,50.0,21.4,42.8,covers,7,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,77.8,50.0,27.8,55.6,covers,9,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,75.0,50.0,25.0,50.0,covers,4,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,20.0,50.0,-30.0,60.0,fades,5,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,50.0,50.0,0.0,0.0,fades,8,False
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs St George Dragons,62.5,50.0,12.5,25.0,covers,8,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,71.4,50.0,21.4,42.8,covers,7,True
+Cronulla Sharks,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,66.7,50.0,16.7,33.4,covers,6,True
+Cronulla Sharks,BY VENUE,4 Pines Park (Brookvale Oval),100.0,50.0,50.0,100.0,covers,4,True
+Cronulla Sharks,BY VENUE,AAMI Park,16.7,50.0,-33.3,66.6,fades,6,True
+Cronulla Sharks,BY VENUE,Accor Stadium,40.0,50.0,-10.0,20.0,fades,5,True
+Cronulla Sharks,BY VENUE,Allegiant Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,Allianz Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,BlueBet Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,C.ex Coffs International Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Cronulla Sharks,BY VENUE,Cbus Super Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,CommBank Stadium,75.0,50.0,25.0,50.0,covers,4,True
+Cronulla Sharks,BY VENUE,GIO Stadium,40.0,50.0,-10.0,20.0,fades,5,True
+Cronulla Sharks,BY VENUE,Go Media Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,Leichhardt Oval,,50.0,,,,,
+Cronulla Sharks,BY VENUE,McDonald Jones Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Cronulla Sharks,BY VENUE,Moreton Daily Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,Ocean Protect Stadium,62.8,50.0,12.8,25.6,covers,43,True
+Cronulla Sharks,BY VENUE,Optus Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,Polytec Stadium,,50.0,,,,,
+Cronulla Sharks,BY VENUE,QCB Stadium,75.0,50.0,25.0,50.0,covers,4,True
+Cronulla Sharks,BY VENUE,Scully Park,,50.0,,,,,
+Cronulla Sharks,BY VENUE,Suncorp Stadium,42.9,50.0,-7.1,14.2,fades,7,False
+Cronulla Sharks,BY VENUE,WIN Stadium,,50.0,,,,,
+Dolphins,OVERALL,Cover Rate — All Games,55.6,50.0,5.6,11.2,covers,72,False
+Dolphins,OVERALL,Cover Rate — Home,58.3,50.0,8.3,16.6,covers,36,True
+Dolphins,OVERALL,Cover Rate — Away,52.8,50.0,2.8,5.6,covers,36,False
+Dolphins,FAVOURITE vs UNDERDOG,As Favourite (line < 0),59.1,50.0,9.1,18.2,covers,22,True
+Dolphins,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),54.0,50.0,4.0,8.0,covers,50,False
+Dolphins,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),,50.0,,,,,
+Dolphins,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),60.0,50.0,10.0,20.0,covers,20,True
+Dolphins,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),45.7,50.0,-4.3,8.6,fades,35,False
+Dolphins,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),73.3,50.0,23.3,46.6,covers,15,True
+Dolphins,TIME OF DAY,Night Games (kick-off ≥ 18:00),67.6,50.0,17.6,35.2,covers,37,True
+Dolphins,TIME OF DAY,Day Games (kick-off < 18:00),42.9,50.0,-7.1,14.2,fades,35,False
+Dolphins,DAY OF WEEK,Thursday / Friday Games,69.2,50.0,19.2,38.4,covers,26,True
+Dolphins,DAY OF WEEK,Saturday Games,50.0,50.0,0.0,0.0,fades,28,False
+Dolphins,DAY OF WEEK,Sunday Games,44.4,50.0,-5.6,11.2,fades,18,False
+Dolphins,FORM,After a Win,51.6,50.0,1.6,3.2,covers,31,False
+Dolphins,FORM,After a Loss,57.5,50.0,7.5,15.0,covers,40,True
+Dolphins,REST,Short Rest (≤ 6 days),63.6,50.0,13.6,27.2,covers,22,True
+Dolphins,REST,Normal Rest (7-9 days),48.6,50.0,-1.4,2.8,fades,35,False
+Dolphins,REST,Long Rest (≥ 10 days),57.1,50.0,7.1,14.2,covers,14,False
+Dolphins,MOON PHASE,New Moon (±1 day),42.9,50.0,-7.1,14.2,fades,7,False
+Dolphins,MOON PHASE,Full Moon (±1 day),44.4,50.0,-5.6,11.2,fades,9,False
+Dolphins,BY MONTH,March,72.7,50.0,22.7,45.4,covers,11,True
+Dolphins,BY MONTH,April,53.8,50.0,3.8,7.6,covers,13,False
+Dolphins,BY MONTH,May,63.6,50.0,13.6,27.2,covers,11,True
+Dolphins,BY MONTH,June,36.4,50.0,-13.6,27.2,fades,11,True
+Dolphins,BY MONTH,July,66.7,50.0,16.7,33.4,covers,9,True
+Dolphins,BY MONTH,August,42.9,50.0,-7.1,14.2,fades,14,False
+Dolphins,BY MONTH,September,66.7,50.0,16.7,33.4,covers,3,True
+Dolphins,BY MONTH,October,,50.0,,,,,
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,66.7,50.0,16.7,33.4,covers,6,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,60.0,50.0,10.0,20.0,covers,5,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,33.3,50.0,-16.7,33.4,fades,3,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,66.7,50.0,16.7,33.4,covers,3,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,66.7,50.0,16.7,33.4,covers,6,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,33.3,50.0,-16.7,33.4,fades,3,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,25.0,50.0,-25.0,50.0,fades,4,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,33.3,50.0,-16.7,33.4,fades,6,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,33.3,50.0,-16.7,33.4,fades,6,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,66.7,50.0,16.7,33.4,covers,6,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,66.7,50.0,16.7,33.4,covers,3,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,100.0,50.0,50.0,100.0,covers,3,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,75.0,50.0,25.0,50.0,covers,4,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs St George Dragons,60.0,50.0,10.0,20.0,covers,5,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,40.0,50.0,-10.0,20.0,fades,5,True
+Dolphins,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,75.0,50.0,25.0,50.0,covers,4,True
+Dolphins,BY VENUE,4 Pines Park (Brookvale Oval),,50.0,,,,,
+Dolphins,BY VENUE,AAMI Park,,50.0,,,,,
+Dolphins,BY VENUE,Accor Stadium,,50.0,,,,,
+Dolphins,BY VENUE,Allianz Stadium,,50.0,,,,,
+Dolphins,BY VENUE,BlueBet Stadium,,50.0,,,,,
+Dolphins,BY VENUE,Cbus Super Stadium,100.0,50.0,50.0,100.0,covers,3,True
+Dolphins,BY VENUE,CommBank Stadium,100.0,50.0,50.0,100.0,covers,3,True
+Dolphins,BY VENUE,GIO Stadium,,50.0,,,,,
+Dolphins,BY VENUE,Go Media Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Dolphins,BY VENUE,HBF Park,,50.0,,,,,
+Dolphins,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Dolphins,BY VENUE,Kayo Stadium,75.0,50.0,25.0,50.0,covers,8,True
+Dolphins,BY VENUE,McDonald Jones Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Dolphins,BY VENUE,McDonalds Park,,50.0,,,,,
+Dolphins,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Dolphins,BY VENUE,Optus Stadium,,50.0,,,,,
+Dolphins,BY VENUE,QCB Stadium,100.0,50.0,50.0,100.0,covers,3,True
+Dolphins,BY VENUE,Salter Oval,,50.0,,,,,
+Dolphins,BY VENUE,Suncorp Stadium,51.7,50.0,1.7,3.4,covers,29,False
+Dolphins,BY VENUE,Sunshine Coast Stadium,,50.0,,,,,
+Dolphins,BY VENUE,TIO Stadium,,50.0,,,,,
+Dolphins,BY VENUE,The Gabba,,50.0,,,,,
+Dolphins,BY VENUE,WIN Stadium,,50.0,,,,,
+Gold Coast Titans,OVERALL,Cover Rate — All Games,44.8,50.0,-5.2,10.4,fades,96,False
+Gold Coast Titans,OVERALL,Cover Rate — Home,45.8,50.0,-4.2,8.4,fades,48,False
+Gold Coast Titans,OVERALL,Cover Rate — Away,43.8,50.0,-6.2,12.4,fades,48,False
+Gold Coast Titans,FAVOURITE vs UNDERDOG,As Favourite (line < 0),18.8,50.0,-31.2,62.4,fades,16,True
+Gold Coast Titans,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),50.0,50.0,0.0,0.0,fades,80,False
+Gold Coast Titans,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),,50.0,,,,,
+Gold Coast Titans,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),21.4,50.0,-28.6,57.2,fades,14,True
+Gold Coast Titans,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),45.8,50.0,-4.2,8.4,fades,48,False
+Gold Coast Titans,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),56.2,50.0,6.2,12.4,covers,32,False
+Gold Coast Titans,TIME OF DAY,Night Games (kick-off ≥ 18:00),46.9,50.0,-3.1,6.2,fades,32,False
+Gold Coast Titans,TIME OF DAY,Day Games (kick-off < 18:00),43.8,50.0,-6.2,12.4,fades,64,False
+Gold Coast Titans,DAY OF WEEK,Thursday / Friday Games,50.0,50.0,0.0,0.0,fades,16,False
+Gold Coast Titans,DAY OF WEEK,Saturday Games,44.2,50.0,-5.8,11.6,fades,43,False
+Gold Coast Titans,DAY OF WEEK,Sunday Games,43.2,50.0,-6.8,13.6,fades,37,False
+Gold Coast Titans,FORM,After a Win,42.9,50.0,-7.1,14.2,fades,28,False
+Gold Coast Titans,FORM,After a Loss,44.8,50.0,-5.2,10.4,fades,67,False
+Gold Coast Titans,REST,Short Rest (≤ 6 days),56.7,50.0,6.7,13.4,covers,30,False
+Gold Coast Titans,REST,Normal Rest (7-9 days),38.5,50.0,-11.5,23.0,fades,52,True
+Gold Coast Titans,REST,Long Rest (≥ 10 days),38.5,50.0,-11.5,23.0,fades,13,True
+Gold Coast Titans,MOON PHASE,New Moon (±1 day),63.6,50.0,13.6,27.2,covers,11,True
+Gold Coast Titans,MOON PHASE,Full Moon (±1 day),25.0,50.0,-25.0,50.0,fades,8,True
+Gold Coast Titans,BY MONTH,March,35.7,50.0,-14.3,28.6,fades,14,True
+Gold Coast Titans,BY MONTH,April,56.2,50.0,6.2,12.4,covers,16,False
+Gold Coast Titans,BY MONTH,May,46.7,50.0,-3.3,6.6,fades,15,False
+Gold Coast Titans,BY MONTH,June,38.5,50.0,-11.5,23.0,fades,13,True
+Gold Coast Titans,BY MONTH,July,50.0,50.0,0.0,0.0,fades,16,False
+Gold Coast Titans,BY MONTH,August,35.3,50.0,-14.7,29.4,fades,17,True
+Gold Coast Titans,BY MONTH,September,60.0,50.0,10.0,20.0,covers,5,True
+Gold Coast Titans,BY MONTH,October,,50.0,,,,,
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,50.0,50.0,0.0,0.0,fades,8,False
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,16.7,50.0,-33.3,66.6,fades,6,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,0.0,50.0,-50.0,100.0,fades,6,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,33.3,50.0,-16.7,33.4,fades,6,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Dolphins,33.3,50.0,-16.7,33.4,fades,6,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,66.7,50.0,16.7,33.4,covers,6,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,80.0,50.0,30.0,60.0,covers,5,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,57.1,50.0,7.1,14.2,covers,7,False
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,57.1,50.0,7.1,14.2,covers,7,False
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,37.5,50.0,-12.5,25.0,fades,8,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,83.3,50.0,33.3,66.6,covers,6,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,75.0,50.0,25.0,50.0,covers,4,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,0.0,50.0,-50.0,100.0,fades,4,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs St George Dragons,28.6,50.0,-21.4,42.8,fades,7,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,25.0,50.0,-25.0,50.0,fades,4,True
+Gold Coast Titans,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,66.7,50.0,16.7,33.4,covers,6,True
+Gold Coast Titans,BY VENUE,4 Pines Park (Brookvale Oval),33.3,50.0,-16.7,33.4,fades,3,True
+Gold Coast Titans,BY VENUE,AAMI Park,,50.0,,,,,
+Gold Coast Titans,BY VENUE,Accor Stadium,,50.0,,,,,
+Gold Coast Titans,BY VENUE,Allianz Stadium,,50.0,,,,,
+Gold Coast Titans,BY VENUE,BB Print Stadium,,50.0,,,,,
+Gold Coast Titans,BY VENUE,Belmore Sports Ground,,50.0,,,,,
+Gold Coast Titans,BY VENUE,BlueBet Stadium,,50.0,,,,,
+Gold Coast Titans,BY VENUE,C.ex Coffs International Stadium,,50.0,,,,,
+Gold Coast Titans,BY VENUE,Cbus Super Stadium,43.2,50.0,-6.8,13.6,fades,44,False
+Gold Coast Titans,BY VENUE,CommBank Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Gold Coast Titans,BY VENUE,GIO Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Gold Coast Titans,BY VENUE,Go Media Stadium,100.0,50.0,50.0,100.0,covers,3,True
+Gold Coast Titans,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Gold Coast Titans,BY VENUE,Leichhardt Oval,66.7,50.0,16.7,33.4,covers,3,True
+Gold Coast Titans,BY VENUE,McDonald Jones Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Gold Coast Titans,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Gold Coast Titans,BY VENUE,QCB Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Gold Coast Titans,BY VENUE,Suncorp Stadium,63.6,50.0,13.6,27.2,covers,11,True
+Gold Coast Titans,BY VENUE,WIN Stadium,0.0,50.0,-50.0,100.0,fades,3,True
+Manly Sea Eagles,OVERALL,Cover Rate — All Games,49.0,50.0,-1.0,2.0,fades,98,False
+Manly Sea Eagles,OVERALL,Cover Rate — Home,58.3,50.0,8.3,16.6,covers,48,True
+Manly Sea Eagles,OVERALL,Cover Rate — Away,40.0,50.0,-10.0,20.0,fades,50,True
+Manly Sea Eagles,FAVOURITE vs UNDERDOG,As Favourite (line < 0),43.1,50.0,-6.9,13.8,fades,51,False
+Manly Sea Eagles,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),55.3,50.0,5.3,10.6,covers,47,False
+Manly Sea Eagles,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),33.3,50.0,-16.7,33.4,fades,15,True
+Manly Sea Eagles,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),47.2,50.0,-2.8,5.6,fades,36,False
+Manly Sea Eagles,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),60.0,50.0,10.0,20.0,covers,35,True
+Manly Sea Eagles,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),41.7,50.0,-8.3,16.6,fades,12,True
+Manly Sea Eagles,TIME OF DAY,Night Games (kick-off ≥ 18:00),50.0,50.0,0.0,0.0,fades,54,False
+Manly Sea Eagles,TIME OF DAY,Day Games (kick-off < 18:00),47.7,50.0,-2.3,4.6,fades,44,False
+Manly Sea Eagles,DAY OF WEEK,Thursday / Friday Games,44.7,50.0,-5.3,10.6,fades,38,False
+Manly Sea Eagles,DAY OF WEEK,Saturday Games,52.9,50.0,2.9,5.8,covers,34,False
+Manly Sea Eagles,DAY OF WEEK,Sunday Games,50.0,50.0,0.0,0.0,fades,26,False
+Manly Sea Eagles,FORM,After a Win,44.4,50.0,-5.6,11.2,fades,45,False
+Manly Sea Eagles,FORM,After a Loss,53.8,50.0,3.8,7.6,covers,52,False
+Manly Sea Eagles,REST,Short Rest (≤ 6 days),32.4,50.0,-17.6,35.2,fades,34,True
+Manly Sea Eagles,REST,Normal Rest (7-9 days),52.1,50.0,2.1,4.2,covers,48,False
+Manly Sea Eagles,REST,Long Rest (≥ 10 days),80.0,50.0,30.0,60.0,covers,15,True
+Manly Sea Eagles,MOON PHASE,New Moon (±1 day),54.5,50.0,4.5,9.0,covers,11,False
+Manly Sea Eagles,MOON PHASE,Full Moon (±1 day),30.8,50.0,-19.2,38.4,fades,13,True
+Manly Sea Eagles,BY MONTH,March,50.0,50.0,0.0,0.0,fades,14,False
+Manly Sea Eagles,BY MONTH,April,44.4,50.0,-5.6,11.2,fades,18,False
+Manly Sea Eagles,BY MONTH,May,43.8,50.0,-6.2,12.4,fades,16,False
+Manly Sea Eagles,BY MONTH,June,53.8,50.0,3.8,7.6,covers,13,False
+Manly Sea Eagles,BY MONTH,July,64.3,50.0,14.3,28.6,covers,14,True
+Manly Sea Eagles,BY MONTH,August,41.2,50.0,-8.8,17.6,fades,17,True
+Manly Sea Eagles,BY MONTH,September,50.0,50.0,0.0,0.0,fades,6,False
+Manly Sea Eagles,BY MONTH,October,,50.0,,,,,
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,50.0,50.0,0.0,0.0,fades,4,False
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,57.1,50.0,7.1,14.2,covers,7,False
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,71.4,50.0,21.4,42.8,covers,7,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,14.3,50.0,-35.7,71.4,fades,7,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Dolphins,66.7,50.0,16.7,33.4,covers,3,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,33.3,50.0,-16.7,33.4,fades,6,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,57.1,50.0,7.1,14.2,covers,7,False
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,50.0,50.0,0.0,0.0,fades,6,False
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,66.7,50.0,16.7,33.4,covers,6,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,80.0,50.0,30.0,60.0,covers,5,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,37.5,50.0,-12.5,25.0,fades,8,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,50.0,50.0,0.0,0.0,fades,6,False
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,60.0,50.0,10.0,20.0,covers,5,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs St George Dragons,33.3,50.0,-16.7,33.4,fades,6,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,37.5,50.0,-12.5,25.0,fades,8,True
+Manly Sea Eagles,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,42.9,50.0,-7.1,14.2,fades,7,False
+Manly Sea Eagles,BY VENUE,4 Pines Park (Brookvale Oval),59.5,50.0,9.5,19.0,covers,42,True
+Manly Sea Eagles,BY VENUE,AAMI Park,33.3,50.0,-16.7,33.4,fades,3,True
+Manly Sea Eagles,BY VENUE,Accor Stadium,83.3,50.0,33.3,66.6,covers,6,True
+Manly Sea Eagles,BY VENUE,Allegiant Stadium,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,Allianz Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Manly Sea Eagles,BY VENUE,BlueBet Stadium,0.0,50.0,-50.0,100.0,fades,3,True
+Manly Sea Eagles,BY VENUE,Campbelltown Stadium,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,Cbus Super Stadium,0.0,50.0,-50.0,100.0,fades,3,True
+Manly Sea Eagles,BY VENUE,Central Coast Stadium,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,CommBank Stadium,40.0,50.0,-10.0,20.0,fades,5,True
+Manly Sea Eagles,BY VENUE,GIO Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Manly Sea Eagles,BY VENUE,Glen Willow Regional Sports Stadium,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,Go Media Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Manly Sea Eagles,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,Leichhardt Oval,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,McDonald Jones Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Manly Sea Eagles,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,Optus Stadium,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,QCB Stadium,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,SCG,,50.0,,,,,
+Manly Sea Eagles,BY VENUE,Suncorp Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Manly Sea Eagles,BY VENUE,WIN Stadium,,50.0,,,,,
+Melbourne Storm,OVERALL,Cover Rate — All Games,45.3,50.0,-4.7,9.4,fades,106,False
+Melbourne Storm,OVERALL,Cover Rate — Home,48.2,50.0,-1.8,3.6,fades,56,False
+Melbourne Storm,OVERALL,Cover Rate — Away,42.0,50.0,-8.0,16.0,fades,50,True
+Melbourne Storm,FAVOURITE vs UNDERDOG,As Favourite (line < 0),43.8,50.0,-6.2,12.4,fades,89,False
+Melbourne Storm,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),52.9,50.0,2.9,5.8,covers,17,False
+Melbourne Storm,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),52.4,50.0,2.4,4.8,covers,42,False
+Melbourne Storm,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),36.2,50.0,-13.8,27.6,fades,47,True
+Melbourne Storm,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),57.1,50.0,7.1,14.2,covers,14,False
+Melbourne Storm,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),33.3,50.0,-16.7,33.4,fades,3,True
+Melbourne Storm,TIME OF DAY,Night Games (kick-off ≥ 18:00),42.1,50.0,-7.9,15.8,fades,76,True
+Melbourne Storm,TIME OF DAY,Day Games (kick-off < 18:00),53.3,50.0,3.3,6.6,covers,30,False
+Melbourne Storm,DAY OF WEEK,Thursday / Friday Games,48.0,50.0,-2.0,4.0,fades,50,False
+Melbourne Storm,DAY OF WEEK,Saturday Games,33.3,50.0,-16.7,33.4,fades,36,True
+Melbourne Storm,DAY OF WEEK,Sunday Games,61.1,50.0,11.1,22.2,covers,18,True
+Melbourne Storm,FORM,After a Win,43.1,50.0,-6.9,13.8,fades,72,False
+Melbourne Storm,FORM,After a Loss,51.5,50.0,1.5,3.0,covers,33,False
+Melbourne Storm,REST,Short Rest (≤ 6 days),48.4,50.0,-1.6,3.2,fades,31,False
+Melbourne Storm,REST,Normal Rest (7-9 days),42.9,50.0,-7.1,14.2,fades,56,False
+Melbourne Storm,REST,Long Rest (≥ 10 days),50.0,50.0,0.0,0.0,fades,18,False
+Melbourne Storm,MOON PHASE,New Moon (±1 day),25.0,50.0,-25.0,50.0,fades,12,True
+Melbourne Storm,MOON PHASE,Full Moon (±1 day),57.1,50.0,7.1,14.2,covers,14,False
+Melbourne Storm,BY MONTH,March,35.7,50.0,-14.3,28.6,fades,14,True
+Melbourne Storm,BY MONTH,April,53.3,50.0,3.3,6.6,covers,15,False
+Melbourne Storm,BY MONTH,May,50.0,50.0,0.0,0.0,fades,16,False
+Melbourne Storm,BY MONTH,June,53.3,50.0,3.3,6.6,covers,15,False
+Melbourne Storm,BY MONTH,July,33.3,50.0,-16.7,33.4,fades,15,True
+Melbourne Storm,BY MONTH,August,50.0,50.0,0.0,0.0,fades,18,False
+Melbourne Storm,BY MONTH,September,45.5,50.0,-4.5,9.0,fades,11,False
+Melbourne Storm,BY MONTH,October,,50.0,,,,,
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,50.0,50.0,0.0,0.0,fades,10,False
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,16.7,50.0,-33.3,66.6,fades,6,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,40.0,50.0,-10.0,20.0,fades,5,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,62.5,50.0,12.5,25.0,covers,8,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Dolphins,75.0,50.0,25.0,50.0,covers,4,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,20.0,50.0,-30.0,60.0,fades,5,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,42.9,50.0,-7.1,14.2,fades,7,False
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,50.0,50.0,0.0,0.0,fades,6,False
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,40.0,50.0,-10.0,20.0,fades,5,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,40.0,50.0,-10.0,20.0,fades,5,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,62.5,50.0,12.5,25.0,covers,8,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,40.0,50.0,-10.0,20.0,fades,10,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,25.0,50.0,-25.0,50.0,fades,8,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs St George Dragons,25.0,50.0,-25.0,50.0,fades,4,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,60.0,50.0,10.0,20.0,covers,10,True
+Melbourne Storm,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,60.0,50.0,10.0,20.0,covers,5,True
+Melbourne Storm,BY VENUE,4 Pines Park (Brookvale Oval),25.0,50.0,-25.0,50.0,fades,4,True
+Melbourne Storm,BY VENUE,AAMI Park,52.1,50.0,2.1,4.2,covers,48,False
+Melbourne Storm,BY VENUE,Accor Stadium,14.3,50.0,-35.7,71.4,fades,7,True
+Melbourne Storm,BY VENUE,Allianz Stadium,,50.0,,,,,
+Melbourne Storm,BY VENUE,BlueBet Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Melbourne Storm,BY VENUE,Campbelltown Stadium,,50.0,,,,,
+Melbourne Storm,BY VENUE,Cbus Super Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Melbourne Storm,BY VENUE,CommBank Stadium,50.0,50.0,0.0,0.0,fades,6,False
+Melbourne Storm,BY VENUE,Go Media Stadium,,50.0,,,,,
+Melbourne Storm,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Melbourne Storm,BY VENUE,Leichhardt Oval,,50.0,,,,,
+Melbourne Storm,BY VENUE,Marvel Stadium,,50.0,,,,,
+Melbourne Storm,BY VENUE,McDonald Jones Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Melbourne Storm,BY VENUE,McDonalds Park,,50.0,,,,,
+Melbourne Storm,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Melbourne Storm,BY VENUE,QCB Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Melbourne Storm,BY VENUE,SCG,,50.0,,,,,
+Melbourne Storm,BY VENUE,Suncorp Stadium,50.0,50.0,0.0,0.0,fades,12,False
+Melbourne Storm,BY VENUE,WIN Stadium,,50.0,,,,,
+New Zealand Warriors,OVERALL,Cover Rate — All Games,49.0,50.0,-1.0,2.0,fades,100,False
+New Zealand Warriors,OVERALL,Cover Rate — Home,44.0,50.0,-6.0,12.0,fades,50,False
+New Zealand Warriors,OVERALL,Cover Rate — Away,54.0,50.0,4.0,8.0,covers,50,False
+New Zealand Warriors,FAVOURITE vs UNDERDOG,As Favourite (line < 0),38.8,50.0,-11.2,22.4,fades,49,True
+New Zealand Warriors,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),58.8,50.0,8.8,17.6,covers,51,True
+New Zealand Warriors,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),25.0,50.0,-25.0,50.0,fades,12,True
+New Zealand Warriors,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),43.2,50.0,-6.8,13.6,fades,37,False
+New Zealand Warriors,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),65.5,50.0,15.5,31.0,covers,29,True
+New Zealand Warriors,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),50.0,50.0,0.0,0.0,fades,22,False
+New Zealand Warriors,TIME OF DAY,Night Games (kick-off ≥ 18:00),43.8,50.0,-6.2,12.4,fades,48,False
+New Zealand Warriors,TIME OF DAY,Day Games (kick-off < 18:00),53.8,50.0,3.8,7.6,covers,52,False
+New Zealand Warriors,DAY OF WEEK,Thursday / Friday Games,43.8,50.0,-6.2,12.4,fades,32,False
+New Zealand Warriors,DAY OF WEEK,Saturday Games,52.3,50.0,2.3,4.6,covers,44,False
+New Zealand Warriors,DAY OF WEEK,Sunday Games,50.0,50.0,0.0,0.0,fades,22,False
+New Zealand Warriors,FORM,After a Win,47.8,50.0,-2.2,4.4,fades,46,False
+New Zealand Warriors,FORM,After a Loss,50.9,50.0,0.9,1.8,covers,53,False
+New Zealand Warriors,REST,Short Rest (≤ 6 days),53.8,50.0,3.8,7.6,covers,26,False
+New Zealand Warriors,REST,Normal Rest (7-9 days),45.6,50.0,-4.4,8.8,fades,57,False
+New Zealand Warriors,REST,Long Rest (≥ 10 days),56.2,50.0,6.2,12.4,covers,16,False
+New Zealand Warriors,MOON PHASE,New Moon (±1 day),88.9,50.0,38.9,77.8,covers,9,True
+New Zealand Warriors,MOON PHASE,Full Moon (±1 day),66.7,50.0,16.7,33.4,covers,9,True
+New Zealand Warriors,BY MONTH,March,66.7,50.0,16.7,33.4,covers,15,True
+New Zealand Warriors,BY MONTH,April,52.9,50.0,2.9,5.8,covers,17,False
+New Zealand Warriors,BY MONTH,May,46.7,50.0,-3.3,6.6,fades,15,False
+New Zealand Warriors,BY MONTH,June,46.7,50.0,-3.3,6.6,fades,15,False
+New Zealand Warriors,BY MONTH,July,61.5,50.0,11.5,23.0,covers,13,True
+New Zealand Warriors,BY MONTH,August,33.3,50.0,-16.7,33.4,fades,18,True
+New Zealand Warriors,BY MONTH,September,28.6,50.0,-21.4,42.8,fades,7,True
+New Zealand Warriors,BY MONTH,October,,50.0,,,,,
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,50.0,50.0,0.0,0.0,fades,6,False
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,37.5,50.0,-12.5,25.0,fades,8,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,66.7,50.0,16.7,33.4,covers,6,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,57.1,50.0,7.1,14.2,covers,7,False
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Dolphins,66.7,50.0,16.7,33.4,covers,6,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,42.9,50.0,-7.1,14.2,fades,7,False
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,50.0,50.0,0.0,0.0,fades,6,False
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,50.0,50.0,0.0,0.0,fades,6,False
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,37.5,50.0,-12.5,25.0,fades,8,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,66.7,50.0,16.7,33.4,covers,6,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,50.0,50.0,0.0,0.0,fades,4,False
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,28.6,50.0,-21.4,42.8,fades,7,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,60.0,50.0,10.0,20.0,covers,5,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs St George Dragons,14.3,50.0,-35.7,71.4,fades,7,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,60.0,50.0,10.0,20.0,covers,5,True
+New Zealand Warriors,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,66.7,50.0,16.7,33.4,covers,6,True
+New Zealand Warriors,BY VENUE,4 Pines Park (Brookvale Oval),66.7,50.0,16.7,33.4,covers,3,True
+New Zealand Warriors,BY VENUE,AAMI Park,50.0,50.0,0.0,0.0,fades,4,False
+New Zealand Warriors,BY VENUE,Accor Stadium,80.0,50.0,30.0,60.0,covers,5,True
+New Zealand Warriors,BY VENUE,Allegiant Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,Allianz Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,Apollo Projects Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,BlueBet Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,Campbelltown Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,Cbus Super Stadium,75.0,50.0,25.0,50.0,covers,4,True
+New Zealand Warriors,BY VENUE,CommBank Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,FMG Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,GIO Stadium,66.7,50.0,16.7,33.4,covers,3,True
+New Zealand Warriors,BY VENUE,Go Media Stadium,40.0,50.0,-10.0,20.0,fades,35,True
+New Zealand Warriors,BY VENUE,Jubilee Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,McDonald Jones Stadium,0.0,50.0,-50.0,100.0,fades,3,True
+New Zealand Warriors,BY VENUE,McLean Park,,50.0,,,,,
+New Zealand Warriors,BY VENUE,Moreton Daily Stadium,33.3,50.0,-16.7,33.4,fades,6,True
+New Zealand Warriors,BY VENUE,Ocean Protect Stadium,75.0,50.0,25.0,50.0,covers,4,True
+New Zealand Warriors,BY VENUE,QCB Stadium,66.7,50.0,16.7,33.4,covers,3,True
+New Zealand Warriors,BY VENUE,SCG,,50.0,,,,,
+New Zealand Warriors,BY VENUE,Sky Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,Suncorp Stadium,66.7,50.0,16.7,33.4,covers,9,True
+New Zealand Warriors,BY VENUE,Sunshine Coast Stadium,,50.0,,,,,
+New Zealand Warriors,BY VENUE,WIN Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Newcastle Knights,OVERALL,Cover Rate — All Games,51.5,50.0,1.5,3.0,covers,99,False
+Newcastle Knights,OVERALL,Cover Rate — Home,51.0,50.0,1.0,2.0,covers,49,False
+Newcastle Knights,OVERALL,Cover Rate — Away,52.0,50.0,2.0,4.0,covers,50,False
+Newcastle Knights,FAVOURITE vs UNDERDOG,As Favourite (line < 0),54.8,50.0,4.8,9.6,covers,31,False
+Newcastle Knights,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),50.0,50.0,0.0,0.0,fades,68,False
+Newcastle Knights,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),57.1,50.0,7.1,14.2,covers,7,False
+Newcastle Knights,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),54.2,50.0,4.2,8.4,covers,24,False
+Newcastle Knights,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),53.7,50.0,3.7,7.4,covers,41,False
+Newcastle Knights,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),44.4,50.0,-5.6,11.2,fades,27,False
+Newcastle Knights,TIME OF DAY,Night Games (kick-off ≥ 18:00),41.7,50.0,-8.3,16.6,fades,36,True
+Newcastle Knights,TIME OF DAY,Day Games (kick-off < 18:00),57.1,50.0,7.1,14.2,covers,63,False
+Newcastle Knights,DAY OF WEEK,Thursday / Friday Games,33.3,50.0,-16.7,33.4,fades,24,True
+Newcastle Knights,DAY OF WEEK,Saturday Games,58.1,50.0,8.1,16.2,covers,31,True
+Newcastle Knights,DAY OF WEEK,Sunday Games,56.8,50.0,6.8,13.6,covers,44,False
+Newcastle Knights,FORM,After a Win,56.4,50.0,6.4,12.8,covers,39,False
+Newcastle Knights,FORM,After a Loss,47.5,50.0,-2.5,5.0,fades,59,False
+Newcastle Knights,REST,Short Rest (≤ 6 days),40.7,50.0,-9.3,18.6,fades,27,True
+Newcastle Knights,REST,Normal Rest (7-9 days),58.2,50.0,8.2,16.4,covers,55,True
+Newcastle Knights,REST,Long Rest (≥ 10 days),43.8,50.0,-6.2,12.4,fades,16,False
+Newcastle Knights,MOON PHASE,New Moon (±1 day),12.5,50.0,-37.5,75.0,fades,8,True
+Newcastle Knights,MOON PHASE,Full Moon (±1 day),50.0,50.0,0.0,0.0,fades,10,False
+Newcastle Knights,BY MONTH,March,64.3,50.0,14.3,28.6,covers,14,True
+Newcastle Knights,BY MONTH,April,35.3,50.0,-14.7,29.4,fades,17,True
+Newcastle Knights,BY MONTH,May,41.2,50.0,-8.8,17.6,fades,17,True
+Newcastle Knights,BY MONTH,June,75.0,50.0,25.0,50.0,covers,12,True
+Newcastle Knights,BY MONTH,July,46.7,50.0,-3.3,6.6,fades,15,False
+Newcastle Knights,BY MONTH,August,62.5,50.0,12.5,25.0,covers,16,True
+Newcastle Knights,BY MONTH,September,37.5,50.0,-12.5,25.0,fades,8,True
+Newcastle Knights,BY MONTH,October,,50.0,,,,,
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,40.0,50.0,-10.0,20.0,fades,5,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,66.7,50.0,16.7,33.4,covers,9,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,42.9,50.0,-7.1,14.2,fades,7,False
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,28.6,50.0,-21.4,42.8,fades,7,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Dolphins,66.7,50.0,16.7,33.4,covers,6,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,42.9,50.0,-7.1,14.2,fades,7,False
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,33.3,50.0,-16.7,33.4,fades,6,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,60.0,50.0,10.0,20.0,covers,5,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,62.5,50.0,12.5,25.0,covers,8,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,40.0,50.0,-10.0,20.0,fades,5,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,20.0,50.0,-30.0,60.0,fades,5,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,50.0,50.0,0.0,0.0,fades,8,False
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,75.0,50.0,25.0,50.0,covers,4,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs St George Dragons,50.0,50.0,0.0,0.0,fades,4,False
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,40.0,50.0,-10.0,20.0,fades,5,True
+Newcastle Knights,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,87.5,50.0,37.5,75.0,covers,8,True
+Newcastle Knights,BY VENUE,4 Pines Park (Brookvale Oval),,50.0,,,,,
+Newcastle Knights,BY VENUE,AAMI Park,,50.0,,,,,
+Newcastle Knights,BY VENUE,Accor Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Newcastle Knights,BY VENUE,Apollo Projects Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,BlueBet Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,C.ex Coffs International Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,Campbelltown Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,Carrington Park,,50.0,,,,,
+Newcastle Knights,BY VENUE,Cbus Super Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,CommBank Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,GIO Stadium,75.0,50.0,25.0,50.0,covers,4,True
+Newcastle Knights,BY VENUE,Glen Willow Regional Sports Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,Go Media Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,HBF Park,,50.0,,,,,
+Newcastle Knights,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,Leichhardt Oval,,50.0,,,,,
+Newcastle Knights,BY VENUE,McDonald Jones Stadium,51.0,50.0,1.0,2.0,covers,49,False
+Newcastle Knights,BY VENUE,Moreton Daily Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,Ocean Protect Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Newcastle Knights,BY VENUE,Optus Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,QCB Stadium,40.0,50.0,-10.0,20.0,fades,5,True
+Newcastle Knights,BY VENUE,SCG,,50.0,,,,,
+Newcastle Knights,BY VENUE,Scully Park,,50.0,,,,,
+Newcastle Knights,BY VENUE,Sky Stadium,,50.0,,,,,
+Newcastle Knights,BY VENUE,Suncorp Stadium,83.3,50.0,33.3,66.6,covers,6,True
+Newcastle Knights,BY VENUE,WIN Stadium,,50.0,,,,,
+North QLD Cowboys,OVERALL,Cover Rate — All Games,54.0,50.0,4.0,8.0,covers,100,False
+North QLD Cowboys,OVERALL,Cover Rate — Home,52.0,50.0,2.0,4.0,covers,50,False
+North QLD Cowboys,OVERALL,Cover Rate — Away,56.0,50.0,6.0,12.0,covers,50,False
+North QLD Cowboys,FAVOURITE vs UNDERDOG,As Favourite (line < 0),53.6,50.0,3.6,7.2,covers,56,False
+North QLD Cowboys,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),54.5,50.0,4.5,9.0,covers,44,False
+North QLD Cowboys,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),52.9,50.0,2.9,5.8,covers,17,False
+North QLD Cowboys,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),53.8,50.0,3.8,7.6,covers,39,False
+North QLD Cowboys,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),48.4,50.0,-1.6,3.2,fades,31,False
+North QLD Cowboys,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),69.2,50.0,19.2,38.4,covers,13,True
+North QLD Cowboys,TIME OF DAY,Night Games (kick-off ≥ 18:00),54.0,50.0,4.0,8.0,covers,50,False
+North QLD Cowboys,TIME OF DAY,Day Games (kick-off < 18:00),54.0,50.0,4.0,8.0,covers,50,False
+North QLD Cowboys,DAY OF WEEK,Thursday / Friday Games,51.9,50.0,1.9,3.8,covers,27,False
+North QLD Cowboys,DAY OF WEEK,Saturday Games,49.0,50.0,-1.0,2.0,fades,49,False
+North QLD Cowboys,DAY OF WEEK,Sunday Games,66.7,50.0,16.7,33.4,covers,24,True
+North QLD Cowboys,FORM,After a Win,54.5,50.0,4.5,9.0,covers,55,False
+North QLD Cowboys,FORM,After a Loss,54.5,50.0,4.5,9.0,covers,44,False
+North QLD Cowboys,REST,Short Rest (≤ 6 days),50.0,50.0,0.0,0.0,fades,34,False
+North QLD Cowboys,REST,Normal Rest (7-9 days),58.0,50.0,8.0,16.0,covers,50,True
+North QLD Cowboys,REST,Long Rest (≥ 10 days),53.3,50.0,3.3,6.6,covers,15,False
+North QLD Cowboys,MOON PHASE,New Moon (±1 day),50.0,50.0,0.0,0.0,fades,12,False
+North QLD Cowboys,MOON PHASE,Full Moon (±1 day),72.7,50.0,22.7,45.4,covers,11,True
+North QLD Cowboys,BY MONTH,March,46.7,50.0,-3.3,6.6,fades,15,False
+North QLD Cowboys,BY MONTH,April,52.9,50.0,2.9,5.8,covers,17,False
+North QLD Cowboys,BY MONTH,May,50.0,50.0,0.0,0.0,fades,16,False
+North QLD Cowboys,BY MONTH,June,64.3,50.0,14.3,28.6,covers,14,True
+North QLD Cowboys,BY MONTH,July,60.0,50.0,10.0,20.0,covers,15,True
+North QLD Cowboys,BY MONTH,August,50.0,50.0,0.0,0.0,fades,16,False
+North QLD Cowboys,BY MONTH,September,57.1,50.0,7.1,14.2,covers,7,False
+North QLD Cowboys,BY MONTH,October,,50.0,,,,,
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,37.5,50.0,-12.5,25.0,fades,8,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,83.3,50.0,33.3,66.6,covers,6,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,83.3,50.0,33.3,66.6,covers,6,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,22.2,50.0,-27.8,55.6,fades,9,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Dolphins,33.3,50.0,-16.7,33.4,fades,6,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,62.5,50.0,12.5,25.0,covers,8,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,20.0,50.0,-30.0,60.0,fades,5,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,60.0,50.0,10.0,20.0,covers,5,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,33.3,50.0,-16.7,33.4,fades,6,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,60.0,50.0,10.0,20.0,covers,5,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,50.0,50.0,0.0,0.0,fades,6,False
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,75.0,50.0,25.0,50.0,covers,8,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,50.0,50.0,0.0,0.0,fades,4,False
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs St George Dragons,100.0,50.0,50.0,100.0,covers,5,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,40.0,50.0,-10.0,20.0,fades,5,True
+North QLD Cowboys,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,62.5,50.0,12.5,25.0,covers,8,True
+North QLD Cowboys,BY VENUE,4 Pines Park (Brookvale Oval),33.3,50.0,-16.7,33.4,fades,3,True
+North QLD Cowboys,BY VENUE,AAMI Park,,50.0,,,,,
+North QLD Cowboys,BY VENUE,Accor Stadium,75.0,50.0,25.0,50.0,covers,4,True
+North QLD Cowboys,BY VENUE,Allianz Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+North QLD Cowboys,BY VENUE,BlueBet Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+North QLD Cowboys,BY VENUE,Cbus Super Stadium,50.0,50.0,0.0,0.0,fades,4,False
+North QLD Cowboys,BY VENUE,CommBank Stadium,75.0,50.0,25.0,50.0,covers,4,True
+North QLD Cowboys,BY VENUE,GIO Stadium,,50.0,,,,,
+North QLD Cowboys,BY VENUE,Go Media Stadium,,50.0,,,,,
+North QLD Cowboys,BY VENUE,Jubilee Stadium,,50.0,,,,,
+North QLD Cowboys,BY VENUE,Leichhardt Oval,66.7,50.0,16.7,33.4,covers,3,True
+North QLD Cowboys,BY VENUE,Moreton Daily Stadium,,50.0,,,,,
+North QLD Cowboys,BY VENUE,Ocean Protect Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+North QLD Cowboys,BY VENUE,Optus Stadium,,50.0,,,,,
+North QLD Cowboys,BY VENUE,QCB Stadium,52.0,50.0,2.0,4.0,covers,50,False
+North QLD Cowboys,BY VENUE,SCG,,50.0,,,,,
+North QLD Cowboys,BY VENUE,Salter Oval,,50.0,,,,,
+North QLD Cowboys,BY VENUE,Suncorp Stadium,54.5,50.0,4.5,9.0,covers,11,False
+North QLD Cowboys,BY VENUE,TIO Stadium,,50.0,,,,,
+Parramatta Eels,OVERALL,Cover Rate — All Games,42.0,50.0,-8.0,16.0,fades,100,True
+Parramatta Eels,OVERALL,Cover Rate — Home,44.9,50.0,-5.1,10.2,fades,49,False
+Parramatta Eels,OVERALL,Cover Rate — Away,39.2,50.0,-10.8,21.6,fades,51,True
+Parramatta Eels,FAVOURITE vs UNDERDOG,As Favourite (line < 0),40.5,50.0,-9.5,19.0,fades,42,True
+Parramatta Eels,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),43.1,50.0,-6.9,13.8,fades,58,False
+Parramatta Eels,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),28.6,50.0,-21.4,42.8,fades,14,True
+Parramatta Eels,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),46.4,50.0,-3.6,7.2,fades,28,False
+Parramatta Eels,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),39.0,50.0,-11.0,22.0,fades,41,True
+Parramatta Eels,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),52.9,50.0,2.9,5.8,covers,17,False
+Parramatta Eels,TIME OF DAY,Night Games (kick-off ≥ 18:00),41.9,50.0,-8.1,16.2,fades,62,True
+Parramatta Eels,TIME OF DAY,Day Games (kick-off < 18:00),42.1,50.0,-7.9,15.8,fades,38,True
+Parramatta Eels,DAY OF WEEK,Thursday / Friday Games,47.7,50.0,-2.3,4.6,fades,44,False
+Parramatta Eels,DAY OF WEEK,Saturday Games,42.3,50.0,-7.7,15.4,fades,26,True
+Parramatta Eels,DAY OF WEEK,Sunday Games,36.4,50.0,-13.6,27.2,fades,22,True
+Parramatta Eels,FORM,After a Win,39.1,50.0,-10.9,21.8,fades,46,True
+Parramatta Eels,FORM,After a Loss,45.3,50.0,-4.7,9.4,fades,53,False
+Parramatta Eels,REST,Short Rest (≤ 6 days),43.2,50.0,-6.8,13.6,fades,37,False
+Parramatta Eels,REST,Normal Rest (7-9 days),50.0,50.0,0.0,0.0,fades,46,False
+Parramatta Eels,REST,Long Rest (≥ 10 days),18.8,50.0,-31.2,62.4,fades,16,True
+Parramatta Eels,MOON PHASE,New Moon (±1 day),61.5,50.0,11.5,23.0,covers,13,True
+Parramatta Eels,MOON PHASE,Full Moon (±1 day),22.2,50.0,-27.8,55.6,fades,9,True
+Parramatta Eels,BY MONTH,March,33.3,50.0,-16.7,33.4,fades,15,True
+Parramatta Eels,BY MONTH,April,41.2,50.0,-8.8,17.6,fades,17,True
+Parramatta Eels,BY MONTH,May,37.5,50.0,-12.5,25.0,fades,16,True
+Parramatta Eels,BY MONTH,June,41.7,50.0,-8.3,16.6,fades,12,True
+Parramatta Eels,BY MONTH,July,25.0,50.0,-25.0,50.0,fades,16,True
+Parramatta Eels,BY MONTH,August,58.8,50.0,8.8,17.6,covers,17,True
+Parramatta Eels,BY MONTH,September,83.3,50.0,33.3,66.6,covers,6,True
+Parramatta Eels,BY MONTH,October,,50.0,,,,,
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,42.9,50.0,-7.1,14.2,fades,7,False
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,33.3,50.0,-16.7,33.4,fades,6,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,50.0,50.0,0.0,0.0,fades,8,False
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,25.0,50.0,-25.0,50.0,fades,4,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Dolphins,33.3,50.0,-16.7,33.4,fades,3,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,16.7,50.0,-33.3,66.6,fades,6,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,62.5,50.0,12.5,25.0,covers,8,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,37.5,50.0,-12.5,25.0,fades,8,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,50.0,50.0,0.0,0.0,fades,4,False
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,80.0,50.0,30.0,60.0,covers,5,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,50.0,50.0,0.0,0.0,fades,6,False
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,50.0,50.0,0.0,0.0,fades,10,False
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,16.7,50.0,-33.3,66.6,fades,6,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs St George Dragons,60.0,50.0,10.0,20.0,covers,5,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,28.6,50.0,-21.4,42.8,fades,7,True
+Parramatta Eels,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,28.6,50.0,-21.4,42.8,fades,7,True
+Parramatta Eels,BY VENUE,4 Pines Park (Brookvale Oval),50.0,50.0,0.0,0.0,fades,4,False
+Parramatta Eels,BY VENUE,AAMI Park,,50.0,,,,,
+Parramatta Eels,BY VENUE,Accor Stadium,12.5,50.0,-37.5,75.0,fades,8,True
+Parramatta Eels,BY VENUE,Allianz Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Parramatta Eels,BY VENUE,BlueBet Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Parramatta Eels,BY VENUE,Campbelltown Stadium,,50.0,,,,,
+Parramatta Eels,BY VENUE,Cbus Super Stadium,,50.0,,,,,
+Parramatta Eels,BY VENUE,CommBank Stadium,48.9,50.0,-1.1,2.2,fades,47,False
+Parramatta Eels,BY VENUE,GIO Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Parramatta Eels,BY VENUE,Go Media Stadium,,50.0,,,,,
+Parramatta Eels,BY VENUE,Leichhardt Oval,,50.0,,,,,
+Parramatta Eels,BY VENUE,Marvel Stadium,,50.0,,,,,
+Parramatta Eels,BY VENUE,McDonald Jones Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Parramatta Eels,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Parramatta Eels,BY VENUE,QCB Stadium,,50.0,,,,,
+Parramatta Eels,BY VENUE,Suncorp Stadium,42.9,50.0,-7.1,14.2,fades,7,False
+Parramatta Eels,BY VENUE,Sunshine Coast Stadium,,50.0,,,,,
+Parramatta Eels,BY VENUE,TIO Stadium,0.0,50.0,-50.0,100.0,fades,4,True
+Parramatta Eels,BY VENUE,The Gabba,,50.0,,,,,
+Parramatta Eels,BY VENUE,WIN Stadium,,50.0,,,,,
+Penrith Panthers,OVERALL,Cover Rate — All Games,54.6,50.0,4.6,9.2,covers,108,False
+Penrith Panthers,OVERALL,Cover Rate — Home,58.9,50.0,8.9,17.8,covers,56,True
+Penrith Panthers,OVERALL,Cover Rate — Away,50.0,50.0,0.0,0.0,fades,52,False
+Penrith Panthers,FAVOURITE vs UNDERDOG,As Favourite (line < 0),51.5,50.0,1.5,3.0,covers,97,False
+Penrith Panthers,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),81.8,50.0,31.8,63.6,covers,11,True
+Penrith Panthers,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),51.7,50.0,1.7,3.4,covers,58,False
+Penrith Panthers,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),51.3,50.0,1.3,2.6,covers,39,False
+Penrith Panthers,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),88.9,50.0,38.9,77.8,covers,9,True
+Penrith Panthers,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),,50.0,,,,,
+Penrith Panthers,TIME OF DAY,Night Games (kick-off ≥ 18:00),55.7,50.0,5.7,11.4,covers,70,False
+Penrith Panthers,TIME OF DAY,Day Games (kick-off < 18:00),52.6,50.0,2.6,5.2,covers,38,False
+Penrith Panthers,DAY OF WEEK,Thursday / Friday Games,53.1,50.0,3.1,6.2,covers,49,False
+Penrith Panthers,DAY OF WEEK,Saturday Games,61.1,50.0,11.1,22.2,covers,36,True
+Penrith Panthers,DAY OF WEEK,Sunday Games,47.8,50.0,-2.2,4.4,fades,23,False
+Penrith Panthers,FORM,After a Win,49.4,50.0,-0.6,1.2,fades,79,False
+Penrith Panthers,FORM,After a Loss,67.9,50.0,17.9,35.8,covers,28,True
+Penrith Panthers,REST,Short Rest (≤ 6 days),61.1,50.0,11.1,22.2,covers,36,True
+Penrith Panthers,REST,Normal Rest (7-9 days),54.7,50.0,4.7,9.4,covers,53,False
+Penrith Panthers,REST,Long Rest (≥ 10 days),38.9,50.0,-11.1,22.2,fades,18,True
+Penrith Panthers,MOON PHASE,New Moon (±1 day),50.0,50.0,0.0,0.0,fades,14,False
+Penrith Panthers,MOON PHASE,Full Moon (±1 day),40.0,50.0,-10.0,20.0,fades,10,True
+Penrith Panthers,BY MONTH,March,60.0,50.0,10.0,20.0,covers,15,True
+Penrith Panthers,BY MONTH,April,43.8,50.0,-6.2,12.4,fades,16,False
+Penrith Panthers,BY MONTH,May,57.1,50.0,7.1,14.2,covers,14,False
+Penrith Panthers,BY MONTH,June,62.5,50.0,12.5,25.0,covers,16,True
+Penrith Panthers,BY MONTH,July,46.2,50.0,-3.8,7.6,fades,13,False
+Penrith Panthers,BY MONTH,August,38.9,50.0,-11.1,22.2,fades,18,True
+Penrith Panthers,BY MONTH,September,76.9,50.0,26.9,53.8,covers,13,True
+Penrith Panthers,BY MONTH,October,66.7,50.0,16.7,33.4,covers,3,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,62.5,50.0,12.5,25.0,covers,8,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,60.0,50.0,10.0,20.0,covers,5,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,57.1,50.0,7.1,14.2,covers,7,False
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,80.0,50.0,30.0,60.0,covers,5,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Dolphins,0.0,50.0,-50.0,100.0,fades,3,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,25.0,50.0,-25.0,50.0,fades,4,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,50.0,50.0,0.0,0.0,fades,6,False
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,60.0,50.0,10.0,20.0,covers,10,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,71.4,50.0,21.4,42.8,covers,7,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,50.0,50.0,0.0,0.0,fades,8,False
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,25.0,50.0,-25.0,50.0,fades,8,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,50.0,50.0,0.0,0.0,fades,10,False
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,77.8,50.0,27.8,55.6,covers,9,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs St George Dragons,40.0,50.0,-10.0,20.0,fades,5,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,75.0,50.0,25.0,50.0,covers,8,True
+Penrith Panthers,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,40.0,50.0,-10.0,20.0,fades,5,True
+Penrith Panthers,BY VENUE,4 Pines Park (Brookvale Oval),,50.0,,,,,
+Penrith Panthers,BY VENUE,AAMI Park,,50.0,,,,,
+Penrith Panthers,BY VENUE,Accor Stadium,66.7,50.0,16.7,33.4,covers,12,True
+Penrith Panthers,BY VENUE,Allegiant Stadium,,50.0,,,,,
+Penrith Panthers,BY VENUE,Allianz Stadium,100.0,50.0,50.0,100.0,covers,3,True
+Penrith Panthers,BY VENUE,BlueBet Stadium,58.3,50.0,8.3,16.6,covers,36,True
+Penrith Panthers,BY VENUE,Carrington Park,50.0,50.0,0.0,0.0,fades,4,False
+Penrith Panthers,BY VENUE,Cbus Super Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Penrith Panthers,BY VENUE,CommBank Stadium,40.0,50.0,-10.0,20.0,fades,15,True
+Penrith Panthers,BY VENUE,GIO Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Penrith Panthers,BY VENUE,Glen Willow Regional Sports Stadium,,50.0,,,,,
+Penrith Panthers,BY VENUE,Go Media Stadium,,50.0,,,,,
+Penrith Panthers,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Penrith Panthers,BY VENUE,Kayo Stadium,,50.0,,,,,
+Penrith Panthers,BY VENUE,Marvel Stadium,,50.0,,,,,
+Penrith Panthers,BY VENUE,McDonald Jones Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Penrith Panthers,BY VENUE,Moreton Daily Stadium,,50.0,,,,,
+Penrith Panthers,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Penrith Panthers,BY VENUE,QCB Stadium,0.0,50.0,-50.0,100.0,fades,4,True
+Penrith Panthers,BY VENUE,SCG,,50.0,,,,,
+Penrith Panthers,BY VENUE,Suncorp Stadium,50.0,50.0,0.0,0.0,fades,8,False
+Penrith Panthers,BY VENUE,WIN Stadium,,50.0,,,,,
+South Sydney Rabbitohs,OVERALL,Cover Rate — All Games,47.5,50.0,-2.5,5.0,fades,99,False
+South Sydney Rabbitohs,OVERALL,Cover Rate — Home,54.2,50.0,4.2,8.4,covers,48,False
+South Sydney Rabbitohs,OVERALL,Cover Rate — Away,41.2,50.0,-8.8,17.6,fades,51,True
+South Sydney Rabbitohs,FAVOURITE vs UNDERDOG,As Favourite (line < 0),47.9,50.0,-2.1,4.2,fades,48,False
+South Sydney Rabbitohs,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),47.1,50.0,-2.9,5.8,fades,51,False
+South Sydney Rabbitohs,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),56.2,50.0,6.2,12.4,covers,16,False
+South Sydney Rabbitohs,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),43.8,50.0,-6.2,12.4,fades,32,False
+South Sydney Rabbitohs,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),50.0,50.0,0.0,0.0,fades,34,False
+South Sydney Rabbitohs,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),41.2,50.0,-8.8,17.6,fades,17,True
+South Sydney Rabbitohs,TIME OF DAY,Night Games (kick-off ≥ 18:00),47.8,50.0,-2.2,4.4,fades,67,False
+South Sydney Rabbitohs,TIME OF DAY,Day Games (kick-off < 18:00),46.9,50.0,-3.1,6.2,fades,32,False
+South Sydney Rabbitohs,DAY OF WEEK,Thursday / Friday Games,44.4,50.0,-5.6,11.2,fades,45,False
+South Sydney Rabbitohs,DAY OF WEEK,Saturday Games,53.7,50.0,3.7,7.4,covers,41,False
+South Sydney Rabbitohs,DAY OF WEEK,Sunday Games,38.5,50.0,-11.5,23.0,fades,13,True
+South Sydney Rabbitohs,FORM,After a Win,50.0,50.0,0.0,0.0,fades,44,False
+South Sydney Rabbitohs,FORM,After a Loss,46.3,50.0,-3.7,7.4,fades,54,False
+South Sydney Rabbitohs,REST,Short Rest (≤ 6 days),60.7,50.0,10.7,21.4,covers,28,True
+South Sydney Rabbitohs,REST,Normal Rest (7-9 days),45.5,50.0,-4.5,9.0,fades,55,False
+South Sydney Rabbitohs,REST,Long Rest (≥ 10 days),33.3,50.0,-16.7,33.4,fades,15,True
+South Sydney Rabbitohs,MOON PHASE,New Moon (±1 day),50.0,50.0,0.0,0.0,fades,8,False
+South Sydney Rabbitohs,MOON PHASE,Full Moon (±1 day),84.6,50.0,34.6,69.2,covers,13,True
+South Sydney Rabbitohs,BY MONTH,March,31.2,50.0,-18.8,37.6,fades,16,True
+South Sydney Rabbitohs,BY MONTH,April,56.2,50.0,6.2,12.4,covers,16,False
+South Sydney Rabbitohs,BY MONTH,May,46.7,50.0,-3.3,6.6,fades,15,False
+South Sydney Rabbitohs,BY MONTH,June,57.1,50.0,7.1,14.2,covers,14,False
+South Sydney Rabbitohs,BY MONTH,July,53.3,50.0,3.3,6.6,covers,15,False
+South Sydney Rabbitohs,BY MONTH,August,43.8,50.0,-6.2,12.4,fades,16,False
+South Sydney Rabbitohs,BY MONTH,September,42.9,50.0,-7.1,14.2,fades,7,False
+South Sydney Rabbitohs,BY MONTH,October,,50.0,,,,,
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,37.5,50.0,-12.5,25.0,fades,8,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,0.0,50.0,-50.0,100.0,fades,4,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,57.1,50.0,7.1,14.2,covers,7,False
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,50.0,50.0,0.0,0.0,fades,8,False
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Dolphins,25.0,50.0,-25.0,50.0,fades,4,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,100.0,50.0,50.0,100.0,covers,4,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,40.0,50.0,-10.0,20.0,fades,5,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,75.0,50.0,25.0,50.0,covers,8,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,40.0,50.0,-10.0,20.0,fades,5,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,25.0,50.0,-25.0,50.0,fades,4,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,50.0,50.0,0.0,0.0,fades,4,False
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,83.3,50.0,33.3,66.6,covers,6,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,22.2,50.0,-27.8,55.6,fades,9,True
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs St George Dragons,42.9,50.0,-7.1,14.2,fades,7,False
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,44.4,50.0,-5.6,11.2,fades,9,False
+South Sydney Rabbitohs,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,57.1,50.0,7.1,14.2,covers,7,False
+South Sydney Rabbitohs,BY VENUE,4 Pines Park (Brookvale Oval),,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,AAMI Park,66.7,50.0,16.7,33.4,covers,3,True
+South Sydney Rabbitohs,BY VENUE,Accor Stadium,57.9,50.0,7.9,15.8,covers,38,True
+South Sydney Rabbitohs,BY VENUE,Allegiant Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Allianz Stadium,37.5,50.0,-12.5,25.0,fades,8,True
+South Sydney Rabbitohs,BY VENUE,Apex Oval,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Barlow Park,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,BlueBet Stadium,0.0,50.0,-50.0,100.0,fades,3,True
+South Sydney Rabbitohs,BY VENUE,Campbelltown Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Cbus Super Stadium,100.0,50.0,50.0,100.0,covers,4,True
+South Sydney Rabbitohs,BY VENUE,Central Coast Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,CommBank Stadium,40.0,50.0,-10.0,20.0,fades,5,True
+South Sydney Rabbitohs,BY VENUE,GIO Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Go Media Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Jubilee Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Kayo Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,McDonald Jones Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Ocean Protect Stadium,50.0,50.0,0.0,0.0,fades,4,False
+South Sydney Rabbitohs,BY VENUE,Optus Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Polytec Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Scully Park,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,Suncorp Stadium,40.0,50.0,-10.0,20.0,fades,10,True
+South Sydney Rabbitohs,BY VENUE,Sunshine Coast Stadium,,50.0,,,,,
+South Sydney Rabbitohs,BY VENUE,WIN Stadium,,50.0,,,,,
+St George Dragons,OVERALL,Cover Rate — All Games,54.2,50.0,4.2,8.4,covers,96,False
+St George Dragons,OVERALL,Cover Rate — Home,64.6,50.0,14.6,29.2,covers,48,True
+St George Dragons,OVERALL,Cover Rate — Away,43.8,50.0,-6.2,12.4,fades,48,False
+St George Dragons,FAVOURITE vs UNDERDOG,As Favourite (line < 0),50.0,50.0,0.0,0.0,fades,26,False
+St George Dragons,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),55.7,50.0,5.7,11.4,covers,70,False
+St George Dragons,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),,50.0,,,,,
+St George Dragons,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),52.0,50.0,2.0,4.0,covers,25,False
+St George Dragons,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),54.3,50.0,4.3,8.6,covers,46,False
+St George Dragons,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),58.3,50.0,8.3,16.6,covers,24,True
+St George Dragons,TIME OF DAY,Night Games (kick-off ≥ 18:00),50.0,50.0,0.0,0.0,fades,36,False
+St George Dragons,TIME OF DAY,Day Games (kick-off < 18:00),56.7,50.0,6.7,13.4,covers,60,False
+St George Dragons,DAY OF WEEK,Thursday / Friday Games,46.2,50.0,-3.8,7.6,fades,26,False
+St George Dragons,DAY OF WEEK,Saturday Games,59.0,50.0,9.0,18.0,covers,39,True
+St George Dragons,DAY OF WEEK,Sunday Games,51.7,50.0,1.7,3.4,covers,29,False
+St George Dragons,FORM,After a Win,41.7,50.0,-8.3,16.6,fades,36,True
+St George Dragons,FORM,After a Loss,61.0,50.0,11.0,22.0,covers,59,True
+St George Dragons,REST,Short Rest (≤ 6 days),54.3,50.0,4.3,8.6,covers,35,False
+St George Dragons,REST,Normal Rest (7-9 days),50.0,50.0,0.0,0.0,fades,44,False
+St George Dragons,REST,Long Rest (≥ 10 days),62.5,50.0,12.5,25.0,covers,16,True
+St George Dragons,MOON PHASE,New Moon (±1 day),77.8,50.0,27.8,55.6,covers,9,True
+St George Dragons,MOON PHASE,Full Moon (±1 day),55.6,50.0,5.6,11.2,covers,9,False
+St George Dragons,BY MONTH,March,53.8,50.0,3.8,7.6,covers,13,False
+St George Dragons,BY MONTH,April,52.9,50.0,2.9,5.8,covers,17,False
+St George Dragons,BY MONTH,May,56.2,50.0,6.2,12.4,covers,16,False
+St George Dragons,BY MONTH,June,53.8,50.0,3.8,7.6,covers,13,False
+St George Dragons,BY MONTH,July,46.7,50.0,-3.3,6.6,fades,15,False
+St George Dragons,BY MONTH,August,66.7,50.0,16.7,33.4,covers,18,True
+St George Dragons,BY MONTH,September,25.0,50.0,-25.0,50.0,fades,4,True
+St George Dragons,BY MONTH,October,,50.0,,,,,
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,60.0,50.0,10.0,20.0,covers,5,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,85.7,50.0,35.7,71.4,covers,7,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,50.0,50.0,0.0,0.0,fades,6,False
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,37.5,50.0,-12.5,25.0,fades,8,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Dolphins,40.0,50.0,-10.0,20.0,fades,5,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,71.4,50.0,21.4,42.8,covers,7,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,66.7,50.0,16.7,33.4,covers,6,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,75.0,50.0,25.0,50.0,covers,4,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,85.7,50.0,35.7,71.4,covers,7,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,50.0,50.0,0.0,0.0,fades,4,False
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,0.0,50.0,-50.0,100.0,fades,5,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,40.0,50.0,-10.0,20.0,fades,5,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,60.0,50.0,10.0,20.0,covers,5,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,57.1,50.0,7.1,14.2,covers,7,False
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,37.5,50.0,-12.5,25.0,fades,8,True
+St George Dragons,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,42.9,50.0,-7.1,14.2,fades,7,False
+St George Dragons,BY VENUE,4 Pines Park (Brookvale Oval),,50.0,,,,,
+St George Dragons,BY VENUE,AAMI Park,,50.0,,,,,
+St George Dragons,BY VENUE,Accor Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+St George Dragons,BY VENUE,Allianz Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+St George Dragons,BY VENUE,Barlow Park,,50.0,,,,,
+St George Dragons,BY VENUE,Belmore Sports Ground,,50.0,,,,,
+St George Dragons,BY VENUE,BlueBet Stadium,,50.0,,,,,
+St George Dragons,BY VENUE,Campbelltown Stadium,,50.0,,,,,
+St George Dragons,BY VENUE,Cbus Super Stadium,,50.0,,,,,
+St George Dragons,BY VENUE,CommBank Stadium,20.0,50.0,-30.0,60.0,fades,5,True
+St George Dragons,BY VENUE,GIO Stadium,100.0,50.0,50.0,100.0,covers,3,True
+St George Dragons,BY VENUE,Go Media Stadium,,50.0,,,,,
+St George Dragons,BY VENUE,Jubilee Stadium,61.9,50.0,11.9,23.8,covers,21,True
+St George Dragons,BY VENUE,Kayo Stadium,,50.0,,,,,
+St George Dragons,BY VENUE,McDonald Jones Stadium,,50.0,,,,,
+St George Dragons,BY VENUE,Ocean Protect Stadium,50.0,50.0,0.0,0.0,fades,4,False
+St George Dragons,BY VENUE,QCB Stadium,0.0,50.0,-50.0,100.0,fades,3,True
+St George Dragons,BY VENUE,SCG,,50.0,,,,,
+St George Dragons,BY VENUE,Suncorp Stadium,25.0,50.0,-25.0,50.0,fades,8,True
+St George Dragons,BY VENUE,Sunshine Coast Stadium,,50.0,,,,,
+St George Dragons,BY VENUE,WIN Stadium,68.0,50.0,18.0,36.0,covers,25,True
+Sydney Roosters,OVERALL,Cover Rate — All Games,51.5,50.0,1.5,3.0,covers,103,False
+Sydney Roosters,OVERALL,Cover Rate — Home,56.0,50.0,6.0,12.0,covers,50,False
+Sydney Roosters,OVERALL,Cover Rate — Away,47.2,50.0,-2.8,5.6,fades,53,False
+Sydney Roosters,FAVOURITE vs UNDERDOG,As Favourite (line < 0),49.3,50.0,-0.7,1.4,fades,67,False
+Sydney Roosters,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),55.6,50.0,5.6,11.2,covers,36,False
+Sydney Roosters,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),43.3,50.0,-6.7,13.4,fades,30,False
+Sydney Roosters,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),54.1,50.0,4.1,8.2,covers,37,False
+Sydney Roosters,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),54.8,50.0,4.8,9.6,covers,31,False
+Sydney Roosters,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),60.0,50.0,10.0,20.0,covers,5,True
+Sydney Roosters,TIME OF DAY,Night Games (kick-off ≥ 18:00),51.5,50.0,1.5,3.0,covers,66,False
+Sydney Roosters,TIME OF DAY,Day Games (kick-off < 18:00),51.4,50.0,1.4,2.8,covers,37,False
+Sydney Roosters,DAY OF WEEK,Thursday / Friday Games,56.5,50.0,6.5,13.0,covers,46,False
+Sydney Roosters,DAY OF WEEK,Saturday Games,52.9,50.0,2.9,5.8,covers,34,False
+Sydney Roosters,DAY OF WEEK,Sunday Games,42.9,50.0,-7.1,14.2,fades,21,False
+Sydney Roosters,FORM,After a Win,47.5,50.0,-2.5,5.0,fades,59,False
+Sydney Roosters,FORM,After a Loss,58.1,50.0,8.1,16.2,covers,43,True
+Sydney Roosters,REST,Short Rest (≤ 6 days),50.0,50.0,0.0,0.0,fades,30,False
+Sydney Roosters,REST,Normal Rest (7-9 days),55.4,50.0,5.4,10.8,covers,56,False
+Sydney Roosters,REST,Long Rest (≥ 10 days),43.8,50.0,-6.2,12.4,fades,16,False
+Sydney Roosters,MOON PHASE,New Moon (±1 day),50.0,50.0,0.0,0.0,fades,10,False
+Sydney Roosters,MOON PHASE,Full Moon (±1 day),61.5,50.0,11.5,23.0,covers,13,True
+Sydney Roosters,BY MONTH,March,40.0,50.0,-10.0,20.0,fades,15,True
+Sydney Roosters,BY MONTH,April,35.3,50.0,-14.7,29.4,fades,17,True
+Sydney Roosters,BY MONTH,May,64.3,50.0,14.3,28.6,covers,14,True
+Sydney Roosters,BY MONTH,June,35.7,50.0,-14.3,28.6,fades,14,True
+Sydney Roosters,BY MONTH,July,53.3,50.0,3.3,6.6,covers,15,False
+Sydney Roosters,BY MONTH,August,87.5,50.0,37.5,75.0,covers,16,True
+Sydney Roosters,BY MONTH,September,41.7,50.0,-8.3,16.6,fades,12,True
+Sydney Roosters,BY MONTH,October,,50.0,,,,,
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,57.1,50.0,7.1,14.2,covers,7,False
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,20.0,50.0,-30.0,60.0,fades,5,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,50.0,50.0,0.0,0.0,fades,6,False
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,28.6,50.0,-21.4,42.8,fades,7,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Dolphins,60.0,50.0,10.0,20.0,covers,5,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,75.0,50.0,25.0,50.0,covers,4,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,62.5,50.0,12.5,25.0,covers,8,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,40.0,50.0,-10.0,20.0,fades,10,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,40.0,50.0,-10.0,20.0,fades,5,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,60.0,50.0,10.0,20.0,covers,5,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,60.0,50.0,10.0,20.0,covers,5,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,71.4,50.0,21.4,42.8,covers,7,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,25.0,50.0,-25.0,50.0,fades,8,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,55.6,50.0,5.6,11.2,covers,9,False
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs St George Dragons,62.5,50.0,12.5,25.0,covers,8,True
+Sydney Roosters,HEAD TO HEAD vs OPPONENT,vs Wests Tigers,75.0,50.0,25.0,50.0,covers,4,True
+Sydney Roosters,BY VENUE,4 Pines Park (Brookvale Oval),50.0,50.0,0.0,0.0,fades,4,False
+Sydney Roosters,BY VENUE,AAMI Park,50.0,50.0,0.0,0.0,fades,6,False
+Sydney Roosters,BY VENUE,Accor Stadium,28.6,50.0,-21.4,42.8,fades,7,True
+Sydney Roosters,BY VENUE,Allegiant Stadium,,50.0,,,,,
+Sydney Roosters,BY VENUE,Allianz Stadium,53.1,50.0,3.1,6.2,covers,32,False
+Sydney Roosters,BY VENUE,BB Print Stadium,,50.0,,,,,
+Sydney Roosters,BY VENUE,BlueBet Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Sydney Roosters,BY VENUE,Cbus Super Stadium,,50.0,,,,,
+Sydney Roosters,BY VENUE,CommBank Stadium,60.0,50.0,10.0,20.0,covers,5,True
+Sydney Roosters,BY VENUE,GIO Stadium,,50.0,,,,,
+Sydney Roosters,BY VENUE,Go Media Stadium,,50.0,,,,,
+Sydney Roosters,BY VENUE,HBF Park,,50.0,,,,,
+Sydney Roosters,BY VENUE,Jubilee Stadium,,50.0,,,,,
+Sydney Roosters,BY VENUE,McDonald Jones Stadium,75.0,50.0,25.0,50.0,covers,4,True
+Sydney Roosters,BY VENUE,Ocean Protect Stadium,20.0,50.0,-30.0,60.0,fades,5,True
+Sydney Roosters,BY VENUE,Polytec Stadium,66.7,50.0,16.7,33.4,covers,3,True
+Sydney Roosters,BY VENUE,QCB Stadium,,50.0,,,,,
+Sydney Roosters,BY VENUE,SCG,50.0,50.0,0.0,0.0,fades,12,False
+Sydney Roosters,BY VENUE,Suncorp Stadium,55.6,50.0,5.6,11.2,covers,9,False
+Sydney Roosters,BY VENUE,The Gabba,,50.0,,,,,
+Wests Tigers,OVERALL,Cover Rate — All Games,42.7,50.0,-7.3,14.6,fades,96,False
+Wests Tigers,OVERALL,Cover Rate — Home,52.1,50.0,2.1,4.2,covers,48,False
+Wests Tigers,OVERALL,Cover Rate — Away,33.3,50.0,-16.7,33.4,fades,48,True
+Wests Tigers,FAVOURITE vs UNDERDOG,As Favourite (line < 0),26.7,50.0,-23.3,46.6,fades,15,True
+Wests Tigers,FAVOURITE vs UNDERDOG,As Underdog  (line > 0),45.7,50.0,-4.3,8.6,fades,81,False
+Wests Tigers,FAVOURITE vs UNDERDOG,Heavy Fav (line ≤ -9.5),,50.0,,,,,
+Wests Tigers,FAVOURITE vs UNDERDOG,Slight Fav (line -1 to -9),26.7,50.0,-23.3,46.6,fades,15,True
+Wests Tigers,FAVOURITE vs UNDERDOG,Slight Dog (line +1 to +9),42.4,50.0,-7.6,15.2,fades,33,True
+Wests Tigers,FAVOURITE vs UNDERDOG,Big Dog    (line ≥ +9.5),47.9,50.0,-2.1,4.2,fades,48,False
+Wests Tigers,TIME OF DAY,Night Games (kick-off ≥ 18:00),40.0,50.0,-10.0,20.0,fades,40,True
+Wests Tigers,TIME OF DAY,Day Games (kick-off < 18:00),44.6,50.0,-5.4,10.8,fades,56,False
+Wests Tigers,DAY OF WEEK,Thursday / Friday Games,38.1,50.0,-11.9,23.8,fades,21,True
+Wests Tigers,DAY OF WEEK,Saturday Games,42.9,50.0,-7.1,14.2,fades,35,False
+Wests Tigers,DAY OF WEEK,Sunday Games,41.7,50.0,-8.3,16.6,fades,36,True
+Wests Tigers,FORM,After a Win,39.1,50.0,-10.9,21.8,fades,23,True
+Wests Tigers,FORM,After a Loss,43.1,50.0,-6.9,13.8,fades,72,False
+Wests Tigers,REST,Short Rest (≤ 6 days),51.6,50.0,1.6,3.2,covers,31,False
+Wests Tigers,REST,Normal Rest (7-9 days),38.8,50.0,-11.2,22.4,fades,49,True
+Wests Tigers,REST,Long Rest (≥ 10 days),33.3,50.0,-16.7,33.4,fades,15,True
+Wests Tigers,MOON PHASE,New Moon (±1 day),50.0,50.0,0.0,0.0,fades,10,False
+Wests Tigers,MOON PHASE,Full Moon (±1 day),22.2,50.0,-27.8,55.6,fades,9,True
+Wests Tigers,BY MONTH,March,42.9,50.0,-7.1,14.2,fades,14,False
+Wests Tigers,BY MONTH,April,50.0,50.0,0.0,0.0,fades,16,False
+Wests Tigers,BY MONTH,May,37.5,50.0,-12.5,25.0,fades,16,True
+Wests Tigers,BY MONTH,June,41.7,50.0,-8.3,16.6,fades,12,True
+Wests Tigers,BY MONTH,July,50.0,50.0,0.0,0.0,fades,18,False
+Wests Tigers,BY MONTH,August,43.8,50.0,-6.2,12.4,fades,16,False
+Wests Tigers,BY MONTH,September,0.0,50.0,-50.0,100.0,fades,4,True
+Wests Tigers,BY MONTH,October,,50.0,,,,,
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Brisbane Broncos,25.0,50.0,-25.0,50.0,fades,4,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Canberra Raiders,57.1,50.0,7.1,14.2,covers,7,False
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Canterbury Bulldogs,60.0,50.0,10.0,20.0,covers,5,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Cronulla Sharks,33.3,50.0,-16.7,33.4,fades,6,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Dolphins,25.0,50.0,-25.0,50.0,fades,4,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Gold Coast Titans,33.3,50.0,-16.7,33.4,fades,6,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Manly Sea Eagles,57.1,50.0,7.1,14.2,covers,7,False
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Melbourne Storm,40.0,50.0,-10.0,20.0,fades,5,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs New Zealand Warriors,33.3,50.0,-16.7,33.4,fades,6,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Newcastle Knights,12.5,50.0,-37.5,75.0,fades,8,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs North QLD Cowboys,37.5,50.0,-12.5,25.0,fades,8,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Parramatta Eels,71.4,50.0,21.4,42.8,covers,7,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Penrith Panthers,60.0,50.0,10.0,20.0,covers,5,True
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs South Sydney Rabbitohs,42.9,50.0,-7.1,14.2,fades,7,False
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs St George Dragons,57.1,50.0,7.1,14.2,covers,7,False
+Wests Tigers,HEAD TO HEAD vs OPPONENT,vs Sydney Roosters,25.0,50.0,-25.0,50.0,fades,4,True
+Wests Tigers,BY VENUE,4 Pines Park (Brookvale Oval),33.3,50.0,-16.7,33.4,fades,3,True
+Wests Tigers,BY VENUE,AAMI Park,,50.0,,,,,
+Wests Tigers,BY VENUE,Accor Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Wests Tigers,BY VENUE,Allianz Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Wests Tigers,BY VENUE,Belmore Sports Ground,,50.0,,,,,
+Wests Tigers,BY VENUE,Campbelltown Stadium,33.3,50.0,-16.7,33.4,fades,15,True
+Wests Tigers,BY VENUE,Carrington Park,,50.0,,,,,
+Wests Tigers,BY VENUE,Cbus Super Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Wests Tigers,BY VENUE,CommBank Stadium,64.3,50.0,14.3,28.6,covers,14,True
+Wests Tigers,BY VENUE,FMG Stadium,,50.0,,,,,
+Wests Tigers,BY VENUE,GIO Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Wests Tigers,BY VENUE,Go Media Stadium,33.3,50.0,-16.7,33.4,fades,3,True
+Wests Tigers,BY VENUE,Kayo Stadium,,50.0,,,,,
+Wests Tigers,BY VENUE,Leichhardt Oval,57.1,50.0,7.1,14.2,covers,14,False
+Wests Tigers,BY VENUE,McDonald Jones Stadium,25.0,50.0,-25.0,50.0,fades,4,True
+Wests Tigers,BY VENUE,Ocean Protect Stadium,,50.0,,,,,
+Wests Tigers,BY VENUE,Polytec Stadium,,50.0,,,,,
+Wests Tigers,BY VENUE,QCB Stadium,50.0,50.0,0.0,0.0,fades,4,False
+Wests Tigers,BY VENUE,SCG,,50.0,,,,,
+Wests Tigers,BY VENUE,Scully Park,33.3,50.0,-16.7,33.4,fades,3,True
+Wests Tigers,BY VENUE,Suncorp Stadium,37.5,50.0,-12.5,25.0,fades,8,True
+Wests Tigers,BY VENUE,WIN Stadium,33.3,50.0,-16.7,33.4,fades,3,True

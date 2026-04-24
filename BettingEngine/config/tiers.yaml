@@ -642,7 +642,59 @@ tier6_referee:
   # Max totals delta
   totals_clamp: 2.0
 
-tier7_environment:
+tier7_emotional:
+  enabled: true
+
+  # Per-team cap — the sum of all emotional flags for one team cannot shift
+  # the margin by more than this many points in either direction.
+  max_home_points_delta: 2.5
+  max_away_points_delta: 2.5
+
+  # Totals cap — emotional intensity lifts scoring but is bounded.
+  # Only positive adjustments are allowed (emotional games score more).
+  max_totals_delta: 1.5
+
+  # Strength multipliers applied to base point values below.
+  #   minor  = light situational lift (e.g. minor milestone)
+  #   normal = standard emotional game
+  #   major  = extraordinary context (tragedy, 300th game, first title shot)
+  strength_multipliers:
+    minor:  0.5
+    normal: 1.0
+    major:  1.5
+
+  # Base margin points per flag type.
+  # Applied to the team carrying the flag; positive = that team is boosted.
+  # Calibrate from NRL history — keep conservative in V1.
+  flag_margin_pts:
+    milestone:        0.8   # team with milestone player fires up
+    new_coach:        1.2   # first game under a new head coach
+    star_return:      1.5   # elite/key player back from long absence
+    shame_blowout:    1.0   # bounce-back game after 30+ loss
+    origin_boost:     0.6   # Origin players returning at peak condition
+    farewell:         0.5   # emotional send-off for retiring player/coach
+    personal_tragedy: 1.5   # team rallying around adversity
+    rivalry_derby:    0.3   # rivalry intensity (home crowd factor)
+    must_win:         0.8   # backs-against-wall motivation
+
+  # Base totals points per flag type.
+  # Totals boost is additive across both teams, then capped at max_totals_delta.
+  # Emotion that only affects one team's effort (new_coach, must_win) doesn't
+  # boost total scoring directly — the opposition responds too.
+  flag_totals_pts:
+    milestone:        0.3   # star game → team attacks freely
+    new_coach:        0.0   # motivational only, both teams defensive early
+    star_return:      0.5   # star back → team more expansive in attack
+    shame_blowout:    0.5   # both sides try to score after a blowout game
+    origin_boost:     0.2   # fitter players → slightly higher output
+    farewell:         0.2   # both teams play open football on occasion
+    personal_tragedy: 0.0   # grief focuses effort, doesn't lift totals
+    rivalry_derby:    0.5   # derby games are traditionally high-scoring
+    must_win:         0.3   # must-win games tend to be higher tempo
+
+
+# Tier 8 — Weather (game-day pricing only, NOT applied mid-week)
+tier8_weather:
   weather:
     enabled: true
     max_total_delta: 3.0

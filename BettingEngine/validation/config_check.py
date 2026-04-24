@@ -400,14 +400,14 @@ def _check_tier_caps(config: dict) -> list:
 
     _log_section('tier caps', resolved)
 
-    # Tier 7 lunar — experimental; warn if enabled and values are large
-    lunar = config.get('tier7_environment', {}).get('lunar', {})
+    # Tier 8 lunar — experimental; warn if enabled and values are large
+    lunar = config.get('tier8_weather', {}).get('lunar', {})
     if lunar.get('enabled'):
         for key in ('max_home_points_delta', 'max_away_points_delta', 'max_total_delta'):
             val = _get_float(lunar, key)
             if val is not None and val > 2.0:
                 issues.append(_warning(
-                    f'tier7_environment.lunar.{key}',
+                    f'tier8_weather.lunar.{key}',
                     f"value={val} — lunar factor is experimental and should be bounded "
                     "tightly (≤ 1.0 recommended)."
                 ))
