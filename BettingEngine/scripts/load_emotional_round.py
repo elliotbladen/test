@@ -160,17 +160,21 @@ def process_flags(conn, items: list, dry_run: bool) -> None:
         player_disp = (player or '')[:22]
 
         if not dry_run:
+            # Delete existing row matching the unique index (uses COALESCE on player_name)
+            conn.execute(
+                """
+                DELETE FROM emotional_flags
+                WHERE match_id = ? AND team_id = ? AND flag_type = ?
+                  AND COALESCE(player_name, '') = COALESCE(?, '')
+                """,
+                (match_id, team_id, flag_type, player),
+            )
             conn.execute(
                 """
                 INSERT INTO emotional_flags
                     (match_id, team_id, flag_type, flag_strength,
                      player_name, notes, source_url, captured_at)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(match_id, team_id, flag_type, player_name) DO UPDATE SET
-                    flag_strength = excluded.flag_strength,
-                    notes         = excluded.notes,
-                    source_url    = excluded.source_url,
-                    captured_at   = excluded.captured_at
                 """,
                 (match_id, team_id, flag_type, strength,
                  player, notes, source_url, now),

@@ -1,0 +1,239 @@
+
+===========================================================================================================================================================
+  NRL 2025 — ML Shadow Predictions vs Actual Results  (213 games)
+  H2H Accuracy: 135/213 = 63.4%
+===========================================================================================================================================================
+
+  Date         Home                             Away                                ML% ML Pick                          Actual Winner                      H2H   ML Mgn  Act Mgn   ML Tot  Act Tot    O/U
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  2025-03-02   Penrith Panthers                 Cronulla Sharks                   67.1% Penrith Panthers                 Penrith Panthers                     ✓     +4.2     +6.0     40.9     50.0   OVER
+  2025-03-02   Canberra Raiders                 NZ Warriors                       62.1% Canberra Raiders                 Canberra Raiders                     ✓     +1.6    +22.0     41.8     38.0  UNDER
+  2025-03-06   Sydney Roosters                  Brisbane Broncos                  62.7% Sydney Roosters                  Brisbane Broncos                     ✗     +6.2    -36.0     40.2     64.0   OVER
+  2025-03-07   South Sydney Rabbitohs           Dolphins                          58.6% South Sydney Rabbitohs           South Sydney Rabbitohs               ✓     +2.2     +2.0     40.1     30.0  UNDER
+  2025-03-07   Wests Tigers                     Newcastle Knights                 40.8% Newcastle Knights                Newcastle Knights                    ✓     -0.6     -2.0     39.0     18.0  UNDER
+  2025-03-08   Manly-Sea Eagles                 North Cowboys                     58.7% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     +1.5    +30.0     36.1     54.0   OVER
+  2025-03-08   St. George Dragons               Bulldogs                          49.3% Bulldogs                         Bulldogs                             ✓     -0.3     -8.0     40.4     48.0   OVER
+  2025-03-09   Melbourne Storm                  Parramatta Eels                   70.5% Melbourne Storm                  Melbourne Storm                      ✓    +10.9    +38.0     38.4     74.0   OVER
+  2025-03-13   Newcastle Knights                Dolphins                          72.9% Newcastle Knights                Newcastle Knights                    ✓     +9.3    +14.0     45.7     38.0  UNDER
+  2025-03-14   Penrith Panthers                 Sydney Roosters                   73.2% Penrith Panthers                 Sydney Roosters                      ✗     +7.0     -6.0     45.4     70.0   OVER
+  2025-03-14   NZ Warriors                      Manly-Sea Eagles                  40.8% Manly-Sea Eagles                 NZ Warriors                          ✗     +0.3    +20.0     47.6     52.0   OVER
+  2025-03-15   Canberra Raiders                 Brisbane Broncos                  59.3% Canberra Raiders                 Canberra Raiders                     ✓     +0.8    +10.0     44.5     54.0   OVER
+  2025-03-15   North Cowboys                    Cronulla Sharks                   63.1% North Cowboys                    Cronulla Sharks                      ✗     +3.5    -24.0     51.9     48.0  UNDER
+  2025-03-15   St. George Dragons               South Sydney Rabbitohs            53.5% St. George Dragons               South Sydney Rabbitohs               ✗     -1.0     -1.0     44.0     49.0   OVER
+  2025-03-16   Bulldogs                         Gold Coast Titans                 61.0% Bulldogs                         Bulldogs                             ✓     +3.4    +16.0     40.5     64.0   OVER
+  2025-03-16   Parramatta Eels                  Wests Tigers                      69.3% Parramatta Eels                  Wests Tigers                         ✗     +4.3    -26.0     48.4     38.0  UNDER
+  2025-03-20   Melbourne Storm                  Penrith Panthers                  64.0% Melbourne Storm                  Melbourne Storm                      ✓     +2.6     +6.0     39.7     54.0   OVER
+  2025-03-21   Brisbane Broncos                 North Cowboys                     63.3% Brisbane Broncos                 Brisbane Broncos                     ✓     +2.7    +10.0     45.3     42.0  UNDER
+  2025-03-21   NZ Warriors                      Sydney Roosters                   42.5% Sydney Roosters                  NZ Warriors                          ✗     +1.0     +8.0     42.8     20.0  UNDER
+  2025-03-22   Gold Coast Titans                Newcastle Knights                 43.0% Newcastle Knights                Gold Coast Titans                    ✗     -4.2    +20.0     47.5     32.0  UNDER
+  2025-03-22   Dolphins                         Wests Tigers                      62.2% Dolphins                         Wests Tigers                         ✗     +5.9    -12.0     40.7     48.0   OVER
+  2025-03-22   Cronulla Sharks                  South Sydney Rabbitohs            66.9% Cronulla Sharks                  Cronulla Sharks                      ✓     +5.4    +15.0     41.2     39.0  UNDER
+  2025-03-23   Manly-Sea Eagles                 Canberra Raiders                  56.6% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     +1.1    +28.0     43.3     52.0   OVER
+  2025-03-23   Parramatta Eels                  Bulldogs                          40.8% Bulldogs                         Bulldogs                             ✓     -4.2     -8.0     43.6     24.0  UNDER
+  2025-03-27   South Sydney Rabbitohs           Penrith Panthers                  30.2% Penrith Panthers                 South Sydney Rabbitohs               ✗     -7.7    +10.0     46.7     46.0  UNDER
+  2025-03-28   Dolphins                         Brisbane Broncos                  40.1% Brisbane Broncos                 Brisbane Broncos                     ✓     -5.9     -8.0     40.2     32.0  UNDER
+  2025-03-28   Sydney Roosters                  Gold Coast Titans                 66.3% Sydney Roosters                  Gold Coast Titans                    ✗     +6.6    -18.0     46.3     42.0  UNDER
+  2025-03-29   Cronulla Sharks                  Bulldogs                          64.3% Cronulla Sharks                  Bulldogs                             ✗     +5.2    -14.0     45.4     26.0  UNDER
+  2025-03-29   North Cowboys                    Canberra Raiders                  63.3% North Cowboys                    North Cowboys                        ✓     +3.2    +10.0     40.6     50.0   OVER
+  2025-03-29   St. George Dragons               Melbourne Storm                   36.4% Melbourne Storm                  St. George Dragons                   ✗     -4.0     +6.0     40.9     22.0  UNDER
+  2025-03-30   Wests Tigers                     NZ Warriors                       53.7% Wests Tigers                     NZ Warriors                          ✗     +3.6     -2.0     45.2     50.0   OVER
+  2025-03-30   Manly-Sea Eagles                 Parramatta Eels                   66.5% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     +3.5    +14.0     47.2     38.0  UNDER
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  2025-04-03   Canberra Raiders                 Cronulla Sharks                   47.5% Cronulla Sharks                  Canberra Raiders                     ✗     -2.9     +4.0     45.9     44.0  UNDER
+  2025-04-04   South Sydney Rabbitohs           Sydney Roosters                   42.3% Sydney Roosters                  South Sydney Rabbitohs               ✗     -4.6     +6.0     44.2     34.0  UNDER
+  2025-04-04   Penrith Panthers                 North Cowboys                     71.9% Penrith Panthers                 North Cowboys                        ✗     +7.6     -4.0     41.6     40.0  UNDER
+  2025-04-05   Brisbane Broncos                 Wests Tigers                      76.9% Brisbane Broncos                 Brisbane Broncos                     ✓     +7.6    +22.0     43.8     70.0   OVER
+  2025-04-05   Gold Coast Titans                Dolphins                          67.2% Gold Coast Titans                Dolphins                             ✗     +6.6    -26.0     44.5     46.0   OVER
+  2025-04-05   Parramatta Eels                  St. George Dragons                54.5% Parramatta Eels                  Parramatta Eels                      ✓     -0.0     +1.0     43.5     45.0   OVER
+  2025-04-06   Bulldogs                         Newcastle Knights                 63.5% Bulldogs                         Bulldogs                             ✓     +6.4    +20.0     45.7     20.0  UNDER
+  2025-04-06   Manly-Sea Eagles                 Melbourne Storm                   42.2% Melbourne Storm                  Melbourne Storm                      ✓     -4.3    -24.0     43.7     72.0   OVER
+  2025-04-10   Dolphins                         Penrith Panthers                  29.6% Penrith Panthers                 Dolphins                             ✗     -4.9    +18.0     43.9     42.0  UNDER
+  2025-04-11   Brisbane Broncos                 Sydney Roosters                   67.1% Brisbane Broncos                 Sydney Roosters                      ✗     +4.2    -10.0     44.4     42.0  UNDER
+  2025-04-11   St. George Dragons               Gold Coast Titans                 67.2% St. George Dragons               St. George Dragons                   ✓     +3.7    +22.0     45.0     54.0   OVER
+  2025-04-12   Parramatta Eels                  Canberra Raiders                  40.6% Canberra Raiders                 Canberra Raiders                     ✓     -2.5    -38.0     46.4     62.0   OVER
+  2025-04-12   South Sydney Rabbitohs           North Cowboys                     44.4% North Cowboys                    North Cowboys                        ✓     -2.8     -8.0     45.7     40.0  UNDER
+  2025-04-12   Cronulla Sharks                  Manly-Sea Eagles                  58.1% Cronulla Sharks                  Cronulla Sharks                      ✓     +2.8     +6.0     46.1     42.0  UNDER
+  2025-04-13   Newcastle Knights                Wests Tigers                      70.5% Newcastle Knights                Wests Tigers                         ✗     +6.2    -16.0     48.0     24.0  UNDER
+  2025-04-13   Melbourne Storm                  NZ Warriors                       69.3% Melbourne Storm                  Melbourne Storm                      ✓     +5.8    +28.0     48.0     56.0   OVER
+  2025-04-17   Manly-Sea Eagles                 St. George Dragons                58.8% Manly-Sea Eagles                 St. George Dragons                   ✗     +5.3     -2.0     44.5     38.0  UNDER
+  2025-04-18   Dolphins                         Melbourne Storm                   33.4% Melbourne Storm                  Dolphins                             ✗     -6.7    +20.0     43.9     64.0   OVER
+  2025-04-18   Bulldogs                         South Sydney Rabbitohs            69.3% Bulldogs                         Bulldogs                             ✓     +6.6    +32.0     47.9     32.0  UNDER
+  2025-04-19   Sydney Roosters                  Penrith Panthers                  49.6% Penrith Panthers                 Penrith Panthers                     ✓     -4.1    -28.0     46.6     52.0   OVER
+  2025-04-19   NZ Warriors                      Brisbane Broncos                  57.6% NZ Warriors                      NZ Warriors                          ✓     +0.9     +2.0     44.3     38.0  UNDER
+  2025-04-20   Newcastle Knights                Cronulla Sharks                   44.3% Cronulla Sharks                  Cronulla Sharks                      ✓     -3.8    -20.0     43.5     48.0   OVER
+  2025-04-20   Gold Coast Titans                Canberra Raiders                  43.8% Canberra Raiders                 Canberra Raiders                     ✓     -6.8    -10.0     42.9     50.0   OVER
+  2025-04-21   Wests Tigers                     Parramatta Eels                   53.5% Wests Tigers                     Parramatta Eels                      ✗     -0.7    -16.0     45.7     60.0   OVER
+  2025-04-24   Brisbane Broncos                 Bulldogs                          48.3% Bulldogs                         Brisbane Broncos                     ✗     -2.7    +24.0     38.1     60.0   OVER
+  2025-04-25   Melbourne Storm                  South Sydney Rabbitohs            78.2% Melbourne Storm                  Melbourne Storm                      ✓    +13.4     +8.0     44.9     40.0  UNDER
+  2025-04-25   NZ Warriors                      Newcastle Knights                 68.8% NZ Warriors                      NZ Warriors                          ✓     +5.1    +14.0     44.7     38.0  UNDER
+  2025-04-25   Sydney Roosters                  St. George Dragons                73.4% Sydney Roosters                  Sydney Roosters                      ✓     +6.7    +28.0     42.6     64.0   OVER
+  2025-04-26   Penrith Panthers                 Manly-Sea Eagles                  74.0% Penrith Panthers                 Manly-Sea Eagles                     ✗     +7.5    -16.0     45.1     36.0  UNDER
+  2025-04-26   North Cowboys                    Gold Coast Titans                 75.7% North Cowboys                    North Cowboys                        ✓     +8.0    +32.0     46.5     68.0   OVER
+  2025-04-27   Wests Tigers                     Cronulla Sharks                   29.5% Cronulla Sharks                  Wests Tigers                         ✗     -7.5     +2.0     39.7     38.0  UNDER
+  2025-04-27   Canberra Raiders                 Dolphins                          62.4% Canberra Raiders                 Canberra Raiders                     ✓     +3.2    +12.0     43.4     68.0   OVER
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  2025-05-02   Sydney Roosters                  Dolphins                          69.9% Sydney Roosters                  Sydney Roosters                      ✓     +3.8    +10.0     45.0     62.0   OVER
+  2025-05-02   Cronulla Sharks                  Parramatta Eels                   65.8% Cronulla Sharks                  Cronulla Sharks                      ✓     +3.0    +10.0     44.8     46.0   OVER
+  2025-05-03   Wests Tigers                     St. George Dragons                41.7% St. George Dragons               Wests Tigers                         ✗     -4.0     +6.0     46.3     62.0   OVER
+  2025-05-03   NZ Warriors                      North Cowboys                     39.1% North Cowboys                    NZ Warriors                          ✗     -6.7     +4.0     43.8     56.0   OVER
+  2025-05-03   South Sydney Rabbitohs           Newcastle Knights                 58.1% South Sydney Rabbitohs           Newcastle Knights                    ✗     +2.4    -26.0     46.8     34.0  UNDER
+  2025-05-04   Melbourne Storm                  Canberra Raiders                  64.9% Melbourne Storm                  Canberra Raiders                     ✗     +2.1     -2.0     42.2     38.0  UNDER
+  2025-05-04   Penrith Panthers                 Brisbane Broncos                  61.0% Penrith Panthers                 Penrith Panthers                     ✓     +3.4    +24.0     44.9     40.0  UNDER
+  2025-05-04   Gold Coast Titans                Bulldogs                          44.3% Bulldogs                         Bulldogs                             ✓     -5.5    -20.0     48.6     56.0   OVER
+  2025-05-08   Parramatta Eels                  Dolphins                          57.8% Parramatta Eels                  Dolphins                             ✗     +2.1     -4.0     45.1     36.0  UNDER
+  2025-05-09   South Sydney Rabbitohs           Brisbane Broncos                  45.8% Brisbane Broncos                 South Sydney Rabbitohs               ✗     -3.7     +8.0     44.1     36.0  UNDER
+  2025-05-09   Newcastle Knights                Gold Coast Titans                 74.2% Newcastle Knights                Gold Coast Titans                    ✗     +7.5     -4.0     46.5     44.0  UNDER
+  2025-05-10   North Cowboys                    Penrith Panthers                  48.4% Penrith Panthers                 Penrith Panthers                     ✓     +0.8     +0.0     43.6     60.0   OVER
+  2025-05-10   St. George Dragons               NZ Warriors                       44.3% NZ Warriors                      NZ Warriors                          ✓     +1.0     -1.0     42.8     29.0  UNDER
+  2025-05-10   Canberra Raiders                 Bulldogs                          57.3% Canberra Raiders                 Bulldogs                             ✗     +6.8    -12.0     42.2     52.0   OVER
+  2025-05-11   Manly-Sea Eagles                 Cronulla Sharks                   47.7% Cronulla Sharks                  Cronulla Sharks                      ✓     -1.3    -16.0     45.4     44.0  UNDER
+  2025-05-11   Melbourne Storm                  Wests Tigers                      77.4% Melbourne Storm                  Melbourne Storm                      ✓    +13.6    +64.0     46.4     64.0   OVER
+  2025-05-16   Bulldogs                         Sydney Roosters                   54.2% Bulldogs                         Bulldogs                             ✓     +2.4     +4.0     43.0     44.0   OVER
+  2025-05-16   Newcastle Knights                Parramatta Eels                   74.0% Newcastle Knights                Parramatta Eels                      ✗     +7.5    -22.0     44.4     34.0  UNDER
+  2025-05-17   Cronulla Sharks                  Melbourne Storm                   38.3% Melbourne Storm                  Cronulla Sharks                      ✗    -10.0     +5.0     39.7     57.0   OVER
+  2025-05-17   North Cowboys                    Manly-Sea Eagles                  70.2% North Cowboys                    Manly-Sea Eagles                     ✗     +5.5    -18.0     47.3     30.0  UNDER
+  2025-05-17   Dolphins                         NZ Warriors                       48.3% NZ Warriors                      NZ Warriors                          ✓     +2.9     -4.0     43.6     28.0  UNDER
+  2025-05-18   Wests Tigers                     South Sydney Rabbitohs            46.1% South Sydney Rabbitohs           South Sydney Rabbitohs               ✓     -4.2    -10.0     47.9     34.0  UNDER
+  2025-05-18   Canberra Raiders                 Gold Coast Titans                 72.8% Canberra Raiders                 Canberra Raiders                     ✓     +5.8    +16.0     45.7     64.0   OVER
+  2025-05-18   Brisbane Broncos                 St. George Dragons                75.2% Brisbane Broncos                 St. George Dragons                   ✗     +7.6     -4.0     41.7     56.0   OVER
+  2025-05-22   Bulldogs                         Dolphins                          72.3% Bulldogs                         Dolphins                             ✗     +6.9    -36.0     36.1     52.0   OVER
+  2025-05-23   Parramatta Eels                  Manly-Sea Eagles                  41.0% Manly-Sea Eagles                 Parramatta Eels                      ✗     -1.8    +20.0     45.9     40.0  UNDER
+  2025-05-24   Sydney Roosters                  Cronulla Sharks                   47.0% Cronulla Sharks                  Sydney Roosters                      ✗     -0.3    +26.0     46.2     58.0   OVER
+  2025-05-24   Penrith Panthers                 Newcastle Knights                 76.9% Penrith Panthers                 Newcastle Knights                    ✗     +9.2    -19.0     45.1     31.0  UNDER
+  2025-05-25   NZ Warriors                      Canberra Raiders                  57.8% NZ Warriors                      Canberra Raiders                     ✗     +1.1     -6.0     40.8     26.0  UNDER
+  2025-05-30   St. George Dragons               Newcastle Knights                 49.0% Newcastle Knights                St. George Dragons                   ✗     +2.1    +14.0     44.9     26.0  UNDER
+  2025-05-31   Manly-Sea Eagles                 Brisbane Broncos                  66.3% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     +7.9    +28.0     41.3     40.0  UNDER
+  2025-05-31   North Cowboys                    Wests Tigers                      71.2% North Cowboys                    North Cowboys                        ✓     +8.5     +4.0     48.4     60.0   OVER
+  2025-05-31   Gold Coast Titans                Melbourne Storm                   37.1% Melbourne Storm                  Melbourne Storm                      ✓     -2.0    -12.0     41.4     44.0   OVER
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  2025-06-01   Sydney Roosters                  Canberra Raiders                  61.9% Sydney Roosters                  Canberra Raiders                     ✗     +3.6     -2.0     42.9     50.0   OVER
+  2025-06-01   Penrith Panthers                 Parramatta Eels                   72.0% Penrith Panthers                 Penrith Panthers                     ✓     +8.5     +8.0     44.0     28.0  UNDER
+  2025-06-01   South Sydney Rabbitohs           NZ Warriors                       48.0% NZ Warriors                      NZ Warriors                          ✓     +0.6     -6.0     45.5     66.0   OVER
+  2025-06-05   Newcastle Knights                Manly-Sea Eagles                  38.6% Manly-Sea Eagles                 Newcastle Knights                    ✗     -5.1     +4.0     44.0     48.0   OVER
+  2025-06-06   Dolphins                         St. George Dragons                58.0% Dolphins                         Dolphins                             ✓     +4.6    +50.0     43.2     62.0   OVER
+  2025-06-06   Melbourne Storm                  North Cowboys                     66.6% Melbourne Storm                  Melbourne Storm                      ✓     +4.1    +24.0     42.1     52.0   OVER
+  2025-06-07   Brisbane Broncos                 Gold Coast Titans                 73.6% Brisbane Broncos                 Brisbane Broncos                     ✓     +7.8    +30.0     47.8     58.0   OVER
+  2025-06-07   Cronulla Sharks                  NZ Warriors                       59.3% Cronulla Sharks                  NZ Warriors                          ✗     +5.0    -30.0     48.5     50.0   OVER
+  2025-06-08   Wests Tigers                     Penrith Panthers                  32.2% Penrith Panthers                 Penrith Panthers                     ✓     -6.6     -4.0     48.0     32.0  UNDER
+  2025-06-08   Canberra Raiders                 South Sydney Rabbitohs            65.9% Canberra Raiders                 Canberra Raiders                     ✓     +3.7    +24.0     38.6     48.0   OVER
+  2025-06-09   Bulldogs                         Parramatta Eels                   68.8% Bulldogs                         Bulldogs                             ✓     +6.4    +18.0     40.9     42.0   OVER
+  2025-06-12   Cronulla Sharks                  St. George Dragons                70.4% Cronulla Sharks                  Cronulla Sharks                      ✓     +7.6    +12.0     42.8     48.0   OVER
+  2025-06-13   Gold Coast Titans                Manly-Sea Eagles                  36.7% Manly-Sea Eagles                 Gold Coast Titans                    ✗     -2.4    +20.0     41.9     36.0  UNDER
+  2025-06-14   North Cowboys                    Dolphins                          61.9% North Cowboys                    Dolphins                             ✗     +3.5    -54.0     42.1     62.0   OVER
+  2025-06-14   Newcastle Knights                Sydney Roosters                   38.6% Sydney Roosters                  Sydney Roosters                      ✓     -4.5     -4.0     44.4     20.0  UNDER
+  2025-06-15   South Sydney Rabbitohs           Bulldogs                          35.8% Bulldogs                         Bulldogs                             ✓     -4.7     -6.0     45.8     42.0  UNDER
+  2025-06-20   Wests Tigers                     Canberra Raiders                  27.6% Canberra Raiders                 Canberra Raiders                     ✓     -5.1     -4.0     41.9     28.0  UNDER
+  2025-06-21   South Sydney Rabbitohs           Melbourne Storm                   29.3% Melbourne Storm                  Melbourne Storm                      ✓     -5.9     -1.0     46.0     49.0   OVER
+  2025-06-21   Dolphins                         Newcastle Knights                 62.5% Dolphins                         Newcastle Knights                    ✗     +1.8     -6.0     40.3     46.0   OVER
+  2025-06-21   NZ Warriors                      Penrith Panthers                  53.1% NZ Warriors                      Penrith Panthers                     ✗     +0.9    -10.0     44.8     46.0   OVER
+  2025-06-22   Parramatta Eels                  Gold Coast Titans                 58.3% Parramatta Eels                  Parramatta Eels                      ✓     +8.4    +16.0     44.5     56.0   OVER
+  2025-06-22   Sydney Roosters                  North Cowboys                     75.1% Sydney Roosters                  Sydney Roosters                      ✓     +7.8    +34.0     44.0     50.0   OVER
+  2025-06-22   Brisbane Broncos                 Cronulla Sharks                   50.2% Brisbane Broncos                 Brisbane Broncos                     ✓     +0.8     +6.0     37.6     62.0   OVER
+  2025-06-26   Penrith Panthers                 Bulldogs                          72.0% Penrith Panthers                 Penrith Panthers                     ✓     +7.3     +2.0     41.6     14.0  UNDER
+  2025-06-27   Newcastle Knights                Canberra Raiders                  42.1% Canberra Raiders                 Canberra Raiders                     ✓     -6.7     -4.0     37.7     40.0   OVER
+  2025-06-27   Manly-Sea Eagles                 Wests Tigers                      72.6% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     +6.5    +18.0     46.5     38.0  UNDER
+  2025-06-28   Dolphins                         South Sydney Rabbitohs            72.8% Dolphins                         Dolphins                             ✓     +8.6    +22.0     41.7     78.0   OVER
+  2025-06-28   St. George Dragons               Parramatta Eels                   51.8% St. George Dragons               St. George Dragons                   ✓     +4.2    +14.0     44.1     54.0   OVER
+  2025-06-28   Brisbane Broncos                 NZ Warriors                       53.3% Brisbane Broncos                 Brisbane Broncos                     ✓     +2.2    +14.0     46.1     38.0  UNDER
+  2025-06-29   Gold Coast Titans                North Cowboys                     46.4% North Cowboys                    North Cowboys                        ✓     +1.7     -6.0     36.9     54.0   OVER
+  2025-06-29   Melbourne Storm                  Cronulla Sharks                   71.6% Melbourne Storm                  Melbourne Storm                      ✓     +8.0    +24.0     41.9     36.0  UNDER
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  2025-07-04   Bulldogs                         Brisbane Broncos                  66.6% Bulldogs                         Brisbane Broncos                     ✗     +5.9     -4.0     42.0     40.0  UNDER
+  2025-07-05   North Cowboys                    Melbourne Storm                   45.9% Melbourne Storm                  Melbourne Storm                      ✓     +0.1     -6.0     42.9     46.0   OVER
+  2025-07-05   Canberra Raiders                 St. George Dragons                77.1% Canberra Raiders                 Canberra Raiders                     ✓     +9.9     +4.0     42.3     52.0   OVER
+  2025-07-06   Manly-Sea Eagles                 South Sydney Rabbitohs            70.6% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     +6.9    +18.0     47.3     42.0  UNDER
+  2025-07-06   Sydney Roosters                  Wests Tigers                      78.9% Sydney Roosters                  Wests Tigers                         ✗    +10.4     -2.0     46.3     58.0   OVER
+  2025-07-11   Cronulla Sharks                  Dolphins                          59.9% Cronulla Sharks                  Cronulla Sharks                      ✓     +5.8    +12.0     44.9     36.0  UNDER
+  2025-07-12   North Cowboys                    Bulldogs                          61.1% North Cowboys                    Bulldogs                             ✗     +2.9     -4.0     43.1     20.0  UNDER
+  2025-07-12   St. George Dragons               Sydney Roosters                   36.1% Sydney Roosters                  Sydney Roosters                      ✓     -4.7     -7.0     42.6     55.0   OVER
+  2025-07-12   Newcastle Knights                Melbourne Storm                   38.4% Melbourne Storm                  Melbourne Storm                      ✓     -3.5    -18.0     50.1     46.0  UNDER
+  2025-07-13   Gold Coast Titans                Brisbane Broncos                  30.3% Brisbane Broncos                 Brisbane Broncos                     ✓     -5.2    -12.0     41.6     40.0  UNDER
+  2025-07-13   Parramatta Eels                  Penrith Panthers                  30.3% Penrith Panthers                 Penrith Panthers                     ✓     -7.6    -22.0     46.7     42.0  UNDER
+  2025-07-13   NZ Warriors                      Wests Tigers                      69.4% NZ Warriors                      NZ Warriors                          ✓     +4.9    +20.0     37.2     48.0   OVER
+  2025-07-17   Dolphins                         North Cowboys                     57.6% Dolphins                         Dolphins                             ✓     +2.2    +19.0     41.5     67.0   OVER
+  2025-07-18   Penrith Panthers                 South Sydney Rabbitohs            78.6% Penrith Panthers                 Penrith Panthers                     ✓    +13.0    +20.0     45.1     40.0  UNDER
+  2025-07-18   Cronulla Sharks                  Sydney Roosters                   53.6% Cronulla Sharks                  Cronulla Sharks                      ✓     +3.6    +13.0     40.6     49.0   OVER
+  2025-07-19   Melbourne Storm                  Manly-Sea Eagles                  74.5% Melbourne Storm                  Manly-Sea Eagles                     ✗    +11.0     -2.0     46.0     34.0  UNDER
+  2025-07-19   Bulldogs                         St. George Dragons                74.9% Bulldogs                         Bulldogs                             ✓     +8.6     +2.0     44.8     38.0  UNDER
+  2025-07-19   Canberra Raiders                 Parramatta Eels                   76.7% Canberra Raiders                 Canberra Raiders                     ✓     +9.9    +24.0     49.3     56.0   OVER
+  2025-07-20   Newcastle Knights                NZ Warriors                       46.8% NZ Warriors                      NZ Warriors                          ✓     +2.2     -5.0     45.2     35.0  UNDER
+  2025-07-20   Wests Tigers                     Gold Coast Titans                 65.0% Wests Tigers                     Wests Tigers                         ✓     +2.8     +1.0     47.2     41.0  UNDER
+  2025-07-24   Sydney Roosters                  Melbourne Storm                   38.7% Melbourne Storm                  Melbourne Storm                      ✓     -4.4     -4.0     42.3     64.0   OVER
+  2025-07-25   Brisbane Broncos                 Parramatta Eels                   75.4% Brisbane Broncos                 Parramatta Eels                      ✗     +8.6     -2.0     43.6     42.0  UNDER
+  2025-07-25   North Cowboys                    St. George Dragons                73.4% North Cowboys                    North Cowboys                        ✓     +7.6     +6.0     44.4     70.0   OVER
+  2025-07-26   South Sydney Rabbitohs           Cronulla Sharks                   32.4% Cronulla Sharks                  Cronulla Sharks                      ✓     -6.2     -2.0     46.6     26.0  UNDER
+  2025-07-26   Penrith Panthers                 Wests Tigers                      76.7% Penrith Panthers                 Penrith Panthers                     ✓    +11.3    +34.0     46.8     38.0  UNDER
+  2025-07-26   NZ Warriors                      Gold Coast Titans                 73.4% NZ Warriors                      Gold Coast Titans                    ✗    +12.2     -8.0     44.3     40.0  UNDER
+  2025-07-27   Bulldogs                         Manly-Sea Eagles                  66.7% Bulldogs                         Bulldogs                             ✓     +3.9    +38.0     47.1     46.0  UNDER
+  2025-07-27   Canberra Raiders                 Newcastle Knights                 72.0% Canberra Raiders                 Canberra Raiders                     ✓    +11.0    +26.0     40.3     62.0   OVER
+  2025-07-31   Parramatta Eels                  Melbourne Storm                   33.0% Melbourne Storm                  Melbourne Storm                      ✓     -6.1     -6.0     44.1     26.0  UNDER
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  2025-08-01   Brisbane Broncos                 South Sydney Rabbitohs            75.3% Brisbane Broncos                 Brisbane Broncos                     ✓     +8.6    +46.0     40.6     74.0   OVER
+  2025-08-01   NZ Warriors                      Dolphins                          64.1% NZ Warriors                      Dolphins                             ✗     +6.8     -2.0     42.5     38.0  UNDER
+  2025-08-02   Manly-Sea Eagles                 Sydney Roosters                   59.1% Manly-Sea Eagles                 Sydney Roosters                      ✗     +0.7    -16.0     40.3     24.0  UNDER
+  2025-08-02   St. George Dragons               Canberra Raiders                  31.6% Canberra Raiders                 St. George Dragons                   ✗     -7.2     +6.0     38.6     30.0  UNDER
+  2025-08-02   Gold Coast Titans                Penrith Panthers                  28.6% Penrith Panthers                 Penrith Panthers                     ✓    -11.8     -4.0     46.0     56.0   OVER
+  2025-08-03   Cronulla Sharks                  North Cowboys                     63.7% Cronulla Sharks                  Cronulla Sharks                      ✓     +5.8    +20.0     44.0     44.0  UNDER
+  2025-08-03   Wests Tigers                     Bulldogs                          28.9% Bulldogs                         Wests Tigers                         ✗    -14.5    +14.0     41.1     42.0   OVER
+  2025-08-07   Melbourne Storm                  Brisbane Broncos                  71.7% Melbourne Storm                  Melbourne Storm                      ✓     +9.8    +20.0     40.2     24.0  UNDER
+  2025-08-08   Canberra Raiders                 Manly-Sea Eagles                  73.1% Canberra Raiders                 Canberra Raiders                     ✓     +7.7    +16.0     42.9     40.0  UNDER
+  2025-08-08   Newcastle Knights                Penrith Panthers                  29.7% Penrith Panthers                 Penrith Panthers                     ✓     -7.8    -36.0     49.6     60.0   OVER
+  2025-08-09   Bulldogs                         NZ Warriors                       74.4% Bulldogs                         Bulldogs                             ✓     +8.3    +18.0     40.7     46.0   OVER
+  2025-08-09   Dolphins                         Sydney Roosters                   49.3% Sydney Roosters                  Sydney Roosters                      ✓     -2.4    -52.0     44.8     76.0   OVER
+  2025-08-09   St. George Dragons               Cronulla Sharks                   35.4% Cronulla Sharks                  St. George Dragons                   ✗     -8.0     +8.0     39.8     36.0  UNDER
+  2025-08-10   Parramatta Eels                  North Cowboys                     55.2% Parramatta Eels                  Parramatta Eels                      ✓     +2.5     +1.0     39.1     37.0  UNDER
+  2025-08-10   Gold Coast Titans                South Sydney Rabbitohs            57.0% Gold Coast Titans                South Sydney Rabbitohs               ✗     +2.9     -2.0     44.8     38.0  UNDER
+  2025-08-14   Penrith Panthers                 Melbourne Storm                   46.1% Melbourne Storm                  Melbourne Storm                      ✓     -0.4     -4.0     43.7     40.0  UNDER
+  2025-08-15   Sydney Roosters                  Bulldogs                          52.1% Sydney Roosters                  Sydney Roosters                      ✓     +2.9    +20.0     45.4     44.0  UNDER
+  2025-08-15   NZ Warriors                      St. George Dragons                74.3% NZ Warriors                      NZ Warriors                          ✓     +7.2     +4.0     40.8     24.0  UNDER
+  2025-08-16   South Sydney Rabbitohs           Parramatta Eels                   54.1% South Sydney Rabbitohs           South Sydney Rabbitohs               ✓     -0.7     +4.0     45.1     36.0  UNDER
+  2025-08-16   Brisbane Broncos                 Dolphins                          72.9% Brisbane Broncos                 Brisbane Broncos                     ✓     +7.8    +10.0     43.4     66.0   OVER
+  2025-08-16   Cronulla Sharks                  Gold Coast Titans                 71.8% Cronulla Sharks                  Cronulla Sharks                      ✓    +10.9    +32.0     46.7     76.0   OVER
+  2025-08-17   North Cowboys                    Newcastle Knights                 72.0% North Cowboys                    North Cowboys                        ✓     +6.6    +34.0     44.7     42.0  UNDER
+  2025-08-17   Wests Tigers                     Manly-Sea Eagles                  35.7% Manly-Sea Eagles                 Wests Tigers                         ✗     -5.0    +14.0     47.2     38.0  UNDER
+  2025-08-21   South Sydney Rabbitohs           St. George Dragons                60.4% South Sydney Rabbitohs           South Sydney Rabbitohs               ✓     +3.4    +40.0     36.9     40.0   OVER
+  2025-08-22   Melbourne Storm                  Bulldogs                          73.6% Melbourne Storm                  Melbourne Storm                      ✓     +6.7     +6.0     39.5     34.0  UNDER
+  2025-08-22   Penrith Panthers                 Canberra Raiders                  53.5% Penrith Panthers                 Canberra Raiders                     ✗     +7.9     -4.0     42.9     36.0  UNDER
+  2025-08-23   Parramatta Eels                  Sydney Roosters                   30.7% Sydney Roosters                  Parramatta Eels                      ✗     -7.6    +20.0     44.9     40.0  UNDER
+  2025-08-23   Gold Coast Titans                NZ Warriors                       36.0% NZ Warriors                      NZ Warriors                          ✓     +1.4    -14.0     46.3     50.0   OVER
+  2025-08-23   Manly-Sea Eagles                 Dolphins                          63.5% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     +3.7    +28.0     46.9     88.0   OVER
+  2025-08-24   Wests Tigers                     North Cowboys                     38.7% North Cowboys                    North Cowboys                        ✓     +1.0     -6.0     43.9     62.0   OVER
+  2025-08-24   Newcastle Knights                Brisbane Broncos                  44.2% Brisbane Broncos                 Brisbane Broncos                     ✓     -5.2    -34.0     48.1     58.0   OVER
+  2025-08-28   Bulldogs                         Penrith Panthers                  38.6% Penrith Panthers                 Bulldogs                             ✗     -4.3    +24.0     43.0     32.0  UNDER
+  2025-08-29   Melbourne Storm                  Sydney Roosters                   68.1% Melbourne Storm                  Sydney Roosters                      ✗     +6.5    -30.0     45.0     50.0   OVER
+  2025-08-29   NZ Warriors                      Parramatta Eels                   61.1% NZ Warriors                      Parramatta Eels                      ✗     +3.8     -4.0     43.4     48.0   OVER
+  2025-08-30   North Cowboys                    Brisbane Broncos                  47.3% Brisbane Broncos                 Brisbane Broncos                     ✓     -2.3     -8.0     42.7     68.0   OVER
+  2025-08-30   St. George Dragons               Manly-Sea Eagles                  39.5% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     -6.6    -16.0     48.8     64.0   OVER
+  2025-08-30   Canberra Raiders                 Wests Tigers                      72.0% Canberra Raiders                 Canberra Raiders                     ✓     +8.8    +14.0     49.4     34.0  UNDER
+  2025-08-31   Dolphins                         Gold Coast Titans                 73.7% Dolphins                         Dolphins                             ✓     +7.5     +6.0     46.4     66.0   OVER
+  2025-08-31   Cronulla Sharks                  Newcastle Knights                 71.2% Cronulla Sharks                  Cronulla Sharks                      ✓     +8.6    +24.0     48.0     56.0   OVER
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  2025-09-04   Brisbane Broncos                 Melbourne Storm                   40.9% Melbourne Storm                  Brisbane Broncos                     ✗     -3.4    +16.0     44.4     44.0  UNDER
+  2025-09-05   Sydney Roosters                  South Sydney Rabbitohs            68.9% Sydney Roosters                  Sydney Roosters                      ✓     +5.0    +30.0     43.3     42.0  UNDER
+  2025-09-05   Manly-Sea Eagles                 NZ Warriors                       63.8% Manly-Sea Eagles                 Manly-Sea Eagles                     ✓     +2.7     +1.0     43.2     53.0   OVER
+  2025-09-06   Bulldogs                         Cronulla Sharks                   47.4% Cronulla Sharks                  Cronulla Sharks                      ✓     +0.4    -18.0     44.9     30.0  UNDER
+  2025-09-06   Gold Coast Titans                Wests Tigers                      49.7% Wests Tigers                     Gold Coast Titans                    ✗     -2.8     +8.0     45.7     64.0   OVER
+  2025-09-06   St. George Dragons               Penrith Panthers                  33.5% Penrith Panthers                 Penrith Panthers                     ✓     -6.3    -20.0     49.5     60.0   OVER
+  2025-09-07   Parramatta Eels                  Newcastle Knights                 74.0% Parramatta Eels                  Parramatta Eels                      ✓     +6.6    +56.0     45.1     76.0   OVER
+  2025-09-07   Dolphins                         Canberra Raiders                  45.7% Canberra Raiders                 Dolphins                             ✗     -3.9    +38.0     45.1     86.0   OVER
+  2025-09-12   Melbourne Storm                  Bulldogs                          72.6% Melbourne Storm                  Melbourne Storm                      ✓     +7.5     +8.0     45.4     44.0  UNDER
+  2025-09-13   Cronulla Sharks                  Sydney Roosters                   47.0% Sydney Roosters                  Cronulla Sharks                      ✗     +1.7    +10.0     40.6     30.0  UNDER
+  2025-09-13   NZ Warriors                      Penrith Panthers                  46.0% Penrith Panthers                 Penrith Panthers                     ✓     +2.0    -16.0     43.8     32.0  UNDER
+  2025-09-14   Canberra Raiders                 Brisbane Broncos                  58.8% Canberra Raiders                 Brisbane Broncos                     ✗     +2.8     -1.0     49.4     57.0   OVER
+  2025-09-20   Bulldogs                         Penrith Panthers                  42.5% Penrith Panthers                 Penrith Panthers                     ✓     -5.3    -20.0     46.0     72.0   OVER
+  2025-09-20   Canberra Raiders                 Cronulla Sharks                   54.7% Canberra Raiders                 Cronulla Sharks                      ✗     +1.8    -20.0     41.8     44.0   OVER
+  2025-09-26   Melbourne Storm                  Cronulla Sharks                   58.6% Melbourne Storm                  Melbourne Storm                      ✓     +2.8     +8.0     39.3     36.0  UNDER
+  2025-09-28   Brisbane Broncos                 Penrith Panthers                  49.1% Penrith Panthers                 Brisbane Broncos                     ✗     -3.9     +2.0     45.4     30.0  UNDER
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  2025-10-05   Melbourne Storm                  Brisbane Broncos                  66.8% Melbourne Storm                  Brisbane Broncos                     ✗     +4.1     -4.0     44.1     48.0   OVER
+
+  ───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  SUMMARY
+  H2H overall:     135/213 = 63.4%
+  High conf (≥65% or ≤35%)            66/94 = 70.2%
+  Medium conf (36-64%)                46/81 = 56.8%
+  Toss-up (45-55%)                    23/38 = 60.5%
+  Totals — actual OVER ml line:  107/213 = 50.2%
+  Totals — actual UNDER ml line: 106/213 = 49.8%
+
+===========================================================================================================================================================

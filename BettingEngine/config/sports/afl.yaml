@@ -1,0 +1,393 @@
+# config/sports/afl.yaml
+# AFL-specific pricing configuration.
+# Loaded when settings.yaml sport = "AFL".
+#
+# KEY AFL DIFFERENCES FROM NRL:
+#   - Scoring: goals (6pts) + behinds (1pt) — total scores ~80-130 per team
+#   - Average combined total: ~170-185 pts per game
+#   - Home advantage: ~8-10 pts (much stronger than NRL due to large, partisan crowds)
+#   - Margin std dev: ~30-35 pts (wider distribution than NRL)
+#   - ELO: same 1500 base; points_per_elo_point recalibrated for AFL scoring scale
+#   - 18 teams, 23 regular season rounds + 4 finals rounds
+#   - Travel: extreme — WA teams (Eagles, Dockers) travel 2700km each way
+#   - Umpires: 3 field umpires; free kick rate replaces penalty rate
+#   - No interchange cap equivalent — 23-man squad, unlimited interchange
+#   - Key positions: key forward / key defender / midfielder / ruck / small forward
+#   - State of Origin does not apply
+#   - Finals system: top 8, two weeks of qualifying/elimination rounds
+
+sport: AFL
+competition: AFL
+num_teams: 18
+season_rounds: 23
+finals_rounds: 4       # QF + EF + SF + GF (simplified)
+
+# =============================================================================
+# SCORING ENVIRONMENT
+# =============================================================================
+scoring:
+  league_avg_total: 167.5         # avg combined pts per game (2022-2025 actual: 166.2/166.7/168.9/168.8)
+  league_avg_per_team: 83.5       # = league_avg_total / 2  (old value 178/89 was pre-2018 era)
+  margin_std_dev: 32.0            # std dev of AFL margin distribution
+                                  # AFL margins are much wider than NRL
+                                  # Calibrate from: std_dev(actual - predicted) ~30-35
+  score_unit: "points"            # AFL final scores in total points (goals*6 + behinds)
+  scoring_system: "goals_behinds" # flag for display/reporting (engine uses total pts)
+
+  # AFL-specific: goal conversion context
+  # Not used in pricing engine directly but tracked in team stats
+  avg_goal_conversion_rate: 0.52  # league avg shots on goal that result in goals
+  avg_behinds_per_game: 12.0      # per team — useful for totals calibration
+
+# =============================================================================
+# TIER 1 — BASELINE
+# =============================================================================
+tier1:
+  enabled: true
+
+  # AFL home advantage is structurally larger than NRL:
+  #   - Crowds of 60-90k at MCG create significant noise/pressure advantage
+  #   - Interstate travel penalty is severe (see Tier 3 travel)
+  #   - Historical calibration: home teams win ~59% in AFL (vs ~55% in NRL)
+  # Set conservatively — Tier 3 travel handles the WA/QLD travel penalty separately.
+  home_advantage_points: 8.5
+
+  # AFL has more games before home advantage stabilises (fewer blowout anomalies)
+  min_games_for_home_advantage: 10
+  team_ha_max_delta: 3.0         # fortress grounds (MCG, SCG) can be much stronger
+
+  # ELO calibration for AFL scoring scale
+  # NRL: 100 ELO pts → 8 margin pts. AFL scores ~3.8x higher total → scale up.
+  # Calibration target: 100 ELO gap → ~12-14 pts margin in AFL
+  elo_weight: 0.35               # slightly higher ELO weight — AFL has more parity swings
+  points_per_elo_point: 0.13     # 100 ELO gap → ~13 pts expected margin
+  elo_gap_dampener_threshold: 120
+  elo_gap_dampener_factor: 0.70
+  default_elo: 1500.0
+
+  # Form: use last 5 games (same as NRL)
+  recent_form_games: 5
+  form_recency_weighted: true    # AFL coaches adjust quickly — weight recent form more
+  form_weight_points: 5.0        # larger in AFL scoring units
+
+  prior_season_weight: 0.65      # slightly lower — AFL has bigger off-season list changes
+  pfpa_max_weight: 0.65
+  pfpa_shrink_full_games: 8      # AFL round counts differently — full trust from R8
+
+  # Pythagorean: AFL exponent is closer to 2.0 (higher scoring game)
+  pythagorean_exponent: 2.0
+  pythagorean_scale: 120.0       # wider scoring range → larger scale
+  pyth_floor_ceiling_max_deviation: 0.20
+  pyth_floor_ceiling_gp_threshold: 6
+
+  season_quality_scale: 50.0     # wider range in AFL (margins 0-100 pts possible)
+  season_quality_correction_weight: 0.2
+  season_quality_win_weight: 0.6
+  season_quality_ladder_weight: 0.4
+  season_quality_num_teams: 18
+
+  attack_season_weight: 0.7
+  defence_season_weight: 0.7
+  defence_attack_bias: 0.05
+
+  totals_conservative_bias: 1.0  # larger bias given AFL totals swing more
+  close_call_class_lean_threshold: 15.0  # AFL margins — 15pts = close in AFL terms
+  close_call_class_lean_pts: 1.5
+
+  # Form normalisation in AFL scoring units
+  form_outcome_weight: 0.35
+  form_margin_weight: 0.25      # margin matters more in AFL (wider range)
+  form_scoring_weight: 0.20
+  form_conceding_weight: 0.20
+  form_margin_norm: 40.0        # ±40 pt margin saturates in AFL
+  form_scoring_norm: 25.0       # ±25 pts above avg saturates
+  form_conceding_norm: 25.0
+
+  season_quality_weight: 0.75
+  form_balance_weight: 1.0
+
+  blowout_threshold: 40.0       # AFL blowout = 40+ pts (vs NRL 20pts)
+  narrow_threshold: 18.0        # AFL close game = within 3 goals (18pts)
+  strong_opp_factor: 1.2
+  weak_opp_factor: 0.8
+  broader_form_threshold: 0.1
+  blowout_win_dampener: 0.10
+  blowout_loss_amplifier: 0.15
+  narrow_loss_vs_strong_bonus: 0.10
+  ugly_win_positive_bonus: 0.05
+  ugly_win_negative_penalty: 0.05
+  form_behavior_max_adj: 0.25
+
+  low_score_winning_threshold: 0.5
+  low_score_attack_threshold: -5.0   # AFL: below avg by 5+ pts/team = weak attack
+  low_score_defence_threshold: 5.0   # AFL: above avg by 5+ pts/team = elite defence
+  low_score_warning_adj: -0.10
+  leaky_defence_threshold: -5.0
+  leaky_attack_threshold: 5.0
+  leaky_warning_adj: -0.08
+  form_quality_max_adj: 0.15
+
+# =============================================================================
+# TIER 2 — STYLE MATCHUP
+# AFL-specific matchup families.
+# NOTE: NRL families (yardage, family_a/c/d) do NOT apply to AFL.
+# AFL Tier 2 uses contested possession, inside 50s, clearances, marks.
+# These families are stubs — calibrate after 2 seasons of AFL data.
+# =============================================================================
+tier2:
+  enabled: true
+  max_home_points_delta: 6.0    # AFL tier 2 can swing more pts
+  max_away_points_delta: 6.0
+
+  # AFL style families (NRL families disabled)
+  active_families: [contested_possession, forward_pressure, transition]
+
+  # --- Family AFL-A: Contested Possession ---
+  # Teams that win contested ball dominate possession time and field position.
+  # High contested_possessions_pg + high clearances_pg = strong style.
+  # Opposition with low CP and clearances = vulnerable.
+  contested_possession:
+    enabled: true
+    cp_weight: 0.60            # contested possessions per game
+    clearances_weight: 0.40    # clearances per game (centre + stoppage)
+    cp_norm: 8.0               # ±8 CP/game differential → ±1.0
+    clearances_norm: 3.0       # ±3 clearances/game → ±1.0
+    gate_threshold: 0.25
+    strong_pts: 5.0
+    average_pts: 3.0
+    weak_pts: 1.5
+    inner_cap: 5.0
+    outer_cap: 6.0
+    min_sample_games: 4
+
+  # --- Family AFL-B: Forward Pressure / Inside 50s ---
+  # Teams generating high inside 50s and scoring shots per inside 50 dominate.
+  # Opposition with poor defensive rebound rate = vulnerable.
+  forward_pressure:
+    enabled: true
+    inside_50s_weight: 0.50
+    scoring_shots_weight: 0.30
+    marks_inside_50_weight: 0.20
+    inside_50s_norm: 5.0       # ±5 i50s/game → ±1.0
+    scoring_shots_norm: 4.0
+    marks_i50_norm: 2.0
+    defensive_rebound_norm: 4.0  # opposition vulnerability stat
+    gate_threshold: 0.25
+    strong_pts: 5.0
+    average_pts: 3.0
+    weak_pts: 1.5
+    inner_cap: 5.0
+    outer_cap: 6.0
+    min_sample_games: 4
+
+  # --- Family AFL-C: Transition / Intercept ---
+  # Teams that intercept opposition forward thrusts and transition quickly.
+  # High intercept possessions + fast rebound → defensive solidity.
+  transition:
+    enabled: false              # stub — enable once intercept data sourced
+    intercept_weight: 0.60
+    rebound_weight: 0.40
+    intercept_norm: 3.0
+    rebound_norm: 4.0
+    gate_threshold: 0.25
+    strong_pts: 4.0
+    average_pts: 2.5
+    weak_pts: 1.0
+    inner_cap: 4.0
+    outer_cap: 5.0
+    min_sample_games: 4
+
+# =============================================================================
+# TIER 3 — SITUATIONAL
+# AFL rest/travel is different in magnitude from NRL.
+# Especially: WA teams (Eagles, Dockers) travel 2700km from Perth.
+# =============================================================================
+tier3:
+  enabled: true
+  max_home_points_delta: 6.0    # travel penalty is huge in AFL
+  max_away_points_delta: 6.0
+
+  rest:
+    enabled: true
+    # AFL rounds are typically 7 days apart; byes are common
+    short_max_days: 6
+    normal_max_days: 9
+    long_max_days: 13
+    cap: 3.0                   # larger cap than NRL — bye advantage is real in AFL
+
+    matrix:
+      short_vs_short: 0.0
+      short_vs_normal: -1.5
+      short_vs_long: -2.5
+      short_vs_bye: -3.0
+      normal_vs_short: 1.5
+      normal_vs_normal: 0.0
+      normal_vs_long: -1.5
+      normal_vs_bye: -2.5
+      long_vs_short: 2.5
+      long_vs_normal: 1.5
+      long_vs_long: 0.0
+      long_vs_bye: -1.5
+      bye_vs_short: 3.0
+      bye_vs_normal: 2.5
+      bye_vs_long: 1.5
+      bye_vs_bye: 0.0
+
+  travel:
+    enabled: true
+    # AFL travel penalty is more severe — flights, time zones, climate
+    # Perth to Melbourne = 2700km. At scale=1.8: 2700km → ~4.9 pts penalty.
+    scale: 1.8
+    cap: 5.0                   # WA travel can be ≥5 pts in AFL
+
+  compound:
+    enabled: true
+    threshold_km: 1000         # AFL: short rest + >1000km travel = compounding fatigue
+    delta: -1.0                # larger penalty than NRL
+    cap: 1.0
+
+# =============================================================================
+# TIER 4 — VENUE
+# AFL: MCG capacity 100k, Optus Stadium 60k, Adelaide Oval 53k.
+# Fortress effects are pronounced at MCG, SCG, Adelaide Oval.
+# =============================================================================
+tier4:
+  enabled: true
+  max_home_points_delta: 5.0
+  max_away_points_delta: 5.0
+  handicap_clamp: 3.0          # AFL fortress effects are larger than NRL
+  totals_clamp: 3.0
+
+# =============================================================================
+# TIER 5 — INJURY / SUSPENSION
+# AFL position importance weights — very different from NRL.
+# AFL scoring is spread across more positions; ruck and midfield dominate.
+# =============================================================================
+tier5:
+  enabled: true
+  handicap_clamp: 8.0          # larger clamp — AFL pt scale is ~4x NRL
+  totals_threshold: 6.0        # AFL totals threshold in AFL scoring units
+  totals_rate: -0.5            # pts suppression per combined injury pt above threshold (injuries suppress totals at ~half the handicap rate)
+  totals_cap: -6.0             # max totals suppression from injuries (AFL is flexible — -8.0 was too aggressive)
+
+  # Role importance in expected-points impact (AFL scoring units)
+  position_weights:
+    # Midfield — drives possession and clearances
+    midfielder:         7.0    # elite inside midfielder (e.g. Clayton Oliver, Patrick Cripps) — IMPACT_TABLE uses -3.5 hdcp for elite
+    inside_mid:         7.0    # alias — same as midfielder in engine
+    outside_mid:        5.0    # run-and-carry outside midfielder
+
+    # Ruck — controls stoppages and clearances
+    ruck:               7.5    # first-choice ruck (e.g. Max Gawn, Brodie Grundy)
+
+    # Key forward — primary goal kicker
+    key_forward:        9.0    # elite key forward (e.g. Jeremy Cameron, Tom Hawkins)
+    small_forward:      5.0    # leading/crumbing small forward
+
+    # Key defender — intercepts, clears, controls opposition key forward
+    key_defender:       7.0    # elite key defender (e.g. Harris Andrews)
+    small_defender:     4.0    # intercept defender / backline sweeper
+
+    # Wingman — run/carry, spread play
+    wingman:            4.5
+
+    # Utility / bench
+    utility:            2.0
+    medical_sub:        0.5    # AFL medical substitute
+
+  # Tier labels for injury_reports table
+  tier_labels:
+    elite:    8.0              # ≥8.0 pts impact (e.g. key forward, elite mid)
+    key:      5.0              # 5.0–7.9 pts impact
+    rotation: 2.0              # <5.0 pts impact
+
+# =============================================================================
+# TIER 6 — NOT USED IN AFL
+# Umpire adjustment removed. Rationale:
+#   - 3 rotating field umpires per game; panel rarely repeats
+#   - No reliable public data to track individual umpire tendencies
+#   - Free kick differentials are too random to model systematically
+#   - Effect size is small relative to AFL's 170-190pt scoring environment
+#   - Venue/weather/travel already capture the structural game environment
+# AFL tier structure: T1(Rules) → T2 → T3 → T4 → T5 → T6 → T7  (no umpire tier)
+# =============================================================================
+tier6:
+  enabled: false
+
+# =============================================================================
+# TIER 7 — EMOTIONAL
+# AFL emotional flags largely same as NRL; magnitudes differ.
+# =============================================================================
+tier7:
+  enabled: true
+  max_home_points_delta: 5.0   # AFL crowds amplify emotional swings more
+  max_away_points_delta: 5.0
+  max_totals_delta: 3.0
+
+  strength_multipliers:
+    minor: 0.5
+    normal: 1.0
+    major: 1.5
+
+  flag_margin_pts:
+    milestone: 1.5             # reduced from 2.0 — umpire bias ≠ actual performance uplift
+    new_coach: 2.5             # new coach bounce — AFL caretaker data: 47% vs 28% win rate
+    star_return: 3.5           # key forward returning — injury burden study supports magnitude
+    shame_blowout: 1.5         # reduced from 2.0 — no AFL-specific data, weak signal
+    farewell: 1.5              # farewell games draw strong team responses
+    personal_tragedy: 2.5      # reduced from 3.0 — no quantitative evidence
+    rivalry_derby: 1.5         # Collingwood-Essendon, Eagles-Dockers etc.
+    must_win: 2.0              # finals positioning games — MoS late-season motivation finding
+    club_drama: -2.0           # suppressive — trade/contract saga consuming org bandwidth
+
+  flag_totals_pts:
+    milestone: 0.5
+    new_coach: 0.0
+    star_return: 1.5           # key forward returning → more scoring shots
+    shame_blowout: 0.0         # reduced from 1.0 — response games are defensive, not high-scoring
+    farewell: 0.5
+    personal_tragedy: 0.0
+    rivalry_derby: 0.0         # reduced from 1.5 — derbies are empirically lower-scoring (avg ~170 vs 178)
+    must_win: 0.5              # reduced from 1.0 — weakly supported
+    club_drama: 0.0
+
+# =============================================================================
+# TIER 8 — WEATHER / ENVIRONMENTAL
+# AFL weather impact is larger — open stadiums, Melbourne weather, Perth heat.
+# Rain affects kick-pass accuracy significantly.
+# =============================================================================
+tier8:
+  weather:
+    enabled: true
+    max_total_delta: 9.5       # raised from 9.0 — heavy rain + strong wind can reach -9.5
+
+    # Rain tiers (updated — old 2mm boundary was too low; BOM daily data unreliable <5mm)
+    rain_light_max_mm: 5.0               # 0–5mm = light_rain (-4.5 pts)
+    rain_moderate_max_mm: 10.0           # 5–10mm = moderate_rain (-7.0 pts)
+    rain_heavy_threshold_mm: 10.0        # >10mm = heavy_rain (-9.0 pts; HPN 10.4mm/3-goal finding)
+
+    # Wind tiers (updated — raised to reflect AFL's higher kick-dependency vs NRL)
+    wind_moderate_kmh: 20                # 20–29 km/h = moderate_wind (-2.8 pts)
+    wind_strong_kmh: 30                  # 30–39 km/h = strong_wind (-6.0 pts, was -5.0)
+    wind_very_strong_kmh: 40             # ≥40 km/h = very_strong_wind (-8.0 pts, was -6.6)
+
+    # Dew risk thresholds (updated — dew point raised from 10°C to 12°C)
+    dew_kickoff_hour: 18                 # night game start (18:30+)
+    dew_point_threshold_c: 12.0          # raised from 10.0 — reduces false positives
+    dew_spread_threshold_c: 5.0          # temp - dew_point < 5°C (raised from 4°C)
+
+    # Cold conditions (new — winter accuracy drop documented by Champion Data)
+    cold_temp_threshold_c: 5.0           # <5°C triggers cold condition (-3.5 pts)
+
+    # MCG wind factor (judgment-based — documented swirl, no quantitative study)
+    mcg_wind_venue_factor: 1.1           # 10% uplift on wind delta at MCG
+
+  lunar:
+    enabled: false
+    max_home_points_delta: 2.0
+    max_away_points_delta: 2.0
+    max_total_delta: 3.0
+    full_moon_home_delta: 1.0
+    full_moon_total_delta: 1.0
+    new_moon_away_delta: 1.0
+    new_moon_total_delta: -1.0

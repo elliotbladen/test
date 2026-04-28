@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { Loader2, X } from 'lucide-react';
 import Link from 'next/link';
 import type { Game } from '@/components/odds/GameCard';
+import AdBanner from '@/components/ads/AdBanner';
 
 // ─── Message limit ────────────────────────────────────────────────────────────
 const FREE_LIMIT = 3;
@@ -298,8 +299,11 @@ export default function ChatPanel({
         </div>
       )}
 
+      {/* ── Chat ad ───────────────────────────────────────────────────────── */}
+      {isLoggedIn && <AdBanner variant="chat" promoIdx={2} />}
+
       {/* ── Input bar ─────────────────────────────────────────────────────── */}
-      {isLoggedIn && <div className="shrink-0 border-t border-[#1C1C1C] px-3 py-3 bg-[#0A0A0A]">
+      {isLoggedIn && <div className="shrink-0 px-3 py-3 bg-[#0A0A0A]">
         <div className="flex items-end gap-2">
           <textarea
             ref={textareaRef}

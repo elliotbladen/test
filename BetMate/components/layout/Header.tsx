@@ -58,6 +58,12 @@ export default function Header() {
           >
             Tools
           </Link>
+          <Link
+            href="/research"
+            className={`text-[13px] font-mono uppercase tracking-widest transition-colors ${pathname === '/research' ? 'text-white' : 'text-[#888888] hover:text-white'}`}
+          >
+            Research
+          </Link>
         </nav>
 
         {/* Right side */}

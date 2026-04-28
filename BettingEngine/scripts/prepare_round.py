@@ -931,8 +931,8 @@ def price_match(conn, match_row, tier2_cfg, tiers_cfg) -> dict:
         '_t7_home_flags': len(home_e_flags),
         '_t7_away_flags': len(away_e_flags),
         '_t7_debug': t7['_debug'],
-        't8_condition_type': t8_condition_type,
-        't8_dew_risk': t8_dew_risk,
+        't7_condition_type': t8_condition_type,
+        't7_dew_risk': t8_dew_risk,
     }
 
 

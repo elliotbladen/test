@@ -1,0 +1,324 @@
+# config/sports/nrl.yaml
+# NRL-specific pricing configuration.
+# Loaded when settings.yaml sport = "NRL".
+# All tier calibrations, caps, and sport-specific constants live here.
+# The generic engine reads this at runtime — no NRL assumptions in engine.py.
+
+sport: NRL
+competition: NRL
+num_teams: 17          # 17 teams in 2026
+season_rounds: 27      # regular season rounds
+finals_rounds: 4
+
+# =============================================================================
+# SCORING ENVIRONMENT
+# =============================================================================
+scoring:
+  league_avg_total: 47.0          # avg combined pts per game (recalibrate each season)
+  league_avg_per_team: 23.5       # = league_avg_total / 2
+  margin_std_dev: 12.0            # std dev of margin distribution → win probability
+  score_unit: "points"            # "points" | "goals_behinds"
+  scoring_system: "simple"        # "simple" (NRL) | "goals_behinds" (AFL)
+
+# =============================================================================
+# TIER 1 — BASELINE
+# =============================================================================
+tier1:
+  enabled: true
+
+  home_advantage_points: 3.5
+  min_games_for_home_advantage: 14
+  team_ha_max_delta: 2.0
+
+  elo_weight: 0.3
+  points_per_elo_point: 0.08
+  elo_gap_dampener_threshold: 150
+  elo_gap_dampener_factor: 0.75
+  default_elo: 1500.0
+
+  recent_form_games: 5
+  form_recency_weighted: false
+  form_weight_points: 2.5
+
+  prior_season_weight: 0.70
+  pfpa_max_weight: 0.70
+  pfpa_shrink_full_games: 10
+
+  pythagorean_exponent: 1.9
+  pythagorean_scale: 50.0
+  pyth_floor_ceiling_max_deviation: 0.25
+  pyth_floor_ceiling_gp_threshold: 8
+
+  season_quality_scale: 24.0
+  season_quality_correction_weight: 0.2
+  season_quality_win_weight: 0.6
+  season_quality_ladder_weight: 0.4
+  season_quality_num_teams: 17
+
+  attack_season_weight: 0.7
+  defence_season_weight: 0.7
+  defence_attack_bias: 0.05
+
+  totals_conservative_bias: 0.5
+  close_call_class_lean_threshold: 6.0
+  close_call_class_lean_pts: 0.5
+
+  form_outcome_weight: 0.4
+  form_margin_weight: 0.2
+  form_scoring_weight: 0.2
+  form_conceding_weight: 0.2
+  form_margin_norm: 20.0
+  form_scoring_norm: 12.0
+  form_conceding_norm: 12.0
+
+  season_quality_weight: 0.75
+  form_balance_weight: 1.0
+
+  blowout_threshold: 20.0
+  narrow_threshold: 8.0
+  strong_opp_factor: 1.2
+  weak_opp_factor: 0.8
+  broader_form_threshold: 0.1
+  blowout_win_dampener: 0.10
+  blowout_loss_amplifier: 0.15
+  narrow_loss_vs_strong_bonus: 0.10
+  ugly_win_positive_bonus: 0.05
+  ugly_win_negative_penalty: 0.05
+  form_behavior_max_adj: 0.25
+
+  low_score_winning_threshold: 0.5
+  low_score_attack_threshold: -1.5
+  low_score_defence_threshold: 2.0
+  low_score_warning_adj: -0.10
+  leaky_defence_threshold: -2.0
+  leaky_attack_threshold: 2.0
+  leaky_warning_adj: -0.08
+  form_quality_max_adj: 0.15
+
+# =============================================================================
+# TIER 2 — STYLE MATCHUP
+# NRL-specific: yardage/ruck, completion, kick metres, missed tackles
+# =============================================================================
+tier2:
+  enabled: true
+  max_home_points_delta: 4.0
+  max_away_points_delta: 4.0
+
+  # Style families active in NRL
+  active_families: [yardage, family_a, family_c, family_d]
+
+  yardage:
+    enabled: true
+    max_points_swing: 2.5
+    run_metres_weight: 0.40
+    completion_weight: 0.30
+    kick_weight: 0.20
+    ruck_weight: 0.10
+    run_metres_norm: 100.0
+    post_contact_metres_norm: 40.0
+    completion_rate_norm: 0.08
+    errors_pg_norm: 3.0
+    penalties_pg_norm: 3.0
+    kick_metres_norm: 150.0
+    ruck_speed_norm: 1.0
+    run_metres_only_weight: 0.60
+    post_contact_metres_weight: 0.40
+    completion_rate_weight: 0.50
+    errors_weight: 0.30
+    penalties_weight: 0.20
+    min_sample_games: 3
+
+  family_a:
+    enabled: true
+    completion_rate_weight: 0.35
+    kick_metres_weight: 0.25
+    errors_style_weight: 0.20
+    penalties_style_weight: 0.15
+    errors_vuln_weight: 0.60
+    penalties_vuln_weight: 0.40
+    gate_threshold: 0.25
+    strong_pts: 3.0
+    average_pts: 2.0
+    weak_pts: 1.0
+    inner_cap: 3.0
+    outer_cap: 4.0
+
+  family_c:
+    enabled: true
+    run_metres_weight: 0.70
+    errors_style_weight: 0.30
+    mt_vuln_weight: 1.00
+    gate_threshold: 0.25
+    strong_pts: 3.0
+    average_pts: 2.0
+    weak_pts: 1.0
+    inner_cap: 3.0
+    outer_cap: 4.0
+
+  family_d:
+    enabled: true
+    fdo_weight: 1.00
+    krm_weight: 1.00
+    gate_threshold: 0.25
+    strong_pts: 3.0
+    average_pts: 2.0
+    weak_pts: 1.0
+    inner_cap: 2.0
+    outer_cap: 2.5
+
+# =============================================================================
+# TIER 3 — SITUATIONAL
+# =============================================================================
+tier3:
+  enabled: true
+  max_home_points_delta: 3.0
+  max_away_points_delta: 3.0
+
+  rest:
+    enabled: true
+    short_max_days: 6
+    normal_max_days: 9
+    long_max_days: 13
+    cap: 2.0
+    matrix:
+      short_vs_short: 0.0
+      short_vs_normal: -1.0
+      short_vs_long: -1.5
+      short_vs_bye: -2.0
+      normal_vs_short: 1.0
+      normal_vs_normal: 0.0
+      normal_vs_long: -1.0
+      normal_vs_bye: -1.5
+      long_vs_short: 1.5
+      long_vs_normal: 1.0
+      long_vs_long: 0.0
+      long_vs_bye: -1.0
+      bye_vs_short: 2.0
+      bye_vs_normal: 1.5
+      bye_vs_long: 1.0
+      bye_vs_bye: 0.0
+
+  travel:
+    enabled: true
+    scale: 1.1
+    cap: 2.0
+
+  compound:
+    enabled: true
+    threshold_km: 500
+    delta: -0.5
+    cap: 0.5
+
+# =============================================================================
+# TIER 4 — VENUE
+# =============================================================================
+tier4:
+  enabled: true
+  max_home_points_delta: 3.0
+  max_away_points_delta: 3.0
+  handicap_clamp: 1.5
+  totals_clamp: 2.0
+
+# =============================================================================
+# TIER 5 — INJURY / SUSPENSION
+# NRL position importance weights (pts impact per absence)
+# =============================================================================
+tier5:
+  enabled: true
+  handicap_clamp: 3.0
+  totals_threshold: 2.5
+  totals_rate: -0.3
+  totals_cap: -3.0
+
+  # Role importance in expected-points impact
+  # These are NRL-specific position values
+  position_weights:
+    halfback:      3.5    # spine — game director
+    five_eighth:   3.0    # spine — attack organiser
+    hooker:        3.0    # spine — dummy half
+    fullback:      2.5    # spine — last line + counter-attack
+    prop:          1.5    # pack — carries and defence
+    lock:          1.5    # pack — link player
+    second_row:    1.2    # pack — carries
+    centre:        1.2    # back — defence and attack
+    winger:        1.0    # back — finisher
+    utility:       0.8    # bench versatility
+
+  # Tier labels mapped from importance (used in injury_reports table)
+  tier_labels:
+    elite:    3.0          # ≥3.0 pts impact
+    key:      1.5          # 1.5–2.9 pts impact
+    rotation: 0.5          # <1.5 pts impact
+
+# =============================================================================
+# TIER 6 — REFEREE
+# NRL: penalty tendency, set restart, game control style
+# =============================================================================
+tier6:
+  enabled: true
+  shrink: 1.0
+  handicap_clamp: 1.5
+  totals_whistle_heavy: -2.0
+  totals_flow_heavy: 2.0
+  totals_neutral: 0.0
+  totals_clamp: 2.0
+
+  # NRL referee stat columns used for bucket classification
+  stat_columns:
+    - penalty_rate
+    - set_restart_rate
+    - home_bias
+    - home_win_pct
+
+# =============================================================================
+# TIER 7 — EMOTIONAL
+# =============================================================================
+tier7:
+  enabled: true
+  max_home_points_delta: 2.5
+  max_away_points_delta: 2.5
+  max_totals_delta: 1.5
+
+  strength_multipliers:
+    minor: 0.5
+    normal: 1.0
+    major: 1.5
+
+  flag_margin_pts:
+    milestone: 0.8
+    new_coach: 1.2
+    star_return: 1.5
+    shame_blowout: 1.0
+    origin_boost: 0.6
+    farewell: 0.5
+    personal_tragedy: 1.5
+    rivalry_derby: 0.3
+    must_win: 0.8
+
+  flag_totals_pts:
+    milestone: 0.3
+    new_coach: 0.0
+    star_return: 0.5
+    shame_blowout: 0.5
+    origin_boost: 0.2
+    farewell: 0.2
+    personal_tragedy: 0.0
+    rivalry_derby: 0.5
+    must_win: 0.3
+
+# =============================================================================
+# TIER 8 — WEATHER / ENVIRONMENTAL
+# =============================================================================
+tier8:
+  weather:
+    enabled: true
+    max_total_delta: 3.0
+  lunar:
+    enabled: false
+    max_home_points_delta: 1.0
+    max_away_points_delta: 1.0
+    max_total_delta: 1.5
+    full_moon_home_delta: 0.5
+    full_moon_total_delta: 0.5
+    new_moon_away_delta: 0.5
+    new_moon_total_delta: -0.5

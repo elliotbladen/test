@@ -1,0 +1,19 @@
+[
+  {"season":2026,"round":9,"team":"Brisbane Broncos","player":"Payne Haas","role":"pack","importance_tier":"elite","status":"out","notes":"knee injury"},
+  {"season":2026,"round":9,"team":"Brisbane Broncos","player":"Corey Jensen","role":"pack","importance_tier":"rotation","status":"out","notes":"pulmonary embolism"},
+  {"season":2026,"round":9,"team":"Canberra Raiders","player":"Josh Papalii","role":"pack","importance_tier":"key","status":"out","notes":"calf injury"},
+  {"season":2026,"round":9,"team":"Canberra Raiders","player":"Hudson Young","role":"pack","importance_tier":"key","status":"out","notes":"suspension"},
+  {"season":2026,"round":9,"team":"Canberra Raiders","player":"Simi Sasagi","role":"pack","importance_tier":"rotation","status":"out","notes":"hamstring"},
+  {"season":2026,"round":9,"team":"St. George Illawarra Dragons","player":"Jaydn Su'A","role":"pack","importance_tier":"key","status":"out","notes":"3-game suspension"},
+  {"season":2026,"round":9,"team":"St. George Illawarra Dragons","player":"David Fale","role":"pack","importance_tier":"rotation","status":"out","notes":"hamstring"},
+  {"season":2026,"round":9,"team":"Dolphins","player":"Kodi Nikorima","role":"five_eighth","importance_tier":"key","status":"out","notes":"suspension"},
+  {"season":2026,"round":9,"team":"Manly-Warringah Sea Eagles","player":"Tom Trbojevic","role":"fullback","importance_tier":"elite","status":"out","notes":"hamstring"},
+  {"season":2026,"round":9,"team":"Penrith Panthers","player":"Mitch Kenny","role":"hooker","importance_tier":"key","status":"out","notes":"leg fracture and syndesmosis"},
+  {"season":2026,"round":9,"team":"Newcastle Knights","player":"Greg Marzhew","role":"other","importance_tier":"rotation","status":"out","notes":"concussion"},
+  {"season":2026,"round":9,"team":"New Zealand Warriors","player":"Charnze Nicoll-Klokstad","role":"fullback","importance_tier":"key","status":"out","notes":"neck injury"},
+  {"season":2026,"round":9,"team":"Canterbury-Bankstown Bulldogs","player":"Jacob Kiraz","role":"other","importance_tier":"rotation","status":"out","notes":"knee injury"},
+  {"season":2026,"round":9,"team":"Wests Tigers","player":"Heamasi Makasini","role":"pack","importance_tier":"rotation","status":"out","notes":""},
+  {"season":2026,"round":9,"team":"North Queensland Cowboys","player":"Harrison Edwards","role":"other","importance_tier":"rotation","status":"out","notes":""},
+  {"season":2026,"round":9,"team":"North Queensland Cowboys","player":"Viliami Vailea","role":"other","importance_tier":"rotation","status":"out","notes":""},
+  {"season":2026,"round":9,"team":"Cronulla-Sutherland Sharks","player":"Jayden Berrell","role":"other","importance_tier":"rotation","status":"out","notes":""}
+]

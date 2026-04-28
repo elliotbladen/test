@@ -11,45 +11,53 @@ import { extractH2HOdds, extractSpreadsOdds, extractTotalsOdds } from '@/lib/odd
 import { computeMovements, mergeMovements } from '@/lib/oddsMovement';
 import type { MovementMap } from '@/lib/oddsMovement';
 import { getRefForGame } from '@/lib/referees';
+import AdBanner from '@/components/ads/AdBanner';
 
-function transformEvents(events: OddsApiEvent[]): Game[] {
-  return events.map((event) => {
-    const odds        = extractH2HOdds(event);
-    const spreadsOdds = extractSpreadsOdds(event);
-    const totalsOdds  = extractTotalsOdds(event);
-    const homeShort = event.home_team.split(' ').pop()!.toUpperCase();
-    const awayShort = event.away_team.split(' ').pop()!.toUpperCase();
+function makeTransform(sport: 'NRL' | 'AFL') {
+  return function transformEvents(events: OddsApiEvent[]): Game[] {
+    return events.map((event) => {
+      const odds        = extractH2HOdds(event);
+      const spreadsOdds = extractSpreadsOdds(event);
+      const totalsOdds  = extractTotalsOdds(event);
+      const homeShort = event.home_team.split(' ').pop()!.toUpperCase();
+      const awayShort = event.away_team.split(' ').pop()!.toUpperCase();
 
-    const kickoff = new Date(event.commence_time);
-    const kickoffTime = kickoff
-      .toLocaleString('en-AU', {
-        weekday: 'short',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: true,
-        timeZone: 'Australia/Sydney',
-      })
-      .toUpperCase() + ' AEST';
+      const kickoff = new Date(event.commence_time);
+      const kickoffTime = kickoff
+        .toLocaleString('en-AU', {
+          weekday: 'short',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true,
+          timeZone: 'Australia/Sydney',
+        })
+        .toUpperCase() + ' AEST';
 
-    return {
-      id: event.id,
-      sport: 'NRL',
-      round: 'NRL 2026',
-      homeTeam: event.home_team,
-      homeShort,
-      awayTeam: event.away_team,
-      awayShort,
-      kickoffTime,
-      commenceTime: event.commence_time,
-      odds,
-      spreadsOdds,
-      totalsOdds,
-      referee: getRefForGame(event.home_team)?.name,
-      refereeBucket: getRefForGame(event.home_team)?.bucket,
-      lastUpdated: new Date().toISOString(),
-    };
-  });
+      return {
+        id: event.id,
+        sport,
+        round: `${sport} 2026`,
+        homeTeam: event.home_team,
+        homeShort,
+        awayTeam: event.away_team,
+        awayShort,
+        kickoffTime,
+        commenceTime: event.commence_time,
+        odds,
+        spreadsOdds,
+        totalsOdds,
+        ...(sport === 'NRL' && {
+          referee:       getRefForGame(event.home_team)?.name,
+          refereeBucket: getRefForGame(event.home_team)?.bucket,
+        }),
+        lastUpdated: new Date().toISOString(),
+      };
+    });
+  };
 }
+
+const transformNRL = makeTransform('NRL');
+const transformAFL = makeTransform('AFL');
 
 const SPORT_TABS = ['NRL', 'AFL'];
 
@@ -68,7 +76,7 @@ function OddsContent({
     <>
       <div className="flex items-center justify-between mb-5">
         <p className="text-[11px] font-mono text-[#555] uppercase tracking-[0.18em]">
-          NRL 2026
+          {activeSport} 2026
         </p>
         <span className="flex items-center gap-1.5 text-[11px] font-mono text-[#00C896] uppercase tracking-wide">
           <span className="w-1.5 h-1.5 rounded-full bg-[#00C896] pulse-dot" />
@@ -97,8 +105,15 @@ function OddsContent({
         </div>
       ) : (
         <div className="flex flex-col gap-3">
-          {games.map((game) => (
-            <GameCard key={game.id} game={game} userPlan="free" isLoggedIn={isLoggedIn} movements={movements} refreshCount={refreshCount} />
+          {/* Leaderboard banner — top of game list */}
+          <AdBanner variant="leaderboard" promoIdx={0} />
+
+          {games.map((game, idx) => (
+            <>
+              <GameCard key={game.id} game={game} userPlan="free" isLoggedIn={isLoggedIn} movements={movements} refreshCount={refreshCount} />
+              {/* Inline banner after game 2 */}
+              {idx === 1 && <AdBanner key="inline-ad" variant="inline" promoIdx={1} />}
+            </>
           ))}
         </div>
       )}
@@ -111,13 +126,18 @@ export default function OddsPage() {
   const [drawerOpen, setDrawerOpen]   = useState(false);
   const [chatOpen, setChatOpen]       = useState(true);
   const [isLoggedIn, setIsLoggedIn]   = useState(false);
+
   const [nrlGames, setNrlGames]       = useState<Game[]>([]);
+  const [aflGames, setAflGames]       = useState<Game[]>([]);
   const [movements, setMovements]     = useState<MovementMap>({});
   const [refreshCount, setRefreshCount] = useState(0);
   const [loading, setLoading]         = useState(false);
   const [error, setError]             = useState<string | null>(null);
+
   const prevGamesRef  = useRef<Game[]>([]);
   const movementsRef  = useRef<MovementMap>({});
+  const aflPrevRef    = useRef<Game[]>([]);
+  const aflMovRef     = useRef<MovementMap>({});
 
   useEffect(() => {
     const supabase = createClient();
@@ -133,7 +153,6 @@ export default function OddsPage() {
   useEffect(() => {
     if (activeSport !== 'NRL') return;
 
-    // Seed prevGamesRef from localStorage so movements survive page refreshes
     try {
       const stored = localStorage.getItem('betmate_nrl_odds');
       if (stored) prevGamesRef.current = JSON.parse(stored);
@@ -148,7 +167,7 @@ export default function OddsPage() {
           return r.json();
         })
         .then((events: OddsApiEvent[]) => {
-          const newGames = transformEvents(events);
+          const newGames = transformNRL(events);
           const incoming = computeMovements(prevGamesRef.current, newGames);
           const merged = mergeMovements(movementsRef.current, incoming);
           movementsRef.current = merged;
@@ -167,7 +186,49 @@ export default function OddsPage() {
     return () => clearInterval(interval);
   }, [activeSport]);
 
-  const games = activeSport === 'NRL' ? nrlGames : [];
+  useEffect(() => {
+    if (activeSport !== 'AFL') return;
+
+    try {
+      const stored = localStorage.getItem('betmate_afl_odds');
+      if (stored) aflPrevRef.current = JSON.parse(stored);
+    } catch { /* ignore */ }
+
+    function fetchAFL(isInitial = false) {
+      if (isInitial) setLoading(true);
+      setError(null);
+      fetch('/api/odds/afl')
+        .then((r) => {
+          if (!r.ok) throw new Error(`Failed to load odds (${r.status})`);
+          return r.json();
+        })
+        .then((events: OddsApiEvent[]) => {
+          const newGames = transformAFL(events);
+          const incoming = computeMovements(aflPrevRef.current, newGames);
+          const merged = mergeMovements(aflMovRef.current, incoming);
+          aflMovRef.current = merged;
+          setMovements(merged);
+          setRefreshCount((c) => c + 1);
+          aflPrevRef.current = newGames;
+          try { localStorage.setItem('betmate_afl_odds', JSON.stringify(newGames)); } catch { /* ignore */ }
+          setAflGames(newGames);
+        })
+        .catch((e) => setError(e.message))
+        .finally(() => { if (isInitial) setLoading(false); });
+    }
+
+    fetchAFL(true);
+    const interval = setInterval(() => fetchAFL(false), 60_000);
+    return () => clearInterval(interval);
+  }, [activeSport]);
+
+  // Reset movements + error when switching sports
+  useEffect(() => {
+    setError(null);
+    setMovements(activeSport === 'NRL' ? movementsRef.current : aflMovRef.current);
+  }, [activeSport]);
+
+  const games = activeSport === 'NRL' ? nrlGames : aflGames;
 
   return (
     <div className="flex flex-col" style={{ height: 'calc(100dvh - 56px)' }}>

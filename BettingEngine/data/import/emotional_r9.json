@@ -1,0 +1,71 @@
+[
+  {
+    "season": 2026,
+    "round": 9,
+    "team": "New Zealand Warriors",
+    "flag_type": "milestone",
+    "flag_strength": "major",
+    "player_name": "Chanel Harris-Tavita",
+    "notes": "100th NRL game. ANZAC Day match in Wellington — first time Warriors bring ANZAC Round to Wellington, sold-out 34,500 crowd."
+  },
+  {
+    "season": 2026,
+    "round": 9,
+    "team": "Melbourne Storm",
+    "flag_type": "milestone",
+    "flag_strength": "normal",
+    "player_name": "Jack Hetherington",
+    "notes": "100th NRL game."
+  },
+  {
+    "season": 2026,
+    "round": 9,
+    "team": "Melbourne Storm",
+    "flag_type": "milestone",
+    "flag_strength": "minor",
+    "player_name": "Shawn Blore",
+    "notes": "50th Storm appearance."
+  },
+  {
+    "season": 2026,
+    "round": 9,
+    "team": "St. George Illawarra Dragons",
+    "flag_type": "milestone",
+    "flag_strength": "normal",
+    "player_name": "Kade Reed",
+    "notes": "NRL debut."
+  },
+  {
+    "season": 2026,
+    "round": 9,
+    "team": "Sydney Roosters",
+    "flag_type": "milestone",
+    "flag_strength": "normal",
+    "player_name": "Angus Crichton",
+    "notes": "150th NRL appearance."
+  },
+  {
+    "season": 2026,
+    "round": 9,
+    "team": "St. George Illawarra Dragons",
+    "flag_type": "must_win",
+    "flag_strength": "major",
+    "notes": "0-7 record through Round 8. Desperate for first win of 2026."
+  },
+  {
+    "season": 2026,
+    "round": 9,
+    "team": "St. George Illawarra Dragons",
+    "flag_type": "rivalry_derby",
+    "flag_strength": "normal",
+    "notes": "ANZAC Day Sydney rivalry clash vs Roosters."
+  },
+  {
+    "season": 2026,
+    "round": 9,
+    "team": "Sydney Roosters",
+    "flag_type": "rivalry_derby",
+    "flag_strength": "normal",
+    "notes": "ANZAC Day Sydney rivalry clash vs Dragons."
+  }
+]

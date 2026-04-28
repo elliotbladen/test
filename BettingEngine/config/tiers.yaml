@@ -625,7 +625,11 @@ tier4_venue:
 tier5_injury:
   enabled: true
   handicap_clamp: 3.0        # max ± shift to handicap from injury differential
-  totals_threshold: 4.0      # combined pts above this trigger totals suppression
+  totals_threshold: 2.5      # combined pts above this trigger totals suppression
+                             # CALIBRATION NOTE (2026-04-24): lowered 4.0 → 2.5 so a single
+                             # elite absence (e.g. Trbojevic, Haas) registers a small totals
+                             # suppression instead of zero. Previous threshold let 3.0pt elite
+                             # outs pass through completely undetected.
   totals_rate: -0.3          # pts suppression per combined injury pt above threshold
   totals_cap: -3.0           # max totals suppression from injuries
 

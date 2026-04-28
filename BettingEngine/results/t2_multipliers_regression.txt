@@ -1,0 +1,141 @@
+Loading data...
+  Games (reg season, 2013-2023): 2141
+  Footywire rows: 234, seasons: 2013-2025
+
+Building style differentials...
+  Games with complete style data: 2141  (skipped 0 missing)
+  Margin range: -138 – 171  mean=5.8
+
+──────────────────────────────────────────────────────────────────────────
+Correlation of style differentials with final margin (home perspective):
+──────────────────────────────────────────────────────────────────────────
+  ELO difference                      r = +0.497
+  CP/game difference                  r = +0.445
+  Clearances/game difference          r = +0.260
+  Inside 50s/game difference          r = +0.565
+  Rebound 50s/game difference         r = -0.305
+  Marks i50/game difference           r = +0.497
+  Goal conv % difference              r = +0.285
+
+══════════════════════════════════════════════════════════════════════════
+OLS REGRESSION: margin ~ elo_diff + style_diffs
+══════════════════════════════════════════════════════════════════════════
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                 margin   R-squared:                       0.383
+Model:                            OLS   Adj. R-squared:                  0.381
+Method:                 Least Squares   F-statistic:                     189.4
+Date:                Sat, 25 Apr 2026   Prob (F-statistic):          1.26e-218
+Time:                        14:56:58   Log-Likelihood:                -10508.
+No. Observations:                2141   AIC:                         2.103e+04
+Df Residuals:                    2133   BIC:                         2.108e+04
+Df Model:                           7                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          5.7342      0.709      8.087      0.000       4.344       7.125
+elo_diff       0.0511      0.007      6.814      0.000       0.036       0.066
+cp_diff        0.5031      0.126      3.998      0.000       0.256       0.750
+cl_diff        0.1575      0.277      0.568      0.570      -0.386       0.701
+i50_diff       2.0410      0.268      7.610      0.000       1.515       2.567
+r50_diff       0.0389      0.267      0.146      0.884      -0.485       0.563
+mi50_diff      2.5796      0.558      4.619      0.000       1.485       3.675
+gconv_diff   141.4163     21.887      6.461      0.000      98.495     184.338
+==============================================================================
+Omnibus:                        0.420   Durbin-Watson:                   2.018
+Prob(Omnibus):                  0.811   Jarque-Bera (JB):                0.399
+Skew:                          -0.033   Prob(JB):                        0.819
+Kurtosis:                       3.008   Cond. No.                     4.08e+03
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 4.08e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+══════════════════════════════════════════════════════════════════════════
+STYLE-ONLY REGRESSION: margin_residual ~ style_diffs (ELO partialled out)
+══════════════════════════════════════════════════════════════════════════
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:           margin_resid   R-squared:                       0.104
+Model:                            OLS   Adj. R-squared:                  0.101
+Method:                 Least Squares   F-statistic:                     41.15
+Date:                Sat, 25 Apr 2026   Prob (F-statistic):           1.14e-47
+Time:                        14:56:58   Log-Likelihood:                -10603.
+No. Observations:                2141   AIC:                         2.122e+04
+Df Residuals:                    2134   BIC:                         2.126e+04
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0225      0.741     -0.030      0.976      -1.476       1.431
+cp_diff        0.2072      0.130      1.597      0.110      -0.047       0.462
+cl_diff        0.5960      0.288      2.070      0.039       0.031       1.161
+i50_diff       1.4934      0.277      5.382      0.000       0.949       2.038
+r50_diff       0.4587      0.278      1.652      0.099      -0.086       1.003
+mi50_diff      0.8013      0.569      1.408      0.159      -0.314       1.917
+gconv_diff    46.9613     21.793      2.155      0.031       4.224      89.698
+==============================================================================
+Omnibus:                        0.404   Durbin-Watson:                   2.006
+Prob(Omnibus):                  0.817   Jarque-Bera (JB):                0.326
+Skew:                          -0.001   Prob(JB):                        0.850
+Kurtosis:                       3.060   Cond. No.                         306.
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+══════════════════════════════════════════════════════════════════════════
+PRACTICAL T2 MULTIPLIERS
+══════════════════════════════════════════════════════════════════════════
+
+Interpretation: these are points-per-unit-differential in each stat.
+A +1 unit advantage in cp_diff means home team averages 1 more CP/game.
+
+  Stat differential                      Coeff   t-stat        p   sig  Notes
+  ----------------------------------- --------  -------  -------  ----  -----
+  ELO difference                         0.051     6.81   0.0000   ***  → 0.051 pts/ELO pt
+  CP/game difference                     0.503     4.00   0.0001   ***  → 0.50 pts per CP/game advantage
+  Clearances/game difference             0.158     0.57   0.5698        → 0.16 pts per clearance/game advantage
+  Inside 50s/game difference             2.041     7.61   0.0000   ***  → 2.04 pts per inside50/game advantage
+  Rebound 50s/game difference            0.039     0.15   0.8843        → 0.04 pts per rebound50/game advantage
+  Marks i50/game difference              2.580     4.62   0.0000   ***  → 2.58 pts per marks-i50/game advantage
+  Goal conv % difference               141.416     6.46   0.0000   ***  → 141.4 pts per 1.0 (100%) goal-conv advantage
+
+  Full model R² = 0.383  (adj R² = 0.381)
+  ELO-only  R² = 0.247
+  Style vars add 0.136 incremental R² on top of ELO
+
+──────────────────────────────────────────────────────────────────────────
+Scale context: typical matchup differentials (std dev across all games):
+──────────────────────────────────────────────────────────────────────────
+  CP/game difference                  std=  9.3  → typical pts impact:  4.7
+  Clearances/game difference          std=  3.2  → typical pts impact:  0.5
+  Inside 50s/game difference          std=  5.4  → typical pts impact: 11.1
+  Rebound 50s/game difference         std=  3.2  → typical pts impact:  0.1
+  Marks i50/game difference           std=  2.1  → typical pts impact:  5.5
+  Goal conv % difference              std=  0.0  → typical pts impact:  5.1
+
+══════════════════════════════════════════════════════════════════════════
+RECOMMENDED T2_CONFIG VALUES  (only statistically significant vars)
+══════════════════════════════════════════════════════════════════════════
+
+  cp_diff              → pts_per_unit = 0.5  (raw coeff = 0.503, p=0.000)
+  i50_diff             → pts_per_unit = 2.0  (raw coeff = 2.041, p=0.000)
+  mi50_diff            → pts_per_unit = 2.6  (raw coeff = 2.580, p=0.000)
+  gconv_diff           → pts_per_unit = 141.4  (raw coeff = 141.416, p=0.000)
+
+  NOT recommended (p >= 0.10, use 0.0):
+    cl_diff              coeff = 0.158, p=0.570
+    r50_diff             coeff = 0.039, p=0.884
+
+Notes:
+  - Apply as: style_pts_delta = Σ(coeff_i × (home_stat_i - away_stat_i))
+  - Use season averages as proxy for 'entering the match' style rating
+  - Cap total T2 adjustment at ±6 pts handicap to prevent over-fitting
+  - These are additive to the ELO baseline (ELO already captures quality)

@@ -1,0 +1,81 @@
+
+=================================================================================================================================================
+  NRL 2026 — Round 9  (ANZAC Round)  |  Full Tier Breakdown
+=================================================================================================================================================
+
+  HANDICAP  (home perspective, +ve = home favoured)
+  Game                                           T1     T2     T3     T4     T5     T6   T7emo  Margin    Hcap     H%   H(fair)   A(fair)    H@105    A@105
+  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Tigers vs Raiders                            -1.3   -4.0   +0.2   +1.5   +3.0   +1.5    +0.0    +0.9    -0.9  53.0%     1.887     2.127    1.797    2.026
+  Cowboys vs Sharks                            -3.1   -0.0   +0.9   +1.5   -0.5   +0.0    +0.0    -1.2    +1.2  46.0%     2.173     1.853    2.070    1.765
+  Broncos vs Bulldogs                          +6.8   +0.0   +1.3   +1.5   -3.0   +0.0    +0.0    +6.7    -6.7  70.9%     1.411     3.434    1.344    3.270
+  Dragons vs Roosters                          -7.7   +0.0   +0.9   -1.5   -2.0   -1.5    +1.2   -10.5   +10.5  18.9%     5.305     1.232    5.052    1.173
+  Warriors vs Dolphins                         +6.5   +0.0   +2.0   +0.0   +0.0   +0.0    +1.2    +9.7    -9.7  79.1%     1.265     4.776    1.205    4.549
+  Storm vs Rabbitohs                          +11.4   +4.0   +0.8   +1.5   +0.0   +0.0    +1.2   +18.9   -18.9  94.2%     1.061    17.361    1.010   16.534
+  Knights vs Panthers                         -10.9   +0.0   +0.2   -0.3   +1.0   +0.0    +0.0   -10.0   +10.0  20.0%     5.000     1.250    4.762    1.190
+  Eagles vs Eels                               +8.6   +0.0   +1.0   +1.5   -3.0   +1.5    +0.0    +9.6    -9.6  78.8%     1.269     4.719    1.209    4.494
+
+  TOTALS  (total expected points)
+  Game                                           T1     T2     T3     T4     T5     T6   T7emo    T8wx   Total    Line   O/U@105
+  ─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Tigers vs Raiders                            49.2   -1.5   -1.5   +0.2   +0.0   +2.0    +0.0    +0.0    48.3    48.3     1.905  clear
+  Cowboys vs Sharks                            51.6   +0.0   -1.0   +2.0   +0.0   +0.0    +0.0    +0.0    52.6    52.6     1.905  clear
+  Broncos vs Bulldogs                          41.4   +0.0   -2.0   +1.0   +0.0   +0.0    +0.0    +0.0    40.4    40.4     1.905  clear
+  Dragons vs Roosters                          47.8   +0.0   -0.8   -0.1   +0.0   +2.0    +1.5    +0.0    50.4    50.4     1.905  clear
+  Warriors vs Dolphins                         53.3   +0.0   -1.0   +0.0   +0.0   +0.0    +0.5    -3.0    49.8    49.8     1.905  strong_wind [dew]
+  Storm vs Rabbitohs                           53.1   +1.5   -0.0   -2.0   +0.0   +0.0    +0.5    +0.0    53.1    53.1     1.905  clear
+  Knights vs Panthers                          47.3   +0.0   +0.0   -2.0   +0.0   +0.0    +0.0    +0.0    45.3    45.3     1.905  clear
+  Eagles vs Eels                               57.6   +0.0   +0.0   -0.7   +0.0   +2.0    +0.0    +0.0    59.0    59.0     1.905  clear
+
+  T5 INJURIES
+  Team                               Player                     Tier       Role             Notes
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  Brisbane Broncos                   Payne Haas                 elite      pack             knee injury
+  Brisbane Broncos                   Corey Jensen               rotation   pack             pulmonary embolism
+  Canberra Raiders                   Josh Papalii               key        pack             calf injury
+  Canberra Raiders                   Hudson Young               key        pack             suspension
+  Canberra Raiders                   Simi Sasagi                rotation   pack             hamstring
+  Canterbury-Bankstown Bulldogs      Jacob Kiraz                rotation   other            knee injury
+  Cronulla-Sutherland Sharks         Jayden Berrell             rotation   other            
+  Dolphins                           Kodi Nikorima              key        five_eighth      suspension
+  Manly-Warringah Sea Eagles         Tom Trbojevic              elite      fullback         hamstring
+  New Zealand Warriors               Charnze Nicoll-Klokstad    key        fullback         neck injury
+  Newcastle Knights                  Greg Marzhew               rotation   other            concussion
+  North Queensland Cowboys           Harrison Edwards           rotation   other            
+  North Queensland Cowboys           Viliami Vailea             rotation   other            
+  Penrith Panthers                   Mitch Kenny                key        hooker           leg fracture and syndesmosis
+  St. George Illawarra Dragons       Jaydn Su'A                 key        pack             3-game suspension
+  St. George Illawarra Dragons       David Fale                 rotation   pack             hamstring
+  Wests Tigers                       Heamasi Makasini           rotation   pack             
+
+  T5 MATCH IMPACT
+  Game                                                HomePts  AwayPts   HcapΔ     TotΔ
+  ──────────────────────────────────────────────────────────────────────────────────
+  Wests Tigers vs Canberra Raiders                       +0.5     +3.5    +3.0     +0.0
+  North Queensland Cowboys vs Cronulla-Sutherland Sharks     +1.0     +0.5    -0.5     +0.0
+  Brisbane Broncos vs Canterbury-Bankstown Bulldogs      +3.5     +0.5    -3.0     +0.0
+  St. George Illawarra Dragons vs Sydney Roosters        +2.0     +0.0    -2.0     +0.0
+  New Zealand Warriors vs Dolphins                       +1.5     +1.5    +0.0     +0.0
+  Newcastle Knights vs Penrith Panthers                  +0.5     +1.5    +1.0     +0.0
+  Manly-Warringah Sea Eagles vs Parramatta Eels          +3.0     +0.0    -3.0     +0.0
+
+  T7 EMOTIONAL FLAGS
+  Game                                     Team                             Flag               Str     Player                       MargΔ     TotΔ  Notes
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Dragons vs Roosters                      St. George Illawarra Dragons     milestone          normal  Kade Reed                    +0.80    +0.30  NRL debut.
+  Dragons vs Roosters                      Sydney Roosters                  milestone          normal  Angus Crichton               +0.80    +0.30  150th NRL appearance.
+  Dragons vs Roosters                      St. George Illawarra Dragons     must_win           major   —                            +1.20    +0.45  0-7 record through Round 8. Desperate for first win of 2026.
+  Dragons vs Roosters                      St. George Illawarra Dragons     rivalry_derby      normal  —                            +0.30    +0.50  ANZAC Day Sydney rivalry clash vs Roosters.
+  Dragons vs Roosters                      Sydney Roosters                  rivalry_derby      normal  —                            +0.30    +0.50  ANZAC Day Sydney rivalry clash vs Dragons.
+  Warriors vs Dolphins                     New Zealand Warriors             milestone          major   Chanel Harris-Tavita         +1.20    +0.45  100th NRL game. ANZAC Day match in Wellington — first time W
+  Storm vs Rabbitohs                       Melbourne Storm                  milestone          normal  Jack Hetherington            +0.80    +0.30  100th NRL game.
+  Storm vs Rabbitohs                       Melbourne Storm                  milestone          minor   Shawn Blore                  +0.40    +0.15  50th Storm appearance.
+
+  T7 NET IMPACT PER GAME
+  Game                                                  HcapΔ      TotΔ
+  ────────────────────────────────────────────────────────────────────────
+  St. George Illawarra Dragons vs Sydney Roosters       +1.20     +1.50
+  New Zealand Warriors vs Dolphins                      +1.20     +0.45
+  Melbourne Storm vs South Sydney Rabbitohs             +1.20     +0.45
+
+=================================================================================================================================================

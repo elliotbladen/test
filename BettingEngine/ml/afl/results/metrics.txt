@@ -1,0 +1,26 @@
+AFL ML — Training Metrics
+==================================================
+
+margin_model:
+  val_mae: 28.309
+  test_mae: 27.939
+  val_rmse: 36.683
+  test_rmse: 35.883
+  val_dir_acc: 0.588
+  test_dir_acc: 0.7083
+
+total_model:
+  val_mae: 23.357
+  test_mae: 25.051
+  val_rmse: 30.514
+  test_rmse: 31.32
+  val_dir_acc: 1.0
+  test_dir_acc: 1.0
+
+h2h_model:
+  val_acc: 0.6667
+  test_acc: 0.6852
+  val_logloss: 0.6271
+  test_logloss: 0.5987
+  val_brier: 0.2174
+  test_brier: 0.2051

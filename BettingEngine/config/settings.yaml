@@ -1,12 +1,28 @@
 # settings.yaml
-# General application settings for the NRL pricing engine.
+# General application settings for the pricing engine.
+# Supports multiple sports. Set active_sport to switch between NRL / AFL / EPL etc.
+# Sport-specific tier calibrations live in config/sports/{sport_lower}.yaml
 
 app:
-  name: "NRL Pricing Engine"
-  version: "1.0.0"
-  sport: "NRL"
-  competition: "NRL"
-  season: 2025
+  name: "Sports Pricing Engine"
+  version: "1.1.0"
+
+  # ── Active sport ──────────────────────────────────────────────────────────
+  # Change this to switch the entire engine to a different sport.
+  # Must match a filename in config/sports/ (case-insensitive).
+  # Valid values: NRL | AFL
+  active_sport: "NRL"
+
+  # ── Per-sport season config ───────────────────────────────────────────────
+  sports:
+    NRL:
+      competition: "NRL"
+      season: 2026
+      config_file: "config/sports/nrl.yaml"
+    AFL:
+      competition: "AFL"
+      season: 2026
+      config_file: "config/sports/afl.yaml"
 
 database:
   engine: "sqlite"  # sqlite | postgresql

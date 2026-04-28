@@ -1,0 +1,54 @@
+
+Loading models and data...
+Style data: R7 snapshot  (18 teams)
+
+========================================================================================================================
+  AFL R7 2026 — T1 (ML) + T2 (Style)  |  Fair Prices
+========================================================================================================================
+
+  Matchup                                             ELO   T1 Mrg  T2 Hcp  FinalMrg  FinalTot   HomeOdds  AwayOdds
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Bulldogs vs Swans                                   +49    +23.7    -7.0     +16.7     142.9       1.47      3.11
+  Tigers vs Demons                                   -153    -13.0    -7.0     -20.0     154.5       3.46      1.41
+  Hawks vs Suns                                       +21    +18.3    +3.3     +21.6     151.4       1.38      3.64
+  Bombers vs Magpies                                 -185    -11.7    -4.4     -16.1     169.5       3.05      1.49
+  Power vs Cats                                      -110     +3.1    -7.0      -3.9     143.4       2.19      1.84
+  Dockers vs Blues                                    +73    +28.2    +2.9     +31.1     145.6       1.24      5.17
+  Saints vs Eagles                                   +149    +49.1    +6.5     +55.6     168.1       1.07     16.34
+  Lions vs Crows                                      +76    +39.4    -2.2     +37.2     154.0       1.18      6.63
+  Giants vs Kangaroos                                +176    +52.3    -1.7     +50.6     157.6       1.09     12.50
+
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Matchup                                          A:Cont   B:Terr    C:Fwd    D:Def  E:Press  T2 total
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Bulldogs vs Swans                                 -0.52     -0.81     -4.00     -3.00     +1.08   -7.00
+  Tigers vs Demons                                  -2.94     -0.65     -4.00     -0.40     -1.42   -7.00
+  Hawks vs Suns                                     +0.75     +0.90     -0.70     +0.67     +1.70   +3.32
+  Bombers vs Magpies                                +0.09     -0.41     -2.10     -2.17     +0.19   -4.40
+  Power vs Cats                                     -2.61     -0.15     -1.96     -1.65     -0.83   -7.00
+  Dockers vs Blues                                  -0.03     +1.37     +1.48     -0.60     +0.73   +2.94
+  Saints vs Eagles                                  +1.07     +1.19     +2.32     +2.28     -0.39   +6.47
+  Lions vs Crows                                    +0.31     -0.02     +0.67     -3.00     -0.20   -2.24
+  Giants vs Kangaroos                               -0.44     -0.41     -1.85     +2.92     -1.92   -1.69
+
+  Positive margin = home team favoured
+  T2 family scores = home z-score minus away z-score, mapped to pts
+========================================================================================================================
+
+================================================================================
+  AFL R7 2026 — H2H FAIR ODDS
+================================================================================
+
+  Home                              Odds  Away                              Odds        Line  Fav
+  ──────────────────────────────────────────────────────────────────────────────
+  Western Bulldogs                  1.47  Sydney Swans                      3.11  Bulldogs -16.7
+  Richmond Tigers                   3.46  Melbourne Demons                  1.41  Demons -20.0
+  Hawthorn Hawks                    1.38  Gold Coast Suns                   3.64  Hawks -21.6
+  Essendon Bombers                  3.05  Collingwood Magpies               1.49  Magpies -16.1
+  Port Adelaide Power               2.19  Geelong Cats                      1.84   Cats -3.9
+  Fremantle Dockers                 1.24  Carlton Blues                     5.17  Dockers -31.1
+  St Kilda Saints                   1.07  West Coast Eagles                16.34  Saints -55.6
+  Brisbane Lions                    1.18  Adelaide Crows                    6.63  Lions -37.2
+  Greater Western Sydney Giants     1.09  North Melbourne Kangaroos        12.50  Giants -50.6
+
+================================================================================
