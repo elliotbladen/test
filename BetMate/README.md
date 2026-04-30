@@ -51,6 +51,8 @@ Open [http://localhost:3000](http://localhost:3000).
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key |
 | `NEXT_PUBLIC_ODDS_API_KEY` | The Odds API key (post-500 visitors) |
 | `ODDS_SCRAPER_TARGET` | `oddscomparison` (default) or `oddsapi` |
+| `NRL_STYLE_STATS_URL` | Optional override for the weekly NRL team-stat source. Blank uses Fox Sports attack/kicking/defence pages |
+| `NRL_ROUND_ONE_MONDAY` | Monday after Round 1, used to infer the current completed round |
 
 ---
 
@@ -114,6 +116,36 @@ The scraper targets [OddsComparison](https://www.oddscomparison.com.au/nrl/) wit
 3. Implement `get_odds_oddsapi()` in `oddscomparison.py` (see TODO comment)
 
 Supabase schema does not change.
+
+---
+
+## NRL style-stat scraper
+
+Stores weekly T2 style inputs in BetMate without showing them in the UI yet.
+By default it scrapes the Fox Sports NRL team stats pages for attack, kicking, and defence/discipline averages.
+
+Output paths:
+
+```text
+data/nrl/style-stats/raw/YYYY/round-N.json
+data/nrl/style-stats/processed/YYYY/round-N-style-stats.csv
+data/nrl/style-stats/processed/latest-style-stats.csv
+data/nrl/style-stats/logs/scrape.log
+```
+
+Manual run:
+
+```powershell
+uv run --with requests --with beautifulsoup4 python lib/scraper/nrl_style_stats.py --season 2026 --round 10
+```
+
+Install the local Windows scheduled task for Monday 6:00 PM:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install_nrl_style_stats_task.ps1 -Season 2026
+```
+
+The scraper retries 4 times, waiting 10 minutes between attempts. The task can wake the computer, but the computer still needs power and internet access. If `--round` is omitted, the scraper infers the completed round from `NRL_ROUND_ONE_MONDAY`.
 
 ---
 

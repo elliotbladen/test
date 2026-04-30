@@ -1,0 +1,4 @@
+.claude/
+**/.pytest_cache/
+**/~$*.xlsx
+BetMate/data/nrl/style-stats/logs/*.log

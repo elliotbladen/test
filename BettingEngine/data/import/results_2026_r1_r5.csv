@@ -1,4 +1,36 @@
 season,round,match_date,kickoff_time,home_team,away_team,venue,home_score,away_score,is_final,is_overtime
+2026,9,2026-04-26,16:05,Manly-Warringah Sea Eagles,Parramatta Eels,4 Pines Park,33,18,1,1
+2026,9,2026-04-26,14:00,Newcastle Knights,Penrith Panthers,McDonald Jones Stadium,12,44,1,1
+2026,9,2026-04-25,20:10,Melbourne Storm,South Sydney Rabbitohs,AAMI Park,6,48,1,1
+2026,9,2026-04-25,20:05,New Zealand Warriors,Dolphins,Hnry Stadium,20,18,1,1
+2026,9,2026-04-25,16:00,St. George Illawarra Dragons,Sydney Roosters,Allianz Stadium,16,62,1,1
+2026,9,2026-04-24,20:00,Brisbane Broncos,Canterbury-Bankstown Bulldogs,Suncorp Stadium,32,12,1,1
+2026,9,2026-04-24,18:00,North Queensland Cowboys,Cronulla-Sutherland Sharks,QCB Stadium,46,34,1,1
+2026,9,2026-04-23,19:50,Wests Tigers,Canberra Raiders,Leichhardt Oval,33,14,1,1
+2026,8,2026-04-19,16:05,Parramatta Eels,Canterbury-Bankstown Bulldogs,CommBank Stadium,38,20,1,1
+2026,8,2026-04-19,14:00,Sydney Roosters,Newcastle Knights,Allianz Stadium,38,24,1,1
+2026,8,2026-04-18,19:30,Wests Tigers,Brisbane Broncos,CommBank Stadium,20,21,1,1
+2026,8,2026-04-18,17:30,South Sydney Rabbitohs,St. George Illawarra Dragons,Accor Stadium,30,12,1,1
+2026,8,2026-04-18,17:00,New Zealand Warriors,Gold Coast Titans,Go Media Stadium,28,20,1,1
+2026,8,2026-04-17,19:30,Dolphins,Penrith Panthers,TIO Stadium,22,23,1,1
+2026,8,2026-04-17,18:00,Canberra Raiders,Melbourne Storm,GIO Stadium,26,22,1,1
+2026,8,2026-04-16,19:50,North Queensland Cowboys,Manly-Warringah Sea Eagles,QCB Stadium,6,38,1,1
+2026,7,2026-04-12,16:05,Wests Tigers,Newcastle Knights,Campbelltown Stadium,42,22,1,1
+2026,7,2026-04-12,14:00,Parramatta Eels,Gold Coast Titans,CommBank Stadium,10,52,1,1
+2026,7,2026-04-11,19:30,Melbourne Storm,New Zealand Warriors,AAMI Park,14,38,1,1
+2026,7,2026-04-11,15:30,Cronulla-Sutherland Sharks,Sydney Roosters,Optus Stadium,22,34,1,1
+2026,7,2026-04-11,13:00,South Sydney Rabbitohs,Canberra Raiders,Optus Stadium,34,36,1,1
+2026,7,2026-04-10,20:00,Brisbane Broncos,North Queensland Cowboys,Suncorp Stadium,31,35,1,1
+2026,7,2026-04-10,18:00,St. George Illawarra Dragons,Manly-Warringah Sea Eagles,WIN Stadium,18,28,1,1
+2026,7,2026-04-09,19:50,Canterbury-Bankstown Bulldogs,Penrith Panthers,Accor Stadium,32,16,1,1
+2026,7,2026-04-06,16:05,Parramatta Eels,Wests Tigers,CommBank Stadium,20,22,1,1
+2026,6,2026-04-05,16:05,Newcastle Knights,Canberra Raiders,McDonald Jones Stadium,32,12,1,1
+2026,6,2026-04-05,14:00,Cronulla-Sutherland Sharks,New Zealand Warriors,Ocean Protect Stadium,36,22,1,1
+2026,6,2026-04-04,18:30,Gold Coast Titans,Brisbane Broncos,Cbus Super Stadium,12,26,1,1
+2026,6,2026-04-04,16:30,St. George Illawarra Dragons,North Queensland Cowboys,Jubilee Stadium,0,32,1,1
+2026,6,2026-04-03,19:00,Penrith Panthers,Melbourne Storm,CommBank Stadium,50,10,1,1
+2026,6,2026-04-03,15:05,South Sydney Rabbitohs,Canterbury-Bankstown Bulldogs,Accor Stadium,32,24,1,1
+2026,6,2026-04-02,19:00,Dolphins,Manly-Warringah Sea Eagles,Kayo Stadium,18,52,1,1
 2026,5,2026-03-29,17:15,Gold Coast Titans,St. George Illawarra Dragons,Cbus Super Stadium,22,14,1,1
 2026,5,2026-03-29,16:05,Canberra Raiders,Cronulla-Sutherland Sharks,GIO Stadium,22,34,1,1
 2026,5,2026-03-28,18:35,North Queensland Cowboys,Melbourne Storm,QCB Stadium,28,24,1,1
@@ -10,7 +42,7 @@ season,round,match_date,kickoff_time,home_team,away_team,venue,home_score,away_s
 2026,4,2026-03-22,17:15,North Queensland Cowboys,Gold Coast Titans,QCB Stadium,30,16,1,1
 2026,4,2026-03-22,16:05,Parramatta Eels,St. George Illawarra Dragons,CommBank Stadium,30,20,1,1
 2026,4,2026-03-21,19:35,South Sydney Rabbitohs,Wests Tigers,Polytec Stadium,20,16,1,1
-2026,4,2026-03-21,17:30,Cronulla-Sutherland Sharks,Dolphins,Sharks Stadium,10,38,1,1
+2026,4,2026-03-21,17:30,Cronulla-Sutherland Sharks,Dolphins,Ocean Protect Stadium,10,38,1,1
 2026,4,2026-03-21,15:00,Newcastle Knights,New Zealand Warriors,McDonald Jones Stadium,12,38,1,1
 2026,4,2026-03-20,20:00,Melbourne Storm,Brisbane Broncos,AAMI Park,14,18,1,1
 2026,4,2026-03-20,18:00,Sydney Roosters,Penrith Panthers,Allianz Stadium,4,40,1,1
@@ -25,7 +57,7 @@ season,round,match_date,kickoff_time,home_team,away_team,venue,home_score,away_s
 2026,3,2026-03-12,19:00,Brisbane Broncos,Parramatta Eels,Suncorp Stadium,32,40,1,1
 2026,2,2026-03-08,16:05,Dolphins,South Sydney Rabbitohs,Suncorp Stadium,30,40,1,1
 2026,2,2026-03-07,19:35,Manly-Warringah Sea Eagles,Canberra Raiders,4 Pines Park,28,29,1,1
-2026,2,2026-03-07,17:30,Cronulla-Sutherland Sharks,Gold Coast Titans,Sharks Stadium,50,10,1,1
+2026,2,2026-03-07,17:30,Cronulla-Sutherland Sharks,Gold Coast Titans,Ocean Protect Stadium,50,10,1,1
 2026,2,2026-03-06,19:00,Brisbane Broncos,Penrith Panthers,Suncorp Stadium,0,26,1,1
 2026,2,2026-03-06,20:00,New Zealand Warriors,Sydney Roosters,Go Media Stadium,42,18,1,1
 2026,2,2026-03-05,20:00,Melbourne Storm,Parramatta Eels,AAMI Park,52,4,1,1
