@@ -55,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`dark ${roboto.variable} ${montserrat.variable}`}>
-      <body className="min-h-[100dvh] bg-[#0D0D0D] text-white flex flex-col font-sans">
+      <body className="min-h-[100dvh] bg-[#F0F2F5] text-[#111827] flex flex-col font-sans">
         <ServiceWorker />
         <Header />
         <main className="flex-1">{children}</main>

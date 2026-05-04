@@ -1,0 +1,68 @@
+
+=================================================================================================================================================
+  NRL 2026 — Round 10  |  ML Shadow Mode vs Rules Model
+  Models: XGBoost trained on 2009–2023  |  T2+T5+T7 layered on top
+=================================================================================================================================================
+
+  MARGIN  (home perspective, +ve = home wins)
+  Game                                           ELO Δ   ML Raw    T2Δ    T5Δ    T7Δ  ML+T2+T5+T7    Rules    Diff
+  ─────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Bulldogs vs Cowboys                            +27.2     +1.5   -1.0   -2.0   +0.0         -1.5     +2.6   -4.1▼
+  Dolphins vs Storm                              -48.6     -2.0   -2.0   +0.0   +0.0         -4.0     +1.4   -5.4▼
+  Titans vs Raiders                             -145.7     -4.3   +0.0   +3.0   +0.0         -1.3     +2.8   -4.1▼
+  Eels vs Warriors                               -71.3     -2.1   +0.0   +3.0   +0.0         +0.9     +0.0   +0.9▲
+  Roosters vs Broncos                            -42.6     +0.3   +0.0   +3.0   +0.0         +3.3     +7.6   -4.3▼
+  Knights vs Rabbitohs                           -63.0     -6.9   +2.0   +3.0   +0.0         -1.9     +2.2   -4.1▼
+  Sharks vs Tigers                               +49.9     +5.7   +5.0   +3.0   +0.0        +13.7    +13.3   +0.4▲
+  Panthers vs Eagles                             +79.3     +2.1   +3.0   +0.5   +0.0         +5.6    +18.5  -12.9▼
+
+  TOTAL  (expected combined score)
+  Game                                           ML Raw    T5Δ    T7Δ   ML+T5+T7    Rules    Diff
+  ───────────────────────────────────────────────────────────────────────────────────────────────
+  Bulldogs vs Cowboys                              42.7   -1.6   +0.0       39.6     44.9   -5.3▼
+  Dolphins vs Storm                                44.4   -1.9   +0.0       41.0     44.1   -3.1▼
+  Titans vs Raiders                                49.7   -0.8   +0.0       48.9     48.5   +0.4 
+  Eels vs Warriors                                 44.0   -0.3   +0.0       43.7     53.5   -9.8▼
+  Roosters vs Broncos                              41.2   -1.4   +0.0       39.9     52.1  -12.2▼
+  Knights vs Rabbitohs                             44.9   -0.6   +0.0       41.3     49.5   -8.2▼
+  Sharks vs Tigers                                 43.6   -1.1   +0.0       39.5     47.2   -7.7▼
+  Panthers vs Eagles                               41.9   -1.2   +0.0       40.7     48.1   -7.4▼
+
+  H2H WIN PROBABILITY  (home team %)
+  Game                                           ML Raw   ML+T5+T7    Rules     Diff   ML H(fair)   Rules H(fair)
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Bulldogs vs Cowboys                             57.8%      45.5%    58.6%   -13.1%▼        2.198           1.706
+  Dolphins vs Storm                               47.2%      38.0%    54.6%   -16.6%▼        2.632           1.832
+  Titans vs Raiders                               38.3%      45.9%    58.9%   -13.0%▼        2.179           1.698
+  Eels vs Warriors                                47.0%      52.8%    50.0%    +2.8%▲        1.894           2.000
+  Roosters vs Broncos                             49.9%      60.1%    73.7%   -13.6%▼        1.664           1.357
+  Knights vs Rabbitohs                            43.2%      44.3%    57.6%   -13.3%▼        2.257           1.736
+  Sharks vs Tigers                                61.6%      85.4%    86.4%    -1.0%         1.171           1.157
+  Panthers vs Eagles                              60.0%      66.7%    93.8%   -27.1%▼        1.499           1.066
+
+  FEATURE AUDIT
+  Game                                           ELO Δ  H Rest  A Rest  H Bye  H Prev  A Prev  H Streak  A Streak  Venue Avg   Ref TD  Completeness
+  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Bulldogs vs Cowboys                            +27.2       7       7      N     -20     +12       -2L       +1W          —     +3.5           85%
+  Dolphins vs Storm                              -48.6       6       6      N      -2     -42       -4L       -6L       47.4     -1.3           91%
+  Titans vs Raiders                             -145.7      14       9      Y      -8     -19       -1L       -1L          —     -1.8           85%
+  Eels vs Warriors                               -71.3       6       7      N     -15      +2       -1L       +3W          —     -0.6           85%
+  Roosters vs Broncos                            -42.6       7       8      N     +46     +20       +4W       +2W       47.2     +0.8           91%
+  Knights vs Rabbitohs                           -63.0       7       8      N     -32     +42       -3L       +2W       43.5     -1.0           91%
+  Sharks vs Tigers                               +49.9       9      10      N     -12     +19       -2L       +1W          —     -1.2           85%
+  Panthers vs Eagles                             +79.3       7       7      N     +32     +15       +2W       +4W          —     +5.2           85%
+
+  DIVERGENCE SUMMARY  (ML+T5+T7 vs Rules, margin ≥ 3 pts OR H2H ≥ 5%)
+  Game                                           Margin Δ   Total Δ    H2H Δ  Notes
+  ────────────────────────────────────────────────────────────────────────────────────────────────────
+  Bulldogs vs Cowboys                                -4.1      -5.3   -13.1%  big H2H gap, total gap
+  Dolphins vs Storm                                  -5.4      -3.1   -16.6%  big margin gap, big H2H gap
+  Titans vs Raiders                                  -4.1      +0.4   -13.0%  big H2H gap
+  Roosters vs Broncos                                -4.3     -12.2   -13.6%  big H2H gap, total gap
+  Knights vs Rabbitohs                               -4.1      -8.2   -13.3%  big H2H gap, total gap
+  Panthers vs Eagles                                -12.9      -7.4   -27.1%  big margin gap, big H2H gap, total gap
+
+=================================================================================================================================================
+  Legend: ML Raw = XGBoost prediction (ELO + rest/form + venue + ref + weather from history)
+          T2Δ = style matchup  |  T5Δ = injury  |  T7Δ = emotional  |  Rules = full 8-tier model
+=================================================================================================================================================

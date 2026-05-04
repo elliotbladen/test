@@ -25,6 +25,7 @@ import argparse
 import csv
 import math
 import pickle
+import sqlite3
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -40,6 +41,7 @@ import numpy as np
 import pandas as pd
 
 ROOT       = Path(__file__).resolve().parent.parent
+DB_PATH    = ROOT / 'data' / 'model.db'
 MODELS_DIR = ROOT / 'ml/afl/results/models'
 FEATURES   = ROOT / 'ml/afl/results/features_afl.csv'
 SNAP_CSV   = ROOT / 'data/footywire_snapshots.csv'
@@ -57,7 +59,18 @@ FIXTURE = {
         ('St Kilda Saints',               'West Coast Eagles',             'Marvel Stadium',   '2026-04-26'),
         ('Brisbane Lions',                'Adelaide Crows',                'The Gabba',        '2026-04-26'),
         ('Greater Western Sydney Giants', 'North Melbourne Kangaroos',     'Manuka Oval',      '2026-04-26'),
-    ]
+    ],
+    8: [
+        ('Collingwood Magpies',           'Hawthorn Hawks',                'MCG',              '2026-04-30'),
+        ('Western Bulldogs',              'Fremantle Dockers',             'Marvel Stadium',   '2026-05-01'),
+        ('Adelaide Crows',                'Port Adelaide Power',           'Adelaide Oval',    '2026-05-01'),
+        ('Essendon Bombers',              'Brisbane Lions',                'Marvel Stadium',   '2026-05-02'),
+        ('West Coast Eagles',             'Richmond Tigers',               'Optus Stadium',    '2026-05-02'),
+        ('Geelong Cats',                  'North Melbourne Kangaroos',     'GMHBA Stadium',    '2026-05-02'),
+        ('Carlton Blues',                 'St Kilda Saints',               'Marvel Stadium',   '2026-05-02'),
+        ('Sydney Swans',                  'Melbourne Demons',              'SCG',              '2026-05-03'),
+        ('Gold Coast Suns',               'Greater Western Sydney Giants', 'People First Stadium', '2026-05-03'),
+    ],
 }
 
 # ── T5 Injuries — update manually before each round ──────────────────────────
@@ -107,7 +120,103 @@ INJURIES = {
         'Adelaide Crows': [
             {'player': 'Alex Neal-Bullen','position': 'utility',      'quality': 'average'}, # injured
         ],
-    }
+    },
+    8: {
+        # Sources: AFL.com.au injury list scraped 2026-04-28
+        'Collingwood Magpies': [
+            {'player': 'Tim Membrey',        'position': 'key_forward',  'quality': 'average'}, # hamstring — 4w ongoing
+        ],
+        'Hawthorn Hawks': [
+            {'player': 'Will Day',           'position': 'key_defender', 'quality': 'good'},    # shoulder 3-4w
+            {'player': 'Mabior Chol',        'position': 'key_forward',  'quality': 'average'}, # hamstring 2-3w
+        ],
+        'Western Bulldogs': [
+            {'player': 'Sam Darcy',          'position': 'ruck',         'quality': 'elite'},   # ACL — season
+            {'player': 'Rory Lobb',          'position': 'ruck',         'quality': 'good'},    # hamstring 2-4w
+            {'player': 'Aaron Naughton',     'position': 'key_forward',  'quality': 'good'},    # neck (test)
+            {'player': "James O'Donnell",    'position': 'key_defender', 'quality': 'average'}, # hamstring 3-4w
+            {'player': 'Riley Garcia',       'position': 'midfielder',   'quality': 'average'}, # hamstring 2-4w
+        ],
+        'Fremantle Dockers': [
+            {'player': 'Sean Darcy',         'position': 'ruck',         'quality': 'elite'},   # calf 3-5w — spine disruption
+            {'player': "Jaeger O'Meara",     'position': 'midfielder',   'quality': 'good'},    # face 3w
+        ],
+        'Adelaide Crows': [
+            {'player': 'Mitch Hinge',        'position': 'key_defender', 'quality': 'average'}, # hamstring 2-3w
+            {'player': 'Mark Keane',         'position': 'key_defender', 'quality': 'average'}, # leg 3-6w
+        ],
+        'Port Adelaide Power': [
+            {'player': 'Connor Rozee',       'position': 'midfielder',   'quality': 'elite'},   # hamstring 9-11w — season-defining loss
+            {'player': 'Sam Powell-Pepper',  'position': 'midfielder',   'quality': 'good'},    # knee 5-7w
+            {'player': 'Jack Lukosius',      'position': 'key_forward',  'quality': 'good'},    # groin 4-6w
+            {'player': 'Esava Ratugolea',    'position': 'key_forward',  'quality': 'average'}, # knee 1-2w
+            {'player': 'Mani Liddy',         'position': 'midfielder',   'quality': 'average'}, # groin 2-3w
+        ],
+        'Essendon Bombers': [
+            {'player': 'Nic Martin',         'position': 'midfielder',   'quality': 'good'},    # knee — season
+            {'player': 'Jordan Ridley',      'position': 'key_defender', 'quality': 'good'},    # calf 3w
+            {'player': 'Harrison Jones',     'position': 'midfielder',   'quality': 'average'}, # calf 2w
+        ],
+        'Brisbane Lions': [
+            {'player': 'Oscar Allen',        'position': 'key_forward',  'quality': 'good'},    # foot 12-14w
+            {'player': 'Jarrod Berry',       'position': 'midfielder',   'quality': 'good'},    # calf 2-3w
+            {'player': 'Darcy Gardiner',     'position': 'key_defender', 'quality': 'good'},    # shoulder 3-4w
+        ],
+        'West Coast Eagles': [
+            {'player': 'Sam Allen',          'position': 'key_defender', 'quality': 'average'}, # knee 5w
+            {'player': 'Brandon Starcevich', 'position': 'key_defender', 'quality': 'average'}, # calf 3-4w
+            {'player': 'Harry Edwards',      'position': 'key_defender', 'quality': 'average'}, # concussion (test)
+        ],
+        'Richmond Tigers': [
+            {'player': 'Maurice Rioli',      'position': 'small_forward','quality': 'good'},    # hamstring 3-4w
+            {'player': 'Toby Nankervis',     'position': 'ruck',         'quality': 'good'},    # hamstring 2-4w
+            {'player': 'Tim Taranto',        'position': 'midfielder',   'quality': 'good'},    # concussion (test)
+            {'player': 'Hugo Ralphsmith',    'position': 'midfielder',   'quality': 'average'}, # MCL 5-7w
+            {'player': 'Kaleb Smith',        'position': 'midfielder',   'quality': 'average'}, # groin 3w
+            {'player': 'Sam Banks',          'position': 'midfielder',   'quality': 'average'}, # collarbone 5-6w
+        ],
+        'Geelong Cats': [
+            {'player': 'Gryan Miers',        'position': 'small_forward','quality': 'good'},    # knee 1-3w
+            {'player': 'Jay Polkinghorne',   'position': 'key_defender', 'quality': 'average'}, # foot 4-6w
+        ],
+        'North Melbourne Kangaroos': [
+            {'player': 'Zac Fisher',         'position': 'midfielder',   'quality': 'good'},    # hamstring 3-4w
+            {'player': 'Luke Urquhart',      'position': 'key_defender', 'quality': 'average'}, # knee 1-2w
+            {'player': 'Jackson Archer',     'position': 'key_defender', 'quality': 'average'}, # knee — season
+        ],
+        'Carlton Blues': [
+            {'player': 'Harry McKay',        'position': 'key_forward',  'quality': 'elite'},   # concussion (test) — monitor
+            {'player': 'Jesse Motlop',       'position': 'small_forward','quality': 'good'},    # knee — season
+            {'player': 'Marc Pittonet',      'position': 'ruck',         'quality': 'average'}, # hand (test)
+        ],
+        'St Kilda Saints': [
+            {'player': 'Lance Collard',      'position': 'midfielder',   'quality': 'good'},    # suspended to R13
+            {'player': 'Hunter Clark',       'position': 'midfielder',   'quality': 'good'},    # knee (TBC)
+            {'player': 'Isaac Keeler',       'position': 'midfielder',   'quality': 'average'}, # hamstring 1-2w
+        ],
+        'Sydney Swans': [
+            {'player': 'Errol Gulden',       'position': 'midfielder',   'quality': 'elite'},   # shoulder 3 months — massive loss
+            {'player': 'Tom McCartin',       'position': 'key_defender', 'quality': 'good'},    # knee 2-3w
+            {'player': 'Max King',           'position': 'key_forward',  'quality': 'good'},    # back 4 months
+        ],
+        'Melbourne Demons': [
+            {'player': 'Jack Viney',         'position': 'midfielder',   'quality': 'elite'},   # achilles (TBC) — monitor
+            {'player': 'Christian Salem',    'position': 'key_defender', 'quality': 'good'},    # foot 2-3w
+            {'player': 'Jake Melksham',      'position': 'winger',       'quality': 'average'}, # ankle 2-3w
+            {'player': 'Xavier Lindsay',     'position': 'midfielder',   'quality': 'average'}, # hip 1-2w
+        ],
+        'Gold Coast Suns': [
+            {'player': 'Elliott Himmelberg', 'position': 'key_forward',  'quality': 'good'},    # knee 4-6w
+            {'player': 'Jy Farrar',          'position': 'winger',       'quality': 'good'},    # ankle 6+ weeks
+        ],
+        'Greater Western Sydney Giants': [
+            {'player': 'Tom Green',          'position': 'midfielder',   'quality': 'elite'},   # knee — season
+            {'player': 'Sam Taylor',         'position': 'key_defender', 'quality': 'good'},    # hamstring 3-4w
+            {'player': 'Josh Kelly',         'position': 'midfielder',   'quality': 'good'},    # hip (TBC) — monitor
+            {'player': 'Cody Angove',        'position': 'midfielder',   'quality': 'average'}, # hamstring 3-4w
+            {'player': 'Logan Smith',        'position': 'key_defender', 'quality': 'average'}, # knee 3-4w
+        ],
+    },
 }
 
 # ── T6 Emotional flags — update manually before each round ───────────────────
@@ -127,7 +236,25 @@ EMOTIONAL_FLAGS = {
             {'flag_type': 'rivalry_derby', 'flag_strength': 'major',
              'player_name': None, 'notes': 'ANZAC Day vs Essendon — biggest regular-season game'},
         ],
-    }
+    },
+    8: {
+        # SA Showdown — Adelaide Oval, Fri 1 May
+        'Adelaide Crows': [
+            {'flag_type': 'rivalry_derby', 'flag_strength': 'major',
+             'player_name': None, 'notes': 'SA Showdown vs Port Adelaide — first Showdown of 2026'},
+            {'flag_type': 'shame_blowout', 'flag_strength': 'minor',
+             'player_name': None, 'notes': 'Off 52-pt loss to Brisbane (R7) — home redemption game'},
+        ],
+        'Port Adelaide Power': [
+            {'flag_type': 'rivalry_derby', 'flag_strength': 'major',
+             'player_name': None, 'notes': 'SA Showdown vs Adelaide — first Showdown of 2026'},
+        ],
+        # Essendon ANZAC Day aftermath — Marvel Stadium, Sat 2 May
+        'Essendon Bombers': [
+            {'flag_type': 'shame_blowout', 'flag_strength': 'major',
+             'player_name': None, 'notes': 'ANZAC Day humiliation — lost to Collingwood by 77 pts (60-137 R7). Must respond.'},
+        ],
+    },
 }
 
 # ── T7 Weather — update on game day ──────────────────────────────────────────
@@ -152,7 +279,10 @@ WEATHER = {
         #     'precip_mm': 0.0, 'wind_kmh': 18.0,
         #     'temp_c': 16.0, 'dew_point_c': 9.0, 'kickoff': '15:20',
         # },
-    }
+    },
+    8: {
+        # Update on game day with actual forecasts
+    },
 }
 
 # Home advantage in ELO points (from game_log.py)
@@ -618,7 +748,7 @@ def last_margin(features_df: pd.DataFrame, team: str, game_date: str):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--season', type=int, default=2026)
-    parser.add_argument('--round',  type=int, default=7)
+    parser.add_argument('--round',  type=int, default=8)
     args = parser.parse_args()
 
     games = FIXTURE.get(args.round)
@@ -627,7 +757,7 @@ def main():
         return
 
     print(f'\nLoading data...')
-    features_df = pd.read_csv(FEATURES)
+    features_df = pd.read_csv(FEATURES, encoding='latin-1')
     features_df = features_df[features_df['season'] <= args.season].copy()
     elo = get_current_elo(features_df[features_df['season'] == args.season])
 
@@ -728,7 +858,7 @@ def main():
         p_over, p_under, odds_over, odds_under = total_to_ou_odds(final_total, fair_line)
 
         results.append({
-            'home': home, 'away': away, 'venue': venue,
+            'home': home, 'away': away, 'venue': venue, 'date': date,
             'home_elo': round(elo.get(home, 1500), 1),
             'away_elo': round(elo.get(away, 1500), 1),
             't1_margin': round(t1_margin, 1),
@@ -968,6 +1098,141 @@ def main():
         print()
         print('  ◆ = divergence flag.  ML is independent cross-check only — not used in pricing.')
         print('=' * 120)
+
+    # ── Store to DB ───────────────────────────────────────────────────────────
+    run_date = datetime.now().strftime('%Y-%m-%d')
+    store_to_db(results, args.season, args.round, run_date)
+
+
+def store_to_db(results: list, season: int, round_num: int, run_date: str):
+    """
+    Upsert AFL round predictions into afl_shadow_predictions table.
+    Creates the table if it doesn't exist.
+    Stores both rules and ML shadow values for end-of-season audit.
+    """
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute('''
+        CREATE TABLE IF NOT EXISTS afl_shadow_predictions (
+            id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+            season              INTEGER NOT NULL,
+            round_number        INTEGER NOT NULL,
+            game_date           TEXT,
+            home_team           TEXT NOT NULL,
+            away_team           TEXT NOT NULL,
+            venue               TEXT,
+            run_date            TEXT NOT NULL,
+            -- Rules engine (T1-T7)
+            rules_margin        REAL,
+            rules_total         REAL,
+            rules_home_prob     REAL,
+            rules_home_odds     REAL,
+            rules_away_odds     REAL,
+            -- ML shadow (raw XGBoost)
+            ml_margin_raw       REAL,
+            ml_total_raw        REAL,
+            ml_h2h_raw          REAL,
+            -- ML adjusted (+ T2 + T5 + T6 + T7)
+            ml_margin           REAL,
+            ml_total            REAL,
+            ml_h2h              REAL,
+            -- Tier adjustments
+            t1_margin           REAL,
+            t1_total            REAL,
+            t2_hcp              REAL,
+            t2_tot              REAL,
+            t3_hcp              REAL,
+            t3_tot              REAL,
+            t4_hcp              REAL,
+            t4_tot              REAL,
+            t5_hcp              REAL,
+            t5_tot              REAL,
+            t6_hcp              REAL,
+            t6_tot              REAL,
+            t7_tot              REAL,
+            -- Agreement
+            agreement_flag      TEXT,
+            -- Actuals (filled in after round completes)
+            actual_margin       REAL,
+            actual_total        REAL,
+            actual_home_win     INTEGER,
+            -- Errors (computed from actuals)
+            rules_margin_error  REAL,
+            rules_total_error   REAL,
+            ml_margin_error     REAL,
+            ml_total_error      REAL,
+            created_at          TEXT,
+            UNIQUE(home_team, away_team, season, round_number)
+        )
+    ''')
+
+    run_dt = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    for r in results:
+        # Agreement flag (ML vs Rules)
+        rules_winner = 'home' if r['final_margin'] > 0 else 'away'
+        ml_winner    = 'home' if (r['ml_margin'] or 0) > 0 else 'away'
+        if r['ml_margin'] is not None:
+            mrg_gap = abs((r['ml_margin'] or 0) - r['final_margin'])
+            h2h_gap = abs((r['ml_h2h'] or 0) - r['home_prob'])
+            if rules_winner != ml_winner:
+                flag = 'disagree'
+            elif mrg_gap < 3.0 and h2h_gap < 0.05:
+                flag = 'strong'
+            else:
+                flag = 'direction'
+        else:
+            flag = None
+
+        conn.execute('''
+            INSERT INTO afl_shadow_predictions
+                (season, round_number, game_date, home_team, away_team, venue,
+                 run_date, rules_margin, rules_total, rules_home_prob,
+                 rules_home_odds, rules_away_odds,
+                 ml_margin_raw, ml_total_raw, ml_h2h_raw,
+                 ml_margin, ml_total, ml_h2h,
+                 t1_margin, t1_total, t2_hcp, t2_tot, t3_hcp, t3_tot,
+                 t4_hcp, t4_tot, t5_hcp, t5_tot, t6_hcp, t6_tot, t7_tot,
+                 agreement_flag, created_at)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+            ON CONFLICT(home_team, away_team, season, round_number) DO UPDATE SET
+                run_date=excluded.run_date,
+                rules_margin=excluded.rules_margin,
+                rules_total=excluded.rules_total,
+                rules_home_prob=excluded.rules_home_prob,
+                rules_home_odds=excluded.rules_home_odds,
+                rules_away_odds=excluded.rules_away_odds,
+                ml_margin_raw=excluded.ml_margin_raw,
+                ml_total_raw=excluded.ml_total_raw,
+                ml_h2h_raw=excluded.ml_h2h_raw,
+                ml_margin=excluded.ml_margin,
+                ml_total=excluded.ml_total,
+                ml_h2h=excluded.ml_h2h,
+                t1_margin=excluded.t1_margin, t1_total=excluded.t1_total,
+                t2_hcp=excluded.t2_hcp, t2_tot=excluded.t2_tot,
+                t3_hcp=excluded.t3_hcp, t3_tot=excluded.t3_tot,
+                t4_hcp=excluded.t4_hcp, t4_tot=excluded.t4_tot,
+                t5_hcp=excluded.t5_hcp, t5_tot=excluded.t5_tot,
+                t6_hcp=excluded.t6_hcp, t6_tot=excluded.t6_tot,
+                t7_tot=excluded.t7_tot,
+                agreement_flag=excluded.agreement_flag
+        ''', (
+            season, round_num, r.get('date', ''), r['home'], r['away'], r['venue'],
+            run_date,
+            r['final_margin'], r['final_total'], r['home_prob'],
+            r['home_odds'], r['away_odds'],
+            r.get('ml_margin_raw'), r.get('ml_total_raw'), r.get('ml_h2h_raw'),
+            r.get('ml_margin'), r.get('ml_total'), r.get('ml_h2h'),
+            r['t1_margin'], r['t1_total'],
+            r['t2_hcp'], r['t2_tot'], r['t3_hcp'], r['t3_tot'],
+            r['t4_hcp'], r['t4_tot'], r['t5_hcp'], r['t5_tot'],
+            r['t6_hcp'], r['t6_tot'], r['t7_tot'],
+            flag, run_dt,
+        ))
+
+    conn.commit()
+    n = conn.execute('SELECT COUNT(*) FROM afl_shadow_predictions WHERE season=? AND round_number=?',
+                     (season, round_num)).fetchone()[0]
+    conn.close()
+    print(f'\nDB: {n} rows stored in afl_shadow_predictions (season={season}, round={round_num})')
 
 
 if __name__ == '__main__':

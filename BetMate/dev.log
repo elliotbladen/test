@@ -1,0 +1,338 @@
+
+> betmate-web@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, trying 3001 instead.
+  ▲ Next.js 14.2.3
+  - Local:        http://localhost:3001
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 4.4s
+ ✓ Compiled /api/odds/afl in 320ms (53 modules)
+ GET /api/odds/afl 200 in 1261ms
+ ○ Compiling /odds ...
+ ✓ Compiled /odds in 4.3s (1399 modules)
+ GET /odds?sport=AFL 200 in 4564ms
+ ✓ Compiled in 315ms (691 modules)
+ ✓ Compiled /api/ev-signals in 338ms (57 modules)
+ GET /api/ev-signals?home=Fremantle+Dockers&away=Hawthorn+Hawks 200 in 627ms
+ ✓ Compiled in 239ms (691 modules)
+ ✓ Compiled in 183ms (691 modules)
+ ✓ Compiled in 186ms (691 modules)
+ ✓ Compiled in 168ms (691 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Restoring pack failed from C:\Users\ElliotBladen\Apps\BetMate\.next\cache\webpack\client-development.pack.gz: Error: incorrect header check
+ ✓ Compiled / in 262ms (1323 modules)
+ GET / 307 in 508ms
+ ✓ Compiled /odds in 93ms (686 modules)
+ GET /odds 200 in 273ms
+ ✓ Compiled /api/odds/nrl in 186ms (716 modules)
+ GET /api/odds/nrl 200 in 300ms
+ GET /api/odds/nrl 200 in 22ms
+ ✓ Compiled /api/ev-signals in 155ms (718 modules)
+ ✓ Compiled (724 modules)
+ GET /api/ev-signals?home=Sydney%20Roosters&away=Gold%20Coast%20Titans 200 in 517ms
+ GET /api/ev-signals?home=North%20Queensland%20Cowboys&away=Parramatta%20Eels 200 in 515ms
+ GET /api/ev-signals?home=Dolphins&away=Canterbury%20Bulldogs 200 in 518ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 544ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 545ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 546ms
+ GET /api/ev-signals?home=St%20George%20Illawarra%20Dragons&away=Newcastle%20Knights 200 in 20ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 33ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 33ms
+ GET /api/ev-signals?home=South%20Sydney%20Rabbitohs&away=Cronulla%20Sutherland%20Sharks 200 in 35ms
+ GET /api/ev-signals?home=Manly%20Warringah%20Sea%20Eagles&away=Brisbane%20Broncos 200 in 23ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 42ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 36ms
+ GET /api/ev-signals?home=Melbourne%20Storm&away=Wests%20Tigers 200 in 31ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 41ms
+ GET /api/ev-signals?home=Canberra%20Raiders&away=Penrith%20Panthers 200 in 26ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 29ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 32ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 31ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 39ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 29ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 29ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 28ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 24ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 24ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 29ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 28ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 44ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 33ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 30ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 30ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 42ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 32ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 43ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 43ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 43ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 43ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 50ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 50ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 49ms
+ ✓ Compiled /api/odds/afl in 353ms (726 modules)
+ GET /api/odds/afl 200 in 881ms
+ GET /api/ev-signals?home=Fremantle%20Dockers&away=Hawthorn%20Hawks 200 in 779ms
+ GET /api/ev-signals?home=Brisbane%20Lions&away=Carlton%20Blues 200 in 778ms
+ GET /api/ev-signals?home=Port%20Adelaide%20Power&away=Western%20Bulldogs 200 in 774ms
+ GET /api/ev-signals?home=North%20Melbourne%20Kangaroos&away=Sydney%20Swans 200 in 774ms
+ GET /api/ev-signals?home=Gold%20Coast%20Suns&away=St%20Kilda%20Saints 200 in 772ms
+ GET /api/ev-signals?home=Greater%20Western%20Sydney%20Giants&away=Essendon%20Bombers 200 in 805ms
+ GET /api/ev-signals?home=Geelong%20Cats&away=Collingwood%20Magpies 200 in 47ms
+ GET /api/ev-signals?home=Melbourne%20Demons&away=West%20Coast%20Eagles 200 in 66ms
+ GET /api/ev-signals?home=Richmond%20Tigers&away=Adelaide%20Crows 200 in 64ms
+ ○ Compiling /research ...
+ ✓ Compiled /research in 2s (1426 modules)
+ ✓ Compiled in 1695ms (1390 modules)
+ ✓ Compiled in 367ms (1385 modules)
+ ✓ Compiled in 442ms (1385 modules)
+ ✓ Compiled in 364ms (1385 modules)
+ ✓ Compiled in 327ms (700 modules)
+ ✓ Compiled in 456ms (1385 modules)
+ ✓ Compiled in 452ms (1385 modules)
+ ✓ Compiled in 419ms (1385 modules)
+ ✓ Compiled in 306ms (1385 modules)
+ ✓ Compiled /_not-found in 194ms (1374 modules)
+ GET /research 200 in 154ms
+ ✓ Compiled in 473ms (1388 modules)
+ ✓ Compiled in 323ms (1388 modules)
+ ✓ Compiled in 499ms (1387 modules)
+ ✓ Compiled /_not-found in 167ms (1374 modules)
+ GET /research 200 in 145ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\ElliotBladen\Apps\BetMate\.next\cache\webpack\client-development\1.pack.gz_' -> 'C:\Users\ElliotBladen\Apps\BetMate\.next\cache\webpack\client-development\1.pack.gz'
+ GET /research 200 in 291ms
+ ○ Compiling /api/odds/nrl ...
+ ✓ Compiled /api/odds/nrl in 701ms (715 modules)
+ GET /api/odds/nrl 200 in 1317ms
+ GET /api/odds/nrl 200 in 36ms
+ ✓ Compiled /api/ev-signals in 380ms (717 modules)
+ ✓ Compiled (723 modules)
+ GET /api/ev-signals?home=Dolphins&away=Canterbury%20Bulldogs 200 in 1799ms
+ GET /api/ev-signals?home=Sydney%20Roosters&away=Gold%20Coast%20Titans 200 in 1798ms
+ GET /api/ev-signals?home=North%20Queensland%20Cowboys&away=Parramatta%20Eels 200 in 1793ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 1837ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 1832ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 1844ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 54ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 53ms
+ GET /api/ev-signals?home=St%20George%20Illawarra%20Dragons&away=Newcastle%20Knights 200 in 85ms
+ GET /api/ev-signals?home=South%20Sydney%20Rabbitohs&away=Cronulla%20Sutherland%20Sharks 200 in 79ms
+ GET /api/ev-signals?home=Manly%20Warringah%20Sea%20Eagles&away=Brisbane%20Broncos 200 in 76ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 101ms
+ GET /api/ev-signals?home=Melbourne%20Storm&away=Wests%20Tigers 200 in 56ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 87ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 78ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 65ms
+ GET /api/ev-signals?home=Canberra%20Raiders&away=Penrith%20Panthers 200 in 94ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 94ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 65ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 99ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 98ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 98ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 89ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 92ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 92ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 95ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 90ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 89ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 89ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 90ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 97ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 97ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 96ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 96ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 95ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 101ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 101ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 98ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 97ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 96ms
+ ✓ Compiled /api/odds/afl in 326ms (725 modules)
+ GET /api/odds/afl 200 in 765ms
+ GET /api/ev-signals?home=Fremantle%20Dockers&away=Hawthorn%20Hawks 200 in 745ms
+ GET /api/ev-signals?home=Brisbane%20Lions&away=Carlton%20Blues 200 in 743ms
+ GET /api/ev-signals?home=Port%20Adelaide%20Power&away=Western%20Bulldogs 200 in 738ms
+ GET /api/ev-signals?home=North%20Melbourne%20Kangaroos&away=Sydney%20Swans 200 in 779ms
+ GET /api/ev-signals?home=Greater%20Western%20Sydney%20Giants&away=Essendon%20Bombers 200 in 778ms
+ GET /api/ev-signals?home=Gold%20Coast%20Suns&away=St%20Kilda%20Saints 200 in 777ms
+ GET /api/ev-signals?home=Geelong%20Cats&away=Collingwood%20Magpies 200 in 55ms
+ GET /api/ev-signals?home=Melbourne%20Demons&away=West%20Coast%20Eagles 200 in 79ms
+ GET /api/ev-signals?home=Richmond%20Tigers&away=Adelaide%20Crows 200 in 79ms
+ ○ Compiling /tools ...
+ ✓ Compiled /tools in 1056ms (1413 modules)
+ ○ Compiling /api/odds/nrl ...
+ ✓ Compiled /api/odds/nrl in 1182ms (719 modules)
+ GET /api/odds/nrl 200 in 1354ms
+ GET /api/odds/nrl 200 in 38ms
+ ✓ Compiled /api/weather in 259ms (721 modules)
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 461ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 458ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 452ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 452ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 450ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 462ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 87ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 84ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 84ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 80ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 78ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 76ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 88ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 87ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 86ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 86ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 85ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 83ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 94ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 93ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 90ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 91ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 90ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 88ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 96ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 95ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 94ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 92ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 92ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 87ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 52ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 52ms
+ GET /api/odds/nrl 200 in 39ms
+ ✓ Compiled /api/odds/afl in 462ms (721 modules)
+ GET /api/odds/afl 200 in 593ms
+ ✓ Compiled /api/weather in 322ms (723 modules)
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 506ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 505ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 501ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 500ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 498ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 507ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 93ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 91ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 84ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 83ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 83ms
+ GET /api/odds/nrl 200 in 109ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 81ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 80ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 80ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 79ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 79ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 91ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 77ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 76ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 76ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 75ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 75ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 76ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 47ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 79ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 79ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 75ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 74ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 80ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 59ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 99ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 94ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 93ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 89ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 106ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 128ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 77ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 118ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 114ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 113ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 107ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 64ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 63ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 93ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 92ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 89ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 92ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 100ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 100ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 103ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 89ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 88ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 109ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 65ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 66ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 132ms
+ GET /api/weather?lat=-33.9697&lon=151.1322&time=2026-05-09T05%3A00%3A00Z 200 in 130ms
+ GET /api/weather?lat=-33.7681&lon=151.2647&time=2026-05-09T09%3A35%3A00Z 200 in 129ms
+ GET /api/weather?lat=-19.259&lon=146.8169&time=2026-05-08T10%3A00%3A00Z 200 in 145ms
+ GET /api/weather?lat=-27.4648&lon=153.0095&time=2026-05-07T09%3A50%3A00Z 200 in 83ms
+ GET /api/weather?lat=-33.8915&lon=151.2248&time=2026-05-08T08%3A00%3A00Z 200 in 82ms
+ GET /api/weather?lat=-35.2454&lon=149.0901&time=2026-05-10T06%3A05%3A00Z 200 in 79ms
+ GET /api/weather?lat=-33.8472&lon=151.0631&time=2026-05-09T07%3A30%3A00Z 200 in 78ms
+ GET /api/weather?lat=-37.8248&lon=144.9836&time=2026-05-10T04%3A00%3A00Z 200 in 77ms
+ GET /api/odds/nrl 200 in 290ms
+ GET /api/odds/nrl 200 in 29ms
+ GET /api/odds/nrl 200 in 18ms
+ GET /api/odds/nrl 200 in 49ms
+ ✓ Compiled in 2.4s (1421 modules)
+ ✓ Compiled in 1598ms (1421 modules)
+ ✓ Compiled in 1955ms (1421 modules)
+ ✓ Compiled in 1558ms (1421 modules)
+ ✓ Compiled in 1866ms (1421 modules)
+ ✓ Compiled in 1143ms (702 modules)
+ ✓ Compiled in 516ms (1421 modules)
+ ✓ Compiled in 365ms (1421 modules)
+ ✓ Compiled in 258ms (1421 modules)
+ ✓ Compiled in 257ms (1421 modules)
+ ✓ Compiled in 349ms (1421 modules)
+ GET /api/odds/nrl 200 in 19ms
+ ✓ Compiled in 327ms (1421 modules)
+ ✓ Compiled in 243ms (1421 modules)
+ ⨯ TypeError: Cannot read properties of undefined (reading 'entryCSSFiles')
+    at r$ (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:3692)
+    at rA (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:4595)
+    at rL (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:6889)
+    at C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:6151
+    at C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\lib\trace\tracer.js:140:36
+    at NoopContextManager.with (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NoopTracer.startActiveSpan (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18093)
+    at ProxyTracer.startActiveSpan (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18854)
+    at C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\lib\trace\tracer.js:122:103
+    at NoopContextManager.with (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7062)
+    at ContextAPI.with (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:518)
+    at NextTracerImpl.trace (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\lib\trace\tracer.js:122:28)
+    at rF (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:6082)
+    at rU (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:12540)
+    at rZ (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:16070)
+    at r2 (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:39:23079)
+    at C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:726
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at Object.wrap (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:36:16615)
+    at C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:616
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+    at Object.wrap (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:36:15721)
+    at r4 (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:543)
+    at nf.render (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:42:4661)
+    at doRender (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:1438:44)
+    at cacheEntry.responseCache.get.routeKind (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:1599:34)
+    at ResponseCache.get (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\response-cache\index.js:49:26)
+    at DevServer.renderToResponseWithComponentsImpl (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:1507:53)
+    at C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:1002:121
+    at NextTracerImpl.trace (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\lib\trace\tracer.js:105:20)
+    at DevServer.renderToResponseWithComponents (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:1002:41)
+    at DevServer.renderPageComponent (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:1924:35)
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processTimers (node:internal/timers:538:9)
+    at async DevServer.renderToResponseImpl (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:1962:32)
+    at async DevServer.pipeImpl (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:920:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\next-server.js:272:17)
+    at async DevServer.handleRequestImpl (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\base-server.js:816:17)
+    at async C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\lib\router-server.js:174:21)
+    at async handleRequest (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\lib\router-server.js:353:24)
+    at async requestHandlerImpl (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\lib\router-server.js:377:13)
+    at async Server.requestListener (C:\Users\ElliotBladen\Apps\BetMate\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  page: '/odds'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1205ms (1631 modules)

@@ -1,0 +1,38 @@
+# Betmate automation config.
+#
+# Set betmate_root to the folder where Betmate writes its completed round exports.
+# The scheduled runner can also read BETMATE_ROOT from the environment.
+
+betmate:
+  root: "/Users/elliotbladen/betmate-web/public/data/nrl"
+
+afl:
+  odds_file: "/Users/elliotbladen/Downloads/afl (7).xlsx"
+
+pricing:
+  season: 2026
+  settings: "config/settings.yaml"
+  skip_weather: true
+  strict: true
+  strict_injuries: false
+  no_export: false
+
+automation:
+  # Picks the first round whose last game date is today or in the future.
+  # This is the right behavior for a Monday pre-round run.
+  round_mode: "current_or_next"
+  log_dir: "logs/betmate"
+
+freshness:
+  # Monday automation should only price from recent Betmate artifacts.
+  max_age_hours:
+    injuries-suspensions: 84
+    referees: 84
+    emotional-flags: 84
+    historical-odds: 168
+  require_target_round:
+    referees: true
+    emotional-flags: false
+  require_previous_round_results: true
+  require_team_stats_current: true
+  require_elo_current: true

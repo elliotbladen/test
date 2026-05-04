@@ -52,6 +52,7 @@ INJURY JSON FORMAT
 import argparse
 import csv
 import json
+import os
 import sqlite3
 import sys
 import yaml
@@ -60,6 +61,47 @@ from datetime import datetime, timedelta, date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
+
+# ---------------------------------------------------------------------------
+# BetMate integration — BetMate is the information hub for fixtures,
+# injuries, and referee data. BettingEngine reads from its processed/ dirs.
+# ---------------------------------------------------------------------------
+
+def _find_betmate_root() -> Path | None:
+    """
+    Locate the BetMate directory. Checks (in order):
+      1. BETMATE_ROOT env var
+      2. Sibling directory named 'BetMate' next to this project's root
+    """
+    env = os.environ.get("BETMATE_ROOT")
+    if env:
+        p = Path(env)
+        if p.is_dir():
+            return p
+    project_root = Path(__file__).resolve().parents[1]
+    candidate = project_root.parent / "BetMate"
+    if candidate.is_dir():
+        return candidate
+    return None
+
+
+def _betmate_path(subpath: str) -> Path | None:
+    root = _find_betmate_root()
+    if root is None:
+        return None
+    return root / subpath
+
+
+def betmate_latest_fixture() -> Path | None:
+    return _betmate_path("data/nrl/fixture/processed/latest-fixture.json")
+
+
+def betmate_latest_injuries() -> Path | None:
+    return _betmate_path("data/nrl/injuries/processed/latest-injuries.json")
+
+
+def betmate_latest_referees() -> Path | None:
+    return _betmate_path("data/nrl/referees/processed/latest-referees.csv")
 
 from pricing.tier1_baseline import compute_baseline
 from pricing.tier2_matchup import (
@@ -153,6 +195,215 @@ def warn(msg: str):
 
 def ok(msg: str):
     print(f'  ✓  {msg}')
+
+
+# =============================================================================
+# Step 0 — Load fixtures from BetMate (if not already in DB)
+# =============================================================================
+
+def step0_load_fixture_from_betmate(conn, season: int, round_number: int,
+                                    dry_run: bool) -> int:
+    """
+    Read BetMate's latest-fixture.json and insert any missing matches into
+    the DB. Safe to re-run — uses INSERT OR IGNORE on source_match_key.
+    Returns number of rows inserted.
+    """
+    header(f'STEP 0 — Load R{round_number} fixture from BetMate')
+
+    fixture_path = betmate_latest_fixture()
+    if not fixture_path or not fixture_path.exists():
+        warn('BetMate fixture not found — assuming fixtures already in DB.')
+        return 0
+
+    data = json.loads(fixture_path.read_text(encoding="utf-8"))
+    games = data.get("games", [])
+    bm_round = data.get("round", round_number)
+
+    if bm_round != round_number:
+        warn(f'BetMate fixture is for R{bm_round} but pricing R{round_number} — skipping fixture load.')
+        return 0
+
+    ok(f'BetMate fixture loaded — {len(games)} games, R{bm_round}, scraped {data.get("scraped_at", "?")}')
+
+    name_to_id = {r["team_name"]: r["team_id"]
+                  for r in conn.execute("SELECT team_id, team_name FROM teams").fetchall()}
+    venue_name_to_id = {r["venue_name"]: r["venue_id"]
+                        for r in conn.execute("SELECT venue_id, venue_name FROM venues").fetchall()}
+
+    now = datetime.utcnow().isoformat()
+    inserted = 0
+
+    print(f'\n  {"Home":<34}  {"Away":<34}  {"Kickoff":<22}  Result')
+    print(f'  {"─"*34}  {"─"*34}  {"─"*22}  {"─"*8}')
+
+    for g in games:
+        home_name = canon(g.get("home_team", ""))
+        away_name = canon(g.get("away_team", ""))
+        venue_raw = g.get("venue", "")
+        kickoff   = g.get("kickoff_utc") or g.get("kickoff_local") or ""
+        match_date = kickoff[:10] if kickoff else ""
+
+        home_id = name_to_id.get(home_name)
+        away_id = name_to_id.get(away_name)
+
+        if not home_id:
+            warn(f'Unknown home team: "{home_name}" — skipping')
+            continue
+        if not away_id:
+            warn(f'Unknown away team: "{away_name}" — skipping')
+            continue
+
+        # Try exact venue name match first, then fuzzy
+        venue_id = venue_name_to_id.get(venue_raw)
+        if not venue_id:
+            for vname, vid in venue_name_to_id.items():
+                if venue_raw.lower() in vname.lower() or vname.lower() in venue_raw.lower():
+                    venue_id = vid
+                    break
+
+        source_key = f"betmate-{season}-r{round_number}-{home_id}-{away_id}"
+
+        exists = conn.execute(
+            "SELECT match_id FROM matches WHERE source_match_key=?", (source_key,)
+        ).fetchone()
+        if exists:
+            print(f'  {home_name:<34}  {away_name:<34}  {kickoff[:19]:<22}  EXISTS')
+            continue
+
+        if not dry_run:
+            conn.execute('''
+                INSERT INTO matches
+                    (sport, competition, season, round_number, match_date,
+                     kickoff_datetime, home_team_id, away_team_id, venue_id,
+                     status, source_match_key, created_at, updated_at)
+                VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+            ''', (
+                "NRL", "NRL Premiership", season, round_number, match_date,
+                kickoff, home_id, away_id, venue_id,
+                "scheduled", source_key, now, now,
+            ))
+            print(f'  {home_name:<34}  {away_name:<34}  {kickoff[:19]:<22}  INSERTED')
+            inserted += 1
+        else:
+            print(f'  {home_name:<34}  {away_name:<34}  {kickoff[:19]:<22}  DRY-RUN')
+            inserted += 1
+
+    if not dry_run and inserted:
+        conn.commit()
+
+    ok(f'{inserted} fixture rows {"staged" if dry_run else "inserted"} from BetMate.')
+    return inserted
+
+
+# =============================================================================
+# Step 0b — Import style stats from BetMate CSV
+# =============================================================================
+
+_STYLE_COL_MAP = {
+    'completion_rate':          'completion_rate',
+    'kick_metres_pg':           'kick_metres_pg',
+    'errors_pg':                'errors_pg',
+    'penalties_pg':             'penalties_pg',
+    'line_breaks_pg':           'lb_pg',
+    'tackle_breaks_pg':         'tb_pg',
+    'missed_tackles_pg':        'mt_pg',
+    'line_breaks_conceded_pg':  'lbc_pg',
+    'run_metres_pg':            'run_metres_pg',
+    'forced_dropouts_pg':       'fdo_pg',
+    'kick_return_metres_pg':    'krm_pg',
+}
+
+
+def step0b_import_style_stats(conn, season: int, dry_run: bool) -> int:
+    """
+    Read BetMate's latest-style-stats.csv and upsert into team_style_stats.
+    Safe to re-run — uses INSERT OR REPLACE keyed on (team_id, season, as_of_date).
+    Returns number of rows written.
+    """
+    header('STEP 0b — Import style stats from BetMate')
+
+    csv_path = _betmate_path("data/nrl/style-stats/processed/latest-style-stats.csv")
+    if not csv_path or not csv_path.exists():
+        warn('BetMate style-stats CSV not found — team_style_stats unchanged.')
+        return 0
+
+    with open(csv_path, newline='', encoding='utf-8') as fh:
+        reader = csv.DictReader(fh)
+        rows = list(reader)
+
+    if not rows:
+        warn('Style-stats CSV is empty.')
+        return 0
+
+    name_to_id = {r['team_name']: r['team_id']
+                  for r in conn.execute('SELECT team_id, team_name FROM teams').fetchall()}
+
+    now = datetime.utcnow().isoformat()
+    written = skipped = 0
+
+    print(f'\n  {"Team":<42}  {"AsOf":>10}  {"Rnd":>4}  Result')
+    print(f'  {"─"*42}  {"─"*10}  {"─"*4}  {"─"*8}')
+
+    for row in rows:
+        team_name = str(row.get('team', '')).strip()
+        as_of = str(row.get('as_of_date', '')).strip()
+        rnd   = row.get('round', '?')
+
+        team_id = name_to_id.get(canon(team_name)) or name_to_id.get(team_name)
+        if not team_id:
+            warn(f'Unknown team: "{team_name}" — skipping')
+            skipped += 1
+            continue
+
+        # Build update dict from mapped columns
+        updates = {}
+        for csv_col, db_col in _STYLE_COL_MAP.items():
+            val = row.get(csv_col)
+            if val not in (None, ''):
+                try:
+                    updates[db_col] = float(val)
+                except ValueError:
+                    pass
+
+        if not updates:
+            warn(f'No numeric data for {team_name} — skipping')
+            skipped += 1
+            continue
+
+        existing = conn.execute(
+            'SELECT style_stat_id FROM team_style_stats '
+            'WHERE team_id=? AND season=? AND as_of_date=?',
+            (team_id, season, as_of)
+        ).fetchone()
+
+        if not dry_run:
+            if existing:
+                set_clause = ', '.join(f'{col}=?' for col in updates)
+                vals = list(updates.values()) + [existing['style_stat_id']]
+                conn.execute(
+                    f'UPDATE team_style_stats SET {set_clause} WHERE style_stat_id=?', vals
+                )
+                action = 'UPDATE'
+            else:
+                cols = ['team_id', 'season', 'as_of_date', 'source_note', 'created_at'] + list(updates.keys())
+                placeholders = ','.join(['?'] * len(cols))
+                vals = [team_id, season, as_of, f'betmate-csv-r{rnd}', now] + list(updates.values())
+                conn.execute(
+                    f'INSERT INTO team_style_stats ({", ".join(cols)}) VALUES ({placeholders})', vals
+                )
+                action = 'INSERT'
+        else:
+            action = 'DRY-RUN'
+
+        print(f'  {team_name:<42}  {as_of:>10}  {str(rnd):>4}  {action}')
+        written += 1
+
+    if not dry_run and written:
+        conn.commit()
+
+    print()
+    ok(f'{written} style-stat rows {"staged" if dry_run else "written"}, {skipped} skipped.')
+    return written
 
 
 # =============================================================================
@@ -705,7 +956,7 @@ def step6_validate(conn, season: int, round_number: int, strict_injuries: bool):
         if not elo_ok:
             errors.append(f'{matchup}: ELO missing')
         if not ref_ok:
-            errors.append(f'{matchup}: no referee assignment')
+            warnings.append(f'{matchup}: no referee — T6=0.0 (refs typically announced Tue/Wed)')
         if not inj_ok:
             msg = f'{matchup}: no injury report (T5 will be 0 — assuming no outs)'
             if strict_injuries:
@@ -1147,12 +1398,12 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
     parser.add_argument('--season',       type=int, default=2026)
-    parser.add_argument('--round',        type=int, required=True,
-                        help='Round number to price')
+    parser.add_argument('--round',        type=int, default=0,
+                        help='Round number to price (0 = auto-detect from BetMate fixture)')
     parser.add_argument('--injury-json',  default=None,
-                        help='JSON file of player injury data for this round')
+                        help='JSON file of player injury data (default: BetMate latest-injuries.json)')
     parser.add_argument('--referee-csv',  default=None,
-                        help='CSV file of referee assignments for this round')
+                        help='CSV file of referee assignments (default: BetMate latest-referees.csv)')
     parser.add_argument('--dry-run',      action='store_true',
                         help='Run all steps but write nothing to DB')
     parser.add_argument('--skip-load',    action='store_true',
@@ -1170,16 +1421,48 @@ def main():
     conn = sqlite3.connect(settings['database']['path'])
     conn.row_factory = sqlite3.Row
 
-    season      = args.season
-    round_num   = args.round
-    prev_round  = round_num - 1
+    season = args.season
+
+    # ── Auto-detect round from BetMate fixture if not supplied ───────────
+    round_num = args.round
+    if round_num == 0:
+        fx_path = betmate_latest_fixture()
+        if fx_path and fx_path.exists():
+            fx_data   = json.loads(fx_path.read_text(encoding="utf-8"))
+            round_num = fx_data.get("round", 0)
+            print(f'\n  Auto-detected round {round_num} from BetMate fixture.')
+        if round_num == 0:
+            die('Could not auto-detect round — supply --round N or run BetMate scrapers first.')
+
+    # ── Auto-resolve injury + referee paths from BetMate ─────────────────
+    injury_json = args.injury_json
+    if not injury_json:
+        bm_inj = betmate_latest_injuries()
+        if bm_inj and bm_inj.exists():
+            injury_json = str(bm_inj)
+            print(f'  Using BetMate injuries: {bm_inj}')
+
+    referee_csv = args.referee_csv
+    if not referee_csv:
+        bm_ref = betmate_latest_referees()
+        if bm_ref and bm_ref.exists():
+            referee_csv = str(bm_ref)
+            print(f'  Using BetMate referees: {bm_ref}')
+
+    prev_round = round_num - 1
 
     print(f'\n{"═"*80}')
     print(f'  prepare_round  season={season}  round={round_num}')
     print(f'  mode={"DRY RUN" if args.dry_run else "WRITE"}')
     print(f'{"═"*80}')
 
-    # ── Step 1: Verify previous round results ────────────────────────��────
+    # ── Step 0: Load fixture from BetMate ────────────────────────────────
+    step0_load_fixture_from_betmate(conn, season, round_num, args.dry_run)
+
+    # ── Step 0b: Import style stats from BetMate ─────────────────────────
+    step0b_import_style_stats(conn, season, args.dry_run)
+
+    # ── Step 1: Verify previous round results ────────────────────────────
     if prev_round >= 1:
         last_result_date = step1_verify_results(conn, season, prev_round)
     else:
@@ -1209,13 +1492,13 @@ def main():
 
     # ── Step 4: Load injuries ─────────────────────────────────────────────
     if not args.skip_load:
-        step4_load_injuries(conn, season, round_num, args.injury_json, args.dry_run)
+        step4_load_injuries(conn, season, round_num, injury_json, args.dry_run)
     else:
         ok('Step 4 skipped (--skip-load).')
 
     # ── Step 5: Load referees ─────────────────────────────────────────────
     if not args.skip_load:
-        step5_load_referees(conn, season, round_num, args.referee_csv, args.dry_run)
+        step5_load_referees(conn, season, round_num, referee_csv, args.dry_run)
     else:
         ok('Step 5 skipped (--skip-load).')
 

@@ -49,7 +49,7 @@ function TeamName({ name }: { name: string }) {
           {meta.abbr}
         </span>
       )}
-      <span className="font-display font-bold text-[19px] sm:text-[15px] uppercase tracking-wide leading-snug text-white">
+      <span className="font-display font-bold text-[19px] sm:text-[15px] uppercase tracking-wide leading-snug text-[#111827]">
         {name.toUpperCase()}
       </span>
     </span>
@@ -198,7 +198,7 @@ function BmCard({
       ? 'ev-snake-border shadow-[0_0_20px_rgba(0,200,150,0.35)] hover:scale-105'
       : isBest
         ? 'border border-[#F97316]/50 bg-[#F97316]/5 hover:border-[#F97316] hover:bg-[#F97316]/10 hover:shadow-[0_0_14px_rgba(249,115,22,0.25)] hover:scale-105'
-        : 'border border-[#2A2A2A] bg-[#1C1C1C] hover:border-[#404040] hover:bg-[#222222] hover:scale-105',
+        : 'border border-[#E2E8F0] bg-[#F8FAFC] hover:border-[#CBD5E1] hover:bg-[#F1F5F9] hover:scale-105',
   ].join(' ');
 
   function getHref(): string | null {
@@ -266,13 +266,13 @@ function MarginRow({ entries }: { entries: { key: string; margin: number }[] }) 
   const sorted = [...entries].sort((a, b) => a.margin - b.margin);
   const lowest = sorted[0]?.margin;
   return (
-    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 border-t border-[#1E1E1E] mt-2">
-      <span className="text-[10px] font-mono text-[#444] uppercase tracking-widest shrink-0">Overround</span>
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 border-t border-[#E2E8F0] mt-2">
+      <span className="text-[10px] font-mono text-[#9CA3AF] uppercase tracking-widest shrink-0">Overround</span>
       {sorted.map(({ key, margin }) => {
         const meta = BOOKMAKER_META[key] ?? { abbr: key.slice(0, 3).toUpperCase(), name: key, color: '', domain: '' };
         const isTightest = margin === lowest;
         return (
-          <span key={key} className={`text-[10px] font-mono tabular-nums ${isTightest ? 'text-[#00C896]' : 'text-[#555]'}`}>
+          <span key={key} className={`text-[10px] font-mono tabular-nums ${isTightest ? 'text-[#00C896]' : 'text-[#9CA3AF]'}`}>
             {meta.abbr} {margin.toFixed(1)}%
           </span>
         );
@@ -302,7 +302,7 @@ function OddsRow({ label, odds, side, best, evPct, userPlan, isLoggedIn, gameId,
             <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evPct : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
               <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
               <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
-              <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-white'}`}>
+              <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-[#111827]'}`}>
                 ${price.toFixed(2)}
               </span>
             </BmCard>
@@ -336,7 +336,7 @@ function SpreadsRow({ label, odds, side, evPct, userPlan, isLoggedIn, gameId, sp
               <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
               <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
               <span className="text-[#888] text-[13px] sm:text-[10px] font-mono leading-none">{sign}{point}</span>
-              <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-white'}`}>
+              <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-[#111827]'}`}>
                 ${price.toFixed(2)}
               </span>
             </BmCard>
@@ -375,7 +375,7 @@ function TotalsRow({ odds, evOver, evUnder, userPlan, isLoggedIn, gameId, sport,
               <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evOver : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
                 <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
                 <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
-                <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-white'}`}>${adjOver.toFixed(2)}</span>
+                <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-[#111827]'}`}>${adjOver.toFixed(2)}</span>
               </BmCard>
             );
           })}
@@ -393,7 +393,7 @@ function TotalsRow({ odds, evOver, evUnder, userPlan, isLoggedIn, gameId, sport,
               <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evUnder : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
                 <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
                 <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
-                <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-white'}`}>${adjUnder.toFixed(2)}</span>
+                <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-[#111827]'}`}>${adjUnder.toFixed(2)}</span>
               </BmCard>
             );
           })}
@@ -447,18 +447,18 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
   };
 
   return (
-    <article className="border border-[#252525] rounded-lg bg-[#111111] overflow-hidden">
+    <article className="border border-[#E2E8F0] rounded-lg bg-white overflow-hidden shadow-sm">
 
       {/* ── Header ──────────────────────────────────────────────────────── */}
       <div className="px-5 pt-5 pb-4 flex items-start justify-between gap-4">
         <div className="min-w-0 overflow-hidden">
           <div className="flex items-center gap-2.5 flex-wrap">
             <TeamName name={game.homeTeam} />
-            <span className="text-[#333] text-[10px] font-mono font-bold uppercase tracking-[0.2em]">VS</span>
+            <span className="text-[#9CA3AF] text-[10px] font-mono font-bold uppercase tracking-[0.2em]">VS</span>
             <TeamName name={game.awayTeam} />
           </div>
           <div className="flex items-center gap-4 mt-1.5 flex-wrap">
-            <p className="text-[#5C5C5C] text-[11px] font-mono uppercase tracking-wide">
+            <p className="text-[#9CA3AF] text-[11px] font-mono uppercase tracking-wide">
               {game.venue ? `${game.venue.toUpperCase()} · ` : ''}{game.kickoffTime.toUpperCase()}
             </p>
             {venue && <WeatherBadge lat={venue.lat} lon={venue.lon} commenceTime={game.commenceTime} />}
@@ -468,8 +468,8 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
           </div>
         </div>
         <div className="text-right shrink-0">
-          <p className="text-[#333] text-[9px] font-mono uppercase tracking-widest leading-snug">Referee</p>
-          <p className="text-[#A0A0A0] text-[11px] font-mono uppercase tracking-wide leading-snug">
+          <p className="text-[#9CA3AF] text-[9px] font-mono uppercase tracking-widest leading-snug">Referee</p>
+          <p className="text-[#374151] text-[11px] font-mono uppercase tracking-wide leading-snug">
             {game.referee ? game.referee.toUpperCase() : 'TBA'}
           </p>
           <p className={`text-[11px] font-mono font-bold uppercase tracking-wide leading-snug ${bucketColor}`}>
@@ -479,17 +479,17 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
       </div>
 
       {/* ── Market tabs ─────────────────────────────────────────────────── */}
-      <div className="border-t border-[#1E1E1E] grid grid-cols-3">
+      <div className="border-t border-[#E2E8F0] grid grid-cols-3">
         {MARKET_TABS.map((t, i) => (
           <button
             key={t}
             onClick={() => setTab(t)}
             className={[
               'py-3 sm:py-2.5 text-[12px] sm:text-[11px] font-mono font-bold uppercase tracking-widest transition-colors relative',
-              i < MARKET_TABS.length - 1 ? 'border-r border-[#1E1E1E]' : '',
+              i < MARKET_TABS.length - 1 ? 'border-r border-[#E2E8F0]' : '',
               tab === t
-                ? 'text-white after:absolute after:bottom-0 after:inset-x-0 after:h-[2px] after:bg-[#00C896]'
-                : 'text-[#5C5C5C] hover:text-[#A0A0A0]',
+                ? 'text-[#111827] after:absolute after:bottom-0 after:inset-x-0 after:h-[2px] after:bg-[#00C896]'
+                : 'text-[#9CA3AF] hover:text-[#4B5563]',
             ].join(' ')}
           >
             {t}
@@ -527,7 +527,7 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
             </div>
           );
         })() : (
-          <div className="px-5 py-8 text-center text-[#444] font-mono text-xs uppercase tracking-widest">Handicap odds unavailable</div>
+          <div className="px-5 py-8 text-center text-[#9CA3AF] font-mono text-xs uppercase tracking-widest">Handicap odds unavailable</div>
         )
       ) : (
         game.totalsOdds && Object.keys(game.totalsOdds).length > 0 ? (() => {
@@ -542,19 +542,19 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
             </div>
           );
         })() : (
-          <div className="px-5 py-8 text-center text-[#444] font-mono text-xs uppercase tracking-widest">Totals odds unavailable</div>
+          <div className="px-5 py-8 text-center text-[#9CA3AF] font-mono text-xs uppercase tracking-widest">Totals odds unavailable</div>
         )
       )}
 
       {/* ── Betfair footnote ────────────────────────────────────────────── */}
       {Object.keys(game.odds).includes(BETFAIR_KEY) && (
         <div className="px-5 pb-2">
-          <p className="text-[#444] text-[10px] font-mono">* Betfair odds adjusted for 5% commission</p>
+          <p className="text-[#9CA3AF] text-[10px] font-mono">* Betfair odds adjusted for 5% commission</p>
         </div>
       )}
 
       {/* ── Value Edge strip ─────────────────────────────────────────────── */}
-      <div className="border-t border-[#1E1E1E] px-5 pt-3 pb-2 flex flex-wrap items-center gap-2">
+      <div className="border-t border-[#E2E8F0] px-5 pt-3 pb-2 flex flex-wrap items-center gap-2">
         {/* Free-tier value edge signals */}
         {evSignals.filter(s => s.tier === 'free').map((s, i) => {
           const label =
@@ -592,17 +592,17 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
 
         {/* No signals placeholder */}
         {evSignals.length === 0 && (
-          <span className="text-[#333] text-[10px] font-mono uppercase tracking-widest">No value edge detected</span>
+          <span className="text-[#9CA3AF] text-[10px] font-mono uppercase tracking-widest">No value edge detected</span>
         )}
 
         {game.publicPct && game.publicTeam && (
-          <span className="inline-flex items-center px-2.5 py-1 rounded border border-[#2A2A2A] bg-[#111] text-[10px] font-mono text-[#888] uppercase tracking-wide">
+          <span className="inline-flex items-center px-2.5 py-1 rounded border border-[#E2E8F0] bg-[#F8FAFC] text-[10px] font-mono text-[#6B7280] uppercase tracking-wide">
             {game.publicPct}% PUBLIC {game.publicTeam}
           </span>
         )}
 
         {game.lineMoveSummary && (
-          <span className="inline-flex items-center px-2.5 py-1 rounded border border-[#2A2A2A] bg-[#111] text-[10px] font-mono text-[#888] uppercase tracking-wide">
+          <span className="inline-flex items-center px-2.5 py-1 rounded border border-[#E2E8F0] bg-[#F8FAFC] text-[10px] font-mono text-[#6B7280] uppercase tracking-wide">
             LINE {game.lineMoveSummary}
           </span>
         )}
@@ -610,7 +610,7 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
       {evSignals.length > 0 && (
         <div className="px-5 pb-3">
           <p className="text-[#333] text-[9px] font-mono leading-snug">
-            Value edge signals are derived from 4 years of NRL data (2022–2025). Backing the flagged side has historically returned positive value over this period. Past performance does not guarantee future results.
+            <span className="text-[#9CA3AF]">Value edge signals are derived from 4 years of NRL data (2022–2025). Backing the flagged side has historically returned positive value over this period. Past performance does not guarantee future results.</span>
           </p>
         </div>
       )}

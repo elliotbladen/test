@@ -26,17 +26,17 @@ module.exports = {
           bright:  '#FB923C',
         },
         pro:  '#7C3AED',
-        // Surface hierarchy (darkest → lightest)
-        page:    '#0D0D0D',
-        surface: '#131313',
-        raised:  '#1C1C1C',
+        // Surface hierarchy
+        page:    '#F0F2F5',
+        surface: '#FFFFFF',
+        raised:  '#F8FAFC',
         // Borders
-        line:    '#2A2A2A',
-        border:  '#222222',
+        line:    '#E2E8F0',
+        border:  '#EEF2F7',
         // Text tokens
-        secondary: '#AAAAAA',
-        muted:     '#707070',
-        ghost:     '#383838',
+        secondary: '#6B7280',
+        muted:     '#9CA3AF',
+        ghost:     '#D1D5DB',
       },
       fontFamily: {
         sans:    ['var(--font-roboto)', 'ui-sans-serif', 'system-ui', 'sans-serif'],

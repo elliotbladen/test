@@ -1,0 +1,8 @@
+2026-05-04 12:05:49 [INFO] Fetching NRL odds ...
+2026-05-04 12:05:49 [INFO]   rugbyleague_nrl — 8 events, 491 API calls remaining
+2026-05-04 12:05:49 [INFO]   → 374 rows
+2026-05-04 12:05:49 [INFO] Fetching AFL odds ...
+2026-05-04 12:05:50 [INFO]   aussierules_afl — 9 events, 488 API calls remaining
+2026-05-04 12:05:50 [INFO]   → 342 rows
+2026-05-04 12:05:50 [INFO] Saved: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-04.csv (716 rows)
+2026-05-04 12:05:50 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv

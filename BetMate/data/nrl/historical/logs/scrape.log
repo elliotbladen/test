@@ -1,0 +1,68 @@
+2026-05-04 08:03:41 [INFO] NRL Historical Results scraper — headless=True
+2026-05-04 08:03:41 [INFO] Attempt 1/1 — downloading NRL historical results
+2026-05-04 08:03:49 [INFO] Opening https://www.aussportsbetting.com/data/historical-nrl-results-and-odds-data/
+2026-05-04 08:03:52 [ERROR] Playwright error — Page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://www.aussportsbetting.com/data/historical-nrl-results-and-odds-data/
+Call log:
+  - navigating to "https://www.aussportsbetting.com/data/historical-nrl-results-and-odds-data/", waiting until "domcontentloaded"
+
+2026-05-04 08:03:52 [ERROR] All attempts exhausted — NRL historical results not downloaded
+2026-05-04 08:04:31 [INFO] NRL Historical Results scraper — headless=True
+2026-05-04 08:04:31 [INFO] Attempt 1/1 — downloading NRL historical results
+2026-05-04 08:04:33 [INFO] Opening https://www.aussportsbetting.com/data/historical-nrl-results-and-odds-data/
+2026-05-04 08:04:33 [INFO] Waiting for page to settle ...
+2026-05-04 08:04:37 [INFO] Looking for download link ...
+2026-05-04 08:04:37 [ERROR] Could not find download button on page
+2026-05-04 08:04:37 [INFO] Page title: Web Filter Block Override
+2026-05-04 08:04:37 [INFO] Page URL: https://www.aussportsbetting.com/data/historical-nrl-results-and-odds-data/
+2026-05-04 08:04:37 [INFO] Page text (first 1000 chars):
+FortiGuard Intrusion Prevention - Access Blocked
+Web Page Blocked
+
+You have tried to access a web page which is in violation of your Internet usage policy.
+
+Category	Gambling
+URL	https://www.aussportsbetting.com/
+
+To have the rating of this web page re-evaluated please click here.
+
+Proceed
+Go Back
+2026-05-04 08:04:37 [ERROR] All attempts exhausted — NRL historical results not downloaded
+2026-05-04 08:04:59 [INFO] NRL Historical Results scraper — headless=True
+2026-05-04 08:04:59 [INFO] Attempt 1/1 — downloading NRL historical results
+2026-05-04 08:05:02 [INFO] Opening https://www.aussportsbetting.com/data/historical-nrl-results-and-odds-data/
+2026-05-04 08:05:02 [INFO] Waiting for page to settle ...
+2026-05-04 08:05:06 [WARNING] Content filter block page detected — attempting to click Proceed
+2026-05-04 08:05:06 [INFO] Clicking Proceed to bypass filter ...
+2026-05-04 08:05:12 [INFO] After proceed — title: Australia Sports Betting - News, data, tools, tips and resources for sports betting enthusiasts
+2026-05-04 08:05:12 [INFO] Looking for download link ...
+2026-05-04 08:05:12 [INFO] Found candidate link: text='NRL Promotions' href=https://www.aussportsbetting.com/betting-agencies/bookmaker-promotions/nrl/
+2026-05-04 08:05:12 [INFO] Clicking download link ...
+2026-05-04 08:05:42 [ERROR] Playwright timeout — ElementHandle.click: Timeout 30000ms exceeded.
+Call log:
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is not visible
+    - retrying click action
+      - waiting 100ms
+    57 × waiting for element to be visible, enabled and stable
+       - element is not visible
+     - retrying click action
+       - waiting 500ms
+
+2026-05-04 08:05:42 [ERROR] All attempts exhausted — NRL historical results not downloaded
+2026-05-04 08:08:05 [INFO] NRL Historical Results scraper — headless=True
+2026-05-04 08:08:05 [INFO] Attempt 1/1 — downloading NRL historical results
+2026-05-04 08:08:07 [INFO] Opening https://www.aussportsbetting.com/data/historical-nrl-results-and-odds-data/
+2026-05-04 08:08:09 [INFO] Waiting for page to settle ...
+2026-05-04 08:08:13 [INFO] Looking for download link ...
+2026-05-04 08:08:14 [INFO] Found xlsx link: text='' href=/historical_data/nrl.xlsx
+2026-05-04 08:08:14 [INFO] Clicking download link ...
+2026-05-04 08:08:14 [INFO] Download started: nrl.xlsx
+2026-05-04 08:08:15 [INFO] Saved raw: C:\Users\ElliotBladen\Apps\BetMate\data\nrl\historical\raw\nrl_20260504.xlsx (787489 bytes)
+2026-05-04 08:08:15 [INFO] Updated latest.xlsx (787489 bytes)
+2026-05-04 08:08:15 [INFO] Download complete — nrl_20260504.xlsx

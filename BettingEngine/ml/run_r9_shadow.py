@@ -24,6 +24,7 @@ import math
 import sqlite3
 import sys
 from collections import defaultdict
+from datetime import datetime
 from pathlib import Path
 
 import joblib
@@ -32,7 +33,7 @@ import numpy as np
 ROOT       = Path(__file__).resolve().parent.parent
 DB_PATH    = ROOT / 'data' / 'model.db'
 MODELS_DIR = ROOT / 'ml' / 'models'
-REF_LOG    = ROOT / 'ml' / 'results' / 'game_log_referee.csv'
+REF_LOG    = ROOT / 'ml' / 'data' / 'game_log_referee.csv'
 
 # ── Rest classification (matches game_log.py) ────────────────────────────────
 SHORT_MAX  = 6
@@ -206,18 +207,27 @@ def build_feature_row(feat_dict: dict) -> np.ndarray:
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--season', type=int, default=2026)
-    parser.add_argument('--round',  type=int, default=9, dest='round_number')
+    parser.add_argument('--season',     type=int, default=2026)
+    parser.add_argument('--round',      type=int, default=9, dest='round_number')
+    parser.add_argument('--stats-date', type=str, default=None,
+                        help='as_of_date for team_stats (auto-detects latest if omitted)')
     parser.add_argument('--output', default=None)
     args = parser.parse_args()
 
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
 
-    # ── Load models ───────────────────────────────────────────────────────────
-    margin_model = joblib.load(MODELS_DIR / 'margin_model_v20260419.joblib')
-    total_model  = joblib.load(MODELS_DIR / 'total_model_v20260419.joblib')
-    h2h_model    = joblib.load(MODELS_DIR / 'h2h_model_v20260419.joblib')
+    # ── Load models (auto-detect latest version) ──────────────────────────────
+    def latest(prefix):
+        files = sorted(MODELS_DIR.glob(f'{prefix}_v*.joblib'))
+        if not files:
+            raise FileNotFoundError(
+                f'No {prefix} model in ml/models/ — run: python ml/rebuild_models.py'
+            )
+        return files[-1]
+    margin_model = joblib.load(latest('margin_model'))
+    total_model  = joblib.load(latest('total_model'))
+    h2h_model    = joblib.load(latest('h2h_model'))
 
     # ── Build ref lookup ──────────────────────────────────────────────────────
     ref_lookup = build_ref_lookup(REF_LOG)
@@ -225,7 +235,20 @@ def main():
     # ── Team form ─────────────────────────────────────────────────────────────
     team_form = build_team_form(conn, args.season, args.round_number)
 
-    # ── Pull R9 matches with all needed data ──────────────────────────────────
+    # ── Resolve team_stats snapshot date ─────────────────────────────────────
+    if args.stats_date:
+        stats_date = args.stats_date
+    else:
+        row = conn.execute(
+            "SELECT MAX(as_of_date) FROM team_stats WHERE season=?", (args.season,)
+        ).fetchone()
+        stats_date = row[0]
+        if not stats_date:
+            print(f"No team_stats found for season {args.season}", file=sys.stderr)
+            sys.exit(1)
+    print(f"Using team_stats as_of_date: {stats_date}")
+
+    # ── Pull round matches with all needed data ───────────────────────────────
     matches = conn.execute("""
         SELECT m.match_id, m.home_team_id, m.away_team_id,
                m.match_date, m.kickoff_datetime, m.venue_id,
@@ -257,17 +280,17 @@ def main():
         JOIN venues v  ON v.venue_id = m.venue_id
         JOIN team_stats hts ON hts.team_id = m.home_team_id
                            AND hts.season = m.season
-                           AND hts.as_of_date = '2026-04-22'
+                           AND hts.as_of_date = ?
         JOIN team_stats ats ON ats.team_id = m.away_team_id
                            AND ats.season = m.season
-                           AND ats.as_of_date = '2026-04-22'
+                           AND ats.as_of_date = ?
         JOIN tier2_performance tp ON tp.match_id = m.match_id
         LEFT JOIN weekly_ref_assignments wra ON wra.match_id = m.match_id
         LEFT JOIN referees ref ON ref.referee_id = wra.referee_id
         LEFT JOIN weather_conditions wc ON wc.match_id = m.match_id
         WHERE m.season = ? AND m.round_number = ?
         ORDER BY m.match_date, m.match_id
-    """, (args.season, args.round_number)).fetchall()
+    """, (stats_date, stats_date, args.season, args.round_number)).fetchall()
 
     if not matches:
         print(f"No matches found for S{args.season} R{args.round_number}", file=sys.stderr)
@@ -460,7 +483,7 @@ def main():
 
     p()
     p('=' * W)
-    p(f'  NRL 2026 — Round 9  |  ML Shadow Mode vs Rules Model')
+    p(f'  NRL {args.season} — Round {args.round_number}  |  ML Shadow Mode vs Rules Model')
     p(f'  Models: XGBoost trained on 2009–2023  |  T2+T5+T7 layered on top')
     p('=' * W)
 
@@ -554,10 +577,63 @@ def main():
     p('=' * W)
 
     # ── Save to file ──────────────────────────────────────────────────────────
-    out_path = args.output or str(ROOT / 'results' / f'r{args.round_number}_ml_shadow_{args.season}.txt')
-    with open(out_path, 'w') as f:
+    out_path = args.output or str(ROOT / 'results' / f'r{args.round_number:02d}_ml_shadow_{args.season}.txt')
+    with open(out_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
     print(f'\nSaved → {out_path}')
+
+    # ── Write to DB (ml_shadow_predictions) ──────────────────────────────────
+    run_date = datetime.now().strftime('%Y-%m-%d')
+    model_ver = str(latest('margin_model').stem)  # e.g. margin_model_v20260501
+
+    def agreement(m_diff, h2h_diff_pct, same_dir):
+        if not same_dir:
+            return 'disagree'
+        if abs(m_diff) < 3 and abs(h2h_diff_pct) < 5:
+            return 'strong'
+        return 'direction'
+
+    rows_db = []
+    for r in results:
+        m_diff  = round(r['ml_adj_margin'] - r['rules_margin'], 2)
+        t_diff  = round(r['ml_adj_total']  - r['rules_total'],  2)
+        h_diff  = round((r['ml_adj_h2h_prob'] - r['rules_h2h_prob']) * 100, 2)
+        same_dir = (r['ml_adj_margin'] >= 0) == (r['rules_margin'] >= 0)
+        flag = agreement(m_diff, h_diff, same_dir)
+        rows_db.append((
+            r['match_id'], args.season, args.round_number,
+            run_date, model_ver, stats_date,
+            r['_elo_diff'],
+            r['ml_margin'], r['ml_total'], r['ml_h2h_prob'],
+            r['t2_hcap'], r['t2_tot'],
+            r['t5_hcap'], r['t5_tot'],
+            r['t7_hcap'], r['t7_tot'],
+            r['ml_adj_margin'], r['ml_adj_total'], r['ml_adj_h2h_prob'],
+            r['rules_margin'], r['rules_total'], r['rules_h2h_prob'],
+            m_diff, t_diff, h_diff, flag,
+            None, None, None,   # actuals filled later
+            None, None, None,   # ml errors filled later
+            None, None, None,   # rules errors filled later
+            run_date,
+        ))
+
+    conn.executemany("""
+        INSERT OR REPLACE INTO ml_shadow_predictions (
+            match_id, season, round_number, run_date, model_version, stats_date,
+            elo_diff,
+            ml_raw_margin, ml_raw_total, ml_raw_h2h_prob,
+            t2_hcap, t2_tot, t5_hcap, t5_tot, t7_hcap, t7_tot,
+            ml_adj_margin, ml_adj_total, ml_adj_h2h_prob,
+            rules_margin, rules_total, rules_h2h_prob,
+            margin_diff, total_diff, h2h_diff, agreement_flag,
+            actual_margin, actual_total, actual_home_win,
+            ml_margin_error, ml_total_error, ml_h2h_correct,
+            rules_margin_error, rules_total_error, rules_h2h_correct,
+            created_at
+        ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+    """, rows_db)
+    conn.commit()
+    print(f'Stored {len(rows_db)} rows → ml_shadow_predictions (DB)')
 
     conn.close()
 

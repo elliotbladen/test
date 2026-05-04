@@ -7,12 +7,12 @@
   --green:     #00C896;
   --orange:    #F97316;
   --pro:       #7C3AED;
-  --line:      #2A2A2A;
-  --border:    #222222;
-  --surface:   #131313;
-  --raised:    #1C1C1C;
-  --muted:     #707070;
-  --secondary: #AAAAAA;
+  --line:      #E2E8F0;
+  --border:    #EEF2F7;
+  --surface:   #FFFFFF;
+  --raised:    #F8FAFC;
+  --muted:     #9CA3AF;
+  --secondary: #6B7280;
 }
 
 * {
@@ -26,8 +26,8 @@ html {
 
 html,
 body {
-  background-color: #0D0D0D;
-  color: #ffffff;
+  background-color: #F0F2F5;
+  color: #111827;
   font-family: var(--font-roboto), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -55,8 +55,8 @@ button, a, [role="button"] {
 /* Slim scrollbar */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #383838; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
 
 /* Selection */
 ::selection {
@@ -74,12 +74,12 @@ button, a, [role="button"] {
 
   /* Section labels */
   .section-label {
-    @apply text-[10px] font-mono text-[#5C5C5C] uppercase tracking-[0.14em];
+    @apply text-[10px] font-mono text-[#9CA3AF] uppercase tracking-[0.14em];
   }
 
   /* Hairline divider */
   .divider {
-    @apply h-px w-full bg-[#1E1E1E];
+    @apply h-px w-full bg-[#E2E8F0];
   }
 
   /* 44px touch target */
@@ -110,7 +110,7 @@ button, a, [role="button"] {
   animation: ev-snake 1.8s linear infinite;
   border: 2px solid transparent !important;
   background:
-    linear-gradient(#0f1d19, #0f1d19) padding-box,
+    linear-gradient(#ffffff, #ffffff) padding-box,
     conic-gradient(
       from var(--ev-angle),
       transparent 0%,

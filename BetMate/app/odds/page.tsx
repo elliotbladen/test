@@ -76,7 +76,7 @@ function OddsContent({
   return (
     <>
       <div className="flex items-center justify-between mb-5">
-        <p className="text-[11px] font-mono text-[#555] uppercase tracking-[0.18em]">
+        <p className="text-[11px] font-mono text-[#9CA3AF] uppercase tracking-[0.18em]">
           {activeSport} 2026
         </p>
         <span className="flex items-center gap-1.5 text-[11px] font-mono text-[#00C896] uppercase tracking-wide">
@@ -87,7 +87,7 @@ function OddsContent({
 
       {loading ? (
         <div className="flex flex-col items-center justify-center py-24 gap-3">
-          <span className="text-[#555] font-mono text-sm uppercase tracking-widest animate-pulse">
+          <span className="text-[#9CA3AF] font-mono text-sm uppercase tracking-widest animate-pulse">
             Fetching odds…
           </span>
         </div>
@@ -97,10 +97,10 @@ function OddsContent({
         </div>
       ) : games.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-24 gap-3 text-center">
-          <span className="text-[#555] font-mono text-sm uppercase tracking-widest">
+          <span className="text-[#9CA3AF] font-mono text-sm uppercase tracking-widest">
             No {activeSport} games available
           </span>
-          <span className="text-[#333] font-mono text-[11px]">
+          <span className="text-[#9CA3AF] font-mono text-[11px]">
             Check back closer to game day
           </span>
         </div>
@@ -247,7 +247,7 @@ export default function OddsPage() {
     <div className="flex flex-col" style={{ height: 'calc(100dvh - 56px)' }}>
 
       {/* ── Sport tabs bar ───────────────────────────────────────────────── */}
-      <div className="border-b border-[#1C1C1C] px-4 sm:px-6 flex items-center gap-1 h-10 shrink-0">
+      <div className="border-b border-[#E2E8F0] bg-white px-4 sm:px-6 flex items-center gap-1 h-10 shrink-0">
         {SPORT_TABS.map((tab) => (
           <button
             key={tab}
@@ -256,7 +256,7 @@ export default function OddsPage() {
               'px-4 py-1 rounded text-[11px] font-mono font-bold uppercase tracking-widest transition-colors',
               activeSport === tab
                 ? 'bg-[#00C896] text-black'
-                : 'text-[#555] hover:text-white',
+                : 'text-[#9CA3AF] hover:text-[#374151]',
             ].join(' ')}
           >
             {tab}
@@ -266,12 +266,12 @@ export default function OddsPage() {
 
       {/* DESKTOP */}
       <div className="hidden lg:flex flex-1 min-h-0">
-        <div className={`overflow-y-auto border-r border-[#1C1C1C] px-6 py-5 transition-all duration-300 ${chatOpen ? 'w-[60%]' : 'w-full'}`}>
+        <div className={`overflow-y-auto border-r border-[#E2E8F0] px-6 py-5 transition-all duration-300 ${chatOpen ? 'w-[60%]' : 'w-full'}`}>
           <div className="flex items-center justify-between mb-1">
             <div />
             <button
               onClick={() => setChatOpen((o) => !o)}
-              className="flex items-center gap-1.5 text-[11px] font-mono text-[#555] hover:text-white uppercase tracking-widest transition-colors"
+              className="flex items-center gap-1.5 text-[11px] font-mono text-[#9CA3AF] hover:text-[#374151] uppercase tracking-widest transition-colors"
             >
               {chatOpen ? (
                 <><MessageCircle className="w-3.5 h-3.5" strokeWidth={2} /><span>Hide Chat</span></>
