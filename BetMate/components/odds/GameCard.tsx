@@ -49,7 +49,7 @@ function TeamName({ name }: { name: string }) {
           {meta.abbr}
         </span>
       )}
-      <span className="text-white font-bold text-[19px] sm:text-[15px] uppercase tracking-wide leading-snug">
+      <span className="font-display font-bold text-[19px] sm:text-[15px] uppercase tracking-wide leading-snug text-white">
         {name.toUpperCase()}
       </span>
     </span>
@@ -197,8 +197,8 @@ function BmCard({
     hasEV
       ? 'ev-snake-border shadow-[0_0_20px_rgba(0,200,150,0.35)] hover:scale-105'
       : isBest
-        ? 'border border-[#00C896]/50 bg-[#00C896]/6 hover:border-[#00C896] hover:bg-[#00C896]/10 hover:shadow-[0_0_14px_rgba(0,200,150,0.2)] hover:scale-105'
-        : 'border border-[#252525] bg-[#1A1A1A] hover:border-[#383838] hover:bg-[#1E1E1E] hover:scale-105',
+        ? 'border border-[#F97316]/50 bg-[#F97316]/5 hover:border-[#F97316] hover:bg-[#F97316]/10 hover:shadow-[0_0_14px_rgba(249,115,22,0.25)] hover:scale-105'
+        : 'border border-[#2A2A2A] bg-[#1C1C1C] hover:border-[#404040] hover:bg-[#222222] hover:scale-105',
   ].join(' ');
 
   function getHref(): string | null {
@@ -227,7 +227,7 @@ function BmCard({
           EDGE {evPct!.toFixed(1)}%
         </span>
       ) : isBest ? (
-        <span className="absolute -top-[9px] left-1/2 -translate-x-1/2 bg-[#00C896] text-black text-[7px] font-black font-mono px-1.5 py-0.5 rounded uppercase tracking-widest whitespace-nowrap leading-none z-10">
+        <span className="absolute -top-[9px] left-1/2 -translate-x-1/2 bg-[#F97316] text-white text-[7px] font-black font-mono px-1.5 py-0.5 rounded uppercase tracking-widest whitespace-nowrap leading-none z-10">
           BEST
         </span>
       ) : null}
@@ -292,7 +292,7 @@ function OddsRow({ label, odds, side, best, evPct, userPlan, isLoggedIn, gameId,
 
   return (
     <div>
-      <p className="text-[10px] font-mono text-[#555] uppercase tracking-[0.15em] mb-2 truncate">{label}</p>
+      <p className="text-[10px] font-mono text-[#777] uppercase tracking-[0.15em] mb-2 truncate">{label}</p>
       <div className="flex overflow-x-auto no-scrollbar gap-2 pb-1 sm:flex-wrap sm:overflow-visible sm:gap-1.5 sm:pb-0">
         {entries.map(({ key, price }) => {
           const meta = BOOKMAKER_META[key] ?? { abbr: key.slice(0, 3).toUpperCase(), name: key, color: '', domain: '' };
@@ -301,8 +301,8 @@ function OddsRow({ label, odds, side, best, evPct, userPlan, isLoggedIn, gameId,
           return (
             <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evPct : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
               <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
-              <span className="text-[#555] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
-              <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#00C896]' : 'text-white'}`}>
+              <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
+              <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-white'}`}>
                 ${price.toFixed(2)}
               </span>
             </BmCard>
@@ -324,7 +324,7 @@ function SpreadsRow({ label, odds, side, evPct, userPlan, isLoggedIn, gameId, sp
 
   return (
     <div>
-      <p className="text-[10px] font-mono text-[#555] uppercase tracking-[0.15em] mb-2 truncate">{label}</p>
+      <p className="text-[10px] font-mono text-[#777] uppercase tracking-[0.15em] mb-2 truncate">{label}</p>
       <div className="flex overflow-x-auto no-scrollbar gap-2 pb-1 sm:flex-wrap sm:overflow-visible sm:gap-1.5 sm:pb-0">
         {entries.map(({ key, price, point }) => {
           const meta = BOOKMAKER_META[key] ?? { abbr: key.slice(0, 3).toUpperCase(), name: key, color: '', domain: '' };
@@ -334,9 +334,9 @@ function SpreadsRow({ label, odds, side, evPct, userPlan, isLoggedIn, gameId, sp
           return (
             <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evPct : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
               <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
-              <span className="text-[#555] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
+              <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
               <span className="text-[#888] text-[13px] sm:text-[10px] font-mono leading-none">{sign}{point}</span>
-              <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#00C896]' : 'text-white'}`}>
+              <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-white'}`}>
                 ${price.toFixed(2)}
               </span>
             </BmCard>
@@ -374,8 +374,8 @@ function TotalsRow({ odds, evOver, evUnder, userPlan, isLoggedIn, gameId, sport,
             return (
               <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evOver : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
                 <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
-                <span className="text-[#555] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
-                <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#00C896]' : 'text-white'}`}>${adjOver.toFixed(2)}</span>
+                <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
+                <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-white'}`}>${adjOver.toFixed(2)}</span>
               </BmCard>
             );
           })}
@@ -392,8 +392,8 @@ function TotalsRow({ odds, evOver, evUnder, userPlan, isLoggedIn, gameId, sport,
             return (
               <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evUnder : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
                 <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
-                <span className="text-[#555] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
-                <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#00C896]' : 'text-white'}`}>${adjUnder.toFixed(2)}</span>
+                <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
+                <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-white'}`}>${adjUnder.toFixed(2)}</span>
               </BmCard>
             );
           })}

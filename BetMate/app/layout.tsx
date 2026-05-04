@@ -1,6 +1,21 @@
 import type { Metadata, Viewport } from 'next';
+import { Roboto, Montserrat } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '700'],
+  variable: '--font-roboto',
+  display: 'swap',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
 import Footer from '@/components/layout/Footer';
 import ServiceWorker from '@/components/ServiceWorker';
 
@@ -39,8 +54,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className="min-h-[100dvh] bg-[#0D0D0D] text-white flex flex-col">
+    <html lang="en" className={`dark ${roboto.variable} ${montserrat.variable}`}>
+      <body className="min-h-[100dvh] bg-[#0D0D0D] text-white flex flex-col font-sans">
         <ServiceWorker />
         <Header />
         <main className="flex-1">{children}</main>

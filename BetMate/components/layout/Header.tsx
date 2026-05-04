@@ -41,8 +41,8 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/odds" className="flex items-center shrink-0 select-none">
-            <span className="font-bold text-[18px] tracking-tight text-white leading-none">Bet</span>
-            <span className="font-bold text-[18px] tracking-tight text-[#00C896] leading-none">Mate</span>
+            <span className="font-display font-extrabold text-[20px] tracking-tight text-white leading-none">Bet</span>
+            <span className="font-display font-extrabold text-[20px] tracking-tight text-[#00C896] leading-none">Mate</span>
           </Link>
 
           {/* Sport tabs — only on odds page */}
