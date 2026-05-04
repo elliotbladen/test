@@ -4,11 +4,14 @@
 
 :root {
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-  --cyan: #00C896;
-  --pro: #7C3AED;
-  --border: #1C1C1C;
-  --surface: #0A0A0A;
-  --muted: #888888;
+  --green:   #00C896;
+  --pro:     #7C3AED;
+  --line:    #252525;
+  --border:  #1E1E1E;
+  --surface: #111111;
+  --raised:  #1A1A1A;
+  --muted:   #5C5C5C;
+  --secondary: #A0A0A0;
 }
 
 * {
@@ -22,13 +25,12 @@ html {
 
 html,
 body {
-  background-color: #000000;
+  background-color: #0D0D0D;
   color: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  /* Safe area insets for iPhone notch + home indicator */
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
   padding-left: env(safe-area-inset-left);
@@ -45,51 +47,41 @@ button, a, [role="button"] {
   font-feature-settings: "tnum";
 }
 
-/* Hide scrollbar but keep scroll functionality */
+/* Hide scrollbar but keep scroll */
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #222;
-  border-radius: 2px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #333;
-}
+/* Slim scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #383838; }
 
 /* Selection */
 ::selection {
-  background: rgba(0, 188, 212, 0.2);
+  background: rgba(0, 200, 150, 0.18);
   color: #ffffff;
 }
 
 @layer utilities {
-  /* Blur-locked: PRO content overlay */
+  /* PRO content blur lock */
   .blur-locked {
     filter: blur(7px);
     user-select: none;
     pointer-events: none;
   }
 
-  /* Section labels — reusable mono uppercase caps */
+  /* Section labels */
   .section-label {
-    @apply text-[10px] font-mono text-[#888888] uppercase tracking-[0.12em];
+    @apply text-[10px] font-mono text-[#5C5C5C] uppercase tracking-[0.14em];
   }
 
   /* Hairline divider */
   .divider {
-    @apply h-px w-full bg-[#1C1C1C];
+    @apply h-px w-full bg-[#1E1E1E];
   }
 
-  /* 44px minimum touch target helper */
+  /* 44px touch target */
   .touch-target {
     min-height: 44px;
     min-width: 44px;
@@ -99,43 +91,37 @@ button, a, [role="button"] {
 /* Pulse dot for live indicator */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
+  50%       { opacity: 0.25; }
 }
-.pulse-dot {
-  animation: pulse-dot 2s ease-in-out infinite;
-}
+.pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
 
-/* Subtle card hover border transition */
-.card-hover {
-  transition: border-color 0.15s ease;
-}
+/* Card hover */
+.card-hover { transition: border-color 0.15s ease; }
 
-/* EV snake border — rotating green comet around bookmaker button */
+/* EV snake border — rotating green comet */
 @property --ev-angle {
   syntax: '<angle>';
   initial-value: 0deg;
   inherits: false;
 }
-@keyframes ev-snake {
-  to { --ev-angle: 360deg; }
-}
+@keyframes ev-snake { to { --ev-angle: 360deg; } }
 .ev-snake-border {
   animation: ev-snake 1.8s linear infinite;
   border: 2px solid transparent !important;
   background:
-    linear-gradient(#0d1f1a, #0d1f1a) padding-box,
+    linear-gradient(#0f1d19, #0f1d19) padding-box,
     conic-gradient(
       from var(--ev-angle),
       transparent 0%,
       transparent 60%,
       #00C896 75%,
-      #00ff99 85%,
+      #00E5A8 85%,
       #00C896 90%,
       transparent 95%
     ) border-box !important;
 }
 
-/* Odds movement arrows */
+/* Odds movement */
 @keyframes flash-up {
   0%   { opacity: 0; transform: translateY(3px) scale(0.7); }
   40%  { opacity: 1; transform: translateY(-2px) scale(1.3); }

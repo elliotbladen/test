@@ -192,13 +192,13 @@ function BmCard({
   const hasEV = isBest && evPct != null;
   const webHref = getAffiliateUrl(bmKey, sport);
   const baseClass = [
-    'relative flex flex-col items-center pt-6 pb-4 px-2 rounded shrink-0 w-[110px] sm:w-auto sm:min-w-[64px] sm:pt-4 sm:pb-2.5',
+    'relative flex flex-col items-center pt-6 pb-4 px-2 rounded-md shrink-0 w-[110px] sm:w-auto sm:min-w-[64px] sm:pt-4 sm:pb-2.5',
     'cursor-pointer transition-all duration-150 group/bm',
     hasEV
-      ? 'ev-snake-border shadow-[0_0_18px_rgba(0,200,150,0.4)] hover:scale-105'
+      ? 'ev-snake-border shadow-[0_0_20px_rgba(0,200,150,0.35)] hover:scale-105'
       : isBest
-        ? 'border border-[#00C896]/60 bg-[#00C896]/5 hover:border-[#00C896] hover:bg-[#00C896]/10 hover:shadow-[0_0_12px_rgba(0,200,150,0.25)] hover:scale-105'
-        : 'border border-[#1C1C1C] bg-[#111] hover:border-[#333] hover:bg-[#1a1a1a] hover:shadow-[0_0_8px_rgba(255,255,255,0.05)] hover:scale-105',
+        ? 'border border-[#00C896]/50 bg-[#00C896]/6 hover:border-[#00C896] hover:bg-[#00C896]/10 hover:shadow-[0_0_14px_rgba(0,200,150,0.2)] hover:scale-105'
+        : 'border border-[#252525] bg-[#1A1A1A] hover:border-[#383838] hover:bg-[#1E1E1E] hover:scale-105',
   ].join(' ');
 
   function getHref(): string | null {
@@ -266,7 +266,7 @@ function MarginRow({ entries }: { entries: { key: string; margin: number }[] }) 
   const sorted = [...entries].sort((a, b) => a.margin - b.margin);
   const lowest = sorted[0]?.margin;
   return (
-    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 border-t border-[#111] mt-2">
+    <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-3 border-t border-[#1E1E1E] mt-2">
       <span className="text-[10px] font-mono text-[#444] uppercase tracking-widest shrink-0">Overround</span>
       {sorted.map(({ key, margin }) => {
         const meta = BOOKMAKER_META[key] ?? { abbr: key.slice(0, 3).toUpperCase(), name: key, color: '', domain: '' };
@@ -447,18 +447,18 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
   };
 
   return (
-    <article className="border border-[#1C1C1C] rounded-lg bg-[#0A0A0A] overflow-hidden">
+    <article className="border border-[#252525] rounded-lg bg-[#111111] overflow-hidden">
 
       {/* ── Header ──────────────────────────────────────────────────────── */}
-      <div className="px-5 pt-4 pb-3 flex items-start justify-between gap-4">
+      <div className="px-5 pt-5 pb-4 flex items-start justify-between gap-4">
         <div className="min-w-0 overflow-hidden">
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex items-center gap-2.5 flex-wrap">
             <TeamName name={game.homeTeam} />
-            <span className="text-[#444] text-[11px] font-mono font-bold uppercase tracking-widest">VS</span>
+            <span className="text-[#333] text-[10px] font-mono font-bold uppercase tracking-[0.2em]">VS</span>
             <TeamName name={game.awayTeam} />
           </div>
-          <div className="flex items-center gap-4 mt-0.5 flex-wrap">
-            <p className="text-[#888888] text-[11px] font-mono uppercase tracking-wide">
+          <div className="flex items-center gap-4 mt-1.5 flex-wrap">
+            <p className="text-[#5C5C5C] text-[11px] font-mono uppercase tracking-wide">
               {game.venue ? `${game.venue.toUpperCase()} · ` : ''}{game.kickoffTime.toUpperCase()}
             </p>
             {venue && <WeatherBadge lat={venue.lat} lon={venue.lon} commenceTime={game.commenceTime} />}
@@ -468,8 +468,8 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
           </div>
         </div>
         <div className="text-right shrink-0">
-          <p className="text-[#444] text-[9px] font-mono uppercase tracking-widest leading-snug">Referee</p>
-          <p className="text-[#888888] text-[11px] font-mono uppercase tracking-wide leading-snug">
+          <p className="text-[#333] text-[9px] font-mono uppercase tracking-widest leading-snug">Referee</p>
+          <p className="text-[#A0A0A0] text-[11px] font-mono uppercase tracking-wide leading-snug">
             {game.referee ? game.referee.toUpperCase() : 'TBA'}
           </p>
           <p className={`text-[11px] font-mono font-bold uppercase tracking-wide leading-snug ${bucketColor}`}>
@@ -479,20 +479,22 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
       </div>
 
       {/* ── Market tabs ─────────────────────────────────────────────────── */}
-      <div className="border-t border-[#1C1C1C] grid grid-cols-3">
+      <div className="border-t border-[#1E1E1E] grid grid-cols-3">
         {MARKET_TABS.map((t, i) => (
           <button
             key={t}
             onClick={() => setTab(t)}
             className={[
-              'py-3.5 sm:py-2.5 text-[13px] sm:text-[11px] font-mono font-bold uppercase tracking-widest transition-colors relative',
-              i < MARKET_TABS.length - 1 ? 'border-r border-[#1C1C1C]' : '',
-              tab === t ? 'text-[#00C896] bg-[#00C896]/5' : 'text-[#555] hover:text-white',
+              'py-3 sm:py-2.5 text-[12px] sm:text-[11px] font-mono font-bold uppercase tracking-widest transition-colors relative',
+              i < MARKET_TABS.length - 1 ? 'border-r border-[#1E1E1E]' : '',
+              tab === t
+                ? 'text-white after:absolute after:bottom-0 after:inset-x-0 after:h-[2px] after:bg-[#00C896]'
+                : 'text-[#5C5C5C] hover:text-[#A0A0A0]',
             ].join(' ')}
           >
             {t}
             {tabHasSignal[t] && (
-              <span className="absolute top-1.5 right-2 w-1.5 h-1.5 rounded-full bg-[#00C896]" />
+              <span className="absolute top-2 right-2 w-1.5 h-1.5 rounded-full bg-[#00C896]" />
             )}
           </button>
         ))}
@@ -552,7 +554,7 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
       )}
 
       {/* ── EV strip ────────────────────────────────────────────────────── */}
-      <div className="border-t border-[#1C1C1C] px-5 py-3 flex flex-wrap items-center gap-2">
+      <div className="border-t border-[#1E1E1E] px-5 py-3 flex flex-wrap items-center gap-2">
         {/* Free-tier EV signals from matrix */}
         {evSignals.filter(s => s.tier === 'free').map((s, i) => {
           const label =
@@ -608,13 +610,13 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
 
       {/* ── PRO upgrade strip ───────────────────────────────────────────── */}
       {userPlan === 'free' && (
-        <div className="border-t border-[#1C1C1C] px-5 py-3 flex items-center justify-between gap-4">
+        <div className="border-t border-[#1E1E1E] px-5 py-3 flex items-center justify-between gap-4">
           <p className="text-[10px] font-mono uppercase tracking-wide">
             <span className="text-[#7C3AED] font-bold">PRO</span>
-            <span className="text-[#555]"> — MODEL BREAKDOWN, TIER SIGNALS, FULL SENTIMENT</span>
+            <span className="text-[#5C5C5C]"> — Model breakdown · tier signals · full sentiment</span>
           </p>
-          <button className="shrink-0 text-[#555] text-[10px] font-mono font-bold uppercase tracking-widest hover:text-white transition-colors">
-            UPGRADE
+          <button className="shrink-0 text-[#5C5C5C] text-[10px] font-mono font-bold uppercase tracking-widest hover:text-white transition-colors">
+            Upgrade
           </button>
         </div>
       )}

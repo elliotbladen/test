@@ -8,7 +8,7 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
-  themeColor: '#000000',
+  themeColor: '#0D0D0D',
 };
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className="min-h-[100dvh] bg-black text-white flex flex-col">
+      <body className="min-h-[100dvh] bg-[#0D0D0D] text-white flex flex-col">
         <ServiceWorker />
         <Header />
         <main className="flex-1">{children}</main>
