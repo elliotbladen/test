@@ -23,17 +23,17 @@ function numInput(
 ) {
   return (
     <div className="flex flex-col gap-1.5">
-      <label className="text-[11px] font-mono uppercase tracking-widest text-[#888]">{label}</label>
-      <div className="flex items-center border border-[#1C1C1C] rounded bg-[#0A0A0A] focus-within:border-[#00C896]/40 transition-colors">
+      <label className="text-[11px] font-mono uppercase tracking-widest text-[#6B7280]">{label}</label>
+      <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00C896]/50 transition-colors">
         {prefix && (
-          <span className="px-3 text-[#555] font-mono text-sm border-r border-[#1C1C1C]">{prefix}</span>
+          <span className="px-3 text-[#9CA3AF] font-mono text-sm border-r border-[#E2E8F0]">{prefix}</span>
         )}
         <input
           type="number"
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className="flex-1 bg-transparent px-3 py-2.5 text-white font-mono text-sm outline-none placeholder:text-[#333]"
+          className="flex-1 bg-transparent px-3 py-2.5 text-[#111827] font-mono text-sm outline-none placeholder:text-[#9CA3AF]"
         />
       </div>
     </div>
@@ -42,9 +42,9 @@ function numInput(
 
 function ResultRow({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
   return (
-    <div className="flex items-center justify-between py-2 border-b border-[#111] last:border-0">
-      <span className="text-[#888] text-[13px]">{label}</span>
-      <span className={`font-mono font-bold text-sm font-tabular ${highlight ? 'text-[#00C896]' : 'text-white'}`}>
+    <div className="flex items-center justify-between py-2 border-b border-[#E2E8F0] last:border-0">
+      <span className="text-[#6B7280] text-[13px]">{label}</span>
+      <span className={`font-mono font-bold text-sm font-tabular ${highlight ? 'text-[#00C896]' : 'text-[#111827]'}`}>
         {value}
       </span>
     </div>
@@ -100,26 +100,26 @@ function OddsConverter() {
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
       {numInput(decimal, fromDecimal, '2.50', 'Decimal', undefined)}
       <div className="flex flex-col gap-1.5">
-        <label className="text-[11px] font-mono uppercase tracking-widest text-[#888]">Fractional</label>
-        <div className="flex items-center border border-[#1C1C1C] rounded bg-[#0A0A0A] focus-within:border-[#00C896]/40 transition-colors">
+        <label className="text-[11px] font-mono uppercase tracking-widest text-[#6B7280]">Fractional</label>
+        <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00C896]/50 transition-colors">
           <input
             type="text"
             value={fractional}
             onChange={(e) => fromFractional(e.target.value)}
             placeholder="3/2"
-            className="flex-1 bg-transparent px-3 py-2.5 text-white font-mono text-sm outline-none placeholder:text-[#333]"
+            className="flex-1 bg-transparent px-3 py-2.5 text-[#111827] font-mono text-sm outline-none placeholder:text-[#9CA3AF]"
           />
         </div>
       </div>
       <div className="flex flex-col gap-1.5">
-        <label className="text-[11px] font-mono uppercase tracking-widest text-[#888]">American</label>
-        <div className="flex items-center border border-[#1C1C1C] rounded bg-[#0A0A0A] focus-within:border-[#00C896]/40 transition-colors">
+        <label className="text-[11px] font-mono uppercase tracking-widest text-[#6B7280]">American</label>
+        <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00C896]/50 transition-colors">
           <input
             type="text"
             value={american}
             onChange={(e) => fromAmerican(e.target.value)}
             placeholder="+150"
-            className="flex-1 bg-transparent px-3 py-2.5 text-white font-mono text-sm outline-none placeholder:text-[#333]"
+            className="flex-1 bg-transparent px-3 py-2.5 text-[#111827] font-mono text-sm outline-none placeholder:text-[#9CA3AF]"
           />
         </div>
       </div>
@@ -142,7 +142,7 @@ function ImpliedProb() {
         {numInput(odds, setOdds, '2.50', 'Decimal Odds')}
         {numInput(vig, setVig, '4.76', 'Bookmaker Margin %')}
       </div>
-      <div className="border border-[#1C1C1C] rounded bg-[#080808] p-4 flex flex-col justify-center gap-1">
+      <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
         <ResultRow label="Raw implied prob" value={raw !== null ? `${raw.toFixed(2)}%` : '—'} />
         <ResultRow label="Fair prob (vig removed)" value={fair !== null ? `${fair.toFixed(2)}%` : '—'} highlight />
       </div>
@@ -165,8 +165,6 @@ function EVCalculator() {
 
   const dollarEV = ev !== null && !isNaN(s) ? (ev / 100) * s : null;
 
-  const evColor = ev === null ? 'text-white' : ev > 0 ? 'text-[#00C896]' : 'text-red-400';
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div className="flex flex-col gap-4">
@@ -174,7 +172,7 @@ function EVCalculator() {
         {numInput(prob, setProb, '45', 'Your True Probability %')}
         {numInput(stake, setStake, '100', 'Stake', '$')}
       </div>
-      <div className="border border-[#1C1C1C] rounded bg-[#080808] p-4 flex flex-col justify-center gap-1">
+      <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
         <ResultRow label="Implied prob (book)" value={!isNaN(d) && d > 1 ? `${(1 / d * 100).toFixed(2)}%` : '—'} />
         <ResultRow label="Your edge" value={ev !== null ? `${ev > 0 ? '+' : ''}${ev.toFixed(2)}%` : '—'} highlight />
         <ResultRow label="EV on stake" value={dollarEV !== null ? `${dollarEV >= 0 ? '+' : ''}$${dollarEV.toFixed(2)}` : '—'} />
@@ -210,7 +208,7 @@ function Kelly() {
         {numInput(bankroll, setBankroll, '1000', 'Bankroll', '$')}
         {numInput(fraction, setFraction, '25', 'Kelly Fraction %')}
       </div>
-      <div className="border border-[#1C1C1C] rounded bg-[#080808] p-4 flex flex-col justify-center gap-1">
+      <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
         <ResultRow label="Full Kelly %" value={kelly !== null ? `${(kelly * 100).toFixed(2)}%` : '—'} />
         <ResultRow
           label={`${fraction || '?'}% Kelly stake`}
@@ -239,8 +237,8 @@ function MultiParlay() {
         <div className="flex flex-col gap-3">
           {legs.map((leg, i) => (
             <div key={i} className="flex flex-col gap-1.5">
-              <label className="text-[11px] font-mono uppercase tracking-widest text-[#888]">Leg {i + 1} Odds</label>
-              <div className="flex items-center border border-[#1C1C1C] rounded bg-[#0A0A0A] focus-within:border-[#00C896]/40 transition-colors">
+              <label className="text-[11px] font-mono uppercase tracking-widest text-[#6B7280]">Leg {i + 1} Odds</label>
+              <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00C896]/50 transition-colors">
                 <input
                   type="number"
                   value={leg}
@@ -250,7 +248,7 @@ function MultiParlay() {
                     setLegs(next);
                   }}
                   placeholder="2.50"
-                  className="flex-1 bg-transparent px-3 py-2.5 text-white font-mono text-sm outline-none placeholder:text-[#333]"
+                  className="flex-1 bg-transparent px-3 py-2.5 text-[#111827] font-mono text-sm outline-none placeholder:text-[#9CA3AF]"
                 />
               </div>
             </div>
@@ -265,7 +263,7 @@ function MultiParlay() {
             {legs.length > 2 && (
               <button
                 onClick={() => setLegs(legs.slice(0, -1))}
-                className="text-[11px] font-mono uppercase tracking-widest text-[#888] border border-[#1C1C1C] px-3 py-1.5 rounded hover:border-red-500/40 hover:text-red-400 transition-colors"
+                className="text-[11px] font-mono uppercase tracking-widest text-[#9CA3AF] border border-[#E2E8F0] px-3 py-1.5 rounded hover:border-red-400/40 hover:text-red-500 transition-colors"
               >
                 Remove
               </button>
@@ -274,7 +272,7 @@ function MultiParlay() {
         </div>
         {numInput(stake, setStake, '50', 'Stake', '$')}
       </div>
-      <div className="border border-[#1C1C1C] rounded bg-[#080808] p-4 flex flex-col justify-center gap-1">
+      <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
         <ResultRow label="Legs included" value={`${parsed.length}`} />
         <ResultRow label="Combined odds" value={combined !== null ? combined.toFixed(3) : '—'} highlight />
         <ResultRow label="Potential payout" value={payout !== null ? `$${payout.toFixed(2)}` : '—'} />
@@ -309,7 +307,7 @@ function ArbCalculator() {
         {numInput(odds2, setOdds2, '2.05', 'Outcome 2 Odds (Book B)')}
         {numInput(total, setTotal, '200', 'Total Stake', '$')}
       </div>
-      <div className="border border-[#1C1C1C] rounded bg-[#080808] p-4 flex flex-col justify-center gap-1">
+      <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
         <ResultRow label="Margin" value={margin !== null ? `${margin.toFixed(2)}%` : '—'} />
         <ResultRow
           label="Arb opportunity"
@@ -340,7 +338,7 @@ function BetReturn() {
         {numInput(odds, setOdds, '2.50', 'Decimal Odds')}
         {numInput(stake, setStake, '100', 'Stake', '$')}
       </div>
-      <div className="border border-[#1C1C1C] rounded bg-[#080808] p-4 flex flex-col justify-center gap-1">
+      <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
         <ResultRow label="Total payout" value={payout !== null ? `$${payout.toFixed(2)}` : '—'} />
         <ResultRow label="Profit" value={profit !== null ? `$${profit.toFixed(2)}` : '—'} highlight />
       </div>
@@ -387,7 +385,7 @@ export default function ToolsPage() {
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-12">
       <div className="mb-8">
         <p className="section-label mb-1">Betting Tools</p>
-        <h1 className="text-2xl font-bold text-white">Calculators</h1>
+        <h1 className="text-2xl font-display font-bold text-[#111827]">Calculators</h1>
       </div>
 
       {/* Tab bar */}
@@ -399,7 +397,7 @@ export default function ToolsPage() {
             className={`px-3 py-1.5 rounded text-[11px] font-mono uppercase tracking-widest transition-colors ${
               active === tab.id
                 ? 'bg-[#00C896] text-black font-bold'
-                : 'border border-[#1C1C1C] text-[#888] hover:text-white hover:border-[#333]'
+                : 'border border-[#E2E8F0] text-[#9CA3AF] hover:text-[#374151] hover:border-[#CBD5E1]'
             }`}
           >
             {tab.label}
@@ -408,10 +406,10 @@ export default function ToolsPage() {
       </div>
 
       {/* Description */}
-      <p className="text-[#888] text-[13px] mb-6 leading-relaxed">{description}</p>
+      <p className="text-[#6B7280] text-[13px] mb-6 leading-relaxed">{description}</p>
 
       {/* Calculator */}
-      <div className="border border-[#1C1C1C] rounded-lg bg-[#080808] p-5 sm:p-6">
+      <div className="border border-[#E2E8F0] rounded-lg bg-white p-5 sm:p-6">
         {component}
       </div>
     </div>

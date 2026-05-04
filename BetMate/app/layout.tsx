@@ -54,7 +54,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`dark ${roboto.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${roboto.variable} ${montserrat.variable}`}>
       <body className="min-h-[100dvh] bg-[#F0F2F5] text-[#111827] flex flex-col font-sans">
         <ServiceWorker />
         <Header />
