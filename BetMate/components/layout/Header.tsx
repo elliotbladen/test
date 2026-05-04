@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { createClient } from '@/lib/supabase';
 
@@ -12,8 +12,10 @@ const NAV = [
 ];
 
 export default function Header() {
-  const pathname = usePathname();
-  const isOdds = pathname === '/odds' || pathname.startsWith('/odds/');
+  const pathname     = usePathname();
+  const searchParams = useSearchParams();
+  const isOdds       = pathname === '/odds' || pathname.startsWith('/odds/');
+  const activeSport  = searchParams.get('sport')?.toUpperCase() === 'AFL' ? 'AFL' : 'NRL';
   const [email, setEmail] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -46,12 +48,21 @@ export default function Header() {
           {/* Sport tabs — only on odds page */}
           {isOdds && (
             <div className="flex items-center gap-0 border border-[#252525] rounded-md overflow-hidden shrink-0">
-              <button className="px-4 h-[30px] text-[11px] font-bold uppercase tracking-widest bg-[#00C896] text-black transition-colors">
-                NRL
-              </button>
-              <button className="px-4 h-[30px] text-[11px] font-bold uppercase tracking-widest text-[#5C5C5C] hover:text-white hover:bg-[#1A1A1A] transition-colors border-l border-[#252525]">
-                AFL
-              </button>
+              {(['NRL', 'AFL'] as const).map((sport, i) => (
+                <Link
+                  key={sport}
+                  href={`/odds?sport=${sport}`}
+                  className={[
+                    'px-4 h-[30px] text-[11px] font-bold uppercase tracking-widest transition-colors',
+                    i > 0 ? 'border-l border-[#252525]' : '',
+                    activeSport === sport
+                      ? 'bg-[#00C896] text-black'
+                      : 'text-[#5C5C5C] hover:text-white hover:bg-[#1A1A1A]',
+                  ].join(' ')}
+                >
+                  {sport}
+                </Link>
+              ))}
             </div>
           )}
 

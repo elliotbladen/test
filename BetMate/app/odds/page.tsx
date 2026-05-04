@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { MessageCircle, X } from 'lucide-react';
 import { createClient } from '@/lib/supabase';
 import GameCard from '@/components/odds/GameCard';
@@ -122,7 +123,11 @@ function OddsContent({
 }
 
 export default function OddsPage() {
-  const [activeSport, setActiveSport] = useState('NRL');
+  const searchParams   = useSearchParams();
+  const router         = useRouter();
+  const sportParam     = searchParams.get('sport')?.toUpperCase();
+  const validSport     = sportParam === 'AFL' ? 'AFL' : 'NRL';
+  const [activeSport, setActiveSport] = useState<'NRL' | 'AFL'>(validSport);
   const [drawerOpen, setDrawerOpen]   = useState(false);
   const [chatOpen, setChatOpen]       = useState(true);
   const [isLoggedIn, setIsLoggedIn]   = useState(false);
@@ -228,6 +233,11 @@ export default function OddsPage() {
     setMovements(activeSport === 'NRL' ? movementsRef.current : aflMovRef.current);
   }, [activeSport]);
 
+  function switchSport(sport: 'NRL' | 'AFL') {
+    setActiveSport(sport);
+    router.replace(`/odds?sport=${sport}`, { scroll: false });
+  }
+
   const games = activeSport === 'NRL' ? nrlGames : aflGames;
 
   return (
@@ -238,7 +248,7 @@ export default function OddsPage() {
         {SPORT_TABS.map((tab) => (
           <button
             key={tab}
-            onClick={() => setActiveSport(tab)}
+            onClick={() => switchSport(tab as 'NRL' | 'AFL')}
             className={[
               'px-4 py-1 rounded text-[11px] font-mono font-bold uppercase tracking-widest transition-colors',
               activeSport === tab
