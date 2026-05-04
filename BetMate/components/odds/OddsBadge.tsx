@@ -45,7 +45,7 @@ export default function OddsBadge({
         'touch-target',
         isBest
           ? 'border-[#00C896] bg-[#00C896]/10 hover:bg-[#00C896]/18'
-          : 'border-[#1C1C1C] bg-[#111111] hover:border-[#2E2E2E]',
+          : 'border-[#E2E8F0] bg-[#F8FAFC] hover:border-[#CBD5E1]',
       ].join(' ')}
     >
       {/* BEST badge — positioned above the button */}
@@ -58,7 +58,7 @@ export default function OddsBadge({
       {/* Bookmaker name */}
       <span className={[
         'text-[9px] font-mono uppercase tracking-[0.1em] mb-1 leading-none',
-        isBest ? 'text-[#00C896]/70' : 'text-[#888888]',
+        isBest ? 'text-[#00C896]/70' : 'text-[#9CA3AF]',
       ].join(' ')}>
         {BM_LABEL[bookmaker] ?? bookmaker.toUpperCase()}
       </span>
@@ -69,7 +69,7 @@ export default function OddsBadge({
           'text-[15px] font-bold font-tabular leading-none',
           isBest
             ? 'text-[#00C896]'
-            : 'text-white group-hover:text-[#00C896] transition-colors',
+            : 'text-[#111827] group-hover:text-[#00C896] transition-colors',
         ].join(' ')}
       >
         {odds.toFixed(2)}

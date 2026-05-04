@@ -18,9 +18,9 @@ export default function SentimentPill({ label, type, visible, userPlan }: Sentim
   const locked = type !== 'publicLean' && userPlan === 'free';
 
   const pill = (
-    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[#1C1C1C] bg-[#111111] text-[11px] font-mono whitespace-nowrap">
-      <span className="text-[#888888]">{TYPE_LABEL[type]}</span>
-      <span className="text-white font-medium">{label}</span>
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[#E2E8F0] bg-[#F8FAFC] text-[11px] font-mono whitespace-nowrap">
+      <span className="text-[#9CA3AF]">{TYPE_LABEL[type]}</span>
+      <span className="text-[#111827] font-medium">{label}</span>
     </span>
   );
 
