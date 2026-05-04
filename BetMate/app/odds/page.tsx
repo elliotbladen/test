@@ -125,9 +125,7 @@ function OddsContent({
 export default function OddsPage() {
   const searchParams   = useSearchParams();
   const router         = useRouter();
-  const sportParam     = searchParams.get('sport')?.toUpperCase();
-  const validSport     = sportParam === 'AFL' ? 'AFL' : 'NRL';
-  const [activeSport, setActiveSport] = useState<'NRL' | 'AFL'>(validSport);
+  const [activeSport, setActiveSport] = useState<'NRL' | 'AFL'>('NRL');
   const [drawerOpen, setDrawerOpen]   = useState(false);
   const [chatOpen, setChatOpen]       = useState(true);
   const [isLoggedIn, setIsLoggedIn]   = useState(false);
@@ -143,6 +141,12 @@ export default function OddsPage() {
   const movementsRef  = useRef<MovementMap>({});
   const aflPrevRef    = useRef<Game[]>([]);
   const aflMovRef     = useRef<MovementMap>({});
+
+  // Sync activeSport with URL — fires whenever the ?sport= param changes
+  useEffect(() => {
+    const sport = searchParams.get('sport')?.toUpperCase();
+    setActiveSport(sport === 'AFL' ? 'AFL' : 'NRL');
+  }, [searchParams]);
 
   useEffect(() => {
     const supabase = createClient();
@@ -234,7 +238,6 @@ export default function OddsPage() {
   }, [activeSport]);
 
   function switchSport(sport: 'NRL' | 'AFL') {
-    setActiveSport(sport);
     router.replace(`/odds?sport=${sport}`, { scroll: false });
   }
 
