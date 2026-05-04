@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { MessageCircle, X } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { createClient } from '@/lib/supabase';
 import GameCard from '@/components/odds/GameCard';
 import ChatPanel from '@/components/chat/ChatPanel';
@@ -12,7 +12,6 @@ import { extractH2HOdds, extractSpreadsOdds, extractTotalsOdds } from '@/lib/odd
 import { computeMovements, mergeMovements } from '@/lib/oddsMovement';
 import type { MovementMap } from '@/lib/oddsMovement';
 import { getRefForGame } from '@/lib/referees';
-import AdBanner from '@/components/ads/AdBanner';
 
 function makeTransform(sport: 'NRL' | 'AFL') {
   return function transformEvents(events: OddsApiEvent[]): Game[] {
@@ -106,15 +105,8 @@ function OddsContent({
         </div>
       ) : (
         <div className="flex flex-col gap-3">
-          {/* Leaderboard banner — top of game list */}
-          <AdBanner variant="leaderboard" promoIdx={0} />
-
-          {games.map((game, idx) => (
-            <>
-              <GameCard key={game.id} game={game} userPlan="free" isLoggedIn={isLoggedIn} movements={movements} refreshCount={refreshCount} />
-              {/* Inline banner after game 2 */}
-              {idx === 1 && <AdBanner key="inline-ad" variant="inline" promoIdx={1} />}
-            </>
+          {games.map((game) => (
+            <GameCard key={game.id} game={game} userPlan="free" isLoggedIn={isLoggedIn} movements={movements} refreshCount={refreshCount} />
           ))}
         </div>
       )}
@@ -126,8 +118,7 @@ export default function OddsPage() {
   const searchParams   = useSearchParams();
   const router         = useRouter();
   const [activeSport, setActiveSport] = useState<'NRL' | 'AFL'>('NRL');
-  const [drawerOpen, setDrawerOpen]   = useState(false);
-  const [chatOpen, setChatOpen]       = useState(true);
+  const [bazOpen, setBazOpen]         = useState(false);
   const [isLoggedIn, setIsLoggedIn]   = useState(false);
 
   const [nrlGames, setNrlGames]       = useState<Game[]>([]);
@@ -264,78 +255,72 @@ export default function OddsPage() {
         ))}
       </div>
 
-      {/* DESKTOP */}
-      <div className="hidden lg:flex flex-1 min-h-0">
-        <div className={`overflow-y-auto border-r border-[#E2E8F0] px-6 py-5 transition-all duration-300 ${chatOpen ? 'w-[60%]' : 'w-full'}`}>
-          <div className="flex items-center justify-between mb-1">
-            <div />
-            <button
-              onClick={() => setChatOpen((o) => !o)}
-              className="flex items-center gap-1.5 text-[11px] font-mono text-[#9CA3AF] hover:text-[#374151] uppercase tracking-widest transition-colors"
-            >
-              {chatOpen ? (
-                <><MessageCircle className="w-3.5 h-3.5" strokeWidth={2} /><span>Hide Chat</span></>
-              ) : (
-                <><MessageCircle className="w-3.5 h-3.5 text-[#00C896]" strokeWidth={2} /><span className="text-[#00C896]">Show Chat</span></>
-              )}
-            </button>
-          </div>
-          <OddsContent activeSport={activeSport} games={games} loading={loading} error={error} movements={movements} refreshCount={refreshCount} isLoggedIn={isLoggedIn} />
-        </div>
-        {chatOpen && (
-          <div className="w-[40%] flex flex-col shrink-0">
-            <ChatPanel games={games} userPlan="free" isLoggedIn={isLoggedIn} />
-          </div>
-        )}
+      {/* ── Odds list — full width on all screens ────────────────────────── */}
+      <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-5 pb-28">
+        <OddsContent activeSport={activeSport} games={games} loading={loading} error={error} movements={movements} refreshCount={refreshCount} isLoggedIn={isLoggedIn} />
       </div>
 
-      {/* MOBILE */}
-      <div className="lg:hidden flex-1">
-        <div className="px-4 py-5 pb-28">
-          <OddsContent activeSport={activeSport} games={games} loading={loading} error={error} movements={movements} refreshCount={refreshCount} isLoggedIn={isLoggedIn} />
+      {/* ── FAB ──────────────────────────────────────────────────────────── */}
+      <button
+        onClick={() => setBazOpen(true)}
+        aria-label="Open AI assistant"
+        className={[
+          'fixed bottom-6 right-5 z-40',
+          'w-14 h-14 rounded-full bg-[#00C896] hover:bg-[#00B386]',
+          'flex items-center justify-center shadow-lg transition-all duration-200',
+          bazOpen ? 'opacity-0 pointer-events-none scale-90' : 'opacity-100 scale-100',
+        ].join(' ')}
+      >
+        <MessageCircle className="w-6 h-6 text-black" strokeWidth={2} />
+      </button>
+
+      {/* ── Backdrop ─────────────────────────────────────────────────────── */}
+      <div
+        onClick={() => setBazOpen(false)}
+        className={[
+          'fixed inset-0 z-40 bg-black/40 transition-opacity duration-300',
+          bazOpen ? 'opacity-100' : 'opacity-0 pointer-events-none',
+        ].join(' ')}
+      />
+
+      {/* ── MOBILE: bottom drawer ─────────────────────────────────────────── */}
+      <div
+        className={[
+          'lg:hidden fixed inset-x-0 bottom-0 z-50 flex flex-col',
+          'bg-white border-t border-[#E2E8F0] rounded-t-2xl shadow-xl',
+          'transition-transform duration-300 ease-out',
+          bazOpen ? 'translate-y-0' : 'translate-y-full',
+        ].join(' ')}
+        style={{ height: '78vh' }}
+      >
+        <div className="flex justify-center pt-3 pb-1 shrink-0">
+          <div className="w-10 h-1 rounded-full bg-[#E2E8F0]" />
         </div>
-
-        <button
-          onClick={() => setDrawerOpen(true)}
-          aria-label="Open AI assistant"
-          className={[
-            'fixed bottom-6 right-5 z-40',
-            'w-14 h-14 rounded-full bg-[#00C896] hover:bg-[#00B386]',
-            'flex items-center justify-center shadow-lg transition-all duration-200',
-            drawerOpen ? 'opacity-0 pointer-events-none scale-90' : 'opacity-100 scale-100',
-          ].join(' ')}
-        >
-          <MessageCircle className="w-6 h-6 text-black" strokeWidth={2} />
-        </button>
-
-        <div
-          onClick={() => setDrawerOpen(false)}
-          className={[
-            'fixed inset-0 z-40 bg-black/70 transition-opacity duration-300',
-            drawerOpen ? 'opacity-100' : 'opacity-0 pointer-events-none',
-          ].join(' ')}
+        <ChatPanel
+          games={games}
+          userPlan="free"
+          isLoggedIn={isLoggedIn}
+          onClose={() => setBazOpen(false)}
+          className="flex-1 min-h-0"
         />
+      </div>
 
-        <div
-          className={[
-            'fixed inset-x-0 bottom-0 z-50 flex flex-col',
-            'bg-black border-t border-[#1C1C1C] rounded-t-2xl',
-            'transition-transform duration-300 ease-out',
-            drawerOpen ? 'translate-y-0' : 'translate-y-full',
-          ].join(' ')}
-          style={{ height: '78vh' }}
-        >
-          <div className="flex justify-center pt-3 pb-1 shrink-0">
-            <div className="w-10 h-1 rounded-full bg-[#2A2A2A]" />
-          </div>
-          <ChatPanel
-            games={games}
-            userPlan="free"
-            isLoggedIn={isLoggedIn}
-            onClose={() => setDrawerOpen(false)}
-            className="flex-1 min-h-0"
-          />
-        </div>
+      {/* ── DESKTOP: right slide-in panel ────────────────────────────────── */}
+      <div
+        className={[
+          'hidden lg:flex fixed top-[56px] right-0 z-50 flex-col',
+          'w-[400px] bg-white border-l border-[#E2E8F0] shadow-2xl',
+          'transition-transform duration-300 ease-out',
+          bazOpen ? 'translate-x-0' : 'translate-x-full',
+        ].join(' ')}
+        style={{ height: 'calc(100dvh - 56px)' }}
+      >
+        <ChatPanel
+          games={games}
+          userPlan="free"
+          isLoggedIn={isLoggedIn}
+          onClose={() => setBazOpen(false)}
+        />
       </div>
     </div>
   );

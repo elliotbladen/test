@@ -4,7 +4,6 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import { Loader2, X } from 'lucide-react';
 import Link from 'next/link';
 import type { Game } from '@/components/odds/GameCard';
-import AdBanner from '@/components/ads/AdBanner';
 
 // ─── Message limit ────────────────────────────────────────────────────────────
 const FREE_LIMIT = 3;
@@ -200,21 +199,21 @@ export default function ChatPanel({
   };
 
   return (
-    <div className={`flex flex-col h-full bg-[#0A0A0A] ${className}`}>
+    <div className={`flex flex-col h-full bg-white ${className}`}>
 
       {/* ── Header ────────────────────────────────────────────────────────── */}
-      <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#1C1C1C] shrink-0">
+      <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#E2E8F0] shrink-0">
         <div className="flex items-center gap-3">
-          <span className="font-bold text-white text-[15px] tracking-tight uppercase">
+          <span className="font-display font-bold text-[#111827] text-[15px] tracking-tight uppercase">
             Baz
           </span>
           <span className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot" />
-            <span className="text-emerald-400 text-[10px] font-mono uppercase tracking-widest">Online</span>
+            <span className="text-emerald-500 text-[10px] font-mono uppercase tracking-widest">Online</span>
           </span>
         </div>
         {onClose && (
-          <button onClick={onClose} aria-label="Close" className="text-[#555] hover:text-white transition-colors">
+          <button onClick={onClose} aria-label="Close" className="text-[#9CA3AF] hover:text-[#111827] transition-colors">
             <X className="w-4 h-4" />
           </button>
         )}
@@ -226,8 +225,8 @@ export default function ChatPanel({
           <div className="w-12 h-12 rounded-full border border-[#00C896]/40 flex items-center justify-center mb-1">
             <span className="text-[#00C896] text-xl">🔒</span>
           </div>
-          <p className="text-white font-semibold text-sm">Sign up to chat with Baz</p>
-          <p className="text-[#555] text-xs leading-relaxed">
+          <p className="text-[#111827] font-semibold text-sm">Sign up to chat with Baz</p>
+          <p className="text-[#9CA3AF] text-xs leading-relaxed">
             Free account gets you 3 messages a day.<br />No credit card needed.
           </p>
           <Link
@@ -236,7 +235,7 @@ export default function ChatPanel({
           >
             Create free account
           </Link>
-          <Link href="/auth/login" className="text-[#555] hover:text-[#00C896] text-xs transition-colors">
+          <Link href="/auth/login" className="text-[#9CA3AF] hover:text-[#00C896] text-xs transition-colors">
             Already have an account? Sign in
           </Link>
         </div>
@@ -255,7 +254,7 @@ export default function ChatPanel({
                   'max-w-[88%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed',
                   msg.role === 'user'
                     ? 'bg-[#00C896] text-black font-medium rounded-br-sm'
-                    : 'bg-[#161616] text-[#ccc] border border-[#1C1C1C] rounded-bl-sm',
+                    : 'bg-[#F8FAFC] text-[#374151] border border-[#E2E8F0] rounded-bl-sm',
                 ].join(' ')}
               >
                 {showTyping ? <TypingDots /> : msg.content}
@@ -269,7 +268,7 @@ export default function ChatPanel({
             <p className="text-[#7C3AED] font-mono font-bold text-[11px] uppercase tracking-wider mb-1">
               Daily limit reached
             </p>
-            <p className="text-[#888] text-xs mb-3 leading-relaxed">
+            <p className="text-[#9CA3AF] text-xs mb-3 leading-relaxed">
               Free users get {FREE_LIMIT} messages per day.<br />Resets at midnight.
             </p>
             <Link
@@ -291,7 +290,7 @@ export default function ChatPanel({
             <button
               key={q}
               onClick={() => send(q)}
-              className="w-full text-left px-3.5 py-2.5 rounded-lg border border-[#1C1C1C] bg-[#111] text-[#888] text-[12px] font-mono hover:border-[#00C896]/40 hover:text-[#00C896] transition-colors"
+              className="w-full text-left px-3.5 py-2.5 rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] text-[#6B7280] text-[12px] font-mono hover:border-[#00C896]/40 hover:text-[#00C896] transition-colors"
             >
               {q}
             </button>
@@ -299,11 +298,8 @@ export default function ChatPanel({
         </div>
       )}
 
-      {/* ── Chat ad ───────────────────────────────────────────────────────── */}
-      {isLoggedIn && <AdBanner variant="chat" promoIdx={2} />}
-
       {/* ── Input bar ─────────────────────────────────────────────────────── */}
-      {isLoggedIn && <div className="shrink-0 px-3 py-3 bg-[#0A0A0A]">
+      {isLoggedIn && <div className="shrink-0 px-3 py-3 bg-white border-t border-[#E2E8F0]">
         <div className="flex items-end gap-2">
           <textarea
             ref={textareaRef}
@@ -313,26 +309,26 @@ export default function ChatPanel({
             placeholder={isBlocked ? 'Upgrade to PRO to continue…' : 'Ask about any game…'}
             disabled={isBlocked || loading}
             rows={1}
-            className="flex-1 bg-[#111] border border-[#1C1C1C] focus:border-[#00C896]/50 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder:text-[#444] outline-none resize-none disabled:opacity-40 transition-colors leading-snug"
+            className="flex-1 bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#00C896]/50 rounded-xl px-3.5 py-2.5 text-sm text-[#111827] placeholder:text-[#9CA3AF] outline-none resize-none disabled:opacity-40 transition-colors leading-snug"
             style={{ minHeight: '40px', maxHeight: '96px' }}
           />
           <button
             onClick={() => send()}
             disabled={!input.trim() || loading || isBlocked}
             aria-label="Send"
-            className="shrink-0 px-4 h-10 flex items-center justify-center bg-transparent border border-[#333] hover:border-[#00C896]/50 disabled:opacity-30 disabled:cursor-not-allowed rounded-xl transition-colors"
+            className="shrink-0 px-4 h-10 flex items-center justify-center bg-transparent border border-[#E2E8F0] hover:border-[#00C896]/50 disabled:opacity-30 disabled:cursor-not-allowed rounded-xl transition-colors"
           >
             {loading
-              ? <Loader2 className="w-4 h-4 text-[#888] animate-spin" />
-              : <span className="text-[#888] text-[11px] font-mono font-bold uppercase tracking-widest">SEND</span>
+              ? <Loader2 className="w-4 h-4 text-[#9CA3AF] animate-spin" />
+              : <span className="text-[#6B7280] text-[11px] font-mono font-bold uppercase tracking-widest">SEND</span>
             }
           </button>
         </div>
 
         {/* Footer */}
-        <p className="text-[#333] text-[10px] font-mono mt-2 text-center uppercase tracking-widest">
+        <p className="text-[#9CA3AF] text-[10px] font-mono mt-2 text-center uppercase tracking-widest">
           {userPlan === 'free' && !isBlocked
-            ? <>{remaining} free message{remaining !== 1 ? 's' : ''} remaining today · <Link href="/auth/register" className="text-[#555] hover:text-[#00C896] transition-colors">Upgrade</Link></>
+            ? <>{remaining} free message{remaining !== 1 ? 's' : ''} remaining today · <Link href="/auth/register" className="text-[#6B7280] hover:text-[#00C896] transition-colors">Upgrade</Link></>
             : userPlan === 'free' && isBlocked
             ? <>Limit reached · <Link href="/auth/register" className="text-[#7C3AED]">Upgrade</Link></>
             : 'PRO — unlimited messages'
