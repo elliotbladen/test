@@ -32,7 +32,7 @@ export default function EVBadge({ label, tier, type, userPlan }: EVBadgeProps) {
         TIER_STYLES[tier],
       ].join(' ')}
     >
-      <span className="text-[#888888] font-normal">{TYPE_LABEL[type]}</span>
+      <span className="text-[#9CA3AF] font-normal">{TYPE_LABEL[type]}</span>
       {label}
     </span>
   );

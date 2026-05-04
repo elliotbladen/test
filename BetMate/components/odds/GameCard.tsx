@@ -95,10 +95,10 @@ function CountdownTimer({ commenceTime }: { commenceTime: string }) {
     diff <= 60 * 60_000   ? 'text-red-400' :
     diff <= 2 * 3600_000  ? 'text-orange-400' :
     diff <= 24 * 3600_000 ? 'text-yellow-400' :
-    'text-white';
+    'text-[#6B7280]';
 
   return (
-    <span className="text-[#555] font-mono text-[10px] uppercase tracking-wide">
+    <span className="text-[#9CA3AF] font-mono text-[10px] uppercase tracking-wide">
       Kicks off in <span className={`font-bold ${color}`}>{label}</span>
     </span>
   );
@@ -148,7 +148,7 @@ const MARKET_TABS = ['H2H', 'HANDICAP', 'TOTALS'] as const;
 type MarketTab = typeof MARKET_TABS[number];
 
 const BUCKET_COLOR: Record<string, string> = {
-  'NEUTRAL':       'text-[#888888]',
+  'NEUTRAL':       'text-[#9CA3AF]',
   'WHISTLE HEAVY': 'text-amber-400',
   'FLOW HEAVY':    'text-sky-400',
   'HOME-FAVOURED': 'text-emerald-400',
@@ -157,9 +157,9 @@ const BUCKET_COLOR: Record<string, string> = {
 
 const EV_STYLE: Record<string, string> = {
   negative: 'text-red-400   border-red-400/30   bg-red-400/10',
-  marginal: 'text-[#888888] border-[#2A2A2A]    bg-transparent',
+  marginal: 'text-[#9CA3AF] border-[#E2E8F0]    bg-transparent',
   strong:   'text-emerald-400 border-emerald-400/30 bg-emerald-400/10',
-  none:     'text-[#444]    border-[#222]        bg-transparent',
+  none:     'text-[#D1D5DB] border-[#E2E8F0]    bg-transparent',
 };
 
 function getBest(odds: Game['odds'], side: 'home' | 'away') {
@@ -292,7 +292,7 @@ function OddsRow({ label, odds, side, best, evPct, userPlan, isLoggedIn, gameId,
 
   return (
     <div>
-      <p className="text-[10px] font-mono text-[#777] uppercase tracking-[0.15em] mb-2 truncate">{label}</p>
+      <p className="text-[10px] font-mono text-[#9CA3AF] uppercase tracking-[0.15em] mb-2 truncate">{label}</p>
       <div className="flex overflow-x-auto no-scrollbar gap-2 pb-1 sm:flex-wrap sm:overflow-visible sm:gap-1.5 sm:pb-0">
         {entries.map(({ key, price }) => {
           const meta = BOOKMAKER_META[key] ?? { abbr: key.slice(0, 3).toUpperCase(), name: key, color: '', domain: '' };
@@ -301,7 +301,7 @@ function OddsRow({ label, odds, side, best, evPct, userPlan, isLoggedIn, gameId,
           return (
             <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evPct : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
               <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
-              <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
+              <span className="text-[#9CA3AF] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
               <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-[#111827]'}`}>
                 ${price.toFixed(2)}
               </span>
@@ -324,7 +324,7 @@ function SpreadsRow({ label, odds, side, evPct, userPlan, isLoggedIn, gameId, sp
 
   return (
     <div>
-      <p className="text-[10px] font-mono text-[#777] uppercase tracking-[0.15em] mb-2 truncate">{label}</p>
+      <p className="text-[10px] font-mono text-[#9CA3AF] uppercase tracking-[0.15em] mb-2 truncate">{label}</p>
       <div className="flex overflow-x-auto no-scrollbar gap-2 pb-1 sm:flex-wrap sm:overflow-visible sm:gap-1.5 sm:pb-0">
         {entries.map(({ key, price, point }) => {
           const meta = BOOKMAKER_META[key] ?? { abbr: key.slice(0, 3).toUpperCase(), name: key, color: '', domain: '' };
@@ -334,8 +334,8 @@ function SpreadsRow({ label, odds, side, evPct, userPlan, isLoggedIn, gameId, sp
           return (
             <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evPct : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
               <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
-              <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
-              <span className="text-[#888] text-[13px] sm:text-[10px] font-mono leading-none">{sign}{point}</span>
+              <span className="text-[#9CA3AF] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
+              <span className="text-[#9CA3AF] text-[13px] sm:text-[10px] font-mono leading-none">{sign}{point}</span>
               <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-[#111827]'}`}>
                 ${price.toFixed(2)}
               </span>
@@ -359,12 +359,12 @@ function TotalsRow({ odds, evOver, evUnder, userPlan, isLoggedIn, gameId, sport,
   return (
     <div className="space-y-4">
       {line != null && (
-        <p className="text-[11px] font-mono text-[#555] uppercase tracking-wide">
-          Line: <span className="text-white font-bold">{line}</span>
+        <p className="text-[11px] font-mono text-[#9CA3AF] uppercase tracking-wide">
+          Line: <span className="text-[#111827] font-bold">{line}</span>
         </p>
       )}
       <div>
-        <p className="text-[10px] font-mono text-[#555] uppercase tracking-[0.15em] mb-2">OVER {line}</p>
+        <p className="text-[10px] font-mono text-[#9CA3AF] uppercase tracking-[0.15em] mb-2">OVER {line}</p>
         <div className="flex overflow-x-auto no-scrollbar gap-2 pb-1 sm:flex-wrap sm:overflow-visible sm:gap-1.5 sm:pb-0">
           {entries.map(([key, o]) => {
             const meta = BOOKMAKER_META[key] ?? { abbr: key.slice(0, 3).toUpperCase(), name: key, color: '', domain: '' };
@@ -374,7 +374,7 @@ function TotalsRow({ odds, evOver, evUnder, userPlan, isLoggedIn, gameId, sport,
             return (
               <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evOver : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
                 <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
-                <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
+                <span className="text-[#9CA3AF] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
                 <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-[#111827]'}`}>${adjOver.toFixed(2)}</span>
               </BmCard>
             );
@@ -382,7 +382,7 @@ function TotalsRow({ odds, evOver, evUnder, userPlan, isLoggedIn, gameId, sport,
         </div>
       </div>
       <div>
-        <p className="text-[10px] font-mono text-[#555] uppercase tracking-[0.15em] mb-2">UNDER {line}</p>
+        <p className="text-[10px] font-mono text-[#9CA3AF] uppercase tracking-[0.15em] mb-2">UNDER {line}</p>
         <div className="flex overflow-x-auto no-scrollbar gap-2 pb-1 sm:flex-wrap sm:overflow-visible sm:gap-1.5 sm:pb-0">
           {entries.map(([key, o]) => {
             const meta = BOOKMAKER_META[key] ?? { abbr: key.slice(0, 3).toUpperCase(), name: key, color: '', domain: '' };
@@ -392,7 +392,7 @@ function TotalsRow({ odds, evOver, evUnder, userPlan, isLoggedIn, gameId, sport,
             return (
               <BmCard key={key} bmKey={key} sport={sport} isBest={isBest} evPct={isBest ? evUnder : undefined} userPlan={userPlan} isLoggedIn={isLoggedIn} movement={movement} refreshCount={refreshCount}>
                 <BookmakerLogo domain={meta.domain} abbr={meta.abbr} />
-                <span className="text-[#888] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
+                <span className="text-[#9CA3AF] text-[12px] sm:text-[9px] font-mono leading-none">{meta.name}</span>
                 <span className={`text-lg sm:text-sm font-bold tabular-nums leading-none ${isBest ? 'text-[#F97316]' : 'text-[#111827]'}`}>${adjUnder.toFixed(2)}</span>
               </BmCard>
             );
@@ -428,7 +428,7 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
 
   const bestHome = getBest(game.odds, 'home');
   const bestAway = getBest(game.odds, 'away');
-  const bucketColor = BUCKET_COLOR[(game.refereeBucket ?? '').toUpperCase()] ?? 'text-[#888888]';
+  const bucketColor = BUCKET_COLOR[(game.refereeBucket ?? '').toUpperCase()] ?? 'text-[#9CA3AF]';
   const venue = getVenue(game.homeTeam);
 
   // EV lookups per market/side
@@ -609,7 +609,7 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
       </div>
       {evSignals.length > 0 && (
         <div className="px-5 pb-3">
-          <p className="text-[#333] text-[9px] font-mono leading-snug">
+          <p className="text-[#9CA3AF] text-[9px] font-mono leading-snug">
             <span className="text-[#9CA3AF]">Value edge signals are derived from 4 years of NRL data (2022–2025). Backing the flagged side has historically returned positive value over this period. Past performance does not guarantee future results.</span>
           </p>
         </div>
@@ -617,12 +617,12 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
 
       {/* ── PRO upgrade strip ───────────────────────────────────────────── */}
       {userPlan === 'free' && (
-        <div className="border-t border-[#1E1E1E] px-5 py-3 flex items-center justify-between gap-4">
+        <div className="border-t border-[#E2E8F0] px-5 py-3 flex items-center justify-between gap-4">
           <p className="text-[10px] font-mono uppercase tracking-wide">
             <span className="text-[#7C3AED] font-bold">PRO</span>
-            <span className="text-[#5C5C5C]"> — Model breakdown · full edge signals · sentiment</span>
+            <span className="text-[#9CA3AF]"> — Model breakdown · full edge signals · sentiment</span>
           </p>
-          <button className="shrink-0 text-[#5C5C5C] text-[10px] font-mono font-bold uppercase tracking-widest hover:text-white transition-colors">
+          <button className="shrink-0 text-[#9CA3AF] text-[10px] font-mono font-bold uppercase tracking-widest hover:text-[#00C896] transition-colors">
             Upgrade
           </button>
         </div>

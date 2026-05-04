@@ -88,9 +88,9 @@ export default function RegisterPage() {
           </button>
 
           <div className="flex items-center gap-3 mb-6">
-            <div className="flex-1 h-px bg-[#1E1E1E]" />
+            <div className="flex-1 h-px bg-[#E2E8F0]" />
             <span className="text-[#6B7280] text-xs font-mono">or</span>
-            <div className="flex-1 h-px bg-[#1E1E1E]" />
+            <div className="flex-1 h-px bg-[#E2E8F0]" />
           </div>
 
           <form onSubmit={handleEmailSignup} className="flex flex-col gap-4">
