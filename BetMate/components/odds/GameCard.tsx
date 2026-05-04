@@ -224,7 +224,7 @@ function BmCard({
     <Wrapper>
       {hasEV ? (
         <span className="absolute -top-[9px] left-1/2 -translate-x-1/2 bg-[#00C896] text-black text-[7px] font-black font-mono px-1.5 py-0.5 rounded uppercase tracking-widest whitespace-nowrap leading-none z-10">
-          EV {evPct!.toFixed(1)}%
+          EDGE {evPct!.toFixed(1)}%
         </span>
       ) : isBest ? (
         <span className="absolute -top-[9px] left-1/2 -translate-x-1/2 bg-[#00C896] text-black text-[7px] font-black font-mono px-1.5 py-0.5 rounded uppercase tracking-widest whitespace-nowrap leading-none z-10">
@@ -553,9 +553,9 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
         </div>
       )}
 
-      {/* ── EV strip ────────────────────────────────────────────────────── */}
-      <div className="border-t border-[#1E1E1E] px-5 py-3 flex flex-wrap items-center gap-2">
-        {/* Free-tier EV signals from matrix */}
+      {/* ── Value Edge strip ─────────────────────────────────────────────── */}
+      <div className="border-t border-[#1E1E1E] px-5 pt-3 pb-2 flex flex-wrap items-center gap-2">
+        {/* Free-tier value edge signals */}
         {evSignals.filter(s => s.tier === 'free').map((s, i) => {
           const label =
             s.market === 'h2h'      ? `H2H ${s.side.toUpperCase()} ${s.edgePct.toFixed(1)}%` :
@@ -564,12 +564,12 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
           return (
             <span key={i} className="inline-flex items-center gap-1 px-2.5 py-1 rounded border border-[#00C896]/40 bg-[#00C896]/8 text-[#00C896] text-[10px] font-mono font-bold uppercase tracking-wide">
               <span className="w-1.5 h-1.5 rounded-full bg-[#00C896] shrink-0" />
-              EV {label}
+              EDGE {label}
             </span>
           );
         })}
 
-        {/* PRO-tier EV signals — blurred for free users */}
+        {/* PRO-tier value edge signals — blurred for free users */}
         {evSignals.filter(s => s.tier === 'pro').map((s, i) => {
           const label =
             s.market === 'h2h'      ? `H2H ${s.side.toUpperCase()}` :
@@ -578,13 +578,13 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
           return userPlan === 'pro' ? (
             <span key={i} className="inline-flex items-center gap-1 px-2.5 py-1 rounded border border-[#7C3AED]/50 bg-[#7C3AED]/10 text-[#a78bfa] text-[10px] font-mono font-bold uppercase tracking-wide">
               <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] shrink-0" />
-              PRO EV {label} {s.edgePct.toFixed(1)}%
+              PRO EDGE {label} {s.edgePct.toFixed(1)}%
             </span>
           ) : (
             <BlurLock key={i}>
               <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded border border-[#7C3AED]/50 bg-[#7C3AED]/10 text-[#a78bfa] text-[10px] font-mono font-bold uppercase tracking-wide">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED] shrink-0" />
-                PRO EV {label}
+                PRO EDGE {label}
               </span>
             </BlurLock>
           );
@@ -592,7 +592,7 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
 
         {/* No signals placeholder */}
         {evSignals.length === 0 && (
-          <span className="text-[#333] text-[10px] font-mono uppercase tracking-widest">No EV signals detected</span>
+          <span className="text-[#333] text-[10px] font-mono uppercase tracking-widest">No value edge detected</span>
         )}
 
         {game.publicPct && game.publicTeam && (
@@ -607,13 +607,20 @@ export default function GameCard({ game, userPlan, isLoggedIn = false, movements
           </span>
         )}
       </div>
+      {evSignals.length > 0 && (
+        <div className="px-5 pb-3">
+          <p className="text-[#333] text-[9px] font-mono leading-snug">
+            Value edge signals are derived from 4 years of NRL data (2022–2025). Backing the flagged side has historically returned positive value over this period. Past performance does not guarantee future results.
+          </p>
+        </div>
+      )}
 
       {/* ── PRO upgrade strip ───────────────────────────────────────────── */}
       {userPlan === 'free' && (
         <div className="border-t border-[#1E1E1E] px-5 py-3 flex items-center justify-between gap-4">
           <p className="text-[10px] font-mono uppercase tracking-wide">
             <span className="text-[#7C3AED] font-bold">PRO</span>
-            <span className="text-[#5C5C5C]"> — Model breakdown · tier signals · full sentiment</span>
+            <span className="text-[#5C5C5C]"> — Model breakdown · full edge signals · sentiment</span>
           </p>
           <button className="shrink-0 text-[#5C5C5C] text-[10px] font-mono font-bold uppercase tracking-widest hover:text-white transition-colors">
             Upgrade
