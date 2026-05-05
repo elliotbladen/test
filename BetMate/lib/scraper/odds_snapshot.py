@@ -127,7 +127,7 @@ def write_csv(rows: list[dict], path: Path, append: bool = False) -> None:
 # ── Main ─────────────────────────────────────────────────────────────────────
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Daily odds snapshot to CSV")
+    parser = argparse.ArgumentParser(description="Intraday odds snapshot to CSV")
     parser.add_argument("--dry-run", action="store_true", help="Fetch but don't write files")
     args = parser.parse_args()
 
@@ -175,10 +175,11 @@ def main() -> None:
             log.info("  %s", r)
         return
 
-    # Dated archive
+    # Dated archive: append intraday snapshots so the file becomes a time series.
     dated_path = SNAP_DIR / year / f"{snap_date}.csv"
-    write_csv(all_rows, dated_path)
-    log.info("Saved: %s (%d rows)", dated_path, len(all_rows))
+    append = dated_path.exists()
+    write_csv(all_rows, dated_path, append=append)
+    log.info("%s: %s (%d rows)", "Appended" if append else "Saved", dated_path, len(all_rows))
 
     # Latest copy
     latest_path = SNAP_DIR / "latest.csv"

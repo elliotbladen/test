@@ -1,0 +1,14 @@
+2026-05-05 13:46:15 [INFO] Targeting season=2026 round=10
+2026-05-05 13:46:15 [INFO] Attempt 1/3 — injuries R10 2026
+2026-05-05 13:46:17 [WARNING] Structured parse found 0 records — page structure may have changed
+2026-05-05 13:46:17 [INFO] Wrote latest-injuries.json — 0 player records, round 10
+2026-05-05 13:46:17 [INFO] Injuries scraped — 0 records
+2026-05-05 13:56:18 [INFO] Targeting season=2026 round=10
+2026-05-05 13:56:18 [INFO] Attempt 1/3 -- injuries R10 2026 -- https://www.nrl.com/news/2026/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-2026/
+2026-05-05 13:56:18 [WARNING] Parsed 0 records -- page structure may have changed or URL is wrong
+2026-05-05 13:56:18 [INFO] Wrote latest-injuries.json -- 0 player records, round 10
+2026-05-05 13:56:18 [INFO] Injuries scraped -- 0 records
+2026-05-05 13:58:52 [INFO] Targeting season=2026 round=10
+2026-05-05 13:58:52 [INFO] Attempt 1/3 -- injuries R10 2026 -- https://www.nrl.com/news/2026/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-2026/
+2026-05-05 13:58:52 [INFO] Wrote latest-injuries.json -- 103 player records, round 10
+2026-05-05 13:58:52 [INFO] Injuries scraped -- 103 records

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { Suspense, useState, useEffect, useRef } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { MessageCircle } from 'lucide-react';
 import { createClient } from '@/lib/supabase';
@@ -9,8 +9,8 @@ import ChatPanel from '@/components/chat/ChatPanel';
 import type { Game } from '@/components/odds/GameCard';
 import type { OddsApiEvent } from '@/lib/oddsApi';
 import { extractH2HOdds, extractSpreadsOdds, extractTotalsOdds } from '@/lib/oddsApi';
-import { computeMovements, mergeMovements } from '@/lib/oddsMovement';
-import type { MovementMap } from '@/lib/oddsMovement';
+import { computeMovementsFromOpening } from '@/lib/oddsMovement';
+import type { MovementMap, OpeningPriceMap } from '@/lib/oddsMovement';
 import { getRefForGame } from '@/lib/referees';
 
 function makeTransform(sport: 'NRL' | 'AFL') {
@@ -60,6 +60,14 @@ const transformNRL = makeTransform('NRL');
 const transformAFL = makeTransform('AFL');
 
 const SPORT_TABS = ['NRL', 'AFL'];
+
+async function fetchOpeningPrices(sport: 'NRL' | 'AFL'): Promise<OpeningPriceMap> {
+  const response = await fetch(`/api/odds/opening?sport=${sport}`);
+  if (!response.ok) return {};
+
+  const data = await response.json();
+  return data.openingPrices ?? {};
+}
 
 function OddsContent({
   activeSport, games, loading, error, movements, refreshCount, isLoggedIn,
@@ -114,7 +122,7 @@ function OddsContent({
   );
 }
 
-export default function OddsPage() {
+function OddsPageContent() {
   const searchParams   = useSearchParams();
   const router         = useRouter();
   const [activeSport, setActiveSport] = useState<'NRL' | 'AFL'>('NRL');
@@ -128,9 +136,7 @@ export default function OddsPage() {
   const [loading, setLoading]         = useState(false);
   const [error, setError]             = useState<string | null>(null);
 
-  const prevGamesRef  = useRef<Game[]>([]);
   const movementsRef  = useRef<MovementMap>({});
-  const aflPrevRef    = useRef<Game[]>([]);
   const aflMovRef     = useRef<MovementMap>({});
 
   // Sync activeSport with URL — fires whenever the ?sport= param changes
@@ -153,27 +159,22 @@ export default function OddsPage() {
   useEffect(() => {
     if (activeSport !== 'NRL') return;
 
-    try {
-      const stored = localStorage.getItem('betmate_nrl_odds');
-      if (stored) prevGamesRef.current = JSON.parse(stored);
-    } catch { /* ignore */ }
-
     function fetchOdds(isInitial = false) {
       if (isInitial) setLoading(true);
       setError(null);
-      fetch('/api/odds/nrl')
-        .then((r) => {
+      Promise.all([
+        fetch('/api/odds/nrl').then((r) => {
           if (!r.ok) throw new Error(`Failed to load odds (${r.status})`);
           return r.json();
-        })
-        .then((events: OddsApiEvent[]) => {
+        }),
+        fetchOpeningPrices('NRL'),
+      ])
+        .then(([events, openingPrices]: [OddsApiEvent[], OpeningPriceMap]) => {
           const newGames = transformNRL(events);
-          const incoming = computeMovements(prevGamesRef.current, newGames);
-          const merged = mergeMovements(movementsRef.current, incoming);
-          movementsRef.current = merged;
-          setMovements(merged);
+          const openingMovements = computeMovementsFromOpening(openingPrices, newGames);
+          movementsRef.current = openingMovements;
+          setMovements(openingMovements);
           setRefreshCount((c) => c + 1);
-          prevGamesRef.current = newGames;
           try { localStorage.setItem('betmate_nrl_odds', JSON.stringify(newGames)); } catch { /* ignore */ }
           setNrlGames(newGames);
         })
@@ -189,27 +190,22 @@ export default function OddsPage() {
   useEffect(() => {
     if (activeSport !== 'AFL') return;
 
-    try {
-      const stored = localStorage.getItem('betmate_afl_odds');
-      if (stored) aflPrevRef.current = JSON.parse(stored);
-    } catch { /* ignore */ }
-
     function fetchAFL(isInitial = false) {
       if (isInitial) setLoading(true);
       setError(null);
-      fetch('/api/odds/afl')
-        .then((r) => {
+      Promise.all([
+        fetch('/api/odds/afl').then((r) => {
           if (!r.ok) throw new Error(`Failed to load odds (${r.status})`);
           return r.json();
-        })
-        .then((events: OddsApiEvent[]) => {
+        }),
+        fetchOpeningPrices('AFL'),
+      ])
+        .then(([events, openingPrices]: [OddsApiEvent[], OpeningPriceMap]) => {
           const newGames = transformAFL(events);
-          const incoming = computeMovements(aflPrevRef.current, newGames);
-          const merged = mergeMovements(aflMovRef.current, incoming);
-          aflMovRef.current = merged;
-          setMovements(merged);
+          const openingMovements = computeMovementsFromOpening(openingPrices, newGames);
+          aflMovRef.current = openingMovements;
+          setMovements(openingMovements);
           setRefreshCount((c) => c + 1);
-          aflPrevRef.current = newGames;
           try { localStorage.setItem('betmate_afl_odds', JSON.stringify(newGames)); } catch { /* ignore */ }
           setAflGames(newGames);
         })
@@ -323,5 +319,13 @@ export default function OddsPage() {
         />
       </div>
     </div>
+  );
+}
+
+export default function OddsPage() {
+  return (
+    <Suspense fallback={null}>
+      <OddsPageContent />
+    </Suspense>
   );
 }

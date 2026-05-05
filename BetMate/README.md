@@ -49,7 +49,7 @@ Open [http://localhost:3000](http://localhost:3000).
 |---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key |
-| `NEXT_PUBLIC_ODDS_API_KEY` | The Odds API key (post-500 visitors) |
+| `ODDS_API_KEY` | The Odds API key. Server-side only; do not use a `NEXT_PUBLIC_` prefix |
 | `ODDS_SCRAPER_TARGET` | `oddscomparison` (default) or `oddsapi` |
 | `NRL_STYLE_STATS_URL` | Optional override for the weekly NRL team-stat source. Blank uses Fox Sports attack/kicking/defence pages |
 | `NRL_ROUND_ONE_MONDAY` | Monday after Round 1, used to infer the current completed round |
@@ -112,7 +112,7 @@ The scraper targets [OddsComparison](https://www.oddscomparison.com.au/nrl/) wit
 
 **After 500 visitors** — swap to The Odds API:
 1. Set `ODDS_SCRAPER_TARGET=oddsapi` in `.env.local`
-2. Add your key to `NEXT_PUBLIC_ODDS_API_KEY`
+2. Add your key to `ODDS_API_KEY`
 3. Implement `get_odds_oddsapi()` in `oddscomparison.py` (see TODO comment)
 
 Supabase schema does not change.

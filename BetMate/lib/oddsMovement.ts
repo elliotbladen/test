@@ -1,7 +1,15 @@
 import type { Game } from '@/components/odds/GameCard';
 
-export type Movement = 'up' | 'down';
+export type MovementDirection = 'up' | 'down';
+
+export interface Movement {
+  direction: MovementDirection;
+  changePct: number;
+  shortenedStrong: boolean;
+}
+
 export type MovementMap = Record<string, Movement>;
+export type OpeningPriceMap = Record<string, number>;
 
 // Merge new movements into existing map.
 // Arrows stay until a new price change overwrites them.
@@ -15,6 +23,17 @@ export function mergeMovements(
 export function computeMovements(prev: Game[], next: Game[]): MovementMap {
   const map: MovementMap = {};
 
+  function setMovement(key: string, previousPrice: number, nextPrice: number) {
+    if (previousPrice <= 0 || nextPrice === previousPrice) return;
+
+    const changePct = ((nextPrice - previousPrice) / previousPrice) * 100;
+    map[key] = {
+      direction: nextPrice > previousPrice ? 'up' : 'down',
+      changePct,
+      shortenedStrong: changePct <= -10,
+    };
+  }
+
   for (const ng of next) {
     const pg = prev.find((g) => g.id === ng.id);
     if (!pg) continue;
@@ -23,10 +42,8 @@ export function computeMovements(prev: Game[], next: Game[]): MovementMap {
     for (const [bm, no] of Object.entries(ng.odds)) {
       const po = pg.odds[bm];
       if (!po) continue;
-      if (no.home > po.home) map[`${ng.id}:h2h:${bm}:home`] = 'up';
-      else if (no.home < po.home) map[`${ng.id}:h2h:${bm}:home`] = 'down';
-      if (no.away > po.away) map[`${ng.id}:h2h:${bm}:away`] = 'up';
-      else if (no.away < po.away) map[`${ng.id}:h2h:${bm}:away`] = 'down';
+      setMovement(`${ng.id}:h2h:${bm}:home`, po.home, no.home);
+      setMovement(`${ng.id}:h2h:${bm}:away`, po.away, no.away);
     }
 
     // Spreads
@@ -34,10 +51,8 @@ export function computeMovements(prev: Game[], next: Game[]): MovementMap {
       for (const [bm, no] of Object.entries(ng.spreadsOdds)) {
         const po = pg.spreadsOdds[bm];
         if (!po) continue;
-        if (no.home > po.home) map[`${ng.id}:spreads:${bm}:home`] = 'up';
-        else if (no.home < po.home) map[`${ng.id}:spreads:${bm}:home`] = 'down';
-        if (no.away > po.away) map[`${ng.id}:spreads:${bm}:away`] = 'up';
-        else if (no.away < po.away) map[`${ng.id}:spreads:${bm}:away`] = 'down';
+        setMovement(`${ng.id}:spreads:${bm}:home`, po.home, no.home);
+        setMovement(`${ng.id}:spreads:${bm}:away`, po.away, no.away);
       }
     }
 
@@ -46,10 +61,50 @@ export function computeMovements(prev: Game[], next: Game[]): MovementMap {
       for (const [bm, no] of Object.entries(ng.totalsOdds)) {
         const po = pg.totalsOdds[bm];
         if (!po) continue;
-        if (no.over > po.over) map[`${ng.id}:totals:${bm}:over`] = 'up';
-        else if (no.over < po.over) map[`${ng.id}:totals:${bm}:over`] = 'down';
-        if (no.under > po.under) map[`${ng.id}:totals:${bm}:under`] = 'up';
-        else if (no.under < po.under) map[`${ng.id}:totals:${bm}:under`] = 'down';
+        setMovement(`${ng.id}:totals:${bm}:over`, po.over, no.over);
+        setMovement(`${ng.id}:totals:${bm}:under`, po.under, no.under);
+      }
+    }
+  }
+
+  return map;
+}
+
+export function computeMovementsFromOpening(
+  openingPrices: OpeningPriceMap,
+  games: Game[],
+): MovementMap {
+  const map: MovementMap = {};
+
+  function setMovement(key: string, currentPrice: number) {
+    const openingPrice = openingPrices[key];
+    if (!openingPrice || openingPrice <= 0 || currentPrice === openingPrice) return;
+
+    const changePct = ((currentPrice - openingPrice) / openingPrice) * 100;
+    map[key] = {
+      direction: currentPrice > openingPrice ? 'up' : 'down',
+      changePct,
+      shortenedStrong: changePct <= -10,
+    };
+  }
+
+  for (const game of games) {
+    for (const [bm, odds] of Object.entries(game.odds)) {
+      setMovement(`${game.id}:h2h:${bm}:home`, odds.home);
+      setMovement(`${game.id}:h2h:${bm}:away`, odds.away);
+    }
+
+    if (game.spreadsOdds) {
+      for (const [bm, odds] of Object.entries(game.spreadsOdds)) {
+        setMovement(`${game.id}:spreads:${bm}:home`, odds.home);
+        setMovement(`${game.id}:spreads:${bm}:away`, odds.away);
+      }
+    }
+
+    if (game.totalsOdds) {
+      for (const [bm, odds] of Object.entries(game.totalsOdds)) {
+        setMovement(`${game.id}:totals:${bm}:over`, odds.over);
+        setMovement(`${game.id}:totals:${bm}:under`, odds.under);
       }
     }
   }

@@ -6,3 +6,151 @@
 2026-05-04 12:05:50 [INFO]   → 342 rows
 2026-05-04 12:05:50 [INFO] Saved: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-04.csv (716 rows)
 2026-05-04 12:05:50 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:02:28 [INFO] Fetching NRL odds ...
+2026-05-05 14:02:28 [INFO]   rugbyleague_nrl — 8 events, 184 API calls remaining
+2026-05-05 14:02:28 [INFO]   400 rows
+2026-05-05 14:02:28 [INFO] Fetching AFL odds ...
+2026-05-05 14:02:29 [INFO]   aussierules_afl — 9 events, 181 API calls remaining
+2026-05-05 14:02:29 [INFO]   424 rows
+2026-05-05 14:02:29 [INFO] Saved: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:02:29 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:10:04 [INFO] Fetching NRL odds ...
+2026-05-05 14:10:05 [INFO]   rugbyleague_nrl — 8 events, 169 API calls remaining
+2026-05-05 14:10:05 [INFO]   400 rows
+2026-05-05 14:10:05 [INFO] Fetching AFL odds ...
+2026-05-05 14:10:05 [INFO]   aussierules_afl — 9 events, 166 API calls remaining
+2026-05-05 14:10:05 [INFO]   424 rows
+2026-05-05 14:10:05 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:10:05 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:10:31 [INFO] Fetching NRL odds ...
+2026-05-05 14:10:31 [INFO]   rugbyleague_nrl — 8 events, 163 API calls remaining
+2026-05-05 14:10:31 [INFO]   400 rows
+2026-05-05 14:10:31 [INFO] Fetching AFL odds ...
+2026-05-05 14:10:32 [INFO]   aussierules_afl — 9 events, 160 API calls remaining
+2026-05-05 14:10:32 [INFO]   424 rows
+2026-05-05 14:10:32 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:10:32 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:12:50 [INFO] Fetching NRL odds ...
+2026-05-05 14:12:50 [ERROR] Failed to fetch NRL — HTTPSConnectionPool(host='api.the-odds-api.com', port=443): Max retries exceeded with url: /v4/sports/rugbyleague_nrl/odds/?apiKey=29cffda625d3420dc24db352a076a5db&regions=au&markets=h2h%2Cspreads%2Ctotals&oddsFormat=decimal (Caused by NewConnectionError("HTTPSConnection(host='api.the-odds-api.com', port=443): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"))
+2026-05-05 14:12:50 [INFO] Fetching AFL odds ...
+2026-05-05 14:12:50 [ERROR] Failed to fetch AFL — HTTPSConnectionPool(host='api.the-odds-api.com', port=443): Max retries exceeded with url: /v4/sports/aussierules_afl/odds/?apiKey=29cffda625d3420dc24db352a076a5db&regions=au&markets=h2h%2Cspreads%2Ctotals&oddsFormat=decimal (Caused by NewConnectionError("HTTPSConnection(host='api.the-odds-api.com', port=443): Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions"))
+2026-05-05 14:12:50 [WARNING] No data fetched — nothing written.
+2026-05-05 14:13:01 [INFO] Fetching NRL odds ...
+2026-05-05 14:13:05 [INFO]   rugbyleague_nrl — 8 events, 154 API calls remaining
+2026-05-05 14:13:05 [INFO]   400 rows
+2026-05-05 14:13:05 [INFO] Fetching AFL odds ...
+2026-05-05 14:13:06 [INFO]   aussierules_afl — 9 events, 151 API calls remaining
+2026-05-05 14:13:06 [INFO]   424 rows
+2026-05-05 14:13:06 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:13:06 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:13:52 [INFO] Fetching NRL odds ...
+2026-05-05 14:13:53 [INFO]   rugbyleague_nrl — 8 events, 148 API calls remaining
+2026-05-05 14:13:53 [INFO]   400 rows
+2026-05-05 14:13:53 [INFO] Fetching AFL odds ...
+2026-05-05 14:13:53 [INFO]   aussierules_afl — 9 events, 145 API calls remaining
+2026-05-05 14:13:53 [INFO]   424 rows
+2026-05-05 14:13:53 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:13:53 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:14:40 [INFO] Fetching NRL odds ...
+2026-05-05 14:14:40 [INFO]   rugbyleague_nrl — 8 events, 142 API calls remaining
+2026-05-05 14:14:40 [INFO]   400 rows
+2026-05-05 14:14:40 [INFO] Fetching AFL odds ...
+2026-05-05 14:14:41 [INFO]   aussierules_afl — 9 events, 139 API calls remaining
+2026-05-05 14:14:41 [INFO]   424 rows
+2026-05-05 14:14:41 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:14:41 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:14:54 [INFO] Fetching NRL odds ...
+2026-05-05 14:14:55 [INFO]   rugbyleague_nrl — 8 events, 136 API calls remaining
+2026-05-05 14:14:55 [INFO]   400 rows
+2026-05-05 14:14:55 [INFO] Fetching AFL odds ...
+2026-05-05 14:14:56 [INFO]   aussierules_afl — 9 events, 133 API calls remaining
+2026-05-05 14:14:56 [INFO]   424 rows
+2026-05-05 14:14:56 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:14:56 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:20:05 [INFO] Fetching NRL odds ...
+2026-05-05 14:20:05 [INFO]   rugbyleague_nrl — 8 events, 124 API calls remaining
+2026-05-05 14:20:05 [INFO]   400 rows
+2026-05-05 14:20:05 [INFO] Fetching AFL odds ...
+2026-05-05 14:20:05 [INFO]   aussierules_afl — 9 events, 121 API calls remaining
+2026-05-05 14:20:05 [INFO]   424 rows
+2026-05-05 14:20:05 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:20:05 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:30:05 [INFO] Fetching NRL odds ...
+2026-05-05 14:30:05 [INFO]   rugbyleague_nrl — 8 events, 109 API calls remaining
+2026-05-05 14:30:05 [INFO]   400 rows
+2026-05-05 14:30:05 [INFO] Fetching AFL odds ...
+2026-05-05 14:30:06 [INFO]   aussierules_afl — 9 events, 106 API calls remaining
+2026-05-05 14:30:06 [INFO]   424 rows
+2026-05-05 14:30:06 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:30:06 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:40:05 [INFO] Fetching NRL odds ...
+2026-05-05 14:40:05 [INFO]   rugbyleague_nrl — 8 events, 91 API calls remaining
+2026-05-05 14:40:05 [INFO]   400 rows
+2026-05-05 14:40:05 [INFO] Fetching AFL odds ...
+2026-05-05 14:40:06 [INFO]   aussierules_afl — 9 events, 88 API calls remaining
+2026-05-05 14:40:06 [INFO]   424 rows
+2026-05-05 14:40:06 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:40:06 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 14:50:05 [INFO] Fetching NRL odds ...
+2026-05-05 14:50:06 [INFO]   rugbyleague_nrl — 8 events, 79 API calls remaining
+2026-05-05 14:50:06 [INFO]   400 rows
+2026-05-05 14:50:06 [INFO] Fetching AFL odds ...
+2026-05-05 14:50:06 [INFO]   aussierules_afl — 9 events, 76 API calls remaining
+2026-05-05 14:50:06 [INFO]   424 rows
+2026-05-05 14:50:06 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 14:50:06 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 15:00:05 [INFO] Fetching NRL odds ...
+2026-05-05 15:00:05 [INFO]   rugbyleague_nrl — 8 events, 67 API calls remaining
+2026-05-05 15:00:05 [INFO]   400 rows
+2026-05-05 15:00:05 [INFO] Fetching AFL odds ...
+2026-05-05 15:00:06 [INFO]   aussierules_afl — 9 events, 64 API calls remaining
+2026-05-05 15:00:06 [INFO]   424 rows
+2026-05-05 15:00:06 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 15:00:06 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 15:10:06 [INFO] Fetching NRL odds ...
+2026-05-05 15:10:07 [INFO]   rugbyleague_nrl — 8 events, 55 API calls remaining
+2026-05-05 15:10:07 [INFO]   400 rows
+2026-05-05 15:10:07 [INFO] Fetching AFL odds ...
+2026-05-05 15:10:08 [INFO]   aussierules_afl — 9 events, 52 API calls remaining
+2026-05-05 15:10:08 [INFO]   424 rows
+2026-05-05 15:10:08 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 15:10:08 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 15:20:09 [INFO] Fetching NRL odds ...
+2026-05-05 15:20:10 [INFO]   rugbyleague_nrl — 8 events, 43 API calls remaining
+2026-05-05 15:20:10 [INFO]   400 rows
+2026-05-05 15:20:10 [INFO] Fetching AFL odds ...
+2026-05-05 15:20:10 [INFO]   aussierules_afl — 9 events, 40 API calls remaining
+2026-05-05 15:20:10 [INFO]   424 rows
+2026-05-05 15:20:10 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 15:20:10 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 15:30:04 [INFO] Fetching NRL odds ...
+2026-05-05 15:30:05 [INFO]   rugbyleague_nrl — 8 events, 28 API calls remaining
+2026-05-05 15:30:05 [INFO]   400 rows
+2026-05-05 15:30:05 [INFO] Fetching AFL odds ...
+2026-05-05 15:30:05 [INFO]   aussierules_afl — 9 events, 25 API calls remaining
+2026-05-05 15:30:05 [INFO]   424 rows
+2026-05-05 15:30:05 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 15:30:05 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 15:40:05 [INFO] Fetching NRL odds ...
+2026-05-05 15:40:06 [INFO]   rugbyleague_nrl — 8 events, 16 API calls remaining
+2026-05-05 15:40:06 [INFO]   400 rows
+2026-05-05 15:40:06 [INFO] Fetching AFL odds ...
+2026-05-05 15:40:06 [INFO]   aussierules_afl — 9 events, 13 API calls remaining
+2026-05-05 15:40:06 [INFO]   424 rows
+2026-05-05 15:40:06 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 15:40:06 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 15:50:05 [INFO] Fetching NRL odds ...
+2026-05-05 15:50:06 [INFO]   rugbyleague_nrl — 8 events, 7 API calls remaining
+2026-05-05 15:50:06 [INFO]   400 rows
+2026-05-05 15:50:06 [INFO] Fetching AFL odds ...
+2026-05-05 15:50:06 [INFO]   aussierules_afl — 9 events, 4 API calls remaining
+2026-05-05 15:50:06 [INFO]   424 rows
+2026-05-05 15:50:06 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (824 rows)
+2026-05-05 15:50:06 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv
+2026-05-05 16:00:05 [INFO] Fetching NRL odds ...
+2026-05-05 16:00:05 [INFO]   rugbyleague_nrl — 8 events, 1 API calls remaining
+2026-05-05 16:00:05 [INFO]   400 rows
+2026-05-05 16:00:05 [INFO] Fetching AFL odds ...
+2026-05-05 16:00:06 [ERROR] Failed to fetch AFL — 401 Client Error: Unauthorized for url: https://api.the-odds-api.com/v4/sports/aussierules_afl/odds/?apiKey=29cffda625d3420dc24db352a076a5db&regions=au&markets=h2h%2Cspreads%2Ctotals&oddsFormat=decimal
+2026-05-05 16:00:06 [INFO] Appended: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\2026\2026-05-05.csv (400 rows)
+2026-05-05 16:00:06 [INFO] Updated: C:\Users\ElliotBladen\Apps\BetMate\data\odds_snapshots\latest.csv

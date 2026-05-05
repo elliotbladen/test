@@ -1,0 +1,142 @@
+[
+  {
+    "name": "NRL Casualty Ward",
+    "url": "https://www.nrl.com/news/2026/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-2026/",
+    "team": null,
+    "fetched": true,
+    "raw_length": 109314
+  },
+  {
+    "name": "NRL Judiciary Report",
+    "url": "https://www.nrl.com/news/2026/01/01/nrl-judiciary-report-2026/",
+    "team": null,
+    "fetched": true,
+    "raw_length": 142699
+  },
+  {
+    "name": "NRL News",
+    "url": "https://www.nrl.com/news/",
+    "team": null,
+    "fetched": true,
+    "raw_length": 140191
+  },
+  {
+    "name": "Brisbane Broncos News",
+    "url": "https://www.broncos.com.au/news/",
+    "team": "Brisbane Broncos",
+    "fetched": true,
+    "raw_length": 115025
+  },
+  {
+    "name": "Canterbury-Bankstown Bulldogs News",
+    "url": "https://www.bulldogs.com.au/news/",
+    "team": "Canterbury-Bankstown Bulldogs",
+    "fetched": true,
+    "raw_length": 118101
+  },
+  {
+    "name": "Canberra Raiders News",
+    "url": "https://www.raiders.com.au/news/",
+    "team": "Canberra Raiders",
+    "fetched": true,
+    "raw_length": 124158
+  },
+  {
+    "name": "Cronulla-Sutherland Sharks News",
+    "url": "https://www.sharks.com.au/news/",
+    "team": "Cronulla-Sutherland Sharks",
+    "fetched": true,
+    "raw_length": 112904
+  },
+  {
+    "name": "Dolphins News",
+    "url": "https://www.dolphinsnrl.com.au/news/",
+    "team": "Dolphins",
+    "fetched": true,
+    "raw_length": 115942
+  },
+  {
+    "name": "Gold Coast Titans News",
+    "url": "https://www.titans.com.au/news/",
+    "team": "Gold Coast Titans",
+    "fetched": true,
+    "raw_length": 120291
+  },
+  {
+    "name": "Manly-Warringah Sea Eagles News",
+    "url": "https://www.seaeagles.com.au/news/",
+    "team": "Manly-Warringah Sea Eagles",
+    "fetched": true,
+    "raw_length": 122870
+  },
+  {
+    "name": "Melbourne Storm News",
+    "url": "https://www.melbournestorm.com.au/news/",
+    "team": "Melbourne Storm",
+    "fetched": true,
+    "raw_length": 114305
+  },
+  {
+    "name": "Newcastle Knights News",
+    "url": "https://www.newcastleknights.com.au/news/",
+    "team": "Newcastle Knights",
+    "fetched": true,
+    "raw_length": 118354
+  },
+  {
+    "name": "New Zealand Warriors News",
+    "url": "https://www.warriors.kiwi/news/",
+    "team": "New Zealand Warriors",
+    "fetched": true,
+    "raw_length": 116755
+  },
+  {
+    "name": "North Queensland Cowboys News",
+    "url": "https://www.cowboys.com.au/news/",
+    "team": "North Queensland Cowboys",
+    "fetched": true,
+    "raw_length": 127010
+  },
+  {
+    "name": "Parramatta Eels News",
+    "url": "https://www.parraeels.com.au/news/",
+    "team": "Parramatta Eels",
+    "fetched": true,
+    "raw_length": 117780
+  },
+  {
+    "name": "Penrith Panthers News",
+    "url": "https://www.penrithpanthers.com.au/news/",
+    "team": "Penrith Panthers",
+    "fetched": true,
+    "raw_length": 113514
+  },
+  {
+    "name": "South Sydney Rabbitohs News",
+    "url": "https://www.rabbitohs.com.au/news/",
+    "team": "South Sydney Rabbitohs",
+    "fetched": true,
+    "raw_length": 179049
+  },
+  {
+    "name": "St. George Illawarra Dragons News",
+    "url": "https://www.dragons.com.au/news/",
+    "team": "St. George Illawarra Dragons",
+    "fetched": true,
+    "raw_length": 115738
+  },
+  {
+    "name": "Sydney Roosters News",
+    "url": "https://www.roosters.com.au/news/",
+    "team": "Sydney Roosters",
+    "fetched": true,
+    "raw_length": 127372
+  },
+  {
+    "name": "Wests Tigers News",
+    "url": "https://www.weststigers.com.au/news/",
+    "team": "Wests Tigers",
+    "fetched": true,
+    "raw_length": 119899
+  }
+]

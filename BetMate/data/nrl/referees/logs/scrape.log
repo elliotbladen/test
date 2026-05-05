@@ -1,0 +1,10 @@
+2026-05-05 13:47:11 [INFO] Targeting season=2026 round=10
+2026-05-05 13:47:11 [INFO] Attempt 1/3 — referees R10 2026 — https://www.nrl.com/draw/nrl-premiership/2026/round-10/
+2026-05-05 13:47:11 [INFO] JSON blob parse found 0 — trying HTML text fallback
+2026-05-05 13:47:11 [INFO] Wrote latest-referees.csv — 0 assignments, round 10
+2026-05-05 13:47:11 [WARNING] Page fetched but no referee data found — referees may not be announced yet
+2026-05-05 14:28:13 [INFO] Targeting season=2026 round=10
+2026-05-05 14:28:13 [INFO] Attempt 1/3 — referees R10 2026 — https://www.nrl.com/draw/nrl-premiership/2026/round-10/
+2026-05-05 14:28:13 [INFO] JSON blob parse found 0 — trying HTML text fallback
+2026-05-05 14:28:13 [INFO] Wrote latest-referees.csv — 0 assignments, round 10
+2026-05-05 14:28:13 [WARNING] Page fetched but no referee data found — referees may not be announced yet

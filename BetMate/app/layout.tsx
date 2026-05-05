@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Suspense } from 'react';
 import { Roboto, Montserrat } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/layout/Header';
@@ -57,7 +58,9 @@ export default function RootLayout({
     <html lang="en" className={`${roboto.variable} ${montserrat.variable}`}>
       <body className="min-h-[100dvh] bg-[#F0F2F5] text-[#111827] flex flex-col font-sans">
         <ServiceWorker />
-        <Header />
+        <Suspense fallback={null}>
+          <Header />
+        </Suspense>
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

@@ -1,0 +1,150 @@
+2026-05-05 15:48:21 [INFO] Targeting season=2026 round=10
+2026-05-05 15:48:21 [INFO] Fetched NRL Casualty Ward                109314 bytes
+2026-05-05 15:48:22 [INFO] Fetched NRL Judiciary Report             142699 bytes
+2026-05-05 15:48:22 [INFO] Fetched NRL News                         140191 bytes
+2026-05-05 15:48:22 [INFO] Fetched Brisbane Broncos News            115025 bytes
+2026-05-05 15:48:23 [INFO] Fetched Canterbury-Bankstown Bulldogs News 118101 bytes
+2026-05-05 15:48:23 [INFO] Fetched Canberra Raiders News            124158 bytes
+2026-05-05 15:48:24 [INFO] Fetched Cronulla-Sutherland Sharks News  112904 bytes
+2026-05-05 15:48:25 [INFO] Fetched Dolphins News                    115942 bytes
+2026-05-05 15:48:25 [INFO] Fetched Gold Coast Titans News           120291 bytes
+2026-05-05 15:48:26 [INFO] Fetched Manly-Warringah Sea Eagles News  122870 bytes
+2026-05-05 15:48:26 [INFO] Fetched Melbourne Storm News             114305 bytes
+2026-05-05 15:48:27 [INFO] Fetched Newcastle Knights News           118354 bytes
+2026-05-05 15:48:27 [INFO] Fetched New Zealand Warriors News        116755 bytes
+2026-05-05 15:48:28 [INFO] Fetched North Queensland Cowboys News    127010 bytes
+2026-05-05 15:48:28 [INFO] Fetched Parramatta Eels News             117780 bytes
+2026-05-05 15:48:29 [INFO] Fetched Penrith Panthers News            113564 bytes
+2026-05-05 15:48:30 [INFO] Fetched South Sydney Rabbitohs News      179049 bytes
+2026-05-05 15:48:30 [INFO] Fetched St. George Illawarra Dragons News 115738 bytes
+2026-05-05 15:48:31 [INFO] Fetched Sydney Roosters News             127372 bytes
+2026-05-05 15:48:31 [INFO] Fetched Wests Tigers News                120278 bytes
+2026-05-05 15:48:31 [INFO] Wrote 150 flags
+2026-05-05 15:48:31 [INFO] JSON: C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.json
+2026-05-05 15:48:31 [INFO] CSV:  C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.csv
+2026-05-05 15:48:31 [INFO] News flags complete -- 150 total, 61 HIGH
+2026-05-05 15:49:28 [INFO] Targeting season=2026 round=10
+2026-05-05 15:49:28 [INFO] Fetched NRL Casualty Ward                109314 bytes
+2026-05-05 15:49:28 [INFO] Fetched NRL Judiciary Report             142699 bytes
+2026-05-05 15:49:29 [INFO] Fetched NRL News                         140191 bytes
+2026-05-05 15:49:29 [INFO] Fetched Brisbane Broncos News            115025 bytes
+2026-05-05 15:49:30 [INFO] Fetched Canterbury-Bankstown Bulldogs News 118101 bytes
+2026-05-05 15:49:30 [INFO] Fetched Canberra Raiders News            124158 bytes
+2026-05-05 15:49:31 [INFO] Fetched Cronulla-Sutherland Sharks News  112904 bytes
+2026-05-05 15:49:31 [INFO] Fetched Dolphins News                    115942 bytes
+2026-05-05 15:49:32 [INFO] Fetched Gold Coast Titans News           120291 bytes
+2026-05-05 15:49:32 [INFO] Fetched Manly-Warringah Sea Eagles News  122870 bytes
+2026-05-05 15:49:33 [INFO] Fetched Melbourne Storm News             114305 bytes
+2026-05-05 15:49:34 [INFO] Fetched Newcastle Knights News           118354 bytes
+2026-05-05 15:49:34 [INFO] Fetched New Zealand Warriors News        116755 bytes
+2026-05-05 15:49:35 [INFO] Fetched North Queensland Cowboys News    127010 bytes
+2026-05-05 15:49:35 [INFO] Fetched Parramatta Eels News             117780 bytes
+2026-05-05 15:49:35 [INFO] Fetched Penrith Panthers News            113468 bytes
+2026-05-05 15:49:36 [INFO] Fetched South Sydney Rabbitohs News      179049 bytes
+2026-05-05 15:49:37 [INFO] Fetched St. George Illawarra Dragons News 115738 bytes
+2026-05-05 15:49:37 [INFO] Fetched Sydney Roosters News             127372 bytes
+2026-05-05 15:49:38 [INFO] Fetched Wests Tigers News                119885 bytes
+2026-05-05 15:49:38 [INFO] Wrote 87 flags
+2026-05-05 15:49:38 [INFO] JSON: C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.json
+2026-05-05 15:49:38 [INFO] CSV:  C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.csv
+2026-05-05 15:49:38 [INFO] News flags complete -- 87 total, 29 HIGH
+2026-05-05 15:50:15 [INFO] Targeting season=2026 round=10
+2026-05-05 15:50:15 [INFO] Fetched NRL Casualty Ward                109314 bytes
+2026-05-05 15:50:16 [INFO] Fetched NRL Judiciary Report             142699 bytes
+2026-05-05 15:50:16 [INFO] Fetched NRL News                         140191 bytes
+2026-05-05 15:50:17 [INFO] Fetched Brisbane Broncos News            115025 bytes
+2026-05-05 15:50:17 [INFO] Fetched Canterbury-Bankstown Bulldogs News 118101 bytes
+2026-05-05 15:50:18 [INFO] Fetched Canberra Raiders News            124158 bytes
+2026-05-05 15:50:19 [INFO] Fetched Cronulla-Sutherland Sharks News  112907 bytes
+2026-05-05 15:50:19 [INFO] Fetched Dolphins News                    115942 bytes
+2026-05-05 15:50:20 [INFO] Fetched Gold Coast Titans News           120291 bytes
+2026-05-05 15:50:27 [INFO] Fetched Manly-Warringah Sea Eagles News  122870 bytes
+2026-05-05 15:50:28 [INFO] Fetched Melbourne Storm News             114305 bytes
+2026-05-05 15:50:28 [INFO] Fetched Newcastle Knights News           118354 bytes
+2026-05-05 15:50:29 [INFO] Fetched New Zealand Warriors News        116755 bytes
+2026-05-05 15:50:30 [INFO] Fetched North Queensland Cowboys News    127010 bytes
+2026-05-05 15:50:30 [INFO] Fetched Parramatta Eels News             117780 bytes
+2026-05-05 15:50:31 [INFO] Fetched Penrith Panthers News            113514 bytes
+2026-05-05 15:50:31 [INFO] Fetched South Sydney Rabbitohs News      179049 bytes
+2026-05-05 15:50:32 [INFO] Fetched St. George Illawarra Dragons News 115738 bytes
+2026-05-05 15:50:32 [INFO] Fetched Sydney Roosters News             127372 bytes
+2026-05-05 15:50:33 [INFO] Fetched Wests Tigers News                119885 bytes
+2026-05-05 15:50:33 [INFO] Wrote 125 flags
+2026-05-05 15:50:33 [INFO] JSON: C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.json
+2026-05-05 15:50:33 [INFO] CSV:  C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.csv
+2026-05-05 15:50:33 [INFO] News flags complete -- 125 total, 66 HIGH
+2026-05-05 15:50:58 [INFO] Targeting season=2026 round=10
+2026-05-05 15:50:58 [INFO] Fetched NRL Casualty Ward                109314 bytes
+2026-05-05 15:50:59 [INFO] Fetched NRL Judiciary Report             142699 bytes
+2026-05-05 15:50:59 [INFO] Fetched NRL News                         140191 bytes
+2026-05-05 15:51:00 [INFO] Fetched Brisbane Broncos News            115025 bytes
+2026-05-05 15:51:00 [INFO] Fetched Canterbury-Bankstown Bulldogs News 118101 bytes
+2026-05-05 15:51:01 [INFO] Fetched Canberra Raiders News            124158 bytes
+2026-05-05 15:51:01 [INFO] Fetched Cronulla-Sutherland Sharks News  112904 bytes
+2026-05-05 15:51:02 [INFO] Fetched Dolphins News                    115942 bytes
+2026-05-05 15:51:03 [INFO] Fetched Gold Coast Titans News           120291 bytes
+2026-05-05 15:51:03 [INFO] Fetched Manly-Warringah Sea Eagles News  122870 bytes
+2026-05-05 15:51:04 [INFO] Fetched Melbourne Storm News             114305 bytes
+2026-05-05 15:51:04 [INFO] Fetched Newcastle Knights News           118354 bytes
+2026-05-05 15:51:05 [INFO] Fetched New Zealand Warriors News        116755 bytes
+2026-05-05 15:51:05 [INFO] Fetched North Queensland Cowboys News    127010 bytes
+2026-05-05 15:51:06 [INFO] Fetched Parramatta Eels News             117780 bytes
+2026-05-05 15:51:06 [INFO] Fetched Penrith Panthers News            113514 bytes
+2026-05-05 15:51:07 [INFO] Fetched South Sydney Rabbitohs News      179049 bytes
+2026-05-05 15:51:08 [INFO] Fetched St. George Illawarra Dragons News 115738 bytes
+2026-05-05 15:51:08 [INFO] Fetched Sydney Roosters News             127372 bytes
+2026-05-05 15:51:09 [INFO] Fetched Wests Tigers News                119885 bytes
+2026-05-05 15:51:09 [INFO] Wrote 86 flags
+2026-05-05 15:51:09 [INFO] JSON: C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.json
+2026-05-05 15:51:09 [INFO] CSV:  C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.csv
+2026-05-05 15:51:09 [INFO] News flags complete -- 86 total, 28 HIGH
+2026-05-05 15:51:50 [INFO] Targeting season=2026 round=10
+2026-05-05 15:51:50 [INFO] Fetched NRL Casualty Ward                109314 bytes
+2026-05-05 15:51:50 [INFO] Fetched NRL Judiciary Report             142699 bytes
+2026-05-05 15:51:51 [INFO] Fetched NRL News                         140191 bytes
+2026-05-05 15:51:52 [INFO] Fetched Brisbane Broncos News            115025 bytes
+2026-05-05 15:51:52 [INFO] Fetched Canterbury-Bankstown Bulldogs News 118101 bytes
+2026-05-05 15:51:53 [INFO] Fetched Canberra Raiders News            124158 bytes
+2026-05-05 15:51:53 [INFO] Fetched Cronulla-Sutherland Sharks News  112907 bytes
+2026-05-05 15:51:54 [INFO] Fetched Dolphins News                    115942 bytes
+2026-05-05 15:51:54 [INFO] Fetched Gold Coast Titans News           120291 bytes
+2026-05-05 15:51:55 [INFO] Fetched Manly-Warringah Sea Eagles News  122870 bytes
+2026-05-05 15:51:55 [INFO] Fetched Melbourne Storm News             114305 bytes
+2026-05-05 15:51:56 [INFO] Fetched Newcastle Knights News           118354 bytes
+2026-05-05 15:51:56 [INFO] Fetched New Zealand Warriors News        116755 bytes
+2026-05-05 15:51:57 [INFO] Fetched North Queensland Cowboys News    127010 bytes
+2026-05-05 15:51:58 [INFO] Fetched Parramatta Eels News             117780 bytes
+2026-05-05 15:51:58 [INFO] Fetched Penrith Panthers News            113514 bytes
+2026-05-05 15:51:59 [INFO] Fetched South Sydney Rabbitohs News      179049 bytes
+2026-05-05 15:52:00 [INFO] Fetched St. George Illawarra Dragons News 115738 bytes
+2026-05-05 15:52:00 [INFO] Fetched Sydney Roosters News             127372 bytes
+2026-05-05 15:52:01 [INFO] Fetched Wests Tigers News                119899 bytes
+2026-05-05 15:52:01 [INFO] Wrote 84 flags
+2026-05-05 15:52:01 [INFO] JSON: C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.json
+2026-05-05 15:52:01 [INFO] CSV:  C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.csv
+2026-05-05 15:52:01 [INFO] News flags complete -- 84 total, 28 HIGH
+2026-05-05 15:53:04 [INFO] Targeting season=2026 round=10
+2026-05-05 15:53:04 [INFO] Fetched NRL Casualty Ward                109314 bytes
+2026-05-05 15:53:05 [INFO] Fetched NRL Judiciary Report             142699 bytes
+2026-05-05 15:53:05 [INFO] Fetched NRL News                         140191 bytes
+2026-05-05 15:53:06 [INFO] Fetched Brisbane Broncos News            115025 bytes
+2026-05-05 15:53:06 [INFO] Fetched Canterbury-Bankstown Bulldogs News 118101 bytes
+2026-05-05 15:53:07 [INFO] Fetched Canberra Raiders News            124158 bytes
+2026-05-05 15:53:08 [INFO] Fetched Cronulla-Sutherland Sharks News  112904 bytes
+2026-05-05 15:53:08 [INFO] Fetched Dolphins News                    115942 bytes
+2026-05-05 15:53:09 [INFO] Fetched Gold Coast Titans News           120291 bytes
+2026-05-05 15:53:09 [INFO] Fetched Manly-Warringah Sea Eagles News  122870 bytes
+2026-05-05 15:53:10 [INFO] Fetched Melbourne Storm News             114305 bytes
+2026-05-05 15:53:10 [INFO] Fetched Newcastle Knights News           118354 bytes
+2026-05-05 15:53:11 [INFO] Fetched New Zealand Warriors News        116755 bytes
+2026-05-05 15:53:11 [INFO] Fetched North Queensland Cowboys News    127010 bytes
+2026-05-05 15:53:12 [INFO] Fetched Parramatta Eels News             117780 bytes
+2026-05-05 15:53:12 [INFO] Fetched Penrith Panthers News            113514 bytes
+2026-05-05 15:53:13 [INFO] Fetched South Sydney Rabbitohs News      179049 bytes
+2026-05-05 15:53:14 [INFO] Fetched St. George Illawarra Dragons News 115738 bytes
+2026-05-05 15:53:14 [INFO] Fetched Sydney Roosters News             127372 bytes
+2026-05-05 15:53:15 [INFO] Fetched Wests Tigers News                119899 bytes
+2026-05-05 15:53:15 [INFO] Wrote 84 flags
+2026-05-05 15:53:15 [INFO] JSON: C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.json
+2026-05-05 15:53:15 [INFO] CSV:  C:\Users\ElliotBladen\Apps\BetMate\data\nrl\news_flags\processed\2026\2026-05-05.csv
+2026-05-05 15:53:15 [INFO] News flags complete -- 84 total, 28 HIGH

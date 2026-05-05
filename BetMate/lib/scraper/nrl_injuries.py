@@ -1,8 +1,11 @@
 """
 lib/scraper/nrl_injuries.py
 
-Scrapes the NRL injury/team list from Fox Sports.
+Scrapes the NRL casualty ward from NRL.com (server-rendered, no JS required).
 Outputs JSON in the exact format BettingEngine's prepare_round.py expects.
+
+Source URL pattern:
+  https://www.nrl.com/news/{season}/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-{season}/
 
 Outputs:
   data/nrl/injuries/raw/YYYY/round-N.json
@@ -11,7 +14,7 @@ Outputs:
   data/nrl/injuries/logs/scrape.log
 
 Usage:
-  uv run --with requests --with beautifulsoup4 python lib/scraper/nrl_injuries.py --season 2026 --round 11
+  uv run --with requests --with beautifulsoup4 python lib/scraper/nrl_injuries.py --season 2026 --round 10
 """
 
 from __future__ import annotations
@@ -39,9 +42,6 @@ DEFAULT_TIMEOUT      = 30
 DEFAULT_MAX_ATTEMPTS = 3
 DEFAULT_RETRY_DELAY  = 30
 DEFAULT_ROUND_ONE_MONDAY = "2026-03-02"
-
-# Fox Sports NRL injury list page
-FOX_INJURY_URL = "https://www.foxsports.com.au/nrl/injury-list"
 
 HEADERS = {
     "User-Agent": (
@@ -75,6 +75,7 @@ TEAM_MAP = {
     "brisbane broncos":              "Brisbane Broncos",
     "canterbury-bankstown bulldogs": "Canterbury-Bankstown Bulldogs",
     "canberra raiders":              "Canberra Raiders",
+    "cronulla sharks":               "Cronulla-Sutherland Sharks",
     "cronulla-sutherland sharks":    "Cronulla-Sutherland Sharks",
     "gold coast titans":             "Gold Coast Titans",
     "manly-warringah sea eagles":    "Manly-Warringah Sea Eagles",
@@ -85,11 +86,11 @@ TEAM_MAP = {
     "parramatta eels":               "Parramatta Eels",
     "penrith panthers":              "Penrith Panthers",
     "south sydney rabbitohs":        "South Sydney Rabbitohs",
+    "st george illawarra dragons":   "St. George Illawarra Dragons",
     "st. george illawarra dragons":  "St. George Illawarra Dragons",
     "sydney roosters":               "Sydney Roosters",
 }
 
-# Position → role mapping for BettingEngine tier5
 POSITION_ROLE_MAP = {
     "halfback":      "halfback",
     "half":          "halfback",
@@ -108,8 +109,6 @@ POSITION_ROLE_MAP = {
     "center":        "other",
 }
 
-# Known elite/key players — drives importance_tier assignment
-# Update each season as rosters change
 ELITE_PLAYERS = {
     "Adam Reynolds", "Daly Cherry-Evans", "Cameron Munster", "Nathan Cleary",
     "Jarome Luai", "Nicho Hynes", "Kieran Foran", "Luke Brooks",
@@ -138,6 +137,13 @@ def setup_logging() -> None:
             logging.StreamHandler(sys.stdout),
         ],
         force=True,
+    )
+
+
+def nrl_casualty_url(season: int) -> str:
+    return (
+        f"https://www.nrl.com/news/{season}/01/01/"
+        f"nrl-casualty-ward-how-your-club-is-shaping-heading-into-{season}/"
     )
 
 
@@ -178,77 +184,107 @@ def fetch_html(url: str) -> str | None:
         resp.raise_for_status()
         return resp.text
     except Exception as exc:
-        log.warning("Fetch failed %s — %s", url, exc)
+        log.warning("Fetch failed %s -- %s", url, exc)
         return None
 
 
-def parse_fox_injury_page(html: str, season: int, round_number: int) -> list[dict]:
+def _parse_return_status(return_info: str, current_round: int) -> str | None:
     """
-    Parse Fox Sports injury list page.
-    Structure: team headings followed by player rows with name, position, injury, status.
-    Falls back to text extraction if table structure changes.
+    Convert return round text to a status string.
+    Returns 'out', 'doubtful', or None (player already returned -- skip them).
     """
-    soup    = BeautifulSoup(html, "html.parser")
+    r = return_info.strip().upper()
+    if not r or "TBC" in r or "INDEFINITE" in r:
+        return "out"
+
+    m = re.search(r"ROUND[^\d]*(\d+)", r)
+    if m:
+        return_round = int(m.group(1))
+        if return_round < current_round:
+            return None       # already returned
+        if return_round == current_round:
+            return "doubtful"
+        return "out"
+
+    return "out"
+
+
+def _is_team_heading(text: str) -> bool:
+    return text.strip().lower() in TEAM_MAP
+
+
+def parse_nrl_casualty_ward(html: str, season: int, round_number: int) -> list[dict]:
+    """
+    Parse NRL.com casualty ward article.
+    Structure: h3 team headings followed by ul/li player entries.
+    Each li: "Player Name: Injury description | Return round/TBC"
+    """
+    soup = BeautifulSoup(html, "html.parser")
     records = []
     scraped_at = datetime.now(timezone.utc).isoformat()
-    current_team = None
+    current_team: str | None = None
 
-    # Try structured table approach first
-    for element in soup.find_all(["h2", "h3", "h4", "tr", "div"]):
-        text = element.get_text(strip=True)
-
-        # Detect team heading
-        canon = canon_team(text)
-        if canon != text or text.lower() in TEAM_MAP:
-            current_team = canon
+    for element in soup.find_all(["h2", "h3", "h4", "li"]):
+        if element.name in ("h2", "h3", "h4"):
+            text = element.get_text(strip=True)
+            if _is_team_heading(text):
+                current_team = canon_team(text)
+            else:
+                # Non-team heading — reset so we don't misassign players
+                current_team = None
             continue
 
-        if not current_team:
-            continue
-
-        # Try to parse player rows from table
-        if element.name == "tr":
-            cells = [td.get_text(strip=True) for td in element.find_all(["td", "th"])]
-            if len(cells) < 2:
-                continue
-            player   = cells[0] if cells else ""
-            position = cells[1] if len(cells) > 1 else "other"
-            injury   = cells[2] if len(cells) > 2 else ""
-            status   = cells[3].lower() if len(cells) > 3 else "out"
-
-            if not player or player.lower() in ("player", "name", ""):
+        if element.name == "li" and current_team:
+            text = element.get_text(strip=True)
+            # Format: "Player Name (injury description, Round N or TBC)"
+            m = re.match(r"^(.+?)\s*\((.+)\)$", text)
+            if not m:
                 continue
 
-            status_clean = "out" if "out" in status else (
-                "doubtful" if "doubtful" in status or "test" in status else (
-                    "managed" if "managed" in status or "managed" in injury.lower() else "out"
-                )
-            )
+            player = m.group(1).strip()
+            inner = m.group(2).strip()
+
+            # Split on last comma: "head knock, TBC" or "knee, Round 12-14"
+            if "," in inner:
+                last_comma = inner.rfind(",")
+                injury = inner[:last_comma].strip()
+                return_info = inner[last_comma + 1:].strip()
+            else:
+                injury = inner
+                return_info = "TBC"
+
+            status = _parse_return_status(return_info, round_number)
+            if status is None:
+                log.debug("  Skipping %s (%s) -- already returned (%s)", player, current_team, return_info)
+                continue
+
             records.append({
-                "season":           season,
-                "round":            round_number,
-                "team":             current_team,
-                "player":           player,
-                "role":             role_from_position(position),
-                "importance_tier":  importance_tier(player, position),
-                "status":           status_clean,
-                "notes":            injury,
-                "scraped_at":       scraped_at,
+                "season":          season,
+                "round":           round_number,
+                "team":            current_team,
+                "player":          player,
+                "role":            "other",
+                "importance_tier": importance_tier(player, ""),
+                "status":          status,
+                "notes":           f"{injury} | Return: {return_info}",
+                "scraped_at":      scraped_at,
             })
+            log.debug("  %s %-30s [%s] %s", current_team, player, status, injury)
 
     if not records:
-        log.warning("Structured parse found 0 records — page structure may have changed")
+        log.warning("Parsed 0 records -- page structure may have changed or URL is wrong")
 
     return records
 
 
-def write_outputs(records: list[dict], raw_html: str, season: int, round_number: int) -> None:
+def write_outputs(records: list[dict], raw_html: str, season: int, round_number: int,
+                  source_url: str) -> None:
     scraped_at = datetime.now(timezone.utc).isoformat()
 
     raw_dir = RAW_DIR / str(season)
     raw_dir.mkdir(parents=True, exist_ok=True)
     (raw_dir / f"round-{round_number}.json").write_text(
-        json.dumps({"scraped_at": scraped_at, "source": FOX_INJURY_URL,
+        json.dumps({"scraped_at": scraped_at, "source": source_url,
                     "raw_length": len(raw_html)}, indent=2),
         encoding="utf-8",
     )
@@ -262,28 +298,29 @@ def write_outputs(records: list[dict], raw_html: str, season: int, round_number:
     (PROCESSED_DIR / "latest-injuries.json").write_text(
         json.dumps(records, indent=2, ensure_ascii=False), encoding="utf-8"
     )
-    log.info("Wrote latest-injuries.json — %d player records, round %d", len(records), round_number)
+    log.info("Wrote latest-injuries.json -- %d player records, round %d", len(records), round_number)
 
 
 def scrape(season: int, round_number: int, max_attempts: int, retry_delay: int) -> int:
+    url = nrl_casualty_url(season)
     for attempt in range(1, max_attempts + 1):
-        log.info("Attempt %d/%d — injuries R%d %d", attempt, max_attempts, round_number, season)
-        html = fetch_html(FOX_INJURY_URL)
+        log.info("Attempt %d/%d -- injuries R%d %d -- %s", attempt, max_attempts, round_number, season, url)
+        html = fetch_html(url)
         if html:
-            records = parse_fox_injury_page(html, season, round_number)
-            write_outputs(records, html, season, round_number)
-            log.info("Injuries scraped — %d records", len(records))
+            records = parse_nrl_casualty_ward(html, season, round_number)
+            write_outputs(records, html, season, round_number, url)
+            log.info("Injuries scraped -- %d records", len(records))
             return len(records)
         if attempt < max_attempts:
             log.warning("Fetch failed, retrying in %ds", retry_delay)
             time.sleep(retry_delay)
-    log.error("All attempts exhausted — no injury data")
+    log.error("All attempts exhausted -- no injury data")
     return 0
 
 
 def main() -> None:
     setup_logging()
-    p = argparse.ArgumentParser(description="Scrape NRL injuries")
+    p = argparse.ArgumentParser(description="Scrape NRL injuries from NRL.com casualty ward")
     p.add_argument("--season", type=int, default=2026)
     p.add_argument("--round", dest="round_number", type=int, default=0)
     p.add_argument("--round-one-monday", default=DEFAULT_ROUND_ONE_MONDAY)

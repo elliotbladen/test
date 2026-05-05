@@ -49,10 +49,12 @@ These are installed on the home dev machine and do NOT need to be recreated on o
 
 | Task | Schedule | What it does |
 |------|----------|--------------|
-| BetMate Daily Odds Snapshot | Daily 9:00 AM | Pulls NRL + AFL odds to CSV |
+| BetMate Odds Snapshot 10min | Every 10 minutes | Pulls NRL + AFL odds, then writes price movements to CSV |
 | BetMate NRL Historical Results | Mon 5:00 PM | Downloads aussportsbetting xlsx |
 | BetMate NRL Style Stats Scrape | Mon 6:00 PM | Scrapes Fox Sports style stats |
 | BetMate NRL Round Prep | Mon 6:05 PM | Fixture + injuries + referees |
+| BettingEngine NRL Referees Fetch | Wed 5:00 PM | Scrapes NRL referee appointments |
+| BetMate NRL News Flags | Thu/Fri/Sat/Sun 10:30 PM | Flags post-game NRL injury, HIA, surgery, suspension and team-news signals |
 
 ---
 

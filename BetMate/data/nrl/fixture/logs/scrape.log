@@ -21,3 +21,11 @@
 2026-05-04 07:42:43 [INFO] Attempt 1/3 — R11 2026
 2026-05-04 07:42:43 [INFO] NRL draw API: https://www.nrl.com/draw/data/?competition=111&season=2026&round=11
 2026-05-04 07:42:44 [INFO] Wrote latest-fixture.json — 8 games, round 11
+2026-05-05 11:52:31 [INFO] Targeting season=2026 round=10
+2026-05-05 11:52:31 [INFO] Attempt 1/3 — R10 2026
+2026-05-05 11:52:31 [INFO] NRL draw API: https://www.nrl.com/draw/data/?competition=111&season=2026&round=10
+2026-05-05 11:52:31 [INFO] Wrote latest-fixture.json — 8 games, round 10
+2026-05-05 11:53:25 [INFO] Targeting season=2026 round=10
+2026-05-05 11:53:25 [INFO] Attempt 1/3 — R10 2026
+2026-05-05 11:53:25 [INFO] NRL draw API: https://www.nrl.com/draw/data/?competition=111&season=2026&round=10
+2026-05-05 11:53:26 [INFO] Wrote latest-fixture.json — 8 games, round 10

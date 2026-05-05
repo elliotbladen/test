@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Lock } from 'lucide-react';
+import { Flame, Lock } from 'lucide-react';
 import BlurLock from './BlurLock';
 import { BOOKMAKER_META } from '@/lib/oddsApi';
 import type { MovementMap, Movement } from '@/lib/oddsMovement';
@@ -190,11 +190,14 @@ function BmCard({
 
   const locked = isBest && userPlan === 'free' && !isLoggedIn;
   const hasEV = isBest && evPct != null;
+  const isStrongShortener = movement?.shortenedStrong ?? false;
   const webHref = getAffiliateUrl(bmKey, sport);
   const baseClass = [
     'relative flex flex-col items-center pt-6 pb-4 px-2 rounded-md shrink-0 w-[110px] sm:w-auto sm:min-w-[64px] sm:pt-4 sm:pb-2.5',
     'cursor-pointer transition-all duration-150 group/bm',
-    hasEV
+    isStrongShortener
+      ? 'border-2 border-[#F97316] bg-[#FFF7ED] shadow-[0_0_18px_rgba(249,115,22,0.30)] hover:bg-[#FFEDD5] hover:shadow-[0_0_24px_rgba(249,115,22,0.42)] hover:scale-105'
+      : hasEV
       ? 'ev-snake-border shadow-[0_0_20px_rgba(0,200,150,0.35)] hover:scale-105'
       : isBest
         ? 'border border-[#F97316]/50 bg-[#F97316]/5 hover:border-[#F97316] hover:bg-[#F97316]/10 hover:shadow-[0_0_14px_rgba(249,115,22,0.25)] hover:scale-105'
@@ -233,11 +236,18 @@ function BmCard({
       ) : null}
       {movement && (
         <span className={[
-          'absolute top-1 right-1.5 font-black leading-none z-10 transition-all duration-500',
+          'absolute top-1 right-1.5 inline-flex items-center justify-center font-black leading-none z-10 transition-all duration-500',
           flash ? 'text-2xl drop-shadow-[0_0_8px_currentColor]' : 'text-[11px]',
-          movement === 'up' ? 'text-emerald-400' : 'text-red-400',
+          isStrongShortener ? 'text-[#F97316]' : movement.direction === 'up' ? 'text-emerald-400' : 'text-red-400',
         ].join(' ')}>
-          {movement === 'up' ? '↑' : '↓'}
+          {isStrongShortener ? (
+            <Flame
+              className={flash ? 'w-6 h-6' : 'w-3.5 h-3.5'}
+              fill="currentColor"
+              strokeWidth={2.5}
+              aria-label={`Price shortened ${Math.abs(movement.changePct).toFixed(0)} percent`}
+            />
+          ) : movement.direction === 'up' ? '↑' : '↓'}
         </span>
       )}
       <div className={[
