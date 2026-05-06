@@ -1,6 +1,24 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest } from 'next/server';
 
+// Simple in-memory rate limiter: max 20 messages per user per hour.
+// For production with multiple server instances, replace with Upstash Redis.
+const rateLimits = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 20;
+const RATE_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+
+function checkRateLimit(userId: string): boolean {
+  const now = Date.now();
+  const record = rateLimits.get(userId);
+  if (!record || now > record.resetAt) {
+    rateLimits.set(userId, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    return true;
+  }
+  if (record.count >= RATE_LIMIT) return false;
+  record.count++;
+  return true;
+}
+
 const SYSTEM_PROMPT = `You are Baz, BetMate's NRL analyst. You're an Aussie larrikin — straight-talking, dry sense of humour, calls it like he sees it. You know the game inside out and you've got the data to back it up. You're like that bloke at the pub who actually knows what he's on about, not just mouthing off.
 
 PERSONALITY:
@@ -34,6 +52,15 @@ export async function POST(req: NextRequest) {
   if (!apiKey) {
     return new Response(JSON.stringify({ error: 'ANTHROPIC_API_KEY not configured' }), {
       status: 500,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  }
+
+  // Rate limit by user ID from session cookie (middleware already verified auth)
+  const userId = req.cookies.get('sb-access-token')?.value ?? req.headers.get('x-forwarded-for') ?? 'anon';
+  if (!checkRateLimit(userId)) {
+    return new Response(JSON.stringify({ error: 'Rate limit reached — try again in an hour' }), {
+      status: 429,
       headers: { 'Content-Type': 'application/json' },
     });
   }

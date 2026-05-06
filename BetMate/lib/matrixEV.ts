@@ -5,7 +5,10 @@ import fs from 'fs';
 import path from 'path';
 import * as xlsx from 'xlsx';
 
-const ENGINE_OUTPUTS = path.join(process.cwd(), '..', 'BettingEngine', 'outputs');
+// Set BETTING_ENGINE_OUTPUTS_PATH in .env.local (local dev) or server env (production).
+// On production this should point to a private location — never a path inside the public app.
+const ENGINE_OUTPUTS = process.env.BETTING_ENGINE_OUTPUTS_PATH
+  ?? path.join(process.cwd(), '..', 'BettingEngine', 'outputs');
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
