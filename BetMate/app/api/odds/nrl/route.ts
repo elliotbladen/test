@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
+import { readLatestOddsSnapshot } from '@/lib/oddsSnapshotFallback';
 
+export const dynamic = 'force-dynamic';
 export const revalidate = 300; // 5-min server cache
 
 export async function GET() {
@@ -16,6 +18,16 @@ export async function GET() {
 
   const res = await fetch(url.toString(), { next: { revalidate: 300 } });
   if (!res.ok) {
+    const fallback = readLatestOddsSnapshot('NRL');
+    if (fallback.length > 0) {
+      return NextResponse.json(fallback, {
+        headers: {
+          'x-betmate-odds-source': 'local-snapshot',
+          'x-betmate-upstream-status': String(res.status),
+        },
+      });
+    }
+
     return NextResponse.json({ error: `Odds API error: ${res.status}` }, { status: res.status });
   }
 

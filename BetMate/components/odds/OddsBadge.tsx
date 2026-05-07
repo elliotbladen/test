@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { getAffiliateUrl } from '@/lib/affiliate';
 
@@ -36,21 +36,21 @@ export default function OddsBadge({
   return (
     <button
       onClick={handleClick}
-      title={`${side === 'home' ? 'Home' : 'Away'} · ${bookmaker} · ${odds.toFixed(2)}`}
+      title={`${side === 'home' ? 'Home' : 'Away'} Â· ${bookmaker} Â· ${odds.toFixed(2)}`}
       className={[
-        // Base — full width in its grid cell, minimum 44px touch height
+        // Base â€” full width in its grid cell, minimum 44px touch height
         'relative w-full flex flex-col items-center justify-center',
         'min-h-[52px] px-2 py-2 rounded border',
         'transition-all duration-150 cursor-pointer group',
         'touch-target',
         isBest
-          ? 'border-[#00C896] bg-[#00C896]/10 hover:bg-[#00C896]/18'
+          ? 'border-[#00DEB8] bg-[#00DEB8]/10 hover:bg-[#00DEB8]/18'
           : 'border-[#E2E8F0] bg-[#F8FAFC] hover:border-[#CBD5E1]',
       ].join(' ')}
     >
-      {/* BEST badge — positioned above the button */}
+      {/* BEST badge â€” positioned above the button */}
       {isBest && (
-        <span className="absolute -top-[9px] left-1/2 -translate-x-1/2 bg-[#00C896] text-black text-[8px] font-black font-mono px-1.5 py-[2px] rounded uppercase tracking-widest whitespace-nowrap leading-none">
+        <span className="absolute -top-[9px] left-1/2 -translate-x-1/2 bg-[#00DEB8] text-black text-[8px] font-black font-mono px-1.5 py-[2px] rounded uppercase tracking-widest whitespace-nowrap leading-none">
           BEST
         </span>
       )}
@@ -58,7 +58,7 @@ export default function OddsBadge({
       {/* Bookmaker name */}
       <span className={[
         'text-[9px] font-mono uppercase tracking-[0.1em] mb-1 leading-none',
-        isBest ? 'text-[#00C896]/70' : 'text-[#9CA3AF]',
+        isBest ? 'text-[#00DEB8]/70' : 'text-[#9CA3AF]',
       ].join(' ')}>
         {BM_LABEL[bookmaker] ?? bookmaker.toUpperCase()}
       </span>
@@ -68,8 +68,8 @@ export default function OddsBadge({
         className={[
           'text-[15px] font-bold font-tabular leading-none',
           isBest
-            ? 'text-[#00C896]'
-            : 'text-[#111827] group-hover:text-[#00C896] transition-colors',
+            ? 'text-[#00DEB8]'
+            : 'text-[#111827] group-hover:text-[#00DEB8] transition-colors',
         ].join(' ')}
       >
         {odds.toFixed(2)}

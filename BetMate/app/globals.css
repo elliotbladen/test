@@ -1,10 +1,10 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-  --green:     #00C896;
+  --green:     #00DEB8;
   --orange:    #F97316;
   --pro:       #7C3AED;
   --line:      #E2E8F0;
@@ -99,7 +99,7 @@ button, a, [role="button"] {
 /* Card hover */
 .card-hover { transition: border-color 0.15s ease; }
 
-/* EV snake border — rotating green comet */
+/* EV snake border â€” rotating green comet */
 @property --ev-angle {
   syntax: '<angle>';
   initial-value: 0deg;
@@ -115,9 +115,9 @@ button, a, [role="button"] {
       from var(--ev-angle),
       transparent 0%,
       transparent 60%,
-      #00C896 75%,
-      #00E5A8 85%,
-      #00C896 90%,
+      #00DEB8 75%,
+      #2AF5D1 85%,
+      #00DEB8 90%,
       transparent 95%
     ) border-box !important;
 }

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useMemo } from 'react';
 import { LEGACY_BETS, MODEL_BETS } from '@/lib/researchData';
@@ -7,14 +7,14 @@ import type { Sport, BetResult, LegacyBet, ModelBet } from '@/lib/researchData';
 const SPORTS: (Sport | 'ALL')[] = ['ALL', 'NRL', 'AFL', 'FOOTBALL', 'OTHER'];
 
 function resultBadge(r: BetResult) {
-  if (r === 'win')  return <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-widest bg-[#00C896]/15 text-[#00C896]">W</span>;
+  if (r === 'win')  return <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-widest bg-[#00DEB8]/15 text-[#00DEB8]">W</span>;
   if (r === 'loss') return <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-widest bg-red-500/15 text-red-500">L</span>;
   return <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold uppercase tracking-widest bg-[#E2E8F0] text-[#9CA3AF]">P</span>;
 }
 
 function sportPill(s: Sport) {
   const colors: Record<Sport, string> = {
-    NRL:      'bg-[#00C896]/10 text-[#00C896]',
+    NRL:      'bg-[#00DEB8]/10 text-[#00DEB8]',
     AFL:      'bg-blue-500/10 text-blue-500',
     FOOTBALL: 'bg-purple-500/10 text-purple-500',
     OTHER:    'bg-[#E2E8F0] text-[#9CA3AF]',
@@ -29,7 +29,7 @@ function sportPill(s: Sport) {
 function clvDelta(taken: number, closing: number | null) {
   if (!closing) return <span className="text-[#D1D5DB]">—</span>;
   const delta = ((taken - closing) / closing) * 100;
-  const cls = delta > 0 ? 'text-[#00C896]' : delta < 0 ? 'text-red-500' : 'text-[#9CA3AF]';
+  const cls = delta > 0 ? 'text-[#00DEB8]' : delta < 0 ? 'text-red-500' : 'text-[#9CA3AF]';
   return <span className={`font-mono text-xs ${cls}`}>{delta > 0 ? '+' : ''}{delta.toFixed(1)}%</span>;
 }
 
@@ -42,7 +42,7 @@ function statsFor(bets: { result: BetResult; plUnits?: number; cumPL?: number }[
   return { total, wins, losses, winRate };
 }
 
-// ── All Bets tab ──────────────────────────────────────────────────────────────
+// -- All Bets tab --------------------------------------------------------------
 function AllBetsTab({ sport }: { sport: Sport | 'ALL' }) {
   const filtered = useMemo(
     () => sport === 'ALL' ? LEGACY_BETS : LEGACY_BETS.filter(b => b.sport === sport),
@@ -85,7 +85,7 @@ function AllBetsTab({ sport }: { sport: Sport | 'ALL' }) {
                 <td className="py-2 pr-4 text-[11px] font-mono text-[#6B7280] whitespace-nowrap">{bet.market}</td>
                 <td className="py-2 pr-4 text-[11px] font-mono text-[#6B7280]">{bet.odds ?? '—'}</td>
                 <td className="py-2 pr-4">{resultBadge(bet.result)}</td>
-                <td className={`py-2 pr-4 text-[12px] font-mono font-bold ${bet.cumPL >= 0 ? 'text-[#00C896]' : 'text-red-500'}`}>
+                <td className={`py-2 pr-4 text-[12px] font-mono font-bold ${bet.cumPL >= 0 ? 'text-[#00DEB8]' : 'text-red-500'}`}>
                   {bet.cumPL > 0 ? '+' : ''}{bet.cumPL.toFixed(2)}u
                 </td>
                 <td className="py-2 pr-4">{sportPill(bet.sport)}</td>
@@ -98,7 +98,7 @@ function AllBetsTab({ sport }: { sport: Sport | 'ALL' }) {
   );
 }
 
-// ── NRL Model tab ─────────────────────────────────────────────────────────────
+// -- NRL Model tab -------------------------------------------------------------
 function ModelTab() {
   const stats   = statsFor(MODEL_BETS);
   const last    = MODEL_BETS[MODEL_BETS.length - 1];
@@ -120,7 +120,7 @@ function ModelTab() {
         ].map(s => (
           <div key={s.label} className="border border-[#E2E8F0] rounded-lg px-4 py-3 bg-white">
             <p className="text-[10px] font-mono text-[#9CA3AF] uppercase tracking-widest mb-1">{s.label}</p>
-            <p className={`text-[18px] font-mono font-bold leading-none ${s.label === 'Running P&L' ? (finalPL >= 0 ? 'text-[#00C896]' : 'text-red-500') : 'text-[#111827]'}`}>
+            <p className={`text-[18px] font-mono font-bold leading-none ${s.label === 'Running P&L' ? (finalPL >= 0 ? 'text-[#00DEB8]' : 'text-red-500') : 'text-[#111827]'}`}>
               {s.value}
             </p>
           </div>
@@ -148,10 +148,10 @@ function ModelTab() {
                 <td className="py-2 pr-4 text-[12px] font-mono text-[#6B7280]">{bet.closingPrice?.toFixed(2) ?? '—'}</td>
                 <td className="py-2 pr-4">{bet.takenPrice !== null ? clvDelta(bet.takenPrice, bet.closingPrice) : <span className="text-[#D1D5DB]">—</span>}</td>
                 <td className="py-2 pr-4">{resultBadge(bet.result)}</td>
-                <td className={`py-2 pr-4 text-[12px] font-mono font-bold ${bet.plUnits >= 0 ? 'text-[#00C896]' : 'text-red-500'}`}>
+                <td className={`py-2 pr-4 text-[12px] font-mono font-bold ${bet.plUnits >= 0 ? 'text-[#00DEB8]' : 'text-red-500'}`}>
                   {bet.plUnits > 0 ? '+' : ''}{bet.plUnits.toFixed(2)}u
                 </td>
-                <td className={`py-2 pr-4 text-[12px] font-mono font-bold ${bet.runningTotal >= 0 ? 'text-[#00C896]' : 'text-red-500'}`}>
+                <td className={`py-2 pr-4 text-[12px] font-mono font-bold ${bet.runningTotal >= 0 ? 'text-[#00DEB8]' : 'text-red-500'}`}>
                   {bet.runningTotal > 0 ? '+' : ''}{bet.runningTotal.toFixed(2)}u
                 </td>
               </tr>
@@ -163,7 +163,7 @@ function ModelTab() {
   );
 }
 
-// ── Page ──────────────────────────────────────────────────────────────────────
+// -- Page ----------------------------------------------------------------------
 const TABS = ['Sports Betting', 'NRL Model'] as const;
 type Tab = typeof TABS[number];
 
@@ -203,7 +203,7 @@ export default function ResearchPage() {
               className={[
                 'px-3 py-1 rounded text-[11px] font-mono font-bold uppercase tracking-widest transition-colors',
                 activeSport === s
-                  ? 'bg-[#00C896] text-black'
+                  ? 'bg-[#00DEB8] text-black'
                   : 'text-[#9CA3AF] border border-[#E2E8F0] hover:text-[#374151]',
               ].join(' ')}
             >
@@ -221,7 +221,7 @@ export default function ResearchPage() {
               className={[
                 'px-4 py-2 text-[12px] font-mono font-bold uppercase tracking-widest transition-colors border-b-2 -mb-px',
                 activeTab === tab
-                  ? 'text-[#111827] border-[#00C896]'
+                  ? 'text-[#111827] border-[#00DEB8]'
                   : 'text-[#9CA3AF] border-transparent hover:text-[#6B7280]',
               ].join(' ')}
             >
@@ -237,3 +237,4 @@ export default function ResearchPage() {
     </div>
   );
 }
+

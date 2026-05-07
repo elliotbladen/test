@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'BetMate — Best Odds. Quantitative Edge.',
+  title: 'BetMATE — Best Odds. Quantitative Edge.',
   description:
     'Find the best odds across all major bookmakers. Powered by a quantitative model. EV analysis, market sentiment, and referee intelligence.',
   keywords: ['sports betting', 'NRL odds', 'AFL odds', 'EPL odds', 'best odds', 'EV betting', 'value betting'],
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'BetMate',
+    title: 'BetMATE',
   },
   icons: {
     icon: '/icons/icon.svg',
     apple: '/icons/icon.svg',
   },
   openGraph: {
-    title: 'BetMate',
+    title: 'BetMATE',
     description: 'Find the best odds. Powered by a quantitative model.',
     type: 'website',
   },

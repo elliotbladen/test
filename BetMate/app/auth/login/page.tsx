@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -38,7 +38,7 @@ export default function LoginPage() {
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="mb-8 text-center">
-          <span className="text-[#00C896] font-mono font-bold text-2xl tracking-tight">BetMate</span>
+          <span className="text-[#00DEB8] font-mono font-bold text-2xl tracking-tight">BetMATE</span>
           <p className="text-[#6B7280] text-sm mt-2">Sign in to your account</p>
         </div>
 
@@ -46,7 +46,7 @@ export default function LoginPage() {
           {/* Google OAuth */}
           <button
             onClick={handleGoogleLogin}
-            className="w-full flex items-center justify-center gap-3 border border-[#E2E8F0] hover:border-[#00C896]/50 bg-[#F8FAFC] hover:bg-[#F8FAFC] text-[#111827] font-medium py-2.5 rounded transition-colors duration-150 mb-6"
+            className="w-full flex items-center justify-center gap-3 border border-[#E2E8F0] hover:border-[#00DEB8]/50 bg-[#F8FAFC] hover:bg-[#F8FAFC] text-[#111827] font-medium py-2.5 rounded transition-colors duration-150 mb-6"
           >
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/>
@@ -75,7 +75,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#00C896] rounded px-3 py-2.5 text-sm text-[#111827] outline-none transition-colors duration-150 placeholder:text-[#9CA3AF]"
+                className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#00DEB8] rounded px-3 py-2.5 text-sm text-[#111827] outline-none transition-colors duration-150 placeholder:text-[#9CA3AF]"
                 placeholder="you@example.com"
               />
             </div>
@@ -88,8 +88,8 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#00C896] rounded px-3 py-2.5 text-sm text-[#111827] outline-none transition-colors duration-150 placeholder:text-[#9CA3AF]"
-                placeholder="••••••••"
+                className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#00DEB8] rounded px-3 py-2.5 text-sm text-[#111827] outline-none transition-colors duration-150 placeholder:text-[#9CA3AF]"
+                placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
               />
             </div>
 
@@ -100,21 +100,21 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-[#00C896] hover:bg-[#00B386] disabled:opacity-50 text-black font-semibold py-2.5 rounded transition-colors duration-150"
+              className="w-full bg-[#00DEB8] hover:bg-[#00C9A6] disabled:opacity-50 text-black font-semibold py-2.5 rounded transition-colors duration-150"
             >
-              {loading ? 'Signing in…' : 'Sign in'}
+              {loading ? 'Signing inâ€¦' : 'Sign in'}
             </button>
           </form>
 
           {/* Wallet placeholder */}
           <div className="mt-4 border border-dashed border-[#E2E8F0] rounded px-4 py-3 text-center">
-            <p className="text-[#3a3a3a] text-xs font-mono">Wallet connection — coming soon</p>
+            <p className="text-[#3a3a3a] text-xs font-mono">Wallet connection â€” coming soon</p>
           </div>
         </div>
 
         <p className="text-center text-[#6B7280] text-sm mt-6">
           No account?{' '}
-          <Link href="/auth/register" className="text-[#00C896] hover:underline">
+          <Link href="/auth/register" className="text-[#00DEB8] hover:underline">
             Sign up free
           </Link>
         </p>

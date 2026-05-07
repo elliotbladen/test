@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState } from 'react';
 
@@ -24,7 +24,7 @@ function numInput(
   return (
     <div className="flex flex-col gap-1.5">
       <label className="text-[11px] font-mono uppercase tracking-widest text-[#6B7280]">{label}</label>
-      <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00C896]/50 transition-colors">
+      <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00DEB8]/50 transition-colors">
         {prefix && (
           <span className="px-3 text-[#9CA3AF] font-mono text-sm border-r border-[#E2E8F0]">{prefix}</span>
         )}
@@ -44,7 +44,7 @@ function ResultRow({ label, value, highlight }: { label: string; value: string; 
   return (
     <div className="flex items-center justify-between py-2 border-b border-[#E2E8F0] last:border-0">
       <span className="text-[#6B7280] text-[13px]">{label}</span>
-      <span className={`font-mono font-bold text-sm font-tabular ${highlight ? 'text-[#00C896]' : 'text-[#111827]'}`}>
+      <span className={`font-mono font-bold text-sm font-tabular ${highlight ? 'text-[#00DEB8]' : 'text-[#111827]'}`}>
         {value}
       </span>
     </div>
@@ -101,7 +101,7 @@ function OddsConverter() {
       {numInput(decimal, fromDecimal, '2.50', 'Decimal', undefined)}
       <div className="flex flex-col gap-1.5">
         <label className="text-[11px] font-mono uppercase tracking-widest text-[#6B7280]">Fractional</label>
-        <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00C896]/50 transition-colors">
+        <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00DEB8]/50 transition-colors">
           <input
             type="text"
             value={fractional}
@@ -113,7 +113,7 @@ function OddsConverter() {
       </div>
       <div className="flex flex-col gap-1.5">
         <label className="text-[11px] font-mono uppercase tracking-widest text-[#6B7280]">American</label>
-        <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00C896]/50 transition-colors">
+        <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00DEB8]/50 transition-colors">
           <input
             type="text"
             value={american}
@@ -143,8 +143,8 @@ function ImpliedProb() {
         {numInput(vig, setVig, '4.76', 'Bookmaker Margin %')}
       </div>
       <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
-        <ResultRow label="Raw implied prob" value={raw !== null ? `${raw.toFixed(2)}%` : '—'} />
-        <ResultRow label="Fair prob (vig removed)" value={fair !== null ? `${fair.toFixed(2)}%` : '—'} highlight />
+        <ResultRow label="Raw implied prob" value={raw !== null ? `${raw.toFixed(2)}%` : 'â€”'} />
+        <ResultRow label="Fair prob (vig removed)" value={fair !== null ? `${fair.toFixed(2)}%` : 'â€”'} highlight />
       </div>
     </div>
   );
@@ -173,9 +173,9 @@ function EVCalculator() {
         {numInput(stake, setStake, '100', 'Stake', '$')}
       </div>
       <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
-        <ResultRow label="Implied prob (book)" value={!isNaN(d) && d > 1 ? `${(1 / d * 100).toFixed(2)}%` : '—'} />
-        <ResultRow label="Your edge" value={ev !== null ? `${ev > 0 ? '+' : ''}${ev.toFixed(2)}%` : '—'} highlight />
-        <ResultRow label="EV on stake" value={dollarEV !== null ? `${dollarEV >= 0 ? '+' : ''}$${dollarEV.toFixed(2)}` : '—'} />
+        <ResultRow label="Implied prob (book)" value={!isNaN(d) && d > 1 ? `${(1 / d * 100).toFixed(2)}%` : 'â€”'} />
+        <ResultRow label="Your edge" value={ev !== null ? `${ev > 0 ? '+' : ''}${ev.toFixed(2)}%` : 'â€”'} highlight />
+        <ResultRow label="EV on stake" value={dollarEV !== null ? `${dollarEV >= 0 ? '+' : ''}$${dollarEV.toFixed(2)}` : 'â€”'} />
       </div>
     </div>
   );
@@ -209,13 +209,13 @@ function Kelly() {
         {numInput(fraction, setFraction, '25', 'Kelly Fraction %')}
       </div>
       <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
-        <ResultRow label="Full Kelly %" value={kelly !== null ? `${(kelly * 100).toFixed(2)}%` : '—'} />
+        <ResultRow label="Full Kelly %" value={kelly !== null ? `${(kelly * 100).toFixed(2)}%` : 'â€”'} />
         <ResultRow
           label={`${fraction || '?'}% Kelly stake`}
-          value={fractKelly !== null ? `${(fractKelly * 100).toFixed(2)}%` : '—'}
+          value={fractKelly !== null ? `${(fractKelly * 100).toFixed(2)}%` : 'â€”'}
           highlight
         />
-        <ResultRow label="Dollar amount" value={stakeAmt !== null ? `$${stakeAmt.toFixed(2)}` : '—'} />
+        <ResultRow label="Dollar amount" value={stakeAmt !== null ? `$${stakeAmt.toFixed(2)}` : 'â€”'} />
       </div>
     </div>
   );
@@ -238,7 +238,7 @@ function MultiParlay() {
           {legs.map((leg, i) => (
             <div key={i} className="flex flex-col gap-1.5">
               <label className="text-[11px] font-mono uppercase tracking-widest text-[#6B7280]">Leg {i + 1} Odds</label>
-              <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00C896]/50 transition-colors">
+              <div className="flex items-center border border-[#E2E8F0] rounded bg-[#F8FAFC] focus-within:border-[#00DEB8]/50 transition-colors">
                 <input
                   type="number"
                   value={leg}
@@ -256,7 +256,7 @@ function MultiParlay() {
           <div className="flex gap-2">
             <button
               onClick={() => setLegs([...legs, ''])}
-              className="text-[11px] font-mono uppercase tracking-widest text-[#00C896] border border-[#00C896]/30 px-3 py-1.5 rounded hover:bg-[#00C896]/10 transition-colors"
+              className="text-[11px] font-mono uppercase tracking-widest text-[#00DEB8] border border-[#00DEB8]/30 px-3 py-1.5 rounded hover:bg-[#00DEB8]/10 transition-colors"
             >
               + Add leg
             </button>
@@ -274,9 +274,9 @@ function MultiParlay() {
       </div>
       <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
         <ResultRow label="Legs included" value={`${parsed.length}`} />
-        <ResultRow label="Combined odds" value={combined !== null ? combined.toFixed(3) : '—'} highlight />
-        <ResultRow label="Potential payout" value={payout !== null ? `$${payout.toFixed(2)}` : '—'} />
-        <ResultRow label="Profit" value={profit !== null ? `$${profit.toFixed(2)}` : '—'} />
+        <ResultRow label="Combined odds" value={combined !== null ? combined.toFixed(3) : 'â€”'} highlight />
+        <ResultRow label="Potential payout" value={payout !== null ? `$${payout.toFixed(2)}` : 'â€”'} />
+        <ResultRow label="Profit" value={profit !== null ? `$${profit.toFixed(2)}` : 'â€”'} />
       </div>
     </div>
   );
@@ -308,16 +308,16 @@ function ArbCalculator() {
         {numInput(total, setTotal, '200', 'Total Stake', '$')}
       </div>
       <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
-        <ResultRow label="Margin" value={margin !== null ? `${margin.toFixed(2)}%` : '—'} />
+        <ResultRow label="Margin" value={margin !== null ? `${margin.toFixed(2)}%` : 'â€”'} />
         <ResultRow
           label="Arb opportunity"
-          value={margin !== null ? (isArb ? 'YES' : 'NO') : '—'}
+          value={margin !== null ? (isArb ? 'YES' : 'NO') : 'â€”'}
           highlight={isArb}
         />
-        <ResultRow label="Profit %" value={profit_pct !== null ? `${profit_pct.toFixed(2)}%` : '—'} />
-        <ResultRow label="Stake on outcome 1" value={stake1 !== null ? `$${stake1.toFixed(2)}` : '—'} />
-        <ResultRow label="Stake on outcome 2" value={stake2 !== null ? `$${stake2.toFixed(2)}` : '—'} />
-        <ResultRow label="Guaranteed profit" value={profit !== null ? `$${profit.toFixed(2)}` : '—'} />
+        <ResultRow label="Profit %" value={profit_pct !== null ? `${profit_pct.toFixed(2)}%` : 'â€”'} />
+        <ResultRow label="Stake on outcome 1" value={stake1 !== null ? `$${stake1.toFixed(2)}` : 'â€”'} />
+        <ResultRow label="Stake on outcome 2" value={stake2 !== null ? `$${stake2.toFixed(2)}` : 'â€”'} />
+        <ResultRow label="Guaranteed profit" value={profit !== null ? `$${profit.toFixed(2)}` : 'â€”'} />
       </div>
     </div>
   );
@@ -339,8 +339,8 @@ function BetReturn() {
         {numInput(stake, setStake, '100', 'Stake', '$')}
       </div>
       <div className="border border-[#E2E8F0] rounded bg-[#F8FAFC] p-4 flex flex-col justify-center gap-1">
-        <ResultRow label="Total payout" value={payout !== null ? `$${payout.toFixed(2)}` : '—'} />
-        <ResultRow label="Profit" value={profit !== null ? `$${profit.toFixed(2)}` : '—'} highlight />
+        <ResultRow label="Total payout" value={payout !== null ? `$${payout.toFixed(2)}` : 'â€”'} />
+        <ResultRow label="Profit" value={profit !== null ? `$${profit.toFixed(2)}` : 'â€”'} highlight />
       </div>
     </div>
   );
@@ -372,7 +372,7 @@ const CONTENT: Record<Tab, { description: string; component: React.ReactNode }> 
     component: <ArbCalculator />,
   },
   return: {
-    description: 'Simple bet return calculator — stake and odds to payout.',
+    description: 'Simple bet return calculator â€” stake and odds to payout.',
     component: <BetReturn />,
   },
 };
@@ -396,7 +396,7 @@ export default function ToolsPage() {
             onClick={() => setActive(tab.id)}
             className={`px-3 py-1.5 rounded text-[11px] font-mono uppercase tracking-widest transition-colors ${
               active === tab.id
-                ? 'bg-[#00C896] text-black font-bold'
+                ? 'bg-[#00DEB8] text-black font-bold'
                 : 'border border-[#E2E8F0] text-[#9CA3AF] hover:text-[#374151] hover:border-[#CBD5E1]'
             }`}
           >

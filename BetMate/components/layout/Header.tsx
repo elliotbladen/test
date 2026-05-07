@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
@@ -36,16 +36,17 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-[#0D0D0D] border-b-2 border-[#00C896] shrink-0">
+      <header className="sticky top-0 z-50 bg-[#0D0D0D] border-b-2 border-[#00DEB8] shrink-0">
         <div className="px-5 sm:px-8 h-[60px] flex items-center gap-6">
 
           {/* Logo */}
           <Link href="/odds" className="flex items-center shrink-0 select-none">
-            <span className="font-display font-extrabold text-[20px] tracking-tight text-white leading-none">Bet</span>
-            <span className="font-display font-extrabold text-[20px] tracking-tight text-[#00C896] leading-none">Mate</span>
+            <span className="font-display font-extrabold text-[20px] tracking-tight text-white leading-none">
+              Bet<span className="text-[#00DEB8]">MATE</span>
+            </span>
           </Link>
 
-          {/* Sport tabs — only on odds page */}
+          {/* Sport tabs â€” only on odds page */}
           {isOdds && (
             <div className="flex items-center gap-0 border border-[#252525] rounded-md overflow-hidden shrink-0">
               {(['NRL', 'AFL'] as const).map((sport, i) => (
@@ -56,7 +57,7 @@ export default function Header() {
                     'px-4 h-[30px] text-[11px] font-bold uppercase tracking-widest transition-colors',
                     i > 0 ? 'border-l border-[#252525]' : '',
                     activeSport === sport
-                      ? 'bg-[#00C896] text-black'
+                      ? 'bg-[#00DEB8] text-black'
                       : 'text-[#5C5C5C] hover:text-white hover:bg-[#1A1A1A]',
                   ].join(' ')}
                 >
@@ -66,7 +67,7 @@ export default function Header() {
             </div>
           )}
 
-          {/* Nav — desktop */}
+          {/* Nav â€” desktop */}
           <nav className="hidden sm:flex items-center gap-1 ml-auto">
             {NAV.map(({ label, href }) => {
               const active = pathname === href || pathname.startsWith(href + '/');
@@ -77,7 +78,7 @@ export default function Header() {
                   className={[
                     'relative px-3 h-[60px] flex items-center text-[13px] font-medium tracking-wide transition-colors',
                     active
-                      ? 'text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-[#00C896] after:rounded-t'
+                      ? 'text-white after:absolute after:bottom-0 after:left-3 after:right-3 after:h-[2px] after:bg-[#00DEB8] after:rounded-t'
                       : 'text-[#5C5C5C] hover:text-[#A0A0A0]',
                   ].join(' ')}
                 >
@@ -91,7 +92,7 @@ export default function Header() {
           <div className="hidden sm:flex items-center sm:ml-2">
             {email ? (
               <div className="relative group">
-                <span className="text-[#00C896] text-[12px] font-mono uppercase tracking-wide truncate max-w-[180px] cursor-default">
+                <span className="text-[#00DEB8] text-[12px] font-mono uppercase tracking-wide truncate max-w-[180px] cursor-default">
                   {email}
                 </span>
                 <button
@@ -114,7 +115,7 @@ export default function Header() {
             )}
           </div>
 
-          {/* Hamburger — mobile only */}
+          {/* Hamburger â€” mobile only */}
           <button
             className="sm:hidden ml-auto flex flex-col justify-center items-center gap-[5px] w-8 h-8"
             onClick={() => setMobileOpen(o => !o)}
@@ -138,7 +139,7 @@ export default function Header() {
                 href={href}
                 className={[
                   'flex items-center px-6 h-[52px] text-[14px] font-medium tracking-wide border-b border-[#1A1A1A] transition-colors',
-                  active ? 'text-[#00C896]' : 'text-[#888] hover:text-white',
+                  active ? 'text-[#00DEB8]' : 'text-[#888] hover:text-white',
                 ].join(' ')}
               >
                 {label}

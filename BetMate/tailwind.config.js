@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+﻿/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,15 +10,15 @@ module.exports = {
       colors: {
         // Keep cyan alias so existing code doesn't break
         cyan: {
-          DEFAULT: '#00C896',
-          400:     '#00C896',
-          500:     '#00B386',
+          DEFAULT: '#00DEB8',
+          400:     '#00DEB8',
+          500:     '#00C9A6',
           600:     '#0097A7',
         },
         green: {
-          DEFAULT: '#00C896',
-          dim:     '#00A87A',
-          bright:  '#00E5A8',
+          DEFAULT: '#00DEB8',
+          dim:     '#00B899',
+          bright:  '#2AF5D1',
         },
         orange: {
           DEFAULT: '#F97316',

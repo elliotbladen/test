@@ -1,0 +1,90 @@
+{
+  "sport": "AFL",
+  "season": 2026,
+  "round": 9,
+  "scraped_at": "2026-05-07T03:04:56.792060+00:00",
+  "source_url": "https://aflua.com.au/wp-content/uploads/2026/05/Round-9.pdf",
+  "records": [
+    {
+      "home_team": "Fremantle Dockers",
+      "away_team": "Hawthorn Hawks",
+      "field_umpires": "Brett Rosebury; Andre Gianfagna; Jacob Mollison; Martin Rodger",
+      "boundary_umpires": "Nathan Doig Jordan Russell Josh Garrett Sean Moylan",
+      "goal_umpires": "Brett Rogers Sam Hunter",
+      "emergency": "Jason Yazdani",
+      "referee": "Brett Rosebury; Andre Gianfagna; Jacob Mollison; Martin Rodger"
+    },
+    {
+      "home_team": "Brisbane Lions",
+      "away_team": "Carlton Blues",
+      "field_umpires": "Andrew Stephens; Robert O'Gorman; Tom Bryce; Cameron Dore",
+      "boundary_umpires": "Adam Reardon Ty Duncan Chris Delany Luke Graves",
+      "goal_umpires": "Steven Piperno Matthew Bridges",
+      "emergency": "Tom Sullivan",
+      "referee": "Andrew Stephens; Robert O'Gorman; Tom Bryce; Cameron Dore"
+    },
+    {
+      "home_team": "Port Adelaide Power",
+      "away_team": "Western Bulldogs",
+      "field_umpires": "Daniel Johanson; Curtis Deboy; Jamie Broadbent; Brent Wallace",
+      "boundary_umpires": "Chris Bull Michael Baker Adrian Pretorius Matthew Konetschka",
+      "goal_umpires": "Rhys Negerman Braden Ford",
+      "emergency": "Brodie Kenny-Bell",
+      "referee": "Daniel Johanson; Curtis Deboy; Jamie Broadbent; Brent Wallace"
+    },
+    {
+      "home_team": "North Melbourne Kangaroos",
+      "away_team": "Sydney Swans",
+      "field_umpires": "Leigh Fisher; Cameron Jones; John Howorth; Andrew Adair",
+      "boundary_umpires": "Lachlan Rayner Ian Burrows Lachlan Menara Adam Coote",
+      "goal_umpires": "Dylan Benwell Georgia Henderson",
+      "emergency": "Stephen Williams",
+      "referee": "Leigh Fisher; Cameron Jones; John Howorth; Andrew Adair"
+    },
+    {
+      "home_team": "Greater Western Sydney Giants",
+      "away_team": "Essendon Bombers",
+      "field_umpires": "Brendan Hosking; Paul Rebeschini; Eleni Tee; Jordan Fry",
+      "boundary_umpires": "Michael Barlow Matthew Tomkins Benjamin Fely Nicholas Phillips",
+      "goal_umpires": "Alex Chisholm Taylor Mattioli",
+      "emergency": "Angus McKenzie-Wills",
+      "referee": "Brendan Hosking; Paul Rebeschini; Eleni Tee; Jordan Fry"
+    },
+    {
+      "home_team": "Gold Coast Suns",
+      "away_team": "St Kilda Saints",
+      "field_umpires": "Nicholas Brown; Hayden Meyer; Nathan Toner; Craig Fleer",
+      "boundary_umpires": "Will Morris Nick Swanson Sam Stagg Jaco Jansen van Rensburg Matthew Jenkinson",
+      "goal_umpires": "Matthew Dervan Peter Challen",
+      "emergency": "James Rizio",
+      "referee": "Nicholas Brown; Hayden Meyer; Nathan Toner; Craig Fleer"
+    },
+    {
+      "home_team": "Geelong Cats",
+      "away_team": "Collingwood Magpies",
+      "field_umpires": "Nick Foot; Simon Meredith; Nathan Williamson; Andrew Heffernan",
+      "boundary_umpires": "Ben MacDonald Joshua Furman Blake Anderson Damien Main",
+      "goal_umpires": "Matt Maclure Michael Craig",
+      "emergency": "David Rodan",
+      "referee": "Nick Foot; Simon Meredith; Nathan Williamson; Andrew Heffernan"
+    },
+    {
+      "home_team": "Melbourne Demons",
+      "away_team": "West Coast Eagles",
+      "field_umpires": "Nicholas Jankovskis; Jordyn Pearson; Mathew Nicholls; Joel Clamp",
+      "boundary_umpires": "Simon Blight Chris Esler Harrison Bell Anthony Laughton",
+      "goal_umpires": "Callum Leonard Luke Monea",
+      "emergency": "Stephen Williams",
+      "referee": "Nicholas Jankovskis; Jordyn Pearson; Mathew Nicholls; Joel Clamp"
+    },
+    {
+      "home_team": "Richmond Tigers",
+      "away_team": "Adelaide Crows",
+      "field_umpires": "Alex Whetton; Peter Bailes; Harrison Birch; Nicholas McGinness",
+      "boundary_umpires": "Jordan Andrews Kieran Ferguson Zachary Mousaco John Cooper",
+      "goal_umpires": "Adam Wojcik Sam Walsh",
+      "emergency": "Steven Piperno",
+      "referee": "Alex Whetton; Peter Bailes; Harrison Birch; Nicholas McGinness"
+    }
+  ]
+}

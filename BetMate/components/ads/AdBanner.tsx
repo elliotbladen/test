@@ -1,6 +1,6 @@
 'use client';
 
-// AdBanner — placeholder ad slots matching the BetMate dark theme.
+// AdBanner — placeholder ad slots matching the BetMATE dark theme.
 // variant="leaderboard"  → full-width horizontal strip (top of list)
 // variant="inline"       → card-height inline slot (between game cards)
 

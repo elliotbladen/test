@@ -1,4 +1,4 @@
-const CACHE = 'betmate-v1';
+const CACHE = 'betmate-v2';
 
 self.addEventListener('install', e => {
   self.skipWaiting();
@@ -26,12 +26,14 @@ self.addEventListener('fetch', e => {
     return;
   }
 
-  // Cache-first for static assets (_next/static, icons, manifest)
-  if (
-    url.includes('/_next/static/') ||
-    url.includes('/icons/') ||
-    url.includes('/manifest.json')
-  ) {
+  // Next build assets must stay network-first to avoid HTML/JS hydration drift.
+  if (url.includes('/_next/static/')) {
+    e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+    return;
+  }
+
+  // Cache-first only for stable PWA assets.
+  if (url.includes('/icons/') || url.includes('/manifest.json')) {
     e.respondWith(
       caches.match(e.request).then(cached =>
         cached || fetch(e.request).then(res => {

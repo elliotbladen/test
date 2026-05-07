@@ -3,16 +3,27 @@ import { NextRequest, NextResponse } from 'next/server';
 
 // Routes that don't require a logged-in session
 const PUBLIC_PATHS = [
+  '/',
+  '/baz-concept',
+  '/mobile-concept',
+  '/odds',
+  '/odds-concept',
+  '/odds-detail-concept',
+  '/research',
+  '/tools',
   '/auth/login',
   '/auth/register',
   '/auth/callback',
+  '/api/odds',
+  '/api/weather',
+  '/api/ev-signals',
 ];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Always allow public auth routes
-  if (PUBLIC_PATHS.some(p => pathname.startsWith(p))) {
+  if (PUBLIC_PATHS.some(p => pathname === p || pathname.startsWith(`${p}/`))) {
     return NextResponse.next();
   }
 

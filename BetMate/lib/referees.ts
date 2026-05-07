@@ -1,6 +1,5 @@
-// Referee assignments and bucket profiles.
-// Keyed by home team name (matches Odds API home_team field).
-// Updated each round manually until the Monday automation is built.
+import nrlReferees from '@/data/nrl/referees/processed/latest-referees.json';
+import aflUmpires from '@/data/afl/umpires/processed/latest-umpires.json';
 
 export type RefBucket = 'WHISTLE HEAVY' | 'FLOW HEAVY' | 'NEUTRAL';
 
@@ -9,18 +8,46 @@ export interface RefAssignment {
   bucket: RefBucket;
 }
 
-// Round 9, 2026 — ANZAC Round
-const ROUND_REFS: Record<string, RefAssignment> = {
-  'Wests Tigers':                  { name: 'Ashley Klein',    bucket: 'WHISTLE HEAVY' },
-  'North Queensland Cowboys':      { name: 'Belinda Sharpe',  bucket: 'NEUTRAL' },
-  'Brisbane Broncos':              { name: 'Wyatt Raymond',   bucket: 'NEUTRAL' },
-  'St George Illawarra Dragons':   { name: 'Grant Atkins',    bucket: 'FLOW HEAVY' },
-  'New Zealand Warriors':          { name: 'Liam Kennedy',    bucket: 'NEUTRAL' },
-  'Melbourne Storm':               { name: 'Adam Gee',        bucket: 'NEUTRAL' },
-  'Newcastle Knights':             { name: 'Gerard Sutton',   bucket: 'NEUTRAL' },
-  'Manly Warringah Sea Eagles':    { name: 'Peter Gough',     bucket: 'FLOW HEAVY' },
+interface RefRecord {
+  home_team: string;
+  away_team?: string;
+  referee?: string;
+  field_umpires?: string;
+}
+
+const REF_BUCKETS: Record<string, RefBucket> = {
+  'Ashley Klein': 'WHISTLE HEAVY',
+  'Grant Atkins': 'FLOW HEAVY',
+  'Peter Gough': 'FLOW HEAVY',
+  'Belinda Sharpe': 'NEUTRAL',
+  'Wyatt Raymond': 'NEUTRAL',
+  'Liam Kennedy': 'NEUTRAL',
+  'Adam Gee': 'NEUTRAL',
+  'Gerard Sutton': 'NEUTRAL',
 };
 
-export function getRefForGame(homeTeam: string): RefAssignment | null {
-  return ROUND_REFS[homeTeam] ?? null;
+function bucketFor(name: string): RefBucket {
+  const first = name.split(';')[0]?.trim();
+  return REF_BUCKETS[first] ?? 'NEUTRAL';
+}
+
+function buildMap(records: RefRecord[] | undefined): Record<string, RefAssignment> {
+  const map: Record<string, RefAssignment> = {};
+  for (const row of records ?? []) {
+    const name = (row.referee || row.field_umpires || '').trim();
+    if (!row.home_team || !name) continue;
+    map[row.home_team] = {
+      name,
+      bucket: bucketFor(name),
+    };
+  }
+  return map;
+}
+
+const NRL_REFS = buildMap((nrlReferees as { records?: RefRecord[] }).records);
+const AFL_UMPIRES = buildMap((aflUmpires as { records?: RefRecord[] }).records);
+
+export function getRefForGame(homeTeam: string, sport: 'NRL' | 'AFL' = 'NRL'): RefAssignment | null {
+  const source = sport === 'AFL' ? AFL_UMPIRES : NRL_REFS;
+  return source[homeTeam] ?? null;
 }

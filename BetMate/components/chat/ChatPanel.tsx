@@ -1,13 +1,13 @@
-'use client';
+﻿'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { Loader2, X } from 'lucide-react';
 import Link from 'next/link';
 import type { Game } from '@/components/odds/GameCard';
 
-// ─── Message limit ────────────────────────────────────────────────────────────
+// â”€â”€â”€ Message limit â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const FREE_LIMIT = 3;
-const STORAGE_KEY = 'betmate_chat_v1';
+const STORAGE_KEY = 'BetMATE_chat_v1';
 
 interface StoredChat {
   count: number;
@@ -46,7 +46,7 @@ function bumpCount(): number {
   return next;
 }
 
-// ─── Odds context ─────────────────────────────────────────────────────────────
+// â”€â”€â”€ Odds context â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function buildOddsContext(games: Game[]): string {
   if (games.length === 0) return 'No games loaded this week.';
   return games.map((g) => {
@@ -69,7 +69,7 @@ ${g.tier ? `Tier: ${g.tier}` : ''}`.trim();
   }).join('\n\n');
 }
 
-// ─── Types ────────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Types â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -77,7 +77,7 @@ interface Message {
 
 const WELCOME: Message = {
   role: 'assistant',
-  content: "G'day. I'm Baz — ask me anything about this round. Odds, value, referee matchups, why the model's on or off a certain team. If the data says something's cooked, I'll tell ya.",
+  content: "G'day. I'm Baz â€” ask me anything about this round. Odds, value, referee matchups, why the model's on or off a certain team. If the data says something's cooked, I'll tell ya.",
 };
 
 const SUGGESTED = [
@@ -86,7 +86,7 @@ const SUGGESTED = [
   'Explain the EV calculation',
 ];
 
-// ─── Typing dots ──────────────────────────────────────────────────────────────
+// â”€â”€â”€ Typing dots â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function TypingDots() {
   return (
     <span className="flex items-center gap-1 py-0.5">
@@ -101,7 +101,7 @@ function TypingDots() {
   );
 }
 
-// ─── Props ────────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Props â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export interface ChatPanelProps {
   games: Game[];
   userPlan?: 'free' | 'pro';
@@ -110,7 +110,7 @@ export interface ChatPanelProps {
   className?: string;
 }
 
-// ─── Component ───────────────────────────────────────────────────────────────
+// â”€â”€â”€ Component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export default function ChatPanel({
   games,
   userPlan = 'free',
@@ -201,7 +201,7 @@ export default function ChatPanel({
   return (
     <div className={`flex flex-col h-full bg-white ${className}`}>
 
-      {/* ── Header ────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ Header â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <div className="flex items-center justify-between px-5 py-3.5 border-b border-[#E2E8F0] shrink-0">
         <div className="flex items-center gap-3">
           <span className="font-display font-bold text-[#111827] text-[15px] tracking-tight uppercase">
@@ -219,11 +219,11 @@ export default function ChatPanel({
         )}
       </div>
 
-      {/* ── Login wall ────────────────────────────────────────────────────── */}
+      {/* â”€â”€ Login wall â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {!isLoggedIn && (
         <div className="flex-1 flex flex-col items-center justify-center px-6 text-center gap-4">
-          <div className="w-12 h-12 rounded-full border border-[#00C896]/40 flex items-center justify-center mb-1">
-            <span className="text-[#00C896] text-xl">🔒</span>
+          <div className="w-12 h-12 rounded-full border border-[#00DEB8]/40 flex items-center justify-center mb-1">
+            <span className="text-[#00DEB8] text-xl">ðŸ”’</span>
           </div>
           <p className="text-[#111827] font-semibold text-sm">Sign up to chat with Baz</p>
           <p className="text-[#9CA3AF] text-xs leading-relaxed">
@@ -231,17 +231,17 @@ export default function ChatPanel({
           </p>
           <Link
             href="/auth/register"
-            className="inline-flex items-center justify-center bg-[#00C896] hover:bg-[#00B386] text-black text-xs font-bold px-6 py-2.5 rounded-lg transition-colors"
+            className="inline-flex items-center justify-center bg-[#00DEB8] hover:bg-[#00C9A6] text-black text-xs font-bold px-6 py-2.5 rounded-lg transition-colors"
           >
             Create free account
           </Link>
-          <Link href="/auth/login" className="text-[#9CA3AF] hover:text-[#00C896] text-xs transition-colors">
+          <Link href="/auth/login" className="text-[#9CA3AF] hover:text-[#00DEB8] text-xs transition-colors">
             Already have an account? Sign in
           </Link>
         </div>
       )}
 
-      {/* ── Messages ──────────────────────────────────────────────────────── */}
+      {/* â”€â”€ Messages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {isLoggedIn && <div className="flex-1 overflow-y-auto px-4 py-4 flex flex-col gap-3 min-h-0">
         {messages.map((msg, i) => {
           const isLastAssistant = msg.role === 'assistant' && i === messages.length - 1 && loading;
@@ -253,7 +253,7 @@ export default function ChatPanel({
                 className={[
                   'max-w-[88%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed',
                   msg.role === 'user'
-                    ? 'bg-[#00C896] text-black font-medium rounded-br-sm'
+                    ? 'bg-[#00DEB8] text-black font-medium rounded-br-sm'
                     : 'bg-[#F8FAFC] text-[#374151] border border-[#E2E8F0] rounded-bl-sm',
                 ].join(' ')}
               >
@@ -275,7 +275,7 @@ export default function ChatPanel({
               href="/auth/register"
               className="inline-flex items-center justify-center bg-[#7C3AED] hover:bg-[#6D28D9] text-white text-xs font-bold px-5 py-2 rounded-lg transition-colors"
             >
-              Upgrade to PRO — unlimited
+              Upgrade to PRO â€” unlimited
             </Link>
           </div>
         )}
@@ -283,14 +283,14 @@ export default function ChatPanel({
         <div ref={bottomRef} />
       </div>}
 
-      {/* ── Suggested questions ───────────────────────────────────────────── */}
+      {/* â”€â”€ Suggested questions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {isLoggedIn && messages.length <= 1 && !isBlocked && (
         <div className="px-4 pb-3 flex flex-col gap-1.5 shrink-0">
           {SUGGESTED.map((q) => (
             <button
               key={q}
               onClick={() => send(q)}
-              className="w-full text-left px-3.5 py-2.5 rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] text-[#6B7280] text-[12px] font-mono hover:border-[#00C896]/40 hover:text-[#00C896] transition-colors"
+              className="w-full text-left px-3.5 py-2.5 rounded-lg border border-[#E2E8F0] bg-[#F8FAFC] text-[#6B7280] text-[12px] font-mono hover:border-[#00DEB8]/40 hover:text-[#00DEB8] transition-colors"
             >
               {q}
             </button>
@@ -298,7 +298,7 @@ export default function ChatPanel({
         </div>
       )}
 
-      {/* ── Input bar ─────────────────────────────────────────────────────── */}
+      {/* â”€â”€ Input bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       {isLoggedIn && <div className="shrink-0 px-3 py-3 bg-white border-t border-[#E2E8F0]">
         <div className="flex items-end gap-2">
           <textarea
@@ -306,17 +306,17 @@ export default function ChatPanel({
             value={input}
             onChange={(e) => { setInput(e.target.value); resizeTextarea(); }}
             onKeyDown={handleKeyDown}
-            placeholder={isBlocked ? 'Upgrade to PRO to continue…' : 'Ask about any game…'}
+            placeholder={isBlocked ? 'Upgrade to PRO to continueâ€¦' : 'Ask about any gameâ€¦'}
             disabled={isBlocked || loading}
             rows={1}
-            className="flex-1 bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#00C896]/50 rounded-xl px-3.5 py-2.5 text-sm text-[#111827] placeholder:text-[#9CA3AF] outline-none resize-none disabled:opacity-40 transition-colors leading-snug"
+            className="flex-1 bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#00DEB8]/50 rounded-xl px-3.5 py-2.5 text-sm text-[#111827] placeholder:text-[#9CA3AF] outline-none resize-none disabled:opacity-40 transition-colors leading-snug"
             style={{ minHeight: '40px', maxHeight: '96px' }}
           />
           <button
             onClick={() => send()}
             disabled={!input.trim() || loading || isBlocked}
             aria-label="Send"
-            className="shrink-0 px-4 h-10 flex items-center justify-center bg-transparent border border-[#E2E8F0] hover:border-[#00C896]/50 disabled:opacity-30 disabled:cursor-not-allowed rounded-xl transition-colors"
+            className="shrink-0 px-4 h-10 flex items-center justify-center bg-transparent border border-[#E2E8F0] hover:border-[#00DEB8]/50 disabled:opacity-30 disabled:cursor-not-allowed rounded-xl transition-colors"
           >
             {loading
               ? <Loader2 className="w-4 h-4 text-[#9CA3AF] animate-spin" />
@@ -328,10 +328,10 @@ export default function ChatPanel({
         {/* Footer */}
         <p className="text-[#9CA3AF] text-[10px] font-mono mt-2 text-center uppercase tracking-widest">
           {userPlan === 'free' && !isBlocked
-            ? <>{remaining} free message{remaining !== 1 ? 's' : ''} remaining today · <Link href="/auth/register" className="text-[#6B7280] hover:text-[#00C896] transition-colors">Upgrade</Link></>
+            ? <>{remaining} free message{remaining !== 1 ? 's' : ''} remaining today Â· <Link href="/auth/register" className="text-[#6B7280] hover:text-[#00DEB8] transition-colors">Upgrade</Link></>
             : userPlan === 'free' && isBlocked
-            ? <>Limit reached · <Link href="/auth/register" className="text-[#7C3AED]">Upgrade</Link></>
-            : 'PRO — unlimited messages'
+            ? <>Limit reached Â· <Link href="/auth/register" className="text-[#7C3AED]">Upgrade</Link></>
+            : 'PRO â€” unlimited messages'
           }
         </p>
       </div>}

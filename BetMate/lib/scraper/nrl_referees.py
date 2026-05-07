@@ -24,7 +24,7 @@ import logging
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
@@ -43,6 +43,7 @@ DEFAULT_RETRY_DELAY  = 30
 DEFAULT_ROUND_ONE_MONDAY = "2026-03-02"
 
 NRL_DRAW_URL = "https://www.nrl.com/draw/nrl-premiership/{season}/round-{round}/"
+NRL_TEAM_LIST_URL = "https://www.nrl.com/news/{year}/{month:02d}/{day:02d}/nrl-team-lists-round-{round}/"
 
 HEADERS = {
     "User-Agent": (
@@ -55,12 +56,12 @@ HEADERS = {
 
 TEAM_MAP = {
     "broncos":          "Brisbane Broncos",
-    "bulldogs":         "Canterbury-Bankstown Bulldogs",
+    "bulldogs":         "Canterbury Bulldogs",
     "raiders":          "Canberra Raiders",
-    "sharks":           "Cronulla-Sutherland Sharks",
+    "sharks":           "Cronulla Sutherland Sharks",
     "dolphins":         "Dolphins",
     "titans":           "Gold Coast Titans",
-    "sea eagles":       "Manly-Warringah Sea Eagles",
+    "sea eagles":       "Manly Warringah Sea Eagles",
     "storm":            "Melbourne Storm",
     "knights":          "Newcastle Knights",
     "warriors":         "New Zealand Warriors",
@@ -68,16 +69,19 @@ TEAM_MAP = {
     "eels":             "Parramatta Eels",
     "panthers":         "Penrith Panthers",
     "rabbitohs":        "South Sydney Rabbitohs",
-    "dragons":          "St. George Illawarra Dragons",
+    "dragons":          "St George Illawarra Dragons",
     "roosters":         "Sydney Roosters",
     "wests tigers":     "Wests Tigers",
     "tigers":           "Wests Tigers",
     "brisbane broncos":              "Brisbane Broncos",
-    "canterbury-bankstown bulldogs": "Canterbury-Bankstown Bulldogs",
+    "canterbury-bankstown bulldogs": "Canterbury Bulldogs",
+    "canterbury bulldogs":           "Canterbury Bulldogs",
     "canberra raiders":              "Canberra Raiders",
-    "cronulla-sutherland sharks":    "Cronulla-Sutherland Sharks",
+    "cronulla-sutherland sharks":    "Cronulla Sutherland Sharks",
+    "cronulla sutherland sharks":    "Cronulla Sutherland Sharks",
     "gold coast titans":             "Gold Coast Titans",
-    "manly-warringah sea eagles":    "Manly-Warringah Sea Eagles",
+    "manly-warringah sea eagles":    "Manly Warringah Sea Eagles",
+    "manly warringah sea eagles":    "Manly Warringah Sea Eagles",
     "melbourne storm":               "Melbourne Storm",
     "newcastle knights":             "Newcastle Knights",
     "new zealand warriors":          "New Zealand Warriors",
@@ -85,7 +89,8 @@ TEAM_MAP = {
     "parramatta eels":               "Parramatta Eels",
     "penrith panthers":              "Penrith Panthers",
     "south sydney rabbitohs":        "South Sydney Rabbitohs",
-    "st. george illawarra dragons":  "St. George Illawarra Dragons",
+    "st. george illawarra dragons":  "St George Illawarra Dragons",
+    "st george illawarra dragons":   "St George Illawarra Dragons",
     "sydney roosters":               "Sydney Roosters",
 }
 
@@ -126,6 +131,29 @@ def fetch_html(url: str) -> str | None:
     except Exception as exc:
         log.warning("Fetch failed %s — %s", url, exc)
         return None
+
+
+def discover_team_lists_html(season: int, round_number: int, explicit_url: str | None = None) -> tuple[str | None, str | None]:
+    """Try official NRL team-list articles, where match officials are currently published."""
+    urls: list[str] = []
+    if explicit_url:
+        urls.append(explicit_url)
+
+    today = datetime.now().date()
+    for offset in range(-8, 2):
+        d = today + timedelta(days=offset)
+        urls.append(NRL_TEAM_LIST_URL.format(year=d.year, month=d.month, day=d.day, round=round_number))
+
+    seen: set[str] = set()
+    for url in urls:
+        if url in seen:
+            continue
+        seen.add(url)
+        html = fetch_html(url)
+        if html and "Match Officials" in html and "Referee:" in html:
+            log.info("Using NRL team-lists source: %s", url)
+            return html, url
+    return None, None
 
 
 def extract_json_blobs(html: str) -> list[dict]:
@@ -265,6 +293,42 @@ def scrape_referees(html: str) -> list[dict]:
     return deduped
 
 
+def parse_referees_from_team_lists(html: str) -> list[dict]:
+    """Parse official NRL team-list article blocks: Match: A v B -> Referee."""
+    soup = BeautifulSoup(html, "html.parser")
+    lines = [line.strip() for line in soup.get_text("\n").splitlines() if line.strip()]
+    records: list[dict] = []
+    current_home = current_away = None
+
+    match_re = re.compile(r"^Match:\s+(.+?)\s+v\s+(.+)$", re.IGNORECASE)
+    ref_re = re.compile(r"^Referee:\s+(.+)$", re.IGNORECASE)
+
+    for line in lines:
+        match_m = match_re.match(line)
+        if match_m:
+            current_home = canon_team(match_m.group(1))
+            current_away = canon_team(match_m.group(2))
+            continue
+
+        ref_m = ref_re.match(line)
+        if ref_m and current_home and current_away:
+            records.append({
+                "home_team": current_home,
+                "away_team": current_away,
+                "referee": ref_m.group(1).strip(),
+            })
+            current_home = current_away = None
+
+    seen = set()
+    deduped = []
+    for r in records:
+        key = (r["home_team"], r["away_team"])
+        if key not in seen:
+            seen.add(key)
+            deduped.append(r)
+    return deduped
+
+
 def write_outputs(records: list[dict], raw_html: str, season: int, round_number: int) -> None:
     scraped_at = datetime.now(timezone.utc).isoformat()
 
@@ -288,10 +352,29 @@ def write_outputs(records: list[dict], raw_html: str, season: int, round_number:
     write_csv(proc_dir / f"round-{round_number}-referees.csv")
     PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
     write_csv(PROCESSED_DIR / "latest-referees.csv")
+    (PROCESSED_DIR / "latest-referees.json").write_text(
+        json.dumps({
+            "sport": "NRL",
+            "season": season,
+            "round": round_number,
+            "scraped_at": scraped_at,
+            "records": records,
+        }, indent=2, ensure_ascii=False),
+        encoding="utf-8",
+    )
     log.info("Wrote latest-referees.csv — %d assignments, round %d", len(records), round_number)
 
 
-def scrape(season: int, round_number: int, max_attempts: int, retry_delay: int) -> int:
+def scrape(season: int, round_number: int, max_attempts: int, retry_delay: int, team_lists_url: str | None = None) -> int:
+    team_html, _source_url = discover_team_lists_html(season, round_number, team_lists_url)
+    if team_html:
+        records = parse_referees_from_team_lists(team_html)
+        write_outputs(records, team_html, season, round_number)
+        if records:
+            log.info("Referees scraped from team lists — %d assignments", len(records))
+            return len(records)
+        log.warning("Team-lists source found but no referee rows parsed — falling back to draw page")
+
     url = NRL_DRAW_URL.format(season=season, round=round_number)
     for attempt in range(1, max_attempts + 1):
         log.info("Attempt %d/%d — referees R%d %d — %s", attempt, max_attempts, round_number, season, url)
@@ -317,13 +400,14 @@ def main() -> None:
     p.add_argument("--season", type=int, default=2026)
     p.add_argument("--round", dest="round_number", type=int, default=0)
     p.add_argument("--round-one-monday", default=DEFAULT_ROUND_ONE_MONDAY)
+    p.add_argument("--team-lists-url", default=None, help="Explicit official NRL team-lists article URL")
     p.add_argument("--max-attempts", type=int, default=DEFAULT_MAX_ATTEMPTS)
     p.add_argument("--retry-delay-seconds", type=int, default=DEFAULT_RETRY_DELAY)
     args = p.parse_args()
 
     round_number = args.round_number or infer_round(args.round_one_monday)
     log.info("Targeting season=%d round=%d", args.season, round_number)
-    count = scrape(args.season, round_number, args.max_attempts, args.retry_delay_seconds)
+    count = scrape(args.season, round_number, args.max_attempts, args.retry_delay_seconds, args.team_lists_url)
     sys.exit(0 if count >= 0 else 1)
 
 
