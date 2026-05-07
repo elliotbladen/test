@@ -7,42 +7,11 @@ import {
   CheckCircle2,
   Flame,
   LineChart,
-  MousePointerClick,
   Search,
   ShieldCheck,
   Trophy,
 } from 'lucide-react';
-
-const previewGames = [
-  {
-    time: 'Tonight 7:50 PM',
-    home: 'Panthers',
-    away: 'Broncos',
-    market: 'H2H',
-    movement: 'Broncos shortening across 3 books',
-    baz: 'Baz: Best away price is still holding, but the market has started moving.',
-    prices: [
-      { book: 'SB', home: '1.82', away: '2.05', best: 'away' },
-      { book: 'TAB', home: '1.78', away: '2.00' },
-      { book: 'Lad', home: '1.85', away: '1.96', best: 'home' },
-      { book: 'BF', home: '1.83', away: '2.08', best: 'away' },
-    ],
-  },
-  {
-    time: 'Sat 4:35 PM',
-    home: 'Swans',
-    away: 'Blues',
-    market: 'Line',
-    movement: 'Best line still available',
-    baz: 'Baz: Compare the line before price. Half a point can matter more than a cent.',
-    prices: [
-      { book: 'SB', home: '-6.5', away: '+6.5', best: 'home' },
-      { book: 'TAB', home: '-7.5', away: '+7.5', best: 'away' },
-      { book: 'Lad', home: '-6.5', away: '+6.5' },
-      { book: 'BF', home: '-5.5', away: '+5.5', best: 'home' },
-    ],
-  },
-];
+import LiveOddsPreview from '@/components/home/LiveOddsPreview';
 
 const pillars = [
   {
@@ -71,93 +40,11 @@ const proofPoints = [
   'Research + tools',
 ];
 
-const paths = [
-  {
-    href: '/odds',
-    icon: Search,
-    label: 'Start here',
-    title: 'Odds board',
-    copy: 'Compare today\'s NRL and AFL prices across books.',
-  },
-  {
-    href: '/research',
-    icon: BarChart3,
-    label: 'Proof',
-    title: 'Research',
-    copy: 'Check betting results, model history and performance notes.',
-  },
-  {
-    href: '/tools',
-    icon: Calculator,
-    label: 'Support',
-    title: 'Tools',
-    copy: 'Use calculators for probability, EV, Kelly and returns.',
-  },
-];
-
 const workflow = [
   { step: '1', title: 'Compare', copy: 'Find the best available price.' },
   { step: '2', title: 'Check the move', copy: 'See what the market is doing.' },
   { step: '3', title: 'Ask Baz', copy: 'Get the betting angle in plain English.' },
 ];
-
-function OddsPreview() {
-  return (
-    <div className="border border-white/12 rounded-lg bg-white/[0.08] shadow-2xl overflow-hidden">
-      <div className="flex items-center justify-between border-b border-white/10 bg-black/35 px-4 py-3">
-        <div>
-          <p className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#00DEB8]">Product preview</p>
-          <p className="text-white font-display font-bold text-lg">Odds board with intelligence</p>
-        </div>
-        <span className="text-[10px] font-mono uppercase tracking-widest text-[#A7F3D0]">Free</span>
-      </div>
-
-      <div className="p-3 sm:p-4 space-y-3">
-        {previewGames.map((game) => (
-          <div key={`${game.home}-${game.away}`} className="border border-[#E2E8F0] rounded-lg bg-white overflow-hidden">
-            <div className="px-4 py-3 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 border-b border-[#E2E8F0]">
-              <div>
-                <p className="text-[10px] font-mono uppercase tracking-widest text-[#9CA3AF]">{game.time} - {game.market}</p>
-                <p className="font-display font-bold text-[#111827] text-lg">{game.home} vs {game.away}</p>
-              </div>
-              <span className="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold uppercase tracking-wide text-[#F97316]">
-                <Flame className="w-3.5 h-3.5" fill="currentColor" />
-                {game.movement}
-              </span>
-            </div>
-
-            <div className="grid grid-cols-[76px_repeat(4,minmax(68px,1fr))] overflow-x-auto">
-              <div className="px-3 py-2 text-[10px] font-mono uppercase tracking-widest text-[#9CA3AF] border-r border-[#E2E8F0]">Team</div>
-              {game.prices.map((price) => (
-                <div key={price.book} className="px-3 py-2 text-center text-[10px] font-mono font-bold text-[#6B7280] border-r last:border-r-0 border-[#E2E8F0]">
-                  {price.book}
-                </div>
-              ))}
-              <div className="px-3 py-2 text-xs font-bold text-[#111827] border-t border-r border-[#E2E8F0]">{game.home}</div>
-              {game.prices.map((price) => (
-                <div key={`${price.book}-home`} className={`px-3 py-2 text-center text-sm font-mono font-bold border-t border-r last:border-r-0 border-[#E2E8F0] ${price.best === 'home' ? 'bg-[#00DEB8]/12 text-[#00866F]' : 'text-[#111827]'}`}>
-                  {price.home}
-                </div>
-              ))}
-              <div className="px-3 py-2 text-xs font-bold text-[#111827] border-t border-r border-[#E2E8F0]">{game.away}</div>
-              {game.prices.map((price) => (
-                <div key={`${price.book}-away`} className={`px-3 py-2 text-center text-sm font-mono font-bold border-t border-r last:border-r-0 border-[#E2E8F0] ${price.best === 'away' ? 'bg-[#00DEB8]/12 text-[#00866F]' : 'text-[#111827]'}`}>
-                  {price.away}
-                </div>
-              ))}
-            </div>
-
-            <div className="border-t border-[#E2E8F0] bg-[#F8FAFC] px-4 py-3">
-              <p className="text-xs leading-5 text-[#4B5563]">
-                <span className="font-bold text-[#111827]">AI read:</span> {game.baz.replace('Baz: ', '')}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -207,7 +94,7 @@ export default function Home() {
               </div>
             </div>
 
-            <OddsPreview />
+            <LiveOddsPreview />
           </div>
         </div>
       </section>
@@ -264,32 +151,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-        <div className="mb-5">
-          <p className="section-label mb-1">Explore</p>
-          <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-[#111827]">Simple entry points, deeper when needed.</h2>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-4">
-          {paths.map((path) => {
-            const Icon = path.icon;
-            return (
-              <Link key={path.title} href={path.href} className="group border border-[#E2E8F0] rounded-lg bg-white p-5 hover:border-[#00DEB8]/60 transition-colors">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="w-10 h-10 rounded-md bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-center">
-                    <Icon className="w-5 h-5 text-[#00B899]" />
-                  </div>
-                  <MousePointerClick className="w-4 h-4 text-[#CBD5E1] group-hover:text-[#00B899] transition-colors" />
-                </div>
-                <p className="section-label mt-4 mb-1">{path.label}</p>
-                <h3 className="font-display text-xl font-extrabold text-[#111827]">{path.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-[#6B7280]">{path.copy}</p>
-              </Link>
-            );
-          })}
         </div>
       </section>
 
