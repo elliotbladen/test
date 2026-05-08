@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "agent": "Scout",
+  "scan_type": "nrl_postgame",
+  "season": 2026,
+  "round": 10,
+  "game": {
+    "label": "Dolphins v Bulldogs",
+    "home_team": "Dolphins",
+    "away_team": "Canterbury-Bankstown Bulldogs",
+    "venue": "Suncorp Stadium",
+    "kickoff_utc": "2026-05-07T09:50:00Z",
+    "match_state": "FullTime",
+    "match_mode": "Post",
+    "score": {
+      "home": 44,
+      "away": 12
+    },
+    "match_centre_url": "https://www.nrl.com/draw/nrl-premiership/2026/round-10/dolphins-v-bulldogs/"
+  },
+  "scanned_at": "2026-05-08T03:29:07.189356+00:00",
+  "verdict": "major_signals_found",
+  "counts": {
+    "major": 2,
+    "watch": 6,
+    "total": 8
+  },
+  "signals": [
+    {
+      "severity": "major",
+      "type": "team_availability",
+      "status": "verified",
+      "text": "Cameron Ciraldo has stuck solid as the Bulldogs navigate a challenging period, with just one change to the starting side that fell to North Queensland last week. Sitili Tupouniua has been named in the back row, with Josh Curran on the bench, but the pair could trade places on game day as they did last week. Interchange forwards Kurt Mann (head knock) and Jake Turpin (biceps) have been ruled out, with Harry Hayes and Sean O'Sullivan the new faces on the bench.",
+      "teams": [
+        "Canterbury-Bankstown Bulldogs"
+      ],
+      "source": {
+        "name": "nrl_team_lists",
+        "url": "https://www.nrl.com/news/2026/05/05/nrl-team-lists-round-10/",
+        "fetched_at": "2026-05-08T03:29:01.781134+00:00"
+      }
+    },
+    {
+      "severity": "major",
+      "type": "team_availability",
+      "status": "verified",
+      "text": "No changes to the starting 13 but two big inclusions on the bench for Kristian Woolf with Kodi Nikorima and Jeremy Marshall-King named in jumper No.18 and No.19 respectively. Nikorima missed the last two weeks due to suspension, with Woolf opting to stick solid with the halves pairing of Brad Schneider and Isaiya Katoa. Marshall-King is eyeing his first game of the season after injuring his knee in a freak accident at home in January. Kurt Donoghoe drops out of the squad after playing 26 minutes off the bench last week.",
+      "teams": [
+        "Dolphins",
+        "Canterbury-Bankstown Bulldogs"
+      ],
+      "source": {
+        "name": "nrl_team_lists",
+        "url": "https://www.nrl.com/news/2026/05/05/nrl-team-lists-round-10/",
+        "fetched_at": "2026-05-08T03:29:01.781105+00:00"
+      }
+    },
+    {
+      "severity": "watch",
+      "type": "injury_watch",
+      "status": "watch_pending",
+      "text": "Bulldogs: Jacob Kiraz (knee, Round 12)",
+      "teams": [
+        "Canterbury-Bankstown Bulldogs"
+      ],
+      "source": {
+        "name": "nrl_casualty_ward",
+        "url": "https://www.nrl.com/news/2026/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-2026/",
+        "fetched_at": "2026-05-08T03:29:07.189285+00:00"
+      }
+    },
+    {
+      "severity": "watch",
+      "type": "injury_watch",
+      "status": "watch_pending",
+      "text": "Bulldogs: Jake Turpin (biceps, TBC)",
+      "teams": [
+        "Canterbury-Bankstown Bulldogs"
+      ],
+      "source": {
+        "name": "nrl_casualty_ward",
+        "url": "https://www.nrl.com/news/2026/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-2026/",
+        "fetched_at": "2026-05-08T03:29:07.189321+00:00"
+      }
+    },
+    {
+      "severity": "watch",
+      "type": "injury_watch",
+      "status": "watch_pending",
+      "text": "Bulldogs: Kurt Mann (head knock, TBC)",
+      "teams": [
+        "Canterbury-Bankstown Bulldogs"
+      ],
+      "source": {
+        "name": "nrl_casualty_ward",
+        "url": "https://www.nrl.com/news/2026/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-2026/",
+        "fetched_at": "2026-05-08T03:29:07.189311+00:00"
+      }
+    },
+    {
+      "severity": "watch",
+      "type": "injury_watch",
+      "status": "watch_pending",
+      "text": "Dolphins: Francis Molo (ankle, TBC)",
+      "teams": [
+        "Dolphins"
+      ],
+      "source": {
+        "name": "nrl_casualty_ward",
+        "url": "https://www.nrl.com/news/2026/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-2026/",
+        "fetched_at": "2026-05-08T03:29:07.189329+00:00"
+      }
+    },
+    {
+      "severity": "watch",
+      "type": "judiciary_watch",
+      "status": "watch_pending",
+      "text": "Flegler was charged for a high tackle on Bulldogs secondrower Sitili Tupouniua just before halftime and faces an $1800 fine as the Grade 1 offence was his second this season.",
+      "teams": [
+        "Canterbury-Bankstown Bulldogs"
+      ],
+      "source": {
+        "name": "nrl_judiciary",
+        "url": "https://www.nrl.com/news/2026/01/01/nrl-judiciary-report-2026/",
+        "fetched_at": "2026-05-08T03:29:05.258734+00:00"
+      }
+    },
+    {
+      "severity": "watch",
+      "type": "judiciary_watch",
+      "status": "watch_pending",
+      "text": "Preston, who was sinbinned just before halftome for a late shot on Dolphins halfback Isaiya Katoa, was charged with Grade 1 Dangerous Contact and faces a fine of $1000 with an early plea.",
+      "teams": [
+        "Dolphins"
+      ],
+      "source": {
+        "name": "nrl_judiciary",
+        "url": "https://www.nrl.com/news/2026/01/01/nrl-judiciary-report-2026/",
+        "fetched_at": "2026-05-08T03:29:05.258683+00:00"
+      }
+    }
+  ],
+  "sources": {
+    "nrl_team_lists": {
+      "url": "https://www.nrl.com/news/2026/05/05/nrl-team-lists-round-10/",
+      "line_count": 180
+    },
+    "nrl_match_centre": {
+      "url": "https://www.nrl.com/draw/nrl-premiership/2026/round-10/dolphins-v-bulldogs/",
+      "line_count": 68
+    },
+    "nrl_judiciary": {
+      "url": "https://www.nrl.com/news/2026/01/01/nrl-judiciary-report-2026/",
+      "line_count": 948
+    },
+    "nrl_casualty_ward": {
+      "url": "https://www.nrl.com/news/2026/01/01/nrl-casualty-ward-how-your-club-is-shaping-heading-into-2026/",
+      "line_count": 17
+    }
+  },
+  "engine_policy": {
+    "model_safe_without_auditor": false,
+    "allowed_for_public_summary": true,
+    "notes": "Scout flags require Auditor confirmation before engine use."
+  }
+}
